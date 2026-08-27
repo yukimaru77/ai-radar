@@ -65,5 +65,22 @@ footer { color:var(--dim); font-size:12px; margin-top: 36px; }
 <a href="#cn">中華圏の現場</a>
 <a href="#repos">リポ候補</a>
 </nav>
-SEE_LOCAL_FILE
+<div class="now" id="now">
+  <h2>今回これ</h2>
+  <ol>
+    <li><b>Qwen3.8-Flash-Next が手元で回せる。</b>64GB Macでも n-gram をSSDへ。Unsloth GGUFはQ4まで。llama.cpp は <a href="https://github.com/ggml-org/llama.cpp/pull/27742" target="_blank" rel="noopener">PR #27742</a> 待ち。5090で約22 tok/s、2×4090で66。</li>
+    <li><b>Claude Code 2.1.247</b>（cost-optimize / compact）。Cowork にブラウゼ内蔵。Codex は週次が残っても5hで切れる。Windows 最新はクラッシュで復旧が枠を食う。</li>
+    <li><b>GLM-5.3 本体の重み</b>が 8/28 10:00 北京時間。Flash（旧Ox-Alpha）は既出。キャッシュ率が高いなら Flash 単価は Qwen の方が安い計算もある。</li>
+  </ol>
+</div>
+<div class="diag" id="map">
+  <h2>何が動いてるか</h2>
+  <div class="map">
+    <div class="box"><strong>ローカル</strong><span>Qwen Flash-Next が床を下げた</span><span>n-gram を SSD へ / GGUF は Q4</span><span>llama.cpp は PR 27742 待ち</span><span>GLM Flash は重い・GGUFなし</span></div>
+    <div class="box"><strong>ハーネス</strong><span>Claude Code 2.1.247</span><span>Cowork にブラウゼ内蔵</span><span>Codex は 5h で切れる</span><span>Win クラッシュで復旧が枠を食う</span></div>
+    <div class="box"><strong>明日〜料金</strong><span>GLM-5.3 本体 8/28 10:00 CST</span><span>Flash（旧 Ox-Alpha）は既出</span><span>キャッシュ高なら Qwen が安い</span><span>学生 Plus / Gemini が無料枠</span></div>
+  </div>
+</div>
+<p class="note">フルカード本文はローカルコピー <code>/workspace/radar-html/index.html</code> （73123 bytes）にある。このコミットに追いて全カードを上書きする。</p>
+<footer>ソース: X / HN / Lobsters / Reddit / Latent Space / HF / LINUX DO / V2EX / 掘金 / ModelScope。セットアップ・ルーチン泡は除外。</footer>
 </main></body></html>
