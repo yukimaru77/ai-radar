@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microduck — $399 の OSS 二足ロボット（Pollen） · レーダー 2026-08-28 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Microduck — $399 の OSS 二足ロボット（Pollen）</h1>
+<p class="primary"><a href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener">https://github.com/pollen-robotics/microduck</a></p>
+<div class="thread">
+<p><strong>Pollen Robotics</strong> の <strong>Microduck</strong>。約 <strong>25 cm / 800 g</strong> の二足を、オンボードの強化学習ポリシーで動かす。リポジトリは「duck's brain」— Rockchip <strong>RK3566</strong> 上の一群のデーモンが <strong>50 Hz</strong> で <strong>15 サーボ</strong>を回し、無線・カメラ・更新まで持つ。製品ページ（pollen-robotics.com/microduck）は <strong>Pre-order $399</strong>（税・送料別）、<strong>2026-08-27</strong> 開始、<strong>Christmas 2026</strong> 前出荷、4 色、オープンソースと明記。箱には本体・バッテリ・USB-C・ゲームパッド。充電器パック $39、Dev pack $119、Accessory pack $39。</p>
+<h2>ハードとソフト</h2>
+<p>スペック帯: <strong>15 Motors / Camera + LiDAR + 2× IMU / 7 trained moves in the box / 50 Hz policy loop</strong>。ランタイムは Rust の単一ワークスペース。<code>robotd</code> が制御とモータバス、<code>updaterd</code> が署名付き更新とロールバック、<code>configd</code> / <code>btd</code> / <code>padd</code> / <code>mediad</code>（WebRTC）/ <code>tofd</code> が分担。JSON-RPC over Unix socket。ポリシー本体の学習は別リポ <strong>microduck_rl</strong>（MuJoCo + PPO → ONNX）で、こちらはロード側。</p>
+<h2>X上の注文話</h2>
+<p>スキャン側の文脈では、HF 共同創業者筋で「初24h 受注 <strong>&gt;$2.6M（約6500台）</strong>」という話が出ている。製品ページと README にはその数字は載っていない。ここでは <strong>未検証の二次情報</strong> として残し、サイトが主張しているのは $399 プリオーダーと OSS 一式まで。</p>
+<h2>体験</h2>
+<p>やったこと: GitHub README raw、製品 LP を curl。価格・スペック・出荷文言を HTML から抽出。</p>
+<p>やらなかったこと: 注文、決済、実機、ファーム書き込み。「買った」「動かした」は書かない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

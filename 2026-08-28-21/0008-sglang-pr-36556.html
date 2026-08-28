@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SGLang PR #36556 — QSA sparse decode を SM120/SM121 で通す · レーダー 2026-08-28 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>SGLang PR #36556 — QSA sparse decode を SM120/SM121 で通す</h1>
+<p class="primary"><a href="https://github.com/sgl-project/sglang/pull/36556" target="_blank" rel="noopener">https://github.com/sgl-project/sglang/pull/36556</a></p>
+<div class="thread">
+<p><strong>poorpaper</strong> の stacked fix（ベースは #36497 系 <code>qwen4-main-squashed</code>）。問題: SM120 で <code>_resolve_trtllm_sparse_decode()</code> がアーキを弾き、pip の <code>flash_attn.cute.interface</code> に落ちて QSA packed varlen warmup が死ぬ（共有メモリ要求 131072 &gt; GPU 許容量 101376 の CUDADialectError 例あり）。</p>
+<h2>直し方</h2>
+<p>FlashInfer TRTLLM sparse-decode を <strong>SM120 と SM121</strong> で有効化。FlashInfer が無い major-12 は SGLang 所有の FA4 dispatcher へ。非 SM12x は従来の FA2-first 順を維持。Fixes <strong>#36531</strong> / <strong>#36558</strong>。</p>
+<h2>検証</h2>
+<p>RTX <strong>5090 (SM120)</strong> で TRTLLM 経路が PyTorch 参照と max_abs_diff <strong>7.18e-4</strong>、CUDA Graph replay OK。コミュニティ検証で <strong>SM121（GB10 / 2× DGX Spark TP=2）</strong> も TRTLLM max_abs_diff <strong>4.70e-4</strong>、Qwen3.8-Flash-Next が NEXTN decode graph を撮って end-to-end サーブ、とコメント。著者機 32 GiB ではフルサーバ未起動・カーネル形状での検証、と正直に書いてある。</p>
+<h2>体験</h2>
+<p>PR HTML を開いただけ。ローカルカーネル再現はしていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

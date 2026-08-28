@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>r/LocalLLaMA: 2x RTX 3060 12GBで Qwen3.8 27B が約30 t/s · レーダー 2026-08-28 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>r/LocalLLaMA: 2x RTX 3060 12GBで Qwen3.8 27B が約30 t/s</h1>
+<p class="primary"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w0muuz/the_rtx_3060_12gb_an_unsung_hero_of_the_current/" target="_blank" rel="noopener">https://www.reddit.com/r/LocalLLaMA/comments/1w0muuz/the_rtx_3060_12gb_an_unsung_hero_of_the_current/</a></p>
+<div class="thread">
+<p>r/LocalLLaMA Discussion。<strong>I_Play_Zed</strong>。「LLM無しで書いた」と明記した長文。短く言うと dual 3060 12GB は約24GB VRAM、低消費、CUDA、Qwen 3.8 27B で <strong>約30 t/s</strong>、価格がまだ難しい。</p>
+<h2>実測プロファイル</h2>
+<p>Ryzen 5 5500、B550、64GB DDR4-3200、2×3060（GPU0 PCIe 3.0 x16、GPU1 x4）、750W Bronze。各GPU <strong>130W</strong> 制限。Pop!_OS、driver 580.126.18、CUDA 12.6、llama.cpp Qwen3.8 build 400。モデル Qwen3.8-27B Q4_K_M、131k ctx、Q8_0 KV、TP 1:1、batch 2048、ubatch 1024、xHigh、modified n-gram spec、1 slot。測定: prefill ~503 t/s @6117 tok、~492 @30719、fresh decode <strong>~29 t/s</strong>。no-spec 130W固定は 503.7 / 27.7。のちに3090へ換装、vLLMで3.8が <strong>約100 t/s</strong>、ただし3060の体験は十分近く、カードは売らない。</p>
+<p>代替比較は Mi50/P100（面倒・電力）、3090/B70（3–5倍の金）、Strix Halo/DGX Spark（$5k/$8kで帯域は劣る）、8–10GBカード（VRAM不足）、AMD 6800XT/7900XTX（電力か価格）。目標はQ4 + 100k+ ctx + KVをQ8より下げない。</p>
+<h2>体験</h2>
+<p>selftextを読んだ。3060も3090もこの箱では動かしていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>掘金：Codex で前端 Skill 3本を実測（taste / humanizer / better-interface） · レーダー 2026-08-28 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>掘金：Codex で前端 Skill 3本を実測（taste / humanizer / better-interface）</h1>
+<p class="primary"><a href="https://juejin.cn/post/7678969473362821146" target="_blank" rel="noopener">https://juejin.cn/post/7678969473362821146</a></p>
+<div class="thread">
+<p>著者『小七』の実測記事（全文 <code>mark_content</code>）。環境は <strong>Windows / Codex CLI 0.149.1 / GPT-5.6 Sol High / HTML+CSS+JS</strong>、架空プロフィール <code>vic-source.md</code>、Skill はすべて <strong>Project の <code>.agents/skills/</code></strong> のみ。</p>
+<h2>流れ</h2>
+<p>Baseline（サードパーティ Skill なし）でも黒地＋蛍光黄緑の個人ページを作り、ブラウザで桌面／移動端を自己検査して CSS 修正——『土味→変身』の台本が最初から不要になった。問いは <strong>既に出来る Agent に Skill を重ねると何が増えるか</strong>。</p>
+<h2>3 Skill</h2>
+<p><strong><code>design-taste-frontend</code></strong>（<code>npx skills add https://github.com/Leonxlnx/taste-skill --skill design-taste-frontend</code>）：双テーマのコンポーネント寄り、画像内焼き込みテキストを HTML テキストへ分離、390/500px や <code>prefers-reduced-motion</code> など QA が厚い。ただし Taste 版は画像生成も使っており、差分を全部 Skill に帰せないと著者自身が釘を刺す。</p>
+<p><strong><code>humanizer</code></strong>（<code>npx skills add https://github.com/blader/humanizer</code>）：レイアウト固定で文案だけ。例『在城市之间，做产品，也做记录』→『在不同城市生活，做产品，也拍照』。インストール時 Snyk High Risk 表示→<code>SKILL.md</code> を人手確認してから Project 限定で続行、と安全メモあり。</p>
+<p><strong><code>better-interface</code></strong>（<code>jakubkrehel/skills</code> から better-interface ほか accessibility/layout/writing/typography/colors/ui の7本）：まず Review only で A4/B4/C0、Verdict <strong>Block</strong>。A1–A4（コントラスト、フォーカスリング、accessible name、aria-pressed 同期）だけ直して <strong>PASS</strong>。PASS＝本 Round の A 類ゼロであり、本番 a11y 認証ではない、と明記。</p>
+<h2>体験</h2>
+<p><strong>Codex へのログインも Skill の実行もしていない。</strong> 一次体験は著者側。こちらはリポ README と skills.sh を開いた（各別ページ）。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

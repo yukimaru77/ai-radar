@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SGLang PR #36567 — Qwen3.8-Flash-Next の PLE を NVMe ストリーム · レーダー 2026-08-28 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>SGLang PR #36567 — Qwen3.8-Flash-Next の PLE を NVMe ストリーム</h1>
+<p class="primary"><a href="https://github.com/sgl-project/sglang/pull/36567" target="_blank" rel="noopener">https://github.com/sgl-project/sglang/pull/36567</a></p>
+<div class="thread">
+<p><strong>jzinno</strong> の <code>feat(qwen4): stream PLE embeddings from NVMe</code>。スタックは <strong>#36497</strong>（Qwen 3.8 Flash Next 導入）の <code>qwen4-main-squashed</code> 上。動機: Qwen3.8 Flash Next <strong>NVFP4</strong> チェックポイントに <strong>47.68 GiB</strong> の FP8 PLE n-gram embedding があり、128 GiB 級 unified memory（DGX Spark 等）で常駐させるとモデル本体・Mamba・KV が窮屈。PLE は forward ごとに少数行しか使わないので、シャード safetensors を NVMe に残して必要行だけ読む。</p>
+<h2>実装の骨</h2>
+<p>Linux Rust 拡張 + 永続 <strong>io_uring</strong>、page-aligned、GIL-free。<code>mmap</code> / io_uring 行リーダ、ピン留め staging、非同期 H2D、デコーダ層とのオーバーラップ。初期パスは <strong>TP1・FP8 E4M3 のみ</strong>。opt-in 環境変数 <strong><code>SGLANG_QWEN4_PLE_NVME_PATH</code></strong>。SM121 向けに Triton sparse GQA decode fallback も追加（TRT-LLM sparse が無いとき）。行一致テストは <code>RadixArk/Qwen3.8-Flash-Next-NVFP4</code> rev <code>7b71922…</code> で byte-exact。</p>
+<h2>周辺 PR（開いた）</h2>
+<p><strong>#36497</strong> Introduce Qwen 3.8 Flash Next — 土台。本文はテンプレ寄りで中身は薄いので独立ページは作らずここに紐づけ。<strong>#36556</strong> fix(qsa): SM120/SM121 sparse decode — 別ページあり。<strong>#36749</strong> cuda-graph BCG buffer sizing — cherry-pick 候補として X で言及、タイトル確認のみで独立ページは省略。</p>
+<h2>X上の速度話</h2>
+<p>スキャン文脈: 単一 <strong>RTX PRO 6000</strong> で Qwen3.8-Flash-Next NVFP4、平均 <strong>140</strong> / peak <strong>190 TPS</strong>、<strong>256K</strong>。この PR 本文にはそのベンチ表は無い。NVMe PLE 経路の動機説明と正確性テストが本体。</p>
+<h2>体験</h2>
+<p>やったこと: PR #36567 / #36497 / #36556 / #36749 の HTML を開いてタイトルと本文を確認。</p>
+<p>やらなかったこと: ブランチ checkout、Rust 拡張ビルド、NVFP4 ロード、PRO 6000 ベンチ。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

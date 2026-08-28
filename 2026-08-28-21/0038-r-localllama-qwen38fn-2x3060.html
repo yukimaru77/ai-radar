@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>r/LocalLLaMA: Qwen3.8-Flash-Next、`-sm tensor` がprefillを7倍遅くする · レーダー 2026-08-28 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>r/LocalLLaMA: Qwen3.8-Flash-Next、`-sm tensor` がprefillを7倍遅くする</h1>
+<p class="primary"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w0na2z/qwen38flashnext_udiq4_xs_on_2x_rtx_3060_7800x3d/" target="_blank" rel="noopener">https://www.reddit.com/r/LocalLLaMA/comments/1w0na2z/qwen38flashnext_udiq4_xs_on_2x_rtx_3060_7800x3d/</a></p>
+<div class="thread">
+<p>r/LocalLLaMA Resources。<strong>Comrade_Mugabe</strong>。2x RTX 3060 12GB + 7800X3D + 128GB DDR5-3200（4枚刺しで定格POSTせず）。モデルは unsloth <code>Qwen3.8-Flash-Next-GGUF</code> UD-IQ4_XS <strong>93.7GB</strong>、125B MoE / 6B active、48層。llama.cpp <code>4e97ac86e</code>、ik_llama.cpp <code>7cff686d</code>。本文後半は投稿者自身が「AI生成レポート」と断っている。</p>
+<h2>効いたノブ</h2>
+<p>最初 decode 14–15 t/s、prefill <strong>36 t/s</strong> で壁。原因は <strong><code>-sm tensor</code></strong>。同じ他条件で tensor 41.7 t/s、layer <strong>303 t/s</strong>。llama.cppはバッチ32以上でCPU側MoEをGPUへop-offloadするが単一デバイス前提なので、tensor-parallelで分割するとoffloadが死に全expertがCPUへ落ちる。証明: tensor（35 t/s）と <code>GGML_OP_OFFLOAD_MIN_BATCH=999999</code>（38 t/s）が同じ。計測中GPU utilは tensor で ~0%、layer で 49%/38%。</p>
+<p><code>-ubatch</code> は tensor では無効。layer にしたあと 512/1024/2048 で 135/191/303 t/s。ik は split-modeの崖がなく layer と graph が 407 vs 401。ik は RAM <strong>106–108GB used</strong>、llama.cpp <code>--load-mode mmap</code> は <strong>21–32GB used</strong>（ページキャッシュ）。96GB機ではikが乗らない差。</p>
+<h2>推奨（投稿者）</h2>
+<p>131Kまで: ik、<code>-sm layer -ncmoe 48 -ub 2048 -b 4096 -fa on</code> → prefill 407 / decode 13、VRAM 9.2/9.1GB、RAM ~108GB。196K–262K: llama.cpp、<code>-sm layer --n-cpu-moe 48 -ub 1024</code> → 215 / 12、RAM ~32GB。128GB未満ならコンテキスト問わず llama.cpp。decodeは帯域律速でフラグでは直らない（このDDR5は実効約40GB/s、EPYC 9555 12chの28 t/sと比較）。<code>--parallel 8</code> はアイドルでも単流decodeを12→5へ落とす。caveat: 単発、ばらつき約10%、262Kフルprefillの38分は59kからの外挿。</p>
+<h2>体験</h2>
+<p>JSON全文を読んだ。この箱でllama.cppもikもQwen3.8-Flash-Nextも回していない。表の数字は投稿者測定。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

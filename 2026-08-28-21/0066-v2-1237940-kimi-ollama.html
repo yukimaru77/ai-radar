@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kimi ¥199 vs Ollama Pro K3：5時間枠の実測比較 · レーダー 2026-08-28 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>Kimi ¥199 vs Ollama Pro K3：5時間枠の実測比較</h1>
+<p class="primary"><a href="https://www.v2ex.com/t/1237940" target="_blank" rel="noopener">https://www.v2ex.com/t/1237940</a></p>
+<div class="thread">
+<p>V2EX programmer ノード、<code>dongzhimin</code> による枠の実測表。制御変数は <strong>同じ CLIProxyAPI・同じリクエスト・<code>high</code> 推理・単一並行・無キャッシュ・無リトライ・超過課金オフ</strong>。JSON 全文がディスクにある。</p>
+<h2>表の骨格</h2>
+<p>| 指標 | Kimi K3 1M | Kimi K3-256K | Ollama Pro K3 |</p>
+<p>月額は Kimi 両方が <strong>¥199</strong>、Ollama Pro が <strong>$20</strong>。データ源は 1M と Ollama が実測、<strong>256K は公式の約半額レートからの推計</strong>（本ラウンド実測ではない）。</p>
+<p><strong>5時間の工作単元</strong>：24 / 約48 / 19。成功リクエスト 72 / 約144 / 57。入力トークン 218万 / 約436万 / 173万。5時間プールの週額占有は 20% / 予想20% / 約18%。週あたり 5h プール数は 5 / 5 / 約5.56。週工作単元 120 / 約240 / 約105.6。月平均工作単元 約522 / 約1044 / 約459。平均遅延 <strong>12.85秒 vs（256K未測）vs 3.54秒</strong>。相対月容量 100% / 約200% / 約88%。</p>
+<h2>著者の結論</h2>
+<p>通常 K3：Kimi の月総量は Ollama より約 <strong>13.7% 多い</strong>。<code>k3-256k</code> は理論上 Ollama の約 <strong>2.27倍</strong>。Ollama は平均で約 <strong>3.6倍速い</strong>。<strong>容量は Kimi、速度は Ollama</strong>。プロジェクトが 256K を超えないなら <code>k3-256k</code> 優先。注：Kimi の他会員機能は月度额度プールを共有。月換算は平均 4.35 週窓。</p>
+<h2>返信</h2>
+<p><strong>SiWXie</strong>：Ollama で GLM を使うのが最コスパ（速くて満血）。Kimi 套餐内 K3 は平日ピークが非常に遅い——『泡茶でも飲んでろ』。著者返信：Ollama はモデルが多く年払い約200で、現状キープできるサブスク、と同意寄りの追記。</p>
+<h2>体験</h2>
+<p>同じ CLIProxyAPI での再実測はしていない。表と返信は V2EX API JSON の翻訳・整理。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JetBrains go-modern-guidelines: エージェントに現代Goを書かせるスキル · レーダー 2026-08-28 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>JetBrains go-modern-guidelines: エージェントに現代Goを書かせるスキル</h1>
+<p class="primary"><a href="https://github.com/JetBrains/go-modern-guidelines" target="_blank" rel="noopener">https://github.com/JetBrains/go-modern-guidelines</a></p>
+<div class="thread">
+<p>HN（id=49476502、3 points）。公式JetBrainsリポ。エージェントが古いGoを出す理由を2つに割る。(1) <strong>学習データの遅れ</strong> — cutoff後の <code>errors.AsType[T]</code>（Go 1.26）を知らない。(2) <strong>頻度バイアス</strong> — <code>for i := 0; i &lt; n; i++</code> の方が <code>for i := range n</code> より多い。ガイドラインは Go 1.0〜1.27、<code>modernize</code> アナライザが狙う範囲をカバーする。エージェントは <code>go.mod</code> からバージョンを読み、そこまで使える機能だけ使う。</p>
+<h2>SKILL.md が強制すること</h2>
+<p>実体は <code>plugin/skills/use-modern-go/SKILL.md</code>。Goを書く・直す・リファクタするとき <strong>必ず</strong> Modern Go Guidelines CLI を呼べ、が契約。ラッパは Linux/macOS で <code>sh &quot;&lt;skill-dir&gt;/scripts/run-tool.sh&quot;</code>。初回はローカルキャッシュへCLIを入れる。サブコマンドは <code>list</code> と <code>explain</code>。編集前に対象ファイルで <code>list --file-path path/to/file.go</code>。出力は新しい順。<strong>head/tail/grep/sed で切るな</strong>（古いガイドラインが落ちる）。該当するならリポの古い慣習よりガイドラインを優先。スキップはコンパイルできない・挙動が変わる・明らかに無関係、のときだけ。その前に <code>explain &lt;id&gt;</code>。</p>
+<p>READMEの具体例: <code>max(a,b)</code> をifの代わりに、<code>slices.Contains</code>、<code>cmp.Or</code>、<code>new(42)</code> で値のポインタ、<code>errors.AsType[T]</code>。</p>
+<h2>入れ方</h2>
+<p>Junie / Claude Code / Codex / Cursor は marketplace。Claudeは <code>/plugin marketplace add JetBrains/go-modern-guidelines</code> → <code>/plugin install modern-go-guidelines@goland-claude-marketplace</code>。明示呼び出しは <code>/modern-go-guidelines:use-modern-go</code>。Codexは <code>codex plugin marketplace add ...</code> → <code>codex plugin add modern-go-guidelines@goland-codex-marketplace</code>。他エージェントは <code>npx skills add JetBrains/go-modern-guidelines</code>。CLI自体は <code>go install</code>、Go 1.25+（古いGoは <code>GOTOOLCHAIN=auto</code>）。キャッシュは <code>~/.cache/go-modern-guidelines</code>。プロジェクトは改変しない。</p>
+<h2>体験</h2>
+<p>READMEとSKILL.mdを raw で開いた。<strong>GoLandでは動かしていない</strong>。Junie/Claude/Codex/Cursor にプラグイン追加もしていない。<code>npx skills add</code> も、<code>go install</code> も、<code>list</code> / <code>explain</code> の実出力も未取得。この箱でGoコードを現代化した事実はない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

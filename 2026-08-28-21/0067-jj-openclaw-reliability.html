@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>掘金：Agent を長く走らせる——OpenClaw の可靠性アーキテクチャ · レーダー 2026-08-28 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>掘金：Agent を長く走らせる——OpenClaw の可靠性アーキテクチャ</h1>
+<p class="primary"><a href="https://juejin.cn/post/7678907389488447514" target="_blank" rel="noopener">https://juejin.cn/post/7678907389488447514</a></p>
+<div class="thread">
+<p>掘金全文（<code>mark_content</code>）を読んだ実測記事。環境は <strong>OpenClaw 2026.7.1-2</strong>、Docker サンドボックス、ホスト <strong>2核 / 3.8GB</strong>。研究 Agent を数時間走らせ、<strong>外部中止・コンテキスト溢れ・ツールエラー</strong>の3事故を越えて報告書を出し切った、という構成。</p>
+<h2>核心洞察</h2>
+<p><strong>コンテキストは作業記憶、ワークスペースは長期記憶。</strong> 進捗は必ず落盤。テスト質問：『セッションを空にしても続きからできるか？』。Run / Session Context / Workspace は寿命が別物。</p>
+<h2>六層モデル（要約）</h2>
+<p>①モデル／プロバイダ（SDK再試行・資格情報・fallback）②Agent 意思決定（<strong>ここだけモデルの自觉</strong>）③ツール実行 ④コンテキスト ⑤ランタイム ⑥観測。<strong>②以外は設定やコマンドで強制できる</strong>——プロンプトに『DBを消すな』と書くより <code>exec</code> をツール一覧から外す、が本筋。</p>
+<h2>実測で触れられている事故と道具</h2>
+<p>1回目 Run は <code>externalAbort=true</code>、2回目は <code>Context overflow</code>、<code>/new</code> 後に <code>reports/</code> と <code>notes/</code> を読んで継続。<code>exec</code> の前景／<code>timeout</code>／<code>yieldMs</code> 背景＋<code>process poll</code> を対比。<strong>Agent の allow はグローバル allow の部分集合でしか広げられない</strong>。再試行は Transport / Agent / Recovery の三層で、HTTP 再試行＝業務フロー再実行ではない。冪等でない外部書き込みは『結果不明なら先に状態確認』。</p>
+<p>收官タスクの Transcript 統計（記事表）：ツール呼び出し 30、エラー 1（<code>git log</code> 128）、ツール付きモデル輪 25、最終は正常收尾。行動パターンは『開場でワークスペースを読む／出力を head・grep で有界に／失敗同一呼び出しを繰り返さない／報告前に checkpoint（3.4KB）／最後に <code>ls -l</code> で成果物検証』。</p>
+<h2>リンクと既報</h2>
+<p>記事は主に <code>docs.openclaw.ai</code> の概念ページ群を参照。<code>github.com/openclaw/openclaw</code> も README を開いて確認したが、<strong>15:00 窓で OpenClaw GitHub／メンテナ系は既報</strong>のため、今窓ではリポ専用ページは増やさない。</p>
+<h2>体験</h2>
+<p>OpenClaw のインストール、Docker 再現、同バージョンでの追試は <strong>していない</strong>。記述は掘金全文の要約であり、こちらの一次ランではない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

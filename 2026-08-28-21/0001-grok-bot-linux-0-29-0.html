@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>非公式 Grok Bot Linux AppImage 0.29.0 — 公式Linuxまだ無し · レーダー 2026-08-28 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>非公式 Grok Bot Linux AppImage 0.29.0 — 公式Linuxまだ無し</h1>
+<p class="primary"><a href="https://github.com/glorics/grok-bot-linux/releases/tag/v0.29.0" target="_blank" rel="noopener">https://github.com/glorics/grok-bot-linux/releases/tag/v0.29.0</a></p>
+<div class="thread">
+<p>公式の Linux デスクトップが未だ無い穴を、コミュニティが塞ぎ続けている。<strong>glorics/grok-bot-linux</strong> の <strong>v0.29.0</strong> が出た。直前の既知は <strong>0.28.1</strong>。リリース本文ははっきり「Unofficial」「Not an xAI or Cursor release」と書く。素材は公式 Windows インストーラ <code>Grok_Bot_0.29.0_Setup.exe</code> をバラして Linux Electron に載せ替え、Windows 専用 native を差し替えたもの。</p>
+<h2>中身と対応ディストロ</h2>
+<p>README（raw）上の一次テストホストは <strong>Debian 12 Bookworm</strong>（amd64 / glibc 2.36 / GNOME・Wayland）。AppImage は generic <strong>linux-x64 / glibc</strong>（musl・ARM ではない）。glibc <strong>≥ 2.34</strong> が必要。<strong>Arch</strong> と <strong>Linux Mint</strong> はコミュニティ確認済み（X上の報告リンク付き）。<strong>Fedora</strong> は「未検証」だが glibc は新しいので動く想定、失敗点はだいたい <strong>FUSE2</strong>。Electron はリリースノートで <strong>42.1.0</strong>。0.28.1 の Linux デスクトップ identity（Plasma アイコン等）は引き継ぎ、既存 GNOME dock の <code>Exec</code> は書き換えない、と明記。</p>
+<h2>配布物と起動</h2>
+<p>アセットは少なくとも <strong><code>Grok_Bot_0.29.0_x86_64.AppImage</code></strong> と <strong><code>Grok_Bot_0.29.0_linux_x64.tar.gz</code></strong>。HEAD で測ったサイズは AppImage <strong>119,900,664 bytes（約114.3 MiB）</strong>、tar.gz <strong>129,051,525 bytes（約123.1 MiB）</strong>。起動は <code>chmod +x</code> のあと <code>./Grok_Bot_0.29.0_x86_64.AppImage --no-sandbox</code>。<strong><code>--no-sandbox</code> 必須</strong>（AppImage に Chromium setuid sandbox を同梱できないため）。<code>scripts/install-linux.sh</code> で XDG ランチャと <code>~/.local/bin/grok-bot</code> を入れられ、起動時に GitHub 最新を見て SHA-256 / ELF 検証してから差し替える仕組み。0.28.1 は公開のまま残す、とも書いてある。</p>
+<h2>体験</h2>
+<p>やったこと: リリースページと README raw を開いた。AppImage URL に HEAD して Content-Length を確認。Range <code>0-15</code> で先頭16バイトを取り、<strong>ELF magic <code>7f 45 4c 46</code></strong> を確認（フルダウンロードはしていない）。GitHub API はこの箱から rate limit で JSON が取れず、HTML + raw に依存。</p>
+<p>やらなかったこと: AppImage 全体の DL、GUI 起動、インストール、ログイン、FUSE マウント試験。箱にディスプレイ付きで Grok Bot を立てる意図もない。公式 Linux が来るまでのブリッジとして「ある」、という事実確認まで。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

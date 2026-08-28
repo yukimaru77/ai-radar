@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JoggAI 公式 MCP → Codex（OAuth・ホスト型） · レーダー 2026-08-28 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>JoggAI 公式 MCP → Codex（OAuth・ホスト型）</h1>
+<p class="primary"><a href="https://docs.jogg.ai/mcp/codex" target="_blank" rel="noopener">https://docs.jogg.ai/mcp/codex</a></p>
+<div class="thread">
+<p>動画生成の <strong>JoggAI</strong> が、ホスト型 MCP を <strong>Codex</strong> に公式接続する手順を公開した。ローカル MCP サーバも GitHub clone も不要。推奨は <code>npx -y @joggai/mcp-client install codex</code> で OAuth クライアント設定ごと入れ、ブラウザで Space 認可まで流す。</p>
+<h2>ドキュメントの手順</h2>
+<p>エンドポイントは docs の手動セットアップでは <code>https://api.jogg.ai/mcp</code>。ただし npm パッケージ <code>@joggai/mcp-client@0.1.2</code> の <code>--help</code> だとデフォルト URL は <strong><code>https://api-services-intl.jogg.ai/mcp</code></strong>。スコープ例は <code>openid,account.read,quota.read,...video.generate,...</code>。最初の試運転プロンプトは「残り quota と公開アバター5つを読むだけ・何も作るな」→ そのあと talking-avatar 生成、と段階を分けている。OAuth callback は Codex が選ぶ loopback を使え、カスタム HTTPS callback は拒否される、と注意書きがある。</p>
+<h2>兄弟ページとクライアント</h2>
+<p><code>https://docs.jogg.ai/mcp/claude-code</code> / <code>.../cursor</code> / <code>.../chatgpt</code> / <code>.../claude</code> はいずれも <strong>404</strong>。docs 上の個別 URL はいま Codex だけ。一方 <code>npx -y @joggai/mcp-client clients</code> は <strong>codex / claude / cursor / chatgpt</strong> を返す（claude・cursor は automatic_install=true、chatgpt は manual）。別 HTML ページは無いので、このスロットでは Codex docs のみを独立ページにした。</p>
+<h2>体験</h2>
+<p>やったこと: docs ページ全文、<code>/llms.txt</code>、<code>npm view</code>、<code>npx -y @joggai/mcp-client --help</code> と <code>clients</code>。<code>https://api.jogg.ai/mcp</code> は GET/POST とも <strong>404</strong>。<code>https://api-services-intl.jogg.ai/mcp</code> は GET/POST とも <strong>401</strong>（<code>invalid_token</code> / authentication required）— 公開で叩けるが未認証。</p>
+<p>やらなかったこと: <code>install codex</code> の実行、OAuth ログイン、動画生成、アバター一覧の実呼び出し。生成ランは捏造しない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
