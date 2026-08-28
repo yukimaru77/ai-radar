@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ryan4yin gist — Flash-Next UD-IQ3_XXS の旗艦フラグ · レーダー 2026-08-29 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>ryan4yin gist — Flash-Next UD-IQ3_XXS の旗艦フラグ</h1>
+<p class="primary"><a href="https://gist.github.com/ryan4yin/48617bbddacc7067f10799770b7cc33f" target="_blank" rel="noopener">https://gist.github.com/ryan4yin/48617bbddacc7067f10799770b7cc33f</a></p>
+<div class="thread">
+<p>RTX 4090 24GB + Ultra 7 270K + 96GB DDR5、mainline <code>full-cuda13</code>。モデルは Unsloth UD-IQ3_XXS（~78GB）。推奨は <code>--fit on --fit-target 512</code>、<code>-b/-ub 6144</code>、KV q8_0、FA on、ctx 150k（mmproj 込み）。</p>
+<h2>速度</h2>
+<p>短入力 decode <strong>~30 t/s</strong>、140K 入力で prefill 648 / decode 17.9。バッチ 6144 近傍で prefill ~982・decode ~29 のスイートスポット、と表がある（X の「982 / 29」と一致）。MTP は draft で OOM、ngram spec はカウンタ0のまま、と pitfalls。</p>
+<h2>体験</h2>
+<p>Gist 本文を fetch した。Docker の <code>llama.cpp:full-cuda13</code> は回していない。自前ベンチなし。パラメータの写経用ページ。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
