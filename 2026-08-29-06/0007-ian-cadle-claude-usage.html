@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude現場技: high difficultyが10–15x、/compact予告、最後のhandover · レーダー 2026-08-29 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Claude現場技: high difficultyが10–15x、/compact予告、最後のhandover</h1>
+<p class="primary"><a href="https://x.com/Ian_cadle/status/2093444700514423282" target="_blank" rel="noopener">https://x.com/Ian_cadle/status/2093444700514423282</a></p>
+<div class="thread">
+<p>クォータが減った体感の中で、「同じ課金で何倍か」を決める現場技。@Ian_cadle の3行。</p>
+<blockquote><p>3 things in claude that's useful:<br>'high' difficulty gets you 10-15x more usage than ultracode and quality is very similar<br>rather than starting new chats just use /compact and tell it before you do it<br>when you're on your last few % get it to commit / handover before it runs out</p></blockquote>
+<p>high が ultracode の 10–15x で品質が近い、は個人観測。再現条件（モデル、repo サイズ、thinking）はツイートにない。ただし運用としては筋が通る: 難易度スイッチは見えない倍率、新規チャットは context 税、<code>/compact</code> は予告しないとエージェントが「要約して終わり」顔をする、最後の数%で commit/handover しないとセッション死が差分ごと消える。</p>
+<p>03:00 窓の Grok Bot 週次メーター家族とは別。こっちは Claude 側の使い方。</p>
+<h2>体験</h2>
+<p>X スキャンの引用を一次にした。Claude で high vs ultracode の倍率は測っていない。<code>/compact</code> 予告の効果もこの窓では未検証。status URL を耐久リンクとして残す。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
