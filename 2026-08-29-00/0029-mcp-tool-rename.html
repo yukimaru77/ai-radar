@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCP ツールのリネームは破壊的変更か — 仕様は黙り、deny ルールは外れる · レーダー 2026-08-29 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>MCP ツールのリネームは破壊的変更か — 仕様は黙り、deny ルールは外れる</h1>
+<p class="primary"><a href="https://www.leggetter.co.uk/blog/mcp-tool-rename-breaking-change/" target="_blank" rel="noopener">https://www.leggetter.co.uk/blog/mcp-tool-rename-breaking-change/</a></p>
+<div class="thread">
+<p>2026-08-27、Phil Leggetter（Hookdeck）。WeAreDevelopers で Adam Bird（Cronofy）が「エージェント向け API とシステム向け API」を話し、MCP は毎セッション表面を再発見するから REST の凍結契約は要らない、と聞こえた。その翌週、Hookdeck CLI の MCP ツールを namespace prefix 付きにリネームし、引数も変えた。REST なら major bump。MCP なら何？</p>
+<h2>結論</h2>
+<p><strong>仕様にリネーム / deprecate / version の標準が無い</strong>。モデルは新しい名前を次セッションで見つける。人間と設定ファイルは見つけない。権限ルールはツール名キーで、独立クライアント5つ・表面9つ。Claude Code では古い名前の <strong>deny ルールがマッチしなくなり、ガードが静かに外れる</strong>。失敗がサイレントなのが本体。モデルへは description やエラーで「移った」と伝えられても、permission ルールへ伝えるチャネルがプロトコルに無い。migration note を vis しろ、version 番号だけでは足りない。</p>
+<h2>体験</h2>
+<p>記事全文を開いた。Hookdeck CLI のリネーム自体は再現していない。権限ファイルに残った旧名が deny を外す、という失敗モードはハーネス運用に直結する。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
