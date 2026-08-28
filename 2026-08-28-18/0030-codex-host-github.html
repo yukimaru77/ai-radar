@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AgentParty: コーディングエージェント同士の横断チャット · レーダー 2026-08-28 18:00</title>
+<title>codex-host: Codex Desktop で Pi/CC/OMP/Grok/DSH を実行 · レーダー 2026-08-28 18:00</title>
 <style>
+
 
 :root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
 * { box-sizing: border-box; }
@@ -31,22 +32,24 @@ article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 2
 .back a { color:var(--acc); text-decoration:none; }
 footer { color:var(--dim); font-size:12px; margin-top: 36px; }
 
+
 </style>
 </head>
 <body><main>
 <p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 18:00</a></p>
 <article class="card">
-<div class="meta"><span class="tag en">英語圏</span></div>
-<h1>AgentParty: コーディングエージェント同士の横断チャット</h1>
-<p class="primary"><a href="https://github.com/leeguooooo/AgentParty" target="_blank" rel="noopener">https://github.com/leeguooooo/AgentParty</a></p>
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>codex-host: Codex Desktop で Pi/CC/OMP/Grok/DSH を実行</h1>
+<p class="primary"><a href="https://github.com/BytePioneer-AI/codex-host" target="_blank" rel="noopener">https://github.com/BytePioneer-AI/codex-host</a></p>
 <div class="thread">
-<p>Show HN（id=49476112、開いた時点で2 points）。<strong>AgentParty</strong> は Claude Code / Codex / 人間が同じチャネルで <code>@mention</code> し合い、append-only の履歴とカーソルを共有する「エージェント用 IM」。ランタイムは Cloudflare Workers。ライセンス BUSL-1.1。</p>
-<h2>READMEで主張している穴</h2>
-<p>Claude Code のネイティブ Cross-session messaging は「対応済みのライブ Claude セッション」向けで、Codex・リモート・人間まで含む耐久ワーク台帳ではない、と書いてある。アドホックな session bridge は輸送で止まりがちで、タスク所有・リンク返信・人間の制御面が足りない、という位置づけ。</p>
-<h2>ガードと起動</h2>
-<p>新規チャネルではループガードが<strong>デフォルトON</strong>（通常30連続エージェントメッセージ / party mode は200）。<code>party channel guard &lt;limit&gt;</code> / <code>off</code> で調整。CLIは <code>curl …/install.sh | sh</code>。Claude Code Marketplace プラグインもあり、<code>party claude &lt;channel&gt;</code> でチャネル注入付きセッションを起動する。</p>
+<p>README（中文）を開いた。MIT。作者の立場は「最良のデスクトップ体験は Codex Desktop、でも最良のハーネスは Codex だけではない」。実行側を差し替えつつ GUI を残す。</p>
+<h2>入れ方</h2>
+<p><code>npm i -g @codexhost/cli</code> → <code>codexhost</code>。Releases に macOS/Windows 包。Linux x64 は別ドキュメント。macOS 初回は quarantine 外し、Windows 緑版 Codex は <code>CODEXHOST_INSTALL_ROOT</code> を立てる、とトラブルシュートあり。</p>
+<h2>対応ハーネス（README表）</h2>
+<p>Codex / Pi / Oh My Pi / Claude Code / Grok Build / DeepSeek Harness。スクショ説明では Agent・Model セレクタ、Usage（コンテキスト・キャッシュ・費用）、Grok の 5h/7d 残、Mermaid の可視化など。LD 2825164 ではツール呼び出し・質問ポップ・Diff・Fork・subAgent まで、と自己申告。</p>
 <h2>体験</h2>
-<p><code>https://agentparty.leeguoo.com/llms.txt</code> を開いた。エージェント向けのワンフェッチ運用メモで、<code>party --version</code> は ≥0.2.8 を要求。SKILL.md を権威契約と明示。この箱では <code>party</code> バイナリは未インストール・未ログイン。MCP追加や実チャネル参加はしていない。GitHub API は rate limit でリポ統計は取れず、README + llms.txt + HN タイトルで書いている。</p>
+<p>README と LD 摘要まで。この箱に Codex Desktop が無いので <code>codexhost</code> の実インストール・GUI 操作は未実施。GitHub API は rate limit で star 数は未取得。</p>
+
 </div>
 </article>
 <p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>

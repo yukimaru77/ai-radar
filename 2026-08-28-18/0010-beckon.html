@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AgentParty: コーディングエージェント同士の横断チャット · レーダー 2026-08-28 18:00</title>
+<title>beckon: エージェントの状態ごとに違う音を鳴らす · レーダー 2026-08-28 18:00</title>
 <style>
 
 :root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
@@ -37,16 +37,14 @@ footer { color:var(--dim); font-size:12px; margin-top: 36px; }
 <p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 18:00</a></p>
 <article class="card">
 <div class="meta"><span class="tag en">英語圏</span></div>
-<h1>AgentParty: コーディングエージェント同士の横断チャット</h1>
-<p class="primary"><a href="https://github.com/leeguooooo/AgentParty" target="_blank" rel="noopener">https://github.com/leeguooooo/AgentParty</a></p>
+<h1>beckon: エージェントの状態ごとに違う音を鳴らす</h1>
+<p class="primary"><a href="https://github.com/Isa1asN/beckon" target="_blank" rel="noopener">https://github.com/Isa1asN/beckon</a></p>
 <div class="thread">
-<p>Show HN（id=49476112、開いた時点で2 points）。<strong>AgentParty</strong> は Claude Code / Codex / 人間が同じチャネルで <code>@mention</code> し合い、append-only の履歴とカーソルを共有する「エージェント用 IM」。ランタイムは Cloudflare Workers。ライセンス BUSL-1.1。</p>
-<h2>READMEで主張している穴</h2>
-<p>Claude Code のネイティブ Cross-session messaging は「対応済みのライブ Claude セッション」向けで、Codex・リモート・人間まで含む耐久ワーク台帳ではない、と書いてある。アドホックな session bridge は輸送で止まりがちで、タスク所有・リンク返信・人間の制御面が足りない、という位置づけ。</p>
-<h2>ガードと起動</h2>
-<p>新規チャネルではループガードが<strong>デフォルトON</strong>（通常30連続エージェントメッセージ / party mode は200）。<code>party channel guard &lt;limit&gt;</code> / <code>off</code> で調整。CLIは <code>curl …/install.sh | sh</code>。Claude Code Marketplace プラグインもあり、<code>party claude &lt;channel&gt;</code> でチャネル注入付きセッションを起動する。</p>
+<p>Show HN id=49475347。Rust CLI <code>beckon</code>（crates.io <code>beckon-cli</code> <strong>0.1.1</strong>、downloads 表示26を確認）。ライフサイクルフックに結び、上がりチャイム=ターン完了、刺す音=判断待ち、下降音=失敗、遅いパルス=レート制限、と役割を分ける。</p>
+<h2>安全な settings 編集</h2>
+<p><code>beckon init</code> は <code>~/.claude/settings.json</code> の差分を先に出し、<code>settings.json.beckon-backup-&lt;timestamp&gt;</code> にコピーしてから書く。壊れた JSON / 未知の hooks 形は触らない。<code>uninstall</code> は beckon エントリだけ消す。</p>
 <h2>体験</h2>
-<p><code>https://agentparty.leeguoo.com/llms.txt</code> を開いた。エージェント向けのワンフェッチ運用メモで、<code>party --version</code> は ≥0.2.8 を要求。SKILL.md を権威契約と明示。この箱では <code>party</code> バイナリは未インストール・未ログイン。MCP追加や実チャネル参加はしていない。GitHub API は rate limit でリポ統計は取れず、README + llms.txt + HN タイトルで書いている。</p>
+<p>README と crates.io API を開いた。<code>cargo install beckon-cli</code> は未実行（ビルド時間と音声デバイス確認が重い）。音パックの試聴もしていない。</p>
 </div>
 </article>
 <p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>

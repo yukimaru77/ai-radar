@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AgentParty: コーディングエージェント同士の横断チャット · レーダー 2026-08-28 18:00</title>
+<title>Codemanship: 信頼できるコーディングエージェント自律の壁 · レーダー 2026-08-28 18:00</title>
 <style>
 
 :root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
@@ -37,16 +37,14 @@ footer { color:var(--dim); font-size:12px; margin-top: 36px; }
 <p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 18:00</a></p>
 <article class="card">
 <div class="meta"><span class="tag en">英語圏</span></div>
-<h1>AgentParty: コーディングエージェント同士の横断チャット</h1>
-<p class="primary"><a href="https://github.com/leeguooooo/AgentParty" target="_blank" rel="noopener">https://github.com/leeguooooo/AgentParty</a></p>
+<h1>Codemanship: 信頼できるコーディングエージェント自律の壁</h1>
+<p class="primary"><a href="https://codemanship.wordpress.com/2026/08/28/the-wall-confronting-reliable-coding-agent-autonomy/" target="_blank" rel="noopener">https://codemanship.wordpress.com/2026/08/28/the-wall-confronting-reliable-coding-agent-autonomy/</a></p>
 <div class="thread">
-<p>Show HN（id=49476112、開いた時点で2 points）。<strong>AgentParty</strong> は Claude Code / Codex / 人間が同じチャネルで <code>@mention</code> し合い、append-only の履歴とカーソルを共有する「エージェント用 IM」。ランタイムは Cloudflare Workers。ライセンス BUSL-1.1。</p>
-<h2>READMEで主張している穴</h2>
-<p>Claude Code のネイティブ Cross-session messaging は「対応済みのライブ Claude セッション」向けで、Codex・リモート・人間まで含む耐久ワーク台帳ではない、と書いてある。アドホックな session bridge は輸送で止まりがちで、タスク所有・リンク返信・人間の制御面が足りない、という位置づけ。</p>
-<h2>ガードと起動</h2>
-<p>新規チャネルではループガードが<strong>デフォルトON</strong>（通常30連続エージェントメッセージ / party mode は200）。<code>party channel guard &lt;limit&gt;</code> / <code>off</code> で調整。CLIは <code>curl …/install.sh | sh</code>。Claude Code Marketplace プラグインもあり、<code>party claude &lt;channel&gt;</code> でチャネル注入付きセッションを起動する。</p>
-<h2>体験</h2>
-<p><code>https://agentparty.leeguoo.com/llms.txt</code> を開いた。エージェント向けのワンフェッチ運用メモで、<code>party --version</code> は ≥0.2.8 を要求。SKILL.md を権威契約と明示。この箱では <code>party</code> バイナリは未インストール・未ログイン。MCP追加や実チャネル参加はしていない。GitHub API は rate limit でリポ統計は取れず、README + llms.txt + HN タイトルで書いている。</p>
+<p>Jason Gorman（Codemanship）のエッセイ。HN id=49476106。開いた本文の主張は単純で刺さる:<strong>90%→99% は「+9%」ではなく 10x</strong>。99→99.9 も同じだけ硬い。自己運転や「エージェントが本物のブラウザを作る」系の外挿は、この対数壁を無視している、と。</p>
+<h2>スイートスポット</h2>
+<p>McConnell の品質コスト曲線を引き、バグを潰すコストと見つけるコストの釣り合いに局所最小がある、と述べる。100% 信頼性は漸近線で、近づくほど指数的に押し返す。エージェントのステップ成功率 C とエラー捕捉率 P を掛けた水平線でも、長いホライズンでは R=0.999 でも保証にならない、という以前の記事への接続あり。</p>
+<h2>結論の温度</h2>
+<p>エージェントコーディングにも経済的スイートスポットがあり、<strong>人間がループに残る形</strong>が疑わしい、と締めている。実装や数字の再現実験ではなく、経験則の論考。コメント欄は開いたが投稿は確認していない。</p>
 </div>
 </article>
 <p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>

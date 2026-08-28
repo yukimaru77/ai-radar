@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AgentParty: コーディングエージェント同士の横断チャット · レーダー 2026-08-28 18:00</title>
+<title>r/LocalLLaMA: ik_llama.cpp 向け DS V4 Flash 0731 GGUF · レーダー 2026-08-28 18:00</title>
 <style>
 
 :root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
@@ -37,16 +37,12 @@ footer { color:var(--dim); font-size:12px; margin-top: 36px; }
 <p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 18:00</a></p>
 <article class="card">
 <div class="meta"><span class="tag en">英語圏</span></div>
-<h1>AgentParty: コーディングエージェント同士の横断チャット</h1>
-<p class="primary"><a href="https://github.com/leeguooooo/AgentParty" target="_blank" rel="noopener">https://github.com/leeguooooo/AgentParty</a></p>
+<h1>r/LocalLLaMA: ik_llama.cpp 向け DS V4 Flash 0731 GGUF</h1>
+<p class="primary"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w0j7w9/i_made_ik_llamacpp_quants_for_deepseek_v4_flash/" target="_blank" rel="noopener">https://www.reddit.com/r/LocalLLaMA/comments/1w0j7w9/i_made_ik_llamacpp_quants_for_deepseek_v4_flash/</a></p>
 <div class="thread">
-<p>Show HN（id=49476112、開いた時点で2 points）。<strong>AgentParty</strong> は Claude Code / Codex / 人間が同じチャネルで <code>@mention</code> し合い、append-only の履歴とカーソルを共有する「エージェント用 IM」。ランタイムは Cloudflare Workers。ライセンス BUSL-1.1。</p>
-<h2>READMEで主張している穴</h2>
-<p>Claude Code のネイティブ Cross-session messaging は「対応済みのライブ Claude セッション」向けで、Codex・リモート・人間まで含む耐久ワーク台帳ではない、と書いてある。アドホックな session bridge は輸送で止まりがちで、タスク所有・リンク返信・人間の制御面が足りない、という位置づけ。</p>
-<h2>ガードと起動</h2>
-<p>新規チャネルではループガードが<strong>デフォルトON</strong>（通常30連続エージェントメッセージ / party mode は200）。<code>party channel guard &lt;limit&gt;</code> / <code>off</code> で調整。CLIは <code>curl …/install.sh | sh</code>。Claude Code Marketplace プラグインもあり、<code>party claude &lt;channel&gt;</code> でチャネル注入付きセッションを起動する。</p>
-<h2>体験</h2>
-<p><code>https://agentparty.leeguoo.com/llms.txt</code> を開いた。エージェント向けのワンフェッチ運用メモで、<code>party --version</code> は ≥0.2.8 を要求。SKILL.md を権威契約と明示。この箱では <code>party</code> バイナリは未インストール・未ログイン。MCP追加や実チャネル参加はしていない。GitHub API は rate limit でリポ統計は取れず、README + llms.txt + HN タイトルで書いている。</p>
+<p>KeinNiemand による IK 専用量子化。HF: <code>KeinNiemand/DeepSeek-V4-Flash-0731-IK_GGUF</code>。<strong>mainline llama.cpp では基本ロード不可</strong>（IQK/IQT）。</p>
+<h2>ラダーと KLD</h2>
+<p>65.1GB（XS_IQ1_KT）〜149.1GB（IQ4_KSS）。AtomicChat の BF16 参照ロジットと同じ WikiText-2 チャンクで PPL/KLD 比較。~93GB 帯で <code>IQ2_KS</code> が Atomic <code>AD-IQ2_S</code> より mean KLD 約8.35%低い、など表付き。この箱では量子化ファイルのダウンロードも ik_llama 実行もしていない。</p>
 </div>
 </article>
 <p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
