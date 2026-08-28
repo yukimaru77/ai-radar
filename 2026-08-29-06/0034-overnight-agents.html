@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>overnight agents on OpenCode（ask→deny、SKILL.md load≠followed） · レーダー 2026-08-29 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>overnight agents on OpenCode（ask→deny、SKILL.md load≠followed）</h1>
+<p class="primary"><a href="https://mouse.dev/blog/running-code-agents-overnight/" target="_blank" rel="noopener">https://mouse.dev/blog/running-code-agents-overnight/</a></p>
+<div class="thread">
+<p>Mouse（Pete）の実装メモ。buzz の「always on」ではなく、夜回すための7条件。基盤は OpenCode（<code>@opencode-ai/sdk</code>）。</p>
+<h2>条件</h2>
+<p>1) ユーザ入力を潰す。<code>ask</code> を自動で <code>deny</code> し risk flag。<code>ask_question</code> 超過は kill。開始前に <code>nightShiftReadiness(objective)</code> をローカルと API の両方で（質問、短すぎ、未決計画は reject）。2) 検証は worker の context の外。3) 思考・ナレーションは evidence にしない。ledger の <code>admissible</code> だけ。4) issue / TODO / README は untrusted。隔離: 専用 sandbox+branch、git token は turn ごと、egress default-deny。5) 並列の前に予算を reserve。10エージェントが同じ残高を見て全員スタート、を防ぐ。6) controller は DB から resume。任意時点で kill して別プロセス再開できないなら overnight 未達。sandbox は Fly Sprites。7) merge / push / PR はしない。<code>no-auto-pr-overnight</code> の CI lint。</p>
+<h2>SKILL.md では足りない</h2>
+<p>夜は「モデルが skill を選ばない」「load ≠ followed」「手順が起きたか検証できない」。pstack（Lauren Tan）を参照し、relay が Inject / Copy / Grade の3点で付ける。House Rules 10本。<code>try-dont-ask</code> と <code>stop-at-merge</code> が夜向け。eval は未完、経験則と明記。</p>
+<h2>体験</h2>
+<p>ブログを開いた（scan-06j/pages/overnight.html にもキャッシュあり）。Mouse は使っていない。OpenCode を overnight 設定にしていない。ask→deny は未再現。ここまで触った／ここは触れなかった。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

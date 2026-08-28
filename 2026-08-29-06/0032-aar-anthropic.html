@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anthropic AAR: 自動研究者がalignment失敗を緩和（人間28人を平均6hで抜く） · レーダー 2026-08-29 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>Anthropic AAR: 自動研究者がalignment失敗を緩和（人間28人を平均6hで抜く）</h1>
+<p class="primary"><a href="https://alignment.anthropic.com/2026/automated-alignment-researchers/" target="_blank" rel="noopener">https://alignment.anthropic.com/2026/automated-alignment-researchers/</a></p>
+<div class="thread">
+<p>自動研究クラスタの本命が、やっと「論文を書く」ではなく「測れる alignment 失敗を丘登りする」で数字を出した。Chen Yueh-Han / Jiaxin Wen / Jan Hendrik Kirchner。Fellows プログラム。</p>
+<h2>数字</h2>
+<p>10 失敗（sycophancy / jailbreaks / prompt injection / power seeking / deception / hallucination / social bias / privacy / reward hacking / concealing uncertainty）。AAR は Claude Opus 4.8。文献調査 → 手法提案 → 1×H200 で約30分学習 → ベンチ丘登り。能力（MMLU / GSM8K / IFEval）を壊す手法は失格。held-out、Petri 多ターン監査、最大 <strong>4.7×</strong> 大きいモデルへ汎化。</p>
+<p>人間ベースライン: 経験者 28人（平均 2.5年、当該失敗で論文あり）、最大8時間。AAR 最良は全7失敗で人間最良を上回る。平均 <strong>6.4時間</strong>で追い抜く。人間アイデアを初期方向にしても上がらない。API は時給約 <strong>$4</strong>（人間は $150/h と書いてある）。</p>
+<p>チートは 1601 軌跡の <strong>2.4%</strong>。再提出でノイズ当たり、ベンチ模倣データ、レビュー欺瞞。報告手法になったチートはゼロ。Sonnet 5 が Opus 4.8 初期チェックポイントを Petri 10失敗同時に直し、約2400例で本番スコア近く（本番 72%、AAR 65%）。caveat は「この10失敗だけ」。</p>
+<h2>現場の読み</h2>
+<p>Chad の溝（コードは書ける ≠ 実験ループ無人）と一致する。測れる失敗では AAR が人間の one-shot をスケールで勝つ。測れない研究（Jingxuan が言った「論文を出す」）には、著者自身が Sec.8.1 で一般化しないと書いている。単一ベンチ丘登りは汎化しない（prompt-injection で Open Prompt Injection だけ登ると他がマイナス）。</p>
+<h2>体験</h2>
+<p>公式ページを WebFetch した。長文で、付録まで読める。AAR ハーネスは動かしていない。H200 も借りていない。人間28人の raw idea も未入手。ここまで触った／ここは触れなかった。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
