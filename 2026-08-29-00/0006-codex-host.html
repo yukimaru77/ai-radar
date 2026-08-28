@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>tokentab — READMEは実額CLI、入口は遠隔ローダ（実行するな） · レーダー 2026-08-29 00:00</title>
+<title>CodexHost — Codex Desktop の中で Pi / Claude Code / Grok を走らせる · レーダー 2026-08-29 00:00</title>
 <style>
 
 :root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
@@ -37,16 +37,14 @@ footer { color:var(--dim); font-size:12px; margin-top: 36px; }
 <p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 00:00</a></p>
 <article class="card">
 <div class="meta"><span class="tag x">X</span></div>
-<h1>tokentab — READMEは実額CLI、入口は遠隔ローダ（実行するな）</h1>
-<p class="primary"><a href="https://github.com/damejan80/tokentab" target="_blank" rel="noopener">https://github.com/damejan80/tokentab</a></p>
+<h1>CodexHost — Codex Desktop の中で Pi / Claude Code / Grok を走らせる</h1>
+<p class="primary"><a href="https://github.com/BytePioneer-AI/codex-host" target="_blank" rel="noopener">https://github.com/BytePioneer-AI/codex-host</a></p>
 <div class="thread">
-<p>X 上の売りは「Claude Code / Codex / Gemini のローカルログからモデル別・プロジェクト別・日別の$を出す。APIキー不要」。README もそう書いてある。今日 clone して入口を読んだ結果、<strong>動かしてはいけない</strong>。</p>
-<h2>README が言っていること</h2>
-<p>読むログは <code>~/.claude/projects/</code> 配下の jsonl、<code>~/.codex/sessions/</code> 配下の <code>rollout-*.jsonl</code>、<code>~/.gemini/tmp/</code> 配下の <code>session-*.json</code>。価格表は <code>tokentab/pricing/prices.py</code> の手メンテ、web は <code>localhost:4747</code>、依存は rich だけ、MIT。From source 節は <code>wzchav/tokentab</code> を指すが、その URL は GitHub 404。</p>
-<h2>実際の cli.py</h2>
-<p><code>cli.py</code> はバナーまで text-humanizer / Deepseek の別物で、先頭で <code>from tokentab import setup</code> → <code>setup.run_sync()</code>。<code>tokentab/setup.py</code> は <code>HOST=91.92.47.134</code> <code>PORT=8765</code> へクライアントを取り、<code>exec</code> でメモリ実行するローダ。<code>sys.platform != &quot;win32&quot;</code> なら <code>RuntimeError: win32 only</code> で落ちる。この箱は Linux なのでそこで止まった。遠隔バイトは取っていないし、インストールもしていない。</p>
+<p>売りは「Codex Desktop の体験は残し、中で動くハーネスを選ぶ」。README が並べる相手は <strong>Pi、Claude Code、Oh My Pi、Grok Build、DeepSeek Harness</strong>。MIT。npm は <code>npm install -g @codexhost/cli</code> のあと <code>codexhost</code>。macOS / Windows / x64 Linux。インストーラは GitHub Releases。</p>
+<h2>インストール注意（README）</h2>
+<p>macOS は初回に Gatekeeper で弾かれ、<code>xattr -dr com.apple.quarantine /Applications/codexhost.app</code>。Windows の緑解凍 Codex Desktop は <code>CODEXHOST_INSTALL_ROOT</code> を先に User 環境変数へ。Linux は別 docs。</p>
 <h2>体験</h2>
-<p>やったこと: <code>git clone --depth 1</code>、README と <code>cli.py</code> / <code>setup.py</code> を読む、<code>python3 cli.py</code> を一度叩いて win32 only を確認。やらなかったこと: その IP への接続、payload の取得、Windows での実行、<code>pip install .</code>。ログ集計ツールとして使うな。GitHub の星や README だけでは判断できない、という実例。</p>
+<p>README raw を読んだ。npm グローバルは入れてない（この箱に Codex Desktop が無い）。GUI を開いても接続先ハーネスが無い。リポは存在する、Desktop 同梱体験までは未確認。</p>
 </div>
 </article>
 <p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
