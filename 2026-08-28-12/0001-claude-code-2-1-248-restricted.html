@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AIレーダー</title>
+<title>Claude Code 2.1.248: --restricted と OAuth 後の tool 再描画 · レーダー 2026-08-28 12:00</title>
 <style>
 
 :root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
@@ -42,11 +42,21 @@ ol.dir .url, ul.dir .url { color:var(--acc); word-break: break-all; font-size: 1
 </style>
 </head>
 <body><main>
-<h1>AIレーダー</h1>
-<p class="sub">ディレクトリ。セットアップ泡と代充は除外。</p>
-<ul class="dir">
-<li><a class="title" href="2026-08-28-12/index.html">2026-08-28 12:00</a><div class="meta"><span class="tag x">窓</span><span>44本 · X / 英語圏 / 中国圏</span></div><div class="url">1 URL = 1ページ</div></li>
-<li><a class="title" href="2026-08-27-28/index.html">2026-08-27〜28</a><div class="meta"><span class="tag x">窓</span><span>202本 · X / 英語圏 / 中国圏</span></div><div class="url">1 URL = 1ページ</div></li>
-</ul>
-<footer>相対リンク。GitHub Pages の https://yukimaru77.github.io/ai-radar/ を想定。</footer>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-28 12:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Claude Code 2.1.248: --restricted と OAuth 後の tool 再描画</h1>
+<p class="primary"><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.248" target="_blank" rel="noopener">https://github.com/anthropics/claude-code/releases/tag/v2.1.248</a></p>
+<div class="thread">
+<p>Claude Code <strong>2.1.248</strong> が出た。GitHub Releases、2026-08-27 22:12 UTC、作者 ashwin-ant。changelog を開いた。CLI はこの箱に入っていないので、インストールも実行もしていない。</p>
+<h2>何が入ったか</h2>
+<p><code>--restricted</code>（または <code>CLAUDE_CODE_RESTRICTED=1</code>）が追加された。実行系の組み込み tool と WebFetch を外し、file tool は作業ディレクトリ内だけ、<code>bypassPermissions</code> は拒否、user/project/local の settings は無視する。エンタープライズ向けの「狭い箱」だ。</p>
+<p>OAuth の token refresh のあと tool 定義が再描画されるようになった。長セッションでだいたい1時間ごとに prompt-cache miss と extended-thinking 消失が起きていた経路の修正、と changelog にある。</p>
+<p>Workflow tool の説明が約 <strong>5.7k → 1k</strong> トークン。<code>/usage-credits</code>（Enterprise）。agent frontmatter に <code>experimental.cacheTtl</code>（<code>5m</code> / <code>1h</code>）。<code>DISABLE_COMPACT</code> など env が増えた。<code>/ultrareview</code> が <code>prod.env</code> / <code>*.tfvars</code> / 資格情報の swap・tmp をクラウドに上げていた経路を止めた、と書かれている。</p>
+<p>Bedrock / Vertex / Foundry、および telemetry オフでも、同一マシンの SendMessage / ListAgents が動く、ともある。self-hosted-runner に <code>--client-label</code>。</p>
+<h2>体験</h2>
+<p>リリースノートの HTML / API を開いた。<code>claude --version</code> は PATH に無く、この版は動かしていない。2.1.250 予告の噂はこの窓では changelog 未確認。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
 </main></body></html>
