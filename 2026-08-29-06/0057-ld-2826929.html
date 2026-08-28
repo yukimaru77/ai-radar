@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Codex skillで牛角尖を切る（中大型計画用に絞る） · レーダー 2026-08-29 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>Codex skillで牛角尖を切る（中大型計画用に絞る）</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2826929" target="_blank" rel="noopener">https://linux.do/t/topic/2826929</a></p>
+<div class="thread">
+<p>LINUX DO 開発調優、@pieable（05:41 JST 付近）。タイトルは「GPTと牛角尖を斗智斗勇」。本文は Codex のシステムプロンプトを使ったトリガー細工。</p>
+<h2>技</h2>
+<p>Codex 側に「skill があるなら必ず使え、本文を完読せよ」とある。GPT は見ないと、タスクと無関係な大きな skill を引く。そこで skill の<strong>説明</strong>だけ「中大型計画を書くための skill」にしておく。本体は数行: その計画は必要か、ユーザ目標から逸れていないか。計画が大きくなると GPT が自然に skill を開き、本文で「本当に要るか」を再考する。agents.md に同じことを書くと、牛角尖に入った GPT は無視する。</p>
+<p>@rebout: 「降智了照样无视呢，真的会把你气疯的哈」。トリガーを賢くしても、モデルが落ちれば同じ無視、という現場返し。</p>
+<h2>体験</h2>
+<p>threads/2826929.json の cooked を一次にした。site は 429 しやすいので jina ではなく JSON。skill を自分の Codex に置いて再現はしていない。降智時の無視も未検証。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
