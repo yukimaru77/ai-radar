@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenCode ソース分解 — while(true) と 2,757語のツール面 · レーダー 2026-08-29 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>OpenCode ソース分解 — while(true) と 2,757語のツール面</h1>
+<p class="primary"><a href="https://dheerajakula.dev/blog/opencode-source-code-deep-dive-agent-harness" target="_blank" rel="noopener">https://dheerajakula.dev/blog/opencode-source-code-deep-dive-agent-harness</a></p>
+<div class="thread">
+<p>ハーネス差で同じモデルが 52%→76% まで動く、という話の中身をファイル単位で読めるのがこの記事。Dheeraj Akula、2026-08-07、34分。対象は MIT / TypeScript の OpenCode（当時 v1.18.15）。リポはいま <code>anomalyco/opencode</code>、古い <code>sst/opencode</code> はリダイレクトが残る。今日の X で再流通した。</p>
+<h2>ループとツール面</h2>
+<p>セッションループは本当に <code>session/prompt.ts</code> の <code>while (true)</code>。ただし「モデルを呼ぶ」は各パスの最小部分で、SQLite から会話を再ロードし、キューに積まれた仕事を途中投入できる。ツールは 17本。説明文は合計 <strong>2,757語</strong>。Claude Code 相当は約 29,000語、と著者は置く。GPT系には <code>apply_patch</code> を渡し、<code>edit</code> / <code>write</code> を外す。毎 edit のあと LSP 診断を返す。</p>
+<h2>権限・undo・実験フラグ</h2>
+<p>権限エンジンはルール配列の上の約10行。context policy は定数7個。undo はプロジェクトの git ではなく、<code>--git-dir</code> を OpenCode のデータ、<code>--work-tree</code> をプロジェクトにした別 git。実験フラグで「ツールを1本ずつ叩かず、ツールAPIに対するプログラムを書かせる」Code mode がある。</p>
+<h2>体験</h2>
+<p>記事本文を開いた（約228KBのHTML）。OpenCode 本体のソースは今日は追っていない。数字は記事と今日の X 要約が一致する範囲だけ使った。v1.18.15 以降にファイルが動いている可能性は著者自身が冒頭で書いている。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
