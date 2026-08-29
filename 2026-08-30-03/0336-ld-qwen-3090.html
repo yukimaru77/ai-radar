@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>linux.do/2830014: 想部署qwen3.8 27b，大佬们推荐个版本，dell7920工作站，RTX3090 24G，内存128 · レーダー 2026-08-30 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>linux.do/2830014: 想部署qwen3.8 27b，大佬们推荐个版本，dell7920工作站，RTX3090 24G，内存128</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2830014" target="_blank" rel="noopener">https://linux.do/t/topic/2830014</a></p>
+<div class="thread">
+<p>@wcl2026。部署qwen3.8 27b on 3090。</p>
+<h2>声</h2>
+<p>@wcl2026「手头有dell7920工作站，RTX3090 24G，内存128，看主板还能插一个3090 供电口差一组8pin,电脑城说可以按个转接。电源是1400W,2种情况，都能部署哪个版本的qwen3.8 27b，自用用slgon，还是llama.cpp ,新手小白，请大佬们赐教」</p>
+<p>@laodo「llama.cpp 用来做基准测试就行；比如： llama-bench -m ./Qwen3.8-27B-Uncensored-Q4_K_M.gguf -p 512 -n 128 -t 8 -ngl 99 使用可以用ollama或者lm studio, anythingllm 等，有很多这种工具 这个配置流畅的跑Q4够了」</p>
+<p>@Jason_Smith「我Ubuntu 用 amd 7900xt 跑这个4bit的模型，输出45-50t/s，感觉相当惊艳，就是上下文，最多32k,只有20g显存，要是上下文能有256k就相当不错了」</p>
+<p>@wcl2026「是单卡吗， 用ollama下载其官网的qwn3.8不知道是不是27b，笔记本8G的也能下载而且一样流畅，感觉不像呀」</p>
+<p>@blaumeer「正好有和你差不多的配置，折腾过一阵 建议双卡，单24G显存上下文太捉襟见肘了 要发挥qwen3.8 27b的推理优势(同时也是缺点，思考太占输出token)，至少要128K上下文朝上 单卡可以llama.cpp用unsloth的UDQ4KM量化，128K上下文问题不大，MTP有原生的 双卡SGlang上AWQ-Marlin的W4A16 INT4量化,开满256K上下文 或者直接让AI Agent帮你配置就行了」</p>
+<p>@wcl2026「重装系统ubuntu吗还是wsl，我现在是windows」</p>
+<p>@wcl2026「佬哥太及时了，后者更强吗。。。值得折腾下是吗」</p>
+<p>@wcl2026「NAME ID SIZE MODIFIED qwen3.8:latest 22130167c4c2 17 GB 11 days ago 笔记本5060la 8G运行这个模型也很快，不知道这是啥版本，用工作站下载是不是一样的模型」</p>
+<h2>体験</h2>
+<p>KEEP と threads/ の引用を読んだ。コードや課金は実行していない。ここまで触った／ここは触れなかった。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
