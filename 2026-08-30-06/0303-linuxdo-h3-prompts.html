@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LINUX DO: MiniMax H3公式プロンプトを今夜探る（実験） · レーダー 2026-08-30 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>LINUX DO: MiniMax H3公式プロンプトを今夜探る（実験）</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2830319" target="_blank" rel="noopener">https://linux.do/t/topic/2830319</a></p>
+<div class="thread">
+<p>develop。huisenandong。自前 H3 聚合平台（首尾帧＋多参考）。客が官网 IR モデル経由の提示詞で生成したら、自分の何晩もかけたスキル合成より上、というショック実験。</p>
+<h2>スレの声（原文）</h2>
+<p>@huisenandong: 「自己搭建的这个h3聚合平台,因为gpu等的缘故,只能上首尾帧和多参考生视频;已经试运营7天了 (之前发链接搞测试,站长删我贴,所以本次就不发了) 今天早上,有个客户跟我讲 找到一个2分钱/秒的 站(意思想让我降价),我没同意,我让他去测; 结果 ,他倒是个小聪明, 他把提示词从官网的的ir模型过一遍 去生成, 我发现居然效果挺好 — 前段时间 熬了好几个大宿, 从网络 社区 去拿别人的提示词 套公式 各种改来改去,我自认为自己多参考产剧已经合适了,结果 和他生成的比较起来 真的差了! 于是索性今天不自己闭门造车,拿着自己的提示词和官网的提示词比较一下，出几条片子对比，就能知道问题在哪儿了! 先说几个须知: 1.h3的提示词 一定是英」</p>
+<p>@xiedian: 「官方不是给了标准提示词怎么写的指南，还放了官方的提示词skills在github上吗？」</p>
+<p>@LLMeme: 「猜你想找：MiniMax-H3/skills/h3-prompt-writing」</p>
+<p>@huisenandong: 「那我熬了几个大宿，我肯定知道啊; 不仅知道他的，还有其他的一些skill ,都拿了~ 这玩意儿吧，只能说做过了才知道，不见棺材不落泪; 归根结底就是把多个skill总结起来，汇总的我输出出来的镜头,跟那个朋友从官网输出出来的镜头，根本就不是一个量级的」</p>
+<p>@huisenandong: 「用过了 4天前就用了;一直在关注, 不然 我为什么也是英文格式,且跟他类似的提示词…」</p>
+<p>@xiedian: 「官方的ir提示词生成的效果会比使用官方skiis生成的效果更好吗？还是差不多？我还没试过ir的提示词，而且官方也明确不开源」</p>
+<p>@huisenandong: 「从人性的角度出发 ,我个人认为: 人家5毛钱一条的东西拿出来卖 ; 跟他放出来的skill 肯定是有区别的,而且 能一条提示词卖5毛,其实是很贵的; 所以 我的第一感觉是 官方出来的 会厉害些 (这个 我今天上午的时候 通过朋友 和我的提示词验证过了) 当前我正在试验… 后续我会更新帖子 关注」</p>
+<p>@xiedian: 「可以，佬有成果了我也看一看学习一下。我都是用本地的h3+按skiils生成的提示词生成。但肯定效果不如官方的」</p>
+<h2>所感</h2>
+<p>公式 skill（MiniMax-H3/skills/h3-prompt-writing）を知っていても、IR 経路の出力が別量級、という現場。闭门造车への戒め。</p>
+<h2>体験</h2>
+<p>threads/2830319.json 通読。H3 実生成は GPU なし。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
