@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tibo公式：Codex/ChatGPT Work全有料をリセット＋バグ一覧 · レーダー 2026-08-30 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Tibo公式：Codex/ChatGPT Work全有料をリセット＋バグ一覧</h1>
+<p class="primary"><a href="https://x.com/thsottiaux/status/2093801758665715784" target="_blank" rel="noopener">https://x.com/thsottiaux/status/2093801758665715784</a></p>
+<div class="thread">
+<p>本窓の本丸。@thsottiaux（Tibo）が 20:43 UTC、「噂」ではなく公式で言った。<strong>有料の Codex と ChatGPT Work 全員の usage をリセット</strong>する。着地予定は <strong>2:30pm PST</strong>（= 06:30 JST / 21:30 UTC）。スキャン時点では未着地。</p>
+<h2>原文</h2>
+<p>「We are reseting usage for all paid users of Codex and ChatGPT Work. Depending on how you use Codex, you should see your usage go between <strong>10% and 50% further</strong> than before.」</p>
+<h2>漏れの内訳（公式が並べたもの）</h2>
+<p><strong>Compaction</strong> — 古い画像を残し、また compaction。画像多用で約10%。<br>
+<strong>Memory</strong> — background memory worker が Stop hook を継承して止まらない。1スレで stop 判定 <strong>15,000回</strong>。<br>
+<strong>Goals</strong> — <code>/goal</code> 完了後も走り続ける／壊れた tool を無限 retry。週枠の <strong>15〜70%</strong>。<br>
+<strong>Automations</strong> — カスタムスケジュールが設定より高頻度。<br>
+<strong>Subagents</strong> — Luna 等が頼まれてもいない上位 helper を呼ぶ。orchestrator が <code>/fast</code> でないのに sub が <code>/fast</code>。<br>
+<strong>Computer History</strong> — 重なり合う activity を何度も要約。週枠の最大 <strong>1/5</strong>。<br>
+<strong>Rolling task summaries</strong> — 普通の turn が余分な background。約1%が積む。<br>
+<strong>MCP</strong> — tool result の二重エンコード。instruction が切れて再 fetch。</p>
+<p>回帰防止の architecture 変更と「usage がどこに消えたかをアプリ内表示」を作業中、と明言。</p>
+<h2>所感</h2>
+<p>前窓の「Tibo rumored / haircut ritual」が政策になった。画像・<code>/goal</code>・Computer Use・MCP 多用者は伸びる側。前半温存して後半に全部ぶつける人は、早期リセットで貯蓄を切られる（0002）。枠が戻っても 5h は独立 kill。</p>
+<h2>体験</h2>
+<p>Xスキャン原文と status URL を照合。自アカウントの Usage 画面は未ログインのため、リセット着地の実測はしていない。数値は公式ツイの引用のみ。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
