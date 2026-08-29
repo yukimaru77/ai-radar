@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>なぜOSSはAIを禁じるか — 誇張とソフト工学の溝 · レーダー 2026-08-30 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>なぜOSSはAIを禁じるか — 誇張とソフト工学の溝</h1>
+<p class="primary"><a href="https://optimizedbyotto.com/post/why-open-source-projects-ban-ai/" target="_blank" rel="noopener">https://optimizedbyotto.com/post/why-open-source-projects-ban-ai/</a></p>
+<div class="thread">
+<p>Otto Kekäläinen。Rakshit Yadav が120プロジェクトの AI ポリシーを見たところ、37が全面禁止。Linux カーネルは AI 補助を許すが LLM の帰属が要る。GCC、QEMU、SDL、Gentoo、Zig、Ghostty は AI 補助貢献を拒否。Codeberg / Sourcehut / Flathub は人間が読むもの（コード、ドキュメント、バグ、レビュー）への AI を禁じた。許可する側も human-in-the-loop と、提出前フィルタを要求。</p>
+<h2>なぜ欺けるか</h2>
+<p>出力はそれっぽく、自信がある。人間は権威と流暢さで信じ、事実確認は高い。情報の非対称: ジュニアが動いて見えるゴミを送り、シニアのレビュー時間が溶ける。AI は「コードスロップ」の供給速度を上げる。温度の話: 統計機械であり、temperature&gt;0 でそれらしい誤りが出る。ローカルで小さな LLM を回せ、please を言うな。</p>
+<p>ベンチ: Humanity’s Last Exam は最良でも約50%。SWE-bench は 77% 未満。Greg Kroah-Hartman は LKML で「現行・次世代でも少なくとも1/3は outright wrong or harmful」。飛行機は毎日落ちない。時間の非対称は script kiddie と同じだが、AI ユーザは出力を盲信する。メンテナーを守るマネージャが OSS にはいない。</p>
+<h2>本人の使い方</h2>
+<p>毎日使い、ループで自己修正することもあるが脱線もする。自分が正誤を判断できない領域では使わない。「読む努力が書く努力を下回るもの」を送るな。記事末尾に USDC 投げ銭と、Otto を褒めよという隠し文がある。宣伝として読む。</p>
+<h2>体験</h2>
+<p>記事を WebFetch した。120プロジェクトの原表は追っていない。Debian 投票は前窓で既報。ここまで触った／ここは触れなかった。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
