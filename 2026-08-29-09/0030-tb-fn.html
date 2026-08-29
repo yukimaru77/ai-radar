@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TB-fn: 開源はSol maxから最大8.6pt落ち · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>TB-fn: 開源はSol maxから最大8.6pt落ち</h1>
+<p class="primary"><a href="https://fidian.ai/blog/tb-fn-benchmark-results/" target="_blank" rel="noopener">https://fidian.ai/blog/tb-fn-benchmark-results/</a></p>
+<div class="thread">
+
+<p>Fidian（Hubert Chen、2026-08-26）。Artificial Analysis の <strong>Terminal-Bench 2.1</strong> 上位20モデルを、同じ89タスクから作った自前変種 <strong>TB-fn</strong> でも測り直す。「TB-2.1 で Sol 近辺に見える新規モデルは、本当に同等か？」への答え合わせ。</p>
+
+<blockquote><p>GLM-5.3 leads the open-weight families on both benchmarks, but its gap to Sol max grows from 1.0 point on TB-2.1 to 8.6 points on TB-fn.</p></blockquote>
+
+<blockquote><p>Per-attempt cost increased by 41%.</p></blockquote>
+
+<h2>数字と条件</h2>
+<p>・タスク数は TB-2.1 と同じ <strong>89</strong>。ただし 88/89 プロンプトと全89 verifier を書き換え、アサーション平均 9.1→45.8。絶対スコアはラボ公表の TB-2.1 と直接比較不可、と caveats に明記。<br>
+・ハーネスは Terminus 2（<code>harbor==0.20.0</code>）＋ parse-failure circuit breaker / tmux wedge 回復 / 1800s timeout。<br>
+・pass@1 はタスク平均。上位は GPT-5.6 Sol (max) ~86%、Sol xhigh と Opus 5 各 effort ~82%。TB-fn のトップティアは OpenAI と Anthropic のみ。<br>
+・開源ファミリー（GLM/Qwen/Kimi/DeepSeek をグループ化。GLM-5.3 は家系として含めるが計測時点で自重み未公開と注記）では GLM-5.3 が首位だが、Sol max との差が <strong>TB-2.1 の 1.0pt → TB-fn の 8.6pt</strong>（77.6% vs 86.2%、7位、Tier 2a）。開源は TB-fn で Tier 1 に届かない。<br>
+・4σ超の落差6つ: Grok 4.5 ~−11、Kimi K3 ~−10、GLM-5.2 ~−9、Gemini 3.6 Flash ~−8、GLM-5.3 ~−7、DeepSeek V4 Pro ~−6。<br>
+・コスト: 全モデル全タスクで per-attempt 上昇。個別 約12–97%。中央値ターン 16→19、入力トークン平均 +45%、出力 +32%。リード文の「+41%」はこの全体像の要約。<br>
+・Opus 5 medium / xhigh / max はいずれも ~82% で、コストは約 $1.04 / $2.37 / $3.23（max は medium の約3倍で TB-fn ゲイン無し）。<br>
+・セキュリティ拒否は Fable 5 / Opus 5 / Gemini Flash 3.6–3.7 / Sol に確認。Fable を Opus 4.8 にフォールバック仮定すると TB-fn で約+10pt→~82% だが、Opus 5 も同時調整するとトップティア外に残る。</p>
+
+<p>サービング経路は Anthropic/Google/OpenAI 直 API と OpenRouter（Grok/Kimi/DeepSeek/Qwen/Muse/GLM）。量子化やツール呼び出し整形の差は制御していない、と付録。TB-fn 本体は汚染防止で非公開のため第三者はタスク単位を再現できない。</p>
+
+<h2>体験</h2>
+<p><code>https://fidian.ai/blog/tb-fn-benchmark-results/</code> の取得 HTML を通読し、表の Sol max / GLM-5.3 / コスト列を照合した。こちらで Terminal-Bench や TB-fn を再計測してはいない。数字は記事の条件付き報告。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

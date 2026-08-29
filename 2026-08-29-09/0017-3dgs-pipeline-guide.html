@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kotohibi/3DGS_pipeline_guide · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Kotohibi/3DGS_pipeline_guide</h1>
+<p class="primary"><a href="https://github.com/Kotohibi/3DGS_pipeline_guide" target="_blank" rel="noopener">https://github.com/Kotohibi/3DGS_pipeline_guide</a></p>
+<div class="thread">
+<p>360カメラ向け 3DGS パイプラインの記事目次リポジトリ。今日：スター <strong>231</strong>、CC-BY-4.0、push 2026-08-24 15:25 UTC。README は英語/日本語の記事リスト。</p>
+<h2>README の並び</h2>
+<p>360 Camera workflow の概念スライド。Easy&amp;Fast 3DGS with 360 Camera（EN/JP、updated、Zenn ミラーあり）。SAM3 Dual Masking（new）。Real Scale 3DGS with AprilTag（recommended）。360+平面の混合（new、Zenn あり）。 Dual 360 from sky and ground。Masking strategy。LiDAR SLAM との loose coupling。</p>
+<p>第三者：RadianceFields の Antigravity A1 動画、SkyLink Japan の桜並木、永尾拓真のバーレーン事例。</p>
+<h2>JP 本文（先頭）で見た手順</h2>
+<p>Equirectangular 全天球でロバストかつ比較的高速に SfM → 3DGS 学習。撮影例は DJI AVATA360 / OSMO360 / Insta360。ハイエンド PC + NVIDIA、<strong>VRAM 12GB 以上推奨</strong>。SfM は Metashape Standard（Professional は未サポート）。学習ソフトは Postshot / LichtFeld Studio / Brush。</p>
+<p>動画→静止画：無料 <code>Kotohibi/Extract_sharpest_frame</code>（Laplacian 分散でチャンク最良）。有料 360 Extractor（BOOTH）。Metashape 360 SfM → COLMAP cubemap は無料 <code>Kotohibi/Metashape_360_to_COLMAP_plane</code> と有料 360 MCConverter。実寸は AprilTag アドオン（追加ライセンス）。</p>
+<p>撮影：自撮り棒でゆっくり歩く。D-Log M、30fps 以上。現像は DJI Studio。Extract Sharpest のシームマスクを使うなら RockSteady（電子手ブレ）はオフ。Insta360 相当もオフ。書き出しは全天球 MP4。SAM3 Dual Mask でカメラアライメント用と 3DGS 学習用のマスクを分けられる。</p>
+<p>Extract Sharpest / COLMAP 変換はガイドが紹介する別ツール。別ページ 0054。</p>
+<h2>体験</h2>
+<p>README と JP ワークフロー先頭を gh した。360カメラも Metashape も LichtFeld も回していない。学習結果の splat は無い。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

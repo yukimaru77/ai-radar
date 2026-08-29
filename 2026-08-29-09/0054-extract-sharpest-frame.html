@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kotohibi/Extract_sharpest_frame · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Kotohibi/Extract_sharpest_frame</h1>
+<p class="primary"><a href="https://github.com/Kotohibi/Extract_sharpest_frame" target="_blank" rel="noopener">https://github.com/Kotohibi/Extract_sharpest_frame</a></p>
+<div class="thread">
+<p>0017 の 360→3DGS ガイドが「動画から静止画を切る」無料ツールとして置く。今日：スター <strong>67</strong>、push 2026-08-24 12:38 UTC。</p>
+<h2>README</h2>
+<p>Python のみ。ffmpeg 実行ファイル不要。入口は <code>extract_sharpest_frame.py</code>（CLI）と <code>extract_sharpest_frame_gui.py</code>（日英切替 GUI）。OpenCV で読み、Laplacian 分散でシャープネス、チャンクごとに最良を JPEG/PNG。依存は opencv-python と tqdm。GUI は Tkinter。</p>
+<p><code>python extract_sharpest_frame.py --video /path/to/video.mp4 --chunk-size 30</code> で 30fps なら1秒間隔。ワーカー数指定、<code>_sharpness_metadata.csv</code> 再利用、<code>--analysis-only</code>。GUI に stop と既存 metadata の確認。</p>
+<p>Windows バイナリ＋GUI は BOOTH 有料。無料 Python に無いもの：YOLO 自動マスク（人・車）、マルチプロセス高速化、類似フレーム除外、カスタムマスク、動画レンジ、SAM3 テキストプロンプト、バッチ複数動画、OSMO360/AVATA360 の preset seam mask（V1.0.0, 2026-08-01）。ガイド本文の SAM3 Dual Mask はこちらの有料側。</p>
+<h2>体験</h2>
+<p>README を gh した。動画は切っていない。GUI も CLI も未実行。BOOTH バイナリは買っていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

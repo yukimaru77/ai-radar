@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>decebal/decebal-codex-skills · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>decebal/decebal-codex-skills</h1>
+<p class="primary"><a href="https://github.com/decebal/decebal-codex-skills" target="_blank" rel="noopener">https://github.com/decebal/decebal-codex-skills</a></p>
+<div class="thread">
+<p>今日開いた README の見出し行：<strong>55 Codex skills. 21 Rust gate crates. 15 incident-backed rules.</strong> スターは <strong>1</strong>。MIT。push 2026-08-28 22:35 UTC（翌 07:35 JST）。Claude 側の兄弟が <code>decebal-claude-skills</code>（0011）。</p>
+<blockquote><p>Prompts guide behavior. Compiled checks cover failures prose does not prevent: skipped tests, broken layer boundaries, missing attribution, stale contracts, unsafe hook commands, and gates that pass while scanning nothing.</p></blockquote>
+<h2>層</h2>
+<p>Skills 55（<code>skills/</code>）。今日 API で見た名前の一部：adapt, animate, app-store-optimization, arch, audit, blog-image, brainstorming, bun-development, codex-beads, codex-browser, codex-prd, codex-seo, skill-autoresearch, rust-quality, web-video … 55件。</p>
+<p>Chronis ワークフロー：<code>$codex-prd</code> → <code>$codex-beads</code> → <code>cn ready/claim/done</code>。ルール15本は instruction fragment であり、Codex の execution-policy <code>.rules</code> ではない。全部を反射で載せない。<code>render-agent-docs</code> で選んだセットを <code>AGENTS.md</code> に埋め込む。</p>
+<p>gates は <code>gates/rust/</code> の 21-crate workspace。このリポジトリ自身で CI が証明するのは：全21メンバーがコンパイル＋単体、skill/plugin メタデータ検証、<code>codex-guard</code> のバイナリ smoke、5つの config-driven gate を hostile fixture に、5スキル（blog-image / web-video / skill-autoresearch / codex-seo / app-store-optimization）の実行テスト。<strong>55全部に behavioral test があるとは書いていない</strong>。<code>gates.toml</code> の <code>apps/api</code> 等のパスはこのコレクションに存在せず、作例。</p>
+<p>Quick start は必要なスキルだけ <code>.agents/skills</code> へ copy。または <code>$skill-installer</code>。</p>
+<h2>体験</h2>
+<p>README と root、skills 一覧、gates ディレクトリを gh した。Rust workspace はビルドしていない。Codex にスキルは入れていない。スター1の新しいキット。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

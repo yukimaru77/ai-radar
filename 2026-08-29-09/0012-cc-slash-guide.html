@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code: /clear vs /compactが一番効く · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Claude Code: /clear vs /compactが一番効く</h1>
+<p class="primary"><a href="https://www.aigeek.biz/2026/08/29/claude-code-slash-commands-guide/" target="_blank" rel="noopener">https://www.aigeek.biz/2026/08/29/claude-code-slash-commands-guide/</a></p>
+<div class="thread">
+<p>@yokebeto が「毎日使う10個に絞る。/clear と /compact の差がいちばん効く」と指したガイド。2026-08-29 公開。ターミナル Claude Code の話。著者は aigeek 編集部（Claude が書いている、と本文が自己開示する）。</p>
+<h2>記事の実際の議論</h2>
+<p>コマンドは「お願いではない操作」の入口。<code>/</code> 一文字で候補。セッション＝起動から終了までのひとまとまり。<code>/help</code> が全一覧。全部覚えるな、困りごとから引け。</p>
+<p>まず10個を4ブロックに分けている。</p>
+<p><strong>重い・金が心配（4）</strong>：<code>/context</code> で現在地（公式：色つきマス目）。対処の前に打て。<code>/clear</code> は空コンテキストの新会話。消えるわけではない。<code>/resume</code> と <code>/rewind</code> から戻せる。名前付き <code>/clear ログイン修正</code> は resume 一覧に残る。著者 Claude の一人称：<code>/clear</code> された瞬間から前の話は参照できない。この記事自体が clear 直後のセッションで書かれ、引き継ぎファイルを読み直した。<code>/memory</code>（CLAUDE.md）とセット。順番は「残す決めごとをファイルへ → そのうえで /clear」。<code>/compact</code> は同じやり取りを続け、長い部分を要約に置換。後ろに指示（<code>/compact 実装の判断理由だけ残して</code>）。何が残るかは公式 What survives compaction。<code>/usage</code>（別名 <code>/cost</code>）は利用量と費用。</p>
+<p>FAQ の答えは短い。<strong>作業が終わっているなら /clear、同じ作業を続けるなら /compact</strong>。判断がつかなければ先に <code>/context</code>。</p>
+<p><strong>出し方を変える（3）</strong>：<code>/model</code> は次起動の既定にも保存される。セッションだけなら引数なしで一覧、行で <code>s</code>。<code>/effort</code> は起動オプションが low/medium/high/xhigh/max の5段（手元 2.1.243 の <code>claude --help</code>）、セッション中の <code>/effort</code> は auto / ultracode も。<code>/help</code>。</p>
+<p><strong>戻す（2）</strong>：<code>/resume</code> は一覧から。<code>claude -c</code> はそのフォルダの最新を一覧なしで続ける。<code>/rewind</code> はコードと会話をチェックポイントまで。Enter で戻る、<code>d</code> で説明、<code>s</code> で要約だけ、Esc で中止。git の前にこれを思え。</p>
+<p><strong>覚えさせる（1）</strong>：<code>/memory</code> で CLAUDE.md。</p>
+<p>慣れたら6つ：<code>/status</code> <code>/permissions</code> <code>/export</code> <code>/copy</code> <code>/doctor</code> <code>/mcp</code>。一覧に出ない2つ：<code>/rate-limit-options</code>、<code>/heapdump</code>。バージョンで増減。<code>/verify</code> は 2.1.215 より前は自己判断でも走った。自作コマンドはスキルに統合（<code>.claude/commands/deploy.md</code> も <code>.claude/skills/deploy/SKILL.md</code> も <code>/deploy</code>）。</p>
+<p>後編予告：<code>/btw</code> <code>/loop</code> <code>/branch</code> <code>/subtask</code>。出典は公式 Commands（2026-08-28 確認）と手元 2.1.243。編集メモ：<code>/help</code> は対話画面専用で自動実行できず取れなかった、と正直に書いている。下書きを別 Claude に反証させて3か所直した（clear は resume で戻せる、effort の数え分け、model の既定保存）。</p>
+<h2>体験</h2>
+<p>記事全文を読んだ。Claude Code 2.1.243 はこちらの箱に無く、<code>/clear</code> も <code>/compact</code> も打っていない。公式 Commands ページそのものはこのページでは開いていない。後編も未読。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

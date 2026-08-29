@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLM memory→program analysis（脆弱性調査の一人称） · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>LLM memory→program analysis（脆弱性調査の一人称）</h1>
+<p class="primary"><a href="https://pwning.systems/posts/llm-memory-program-analysis/" target="_blank" rel="noopener">https://pwning.systems/posts/llm-memory-program-analysis/</a></p>
+<div class="thread">
+
+<p>Jordy Zomer（pwning.systems、2026-08-28、「19 MIN READ」）。タイトルそのまま——<strong>I accidentally turned LLM memory into program analysis</strong>。脆弱性調査で LLM エージェントを何時間も回していると、確立したはずの事実を忘れ、棄却した仮説を蘇らせ、もう無効な観測の上に自信満々で推論を続ける。著者の一人称:</p>
+
+<blockquote><p>Obviously, telling an LLM that something is wrong does not necessarily mean that it will stop believing all of the things that depended on it :)</p></blockquote>
+
+<blockquote><p>During a vulnerability research sesh, I don’t just want the model to remember what we said. I want it to maintain what we currently know.</p></blockquote>
+
+<h2>ベクトル記憶への不満</h2>
+<p>既存の「会話や観測を埋め込んで関連を取る」はそこそこ動く。だが調査では、例えば:</p>
+<pre>attacker controls object_a
+object_a points to object_b
+object_b is a kernel object</pre>
+<p>から「攻撃者がカーネルオブジェクトを制御できる」と結論づけたあと、二時間後に LLDB で <code>object_a</code> が実は <code>object_b</code> を指していなかったと分かる。メモリには正しい観測と誤った観測が並び、検索結果の部分集合を LLM に渡して「どれがまだ有効か」を希望的に再判定させることになる。それが著者には<strong>プログラム解析</strong>に見えた——事実と規則、固定点、入力事実が変わったときの差分更新。</p>
+
+<blockquote><p>If an observation changes, I don’t want the model to reconstruct the entire investigation from a transcript and hopefully notice all of the consequences. I want the affected conclusions to become invalid automatically.</p></blockquote>
+
+<blockquote><p>And this is how I somehow ended up writing a Datalog engine for LLMs :)</p></blockquote>
+
+<h2>Lemmalog: 曖昧さと決定論の分割</h2>
+<p>LLM は自然言語・ソース・デバッガ出力の「曖昧な側」を担当し、構造化事実になったあとの帰結は Datalog が持つ。リトラクションが難しい例——<code>c</code> が <code>a</code> と <code>b</code> の二経路で導出されているとき、<code>a</code> だけ消しても <code>c</code> は残る——が脆弱性調査ではそのまま効く（別のプリミティブがまだ生きているなら exploitable は残る）。由来（provenance）を辿れるので「なぜそう信じているか」を聞け、根拠ゼロの断定を state から弾きやすい。</p>
+
+<p>事実は時間区間も持てる。<code>viable(primitive_a) [10:14, 12:37)</code> と <code>not_viable(...)</code> を並置せず、「今」と「なぜ昔そう思ったか」を分けて答える。著者の言い方:</p>
+
+<blockquote><p>Again, this is not really a language model problem. It is mostly a database problem.</p></blockquote>
+
+<p>ベクトル DB は「関連」は取れるが、「二時間後に反証され、五つ依存していた」ことを本質的には知らない。「memory」という言葉の下に、<strong>過去のどれが関連か</strong>と<strong>いま何が真か</strong>の二問題が隠れている、というのが論の芯。</p>
+
+<h2>ベンチとフロントエンド</h2>
+<p>LongMemEval / LoCoMo で測定。LoCoMo で Lemmalog <strong>0.533 ± 0.001 F1</strong>（PropMem 0.605、OpenClaw 0.557、Full Context 0.542 の次）。adversarial では Lemmalog 0.707 vs full context 0.509——偽前提の質問に「no」と答えられるのが構造化記憶の強み、と著者は喜ぶ。temporal は日付を Datalog シンボルの内部 id で比較していたバグ修正後 0.257→0.454。改善の大半はエンジンが賢くなったのではなく、抽出・エンティティ解決・検索（BM25+グラフ+埋め込み）のフロントエンド。</p>
+
+<blockquote><p>None of those required making the language model larger. They required maintaining better state around it.</p></blockquote>
+
+<p>トークン面: LongMemEval で full context ~104k / 問 vs Lemmalog ~2.7k（約38倍減）。抽出コストは一度きりで、永続エージェントでは差がターンとともに開く、と表で示す。推論カテゴリはまだ弱い（条件付き嗜好を無条件タプルに潰す問題）。望ましい形はベクトル OR 記号ではなく、演繹状態とエピソード記憶の併存。</p>
+
+<h2>結論の声</h2>
+<blockquote><p>I didn’t really want to give the LLM a better memory. I wanted it to stop forgetting why we believed things.</p></blockquote>
+
+<blockquote><p>But perhaps we don’t need a bigger context window every time an agent forgets something. Sometimes we can just maintain the state.</p></blockquote>
+
+<p>ソースは <code>https://github.com/JordyZomer/lemmalog</code>（別ページ 0060）。次の実験として「長い脆弱性調査で、死んだ仮説の蘇生と幻覚関係を止められるか」を本当に見たい、と締める。こちらはポストを通読した。Lemmalog 自体の実行や脆弱性調査の再現はしていない。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

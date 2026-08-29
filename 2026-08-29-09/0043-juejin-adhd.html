@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>掘金: i-have-adhd — 先に答え、毎ターン進捗 · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>掘金: i-have-adhd — 先に答え、毎ターン進捗</h1>
+<p class="primary"><a href="https://juejin.cn/post/7678975158596239369" target="_blank" rel="noopener">https://juejin.cn/post/7678975158596239369</a></p>
+<div class="thread">
+<p>掘金、JavaGuide。07:31 JST。タイトル「一个 SKILL.md 拿下 2.3 万 Star：让 Codex/Claude Code 少说废话、先给答案」。カテゴリ人工知能。記事時点 約 22.8K Star / 1.5K Fork、MIT。取得 JSON では view 55 / digg 4 / collect 2 / 本文 1873 字 / 読了 6 分。jina は Cloudflare。本文は <code>juejin-skill.json</code> の <code>mark_content</code>。</p>
+<p>フックは Codex が 401 を調べるとき、認証フロー・ミドルウェア・Token・Cookie を先に書いて、実行コマンドは最後の 1 行、という現場。</p>
+<blockquote><p>用 Coding Agent 改代码，最磨耐心的情况之一，就是它明明答对了，答案却藏在一堆废话里。</p>
+<p>你让 Codex 排查一个接口为什么返回 401，它可能先查认证流程，再分析中间件、Token 和 Cookie，顺手提醒你依赖版本也该升级了。全部看完之后，真正要执行的命令只有一条。</p></blockquote>
+<p>群で名前が面白くて開いた、が導入。プロジェクトは <code>ayghri/i-have-adhd</code>。診断でも治療でもなく、Agent の出力順だけ。</p>
+<blockquote><p>它给 Coding Agent 加了一套回答规则：第一行先放行动，多步骤任务编号，报错直接写位置和原因，每轮重新交代进度，结尾只留一个明确的下一步。</p></blockquote>
+<h2>SKILL.md は 1 ファイル、10 条を 4 組</h2>
+<p>記事の要約。</p>
+<ul>
+<li><strong>先行动</strong>：第一行先给答案或下一步；命令・パス・断片は説明の前。</li>
+<li><strong>说进度</strong>：复杂任务拆成编号步骤，每轮说明已经完成什么。</li>
+<li><strong>讲具体</strong>：时间用明确单位；报错写位置、原因、修复。</li>
+<li><strong>删干扰</strong>：列表不超过 5 项；不写客套开场、重复总结、无关支线。</li>
+</ul>
+<p>作者は <em>The Adult ADHD Tool Kit</em> を「松散参考」し、LLM が実行できる出力規則に落とした、と書く。ADHD の診断はしない。</p>
+<blockquote><p>它不会让 Agent 突然变聪明。它的目标是减少来回翻屏和追问“然后呢”的次数，让下一步行动更容易被看到。</p></blockquote>
+<h2>入れただけじゃ開かない</h2>
+<p>記事のインストール節が一番実務。</p>
+<p>Codex:</p>
+<pre><code>codex plugin marketplace add ayghri/i-have-adhd --ref main
+codex plugin add i-have-adhd@i-have-adhd
+codex plugin list</code></pre>
+<p>セッションで <code>$i-have-adhd</code>。記事の強調: <strong>安装插件后不会自动开启</strong>。常駐するなら公式の出力規則を <code>~/.codex/AGENTS.md</code> に足す。</p>
+<p>Claude Code:</p>
+<pre><code>claude plugin marketplace add ayghri/i-have-adhd
+claude plugin install i-have-adhd@i-have-adhd</code></pre>
+<p>呼びは <code>/i-have-adhd</code>。見えなければ <code>/reload-plugins</code>。常駐は <code>touch ~/.claude/.i-have-adhd-always</code>（SessionStart Hook）。切るのは <code>stop adhd mode</code> / <code>normal mode</code>、または flag 削除。</p>
+<blockquote><p>keyi先保留按需启用。排错、执行修改和推进长任务时打开；需要讨论方案、讲源码或审文章时，再决定要不要保留更完整的解释。</p></blockquote>
+<p>（原文のまま。たぶん「可以先」）。</p>
+<p>JavaGuide は「直接让 Codex 帮我安装并测试」と書き、スクショを 1 枚貼っている。こちらはそのスクショを再現していない。Pi / OpenCode / Qwen Code / Gemini CLI / Copilot / Zed / OMP も INSTALL.md に節がある、と記事は指す。別ツールではなく同じ Skill のインストール先。</p>
+<h2>体験</h2>
+<p>掘金 JSON を読んだ。記事の指示どおり Codex に入れても、呼び出しなしでは出力は変わらない、というのが本文の主張。こちらで <code>$i-have-adhd</code> を叩いてコーディングセッションを走らせてはいない。リポ実体は 0044。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

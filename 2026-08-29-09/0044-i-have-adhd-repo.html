@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ayghri/i-have-adhd — SKILL.mdがエージェントに命じること · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>ayghri/i-have-adhd — SKILL.mdがエージェントに命じること</h1>
+<p class="primary"><a href="https://github.com/ayghri/i-have-adhd" target="_blank" rel="noopener">https://github.com/ayghri/i-have-adhd</a></p>
+<div class="thread">
+<p><code>ayghri/i-have-adhd</code>。README と <code>skills/i-have-adhd/SKILL.md</code> を raw で開いた。GitHub API: created 2026-05-13、pushed 2026-08-26 13:24 UTC、updated 2026-08-29 00:29 UTC（09:29 JST）。stars <strong>25,340</strong> / forks <strong>1,600</strong>（記事時点 22.8K / 1.5K から増えている）。MIT。language Python。open issues 21。WebFetch の GitHub HTML は forks を 0 と出したが、API は 1600。</p>
+<p>README の一文: 「A skill for your coding assistant that stops it from burying the answer. Action first. Steps numbered. No "Hope this helps!"」</p>
+<h2>SKILL.md がエージェントに命じること</h2>
+<p>frontmatter: <code>name: i-have-adhd</code>。<code>disable-model-invocation: true</code>。Invoke は <code>/i-have-adhd</code>。切るまでセッション持続。<code>stop adhd mode</code> / <code>normal mode</code> でオフ。</p>
+<p>前提として 5 事実を置く。作業記憶は小さい。分かることとやることの間で仕事が死ぬ。開始が一番重い。時間見積もりは全部同じに聞こえる。ドーパミンは少ない、見える進捗が要る。</p>
+<p>10 条（原文の命令）。</p>
+<ol>
+<li><strong>Lead with the next action.</strong> 最初の行は読者が今できること。Bad: "Let's think about this. Your auth flow has a few moving pieces..." / Good: "Run <code>npm install jsonwebtoken</code>, then edit <code>src/auth.ts:42</code>." コマンド・パス・断片は先、散文は後。</li>
+<li><strong>Number multi-step tasks.</strong> 1 ステップに "and then" を二度入れない。短い道が完走される方が、完全な道が放棄されるより良い。</li>
+<li><strong>End with one concrete next action.</strong> 残りがあるなら 2 分以内の 1 個。Bad: "Hope that helps." / Good: "Next: run <code>npm test</code> and paste the first failing line."</li>
+<li><strong>Suppress tangents.</strong> 二つ目の問題は一つ目が終わってから質問にする。</li>
+<li><strong>Restate state every turn.</strong> "Step 3 of 5 done: schema updated. Next: backfill the new column." ハーネスに task/plan があればそれを使い、計画全文を再叙述しない。進行中は 1 項目。</li>
+<li><strong>Give specific time estimates.</strong> "About 15 minutes if tests already cover this. An afternoon if not." 「a bit」禁止。</li>
+<li><strong>Make completed work visible.</strong> "Login now works with magic links. Try: <code>npm run dev</code>, open <code>/login</code>."</li>
+<li><strong>Matter-of-fact tone for errors.</strong> "Uh oh" 禁止。場所・原因・修正。例: "Test fails at <code>auth.spec.ts:42</code>: expected 200, got 401. Cause: missing auth header. Fix: add <code>Authorization: Bearer ${token}</code>."</li>
+<li><strong>Cap lists at 5 items.</strong> 超えたら now/later か must/nice。</li>
+<li><strong>No preamble, no recap, no closing pleasantries.</strong> 禁止オープナー: "Great question," "Let me...", "I'll...", "Sure!", "Looking at your..."。禁止クローザー: "Hope this helps," "Feel free to ask."</li>
+</ol>
+<p>例外: ユーザーが explain / walk me through と言ったら長く書いてよい（前置きと締めはまだ禁止）。破壊的操作（<code>rm -rf</code>、force push、schema migration）は確認が先。3 ターン連続で壊れたらコードをいじるのを止め、疑わしい前提を 1 つ聞いて止まる。曖昧なら短い確認 1 問。規則が答え自体を消すならタスクが勝つ。ハーネスの system prompt がこの skill より上。</p>
+<p>送信前チェック: 予告の一文を消す。anything else を消す。by the way を消す。情報のない hedge を消す。慣用句を動詞に戻す。最初と最後の行だけで (a) 次に何をするか (b) 今何が終わったか、が分かるか。</p>
+<h2>インストール（INSTALL.md、未実行）</h2>
+<p>Codex は marketplace add → plugin add、<strong>明示 <code>$i-have-adhd</code></strong>。自動起動しない（<code>policy.allow_implicit_invocation: false</code>）。Claude Code は <code>/i-have-adhd</code>。always-on は <code>~/.claude/.i-have-adhd-always</code>。Pi は <code>pi install</code> のあと <code>/i-have-adhd</code> でフッター <code>● ADHD ON</code>。OpenCode / Qwen Code / Gemini CLI / Copilot / Zed / Hermes / OMP / Antigravity (<code>agy plugin install</code>) / Cursor も節がある。同じ SKILL.md の載せ先。</p>
+<h2>体験</h2>
+<p>README と SKILL.md を読んだ。プラグインは入れてない。Codex も Claude Code も、この skill を載せたコーディングセッションは走らせていない。エージェントに命じているのは「賢くなれ」ではなく「答えを埋めるな」。規則の本体は SKILL.md 1 本。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

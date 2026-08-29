@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PrimeIntellect-ai/prime-agent · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>PrimeIntellect-ai/prime-agent</h1>
+<p class="primary"><a href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank" rel="noopener">https://github.com/PrimeIntellect-ai/prime-agent</a></p>
+<div class="thread">
+<p>Prime Intellect の <strong>self-improving RLM harness</strong>。今日のメタ：スター <strong>18,957</strong>、MIT、push 2026-08-28 21:34 UTC（翌 06:34 JST）、更新 2026-08-29 00:18 UTC。README バッジに arXiv:2608.23552。</p>
+<h2>README の二本柱</h2>
+<p><strong>Recursive Language Model (RLM)</strong>：コンテキストを変数（prompt-as-a-variable）、再帰サブエージェントを関数（programmatic tool / sub-agent calling）。永続 REPL の中。</p>
+<p><strong>Continual Harness</strong>：補足プロンプト、メモリ、スキル説明、再利用サブエージェント仕様を耐久状態として持ち、<code>/refine</code> で小さな証拠付き更新。ベースの immutable system prompt は書き換えない。スナップショットで rollback。</p>
+<p>全部がプログラム：ファイル・シェル・ツール・サブエージェント・コンテキスト管理はコード経由。<code>rlm(...)</code> が子エージェント。スキルは import できる Python パッケージ。デーモンで端末を切っても動き、<code>prime-agent attach</code> で戻る。エージェント同士が直接メッセージ。</p>
+<p>インストール：<code>curl -fsSL https://app.primeintellect.ai/prime-agent/install.sh | sh</code>。macOS/Linux。初回 <code>/login</code>。警告：モデル生成の Python とプロジェクトコマンドはユーザー権限。worker/kernel はライフサイクル隔離であり、<strong>セキュリティサンドボックスではない</strong>。</p>
+<p>長時間向け：<code>/goal</code>、<code>/heartbeat</code>、<code>prime-agent schedule</code>、<code>/autonomous</code>（turn/token/time 予算と quality gate）。gate 通過は「その gate が検証したこと」だけで、上限到達は成功を意味しない。</p>
+<h2>models.json と今日のコミット</h2>
+<p>リポジトリ内に <code>models.json</code> は無い。ユーザー側は <code>~/.prime/agent/models.json</code>（0006）。直近コミットは REPL フレーム修復、dispatcher envelope、bash output sentinel、connection models を read 時に導出、ライブ provider カタログからモデルカタログ再生成。ARC-AGI 95.5% を新機能として書いていない。既出荷の数字は別ページのまま。</p>
+<h2>体験</h2>
+<p>README・root・直近12コミット・models.md・git tree を gh した。install.sh は流していない。TUI も <code>/refine</code> も未実行。95.5% の提出ログは見ていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

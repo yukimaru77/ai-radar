@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler</h1>
+<p class="primary"><a href="https://github.com/LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler" target="_blank" rel="noopener">https://github.com/LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler</a></p>
+<div class="thread">
+<p>0020 H3-Longvideos が任意依存として指す latent upscaler。今日：スター <strong>398</strong>、push 2026-08-28 06:10 UTC。説明文：H3 の 24ch latent をニューラル upscale。5B VAE の decode/encode 往復を避ける。</p>
+<h2>README が言うこと</h2>
+<p>低解像でサンプリング → このノードで latent を上げる → 目標解像で refine。bilinear/bicubic の ghost / double-image を避ける。LTX2.3 の latent upscaler に近い役割。<strong>時間は得て VRAM は得ない</strong>。refine は目標解像で走るのでピークメモリは直生成と同程度。</p>
+<p>2バリアント（カテゴリ <code>video/MinimaxH3</code>）：<strong>2D</strong> は ResBlock + Temporal 3D-Conv、空間だけ、scale 1.0–4.0。<strong>3D</strong> はフル 3D-conv。resize は multiplier / target dimensions / megapixels。grid 揃え（default 32）。</p>
+<p>2026-08-28 の News：<code>MMH3 Split Upscale</code> 3ノード（Temporal / Spatial Split Params + Split Upscale）。時間チャンクと空間タイル、seam denoise、二段 color match、triple temporal anchors。内蔵 upscale モデルは外し、外から pre-upscaled latent を受ける。08-26 は zero-copy load、chunk stride 24→32、上限 8192px / 16MP。ROCm オプションあり。</p>
+<p>0020 側の注意：チェーンの handoff は upscale 前の decode から取る。upscale 後フレームを次ショットに渡すとキャストがドリフトする。</p>
+<h2>体験</h2>
+<p>README を gh した。weights（bf16/fp16 ≈691MB）は入れておらず、ComfyUI ノードも未実行。速度比較は著者の主張。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

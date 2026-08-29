@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foundry実測: ハーネスがランタイムより効く · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Foundry実測: ハーネスがランタイムより効く</h1>
+<p class="primary"><a href="https://x.com/zaycruz__/status/2093453152183877694" target="_blank" rel="noopener">https://x.com/zaycruz__/status/2093453152183877694</a></p>
+<div class="thread">
+<p>ランタイム比較より、ツール境界を書いたハーネスが半分の tool call を削る、という n=10 の数字。</p>
+<blockquote><p>I built a Palantir Foundry agent harness and ran it on two agent runtimes — pi and prime agent — same architecture on both. … The harness mattered more than the runtime. — @zaycruz__</p></blockquote>
+<h2>三つの入口（ improvise させない）</h2>
+<p>Foundry 配送を一つの UI が端から端までやらないので、エージェントに3経路を渡し、ルーティングを文書化した。</p>
+<p><strong>Foundry MCP</strong> — 約80のプラットフォームツールをネイティブ化。fail-closed scope：選んだ ontology / projects / その中で発見した resource 以外はサーバに届く前に遮断。</p>
+<p><strong>pfoundry</strong> — 自作 Foundry CLI。MCP の確認済みギャップ：impact analysis、context selection、link-type enumeration。</p>
+<p><strong>公式 foundry CLI</strong> — SuperRepo ライフサイクル（manifest / validation / deploy）。</p>
+<p>変異は全部、隔離された revertible branch。8スキルで discovery → ontology → data pipelines / ontology apps → delivery。トレースは OTel → Langfuse（session/agent/tool）。tool I/O はエクスポート前に redact（field rules、pinned pattern、URL scrub）。redaction 変更は revision、commit ではない。夜間ジョブが当日トレースを再構成し、LLM 採点、secret/PII/canary スキャン、人間レビューキュー、通ったものだけ翌日の memory page。</p>
+<h2>同じモデル、10 scoped tasks</h2>
+<p><strong>pi + harness: 90% correct / 6.9 calls / 57s</strong></p>
+<p>prime + harness: 80% / 10.2 / 88s</p>
+<p>pi bare: 70% / 12.8 / 76s（1タスクは 41 calls / 300s timeout / 答えなし）</p>
+<p>prime bare: 40% / 22.2 / 130s</p>
+<p>裸でも Foundry には届くが、ほとんど狩っている。ハーネスは「知っているプラットフォーム」と「推測しているプラットフォーム」の差。著者自身が Small sample: n=10, one ontology, one model と書いている。次は multi-step chaining / SuperRepo / 他スタック、数字が本物になったら出す、と。</p>
+<h2>体験</h2>
+<p>ツイート全文を一次にした。Foundry / pfoundry / Langfuse は触っていない。n=10 は再現していない。pfoundry の公開 repo はこのツイートからは特定できなかった。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

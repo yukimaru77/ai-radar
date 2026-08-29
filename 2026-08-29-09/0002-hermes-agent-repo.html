@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NousResearch/hermes-agent · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>NousResearch/hermes-agent</h1>
+<p class="primary"><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent</a></p>
+<div class="thread">
+<p>Nous Research の自己改善エージェント。README の一文は <strong>The agent that grows with you</strong>。今日（2026-08-29 09:23 JST 前後に gh した時点）スターは <strong>237,746</strong>、ライセンス MIT、default <code>main</code>、最終 push は 2026-08-29 00:21 UTC（09:21 JST）。</p>
+<h2>README が売っているもの</h2>
+<p>内蔵ラーニングループ：経験からスキルを作り、使用中に改善し、知識を残せと自分を nudges し、過去会話を検索し、セッション横断でユーザーモデルを深める。モデルは Nous Portal / OpenRouter / OpenAI / 自前。切替は <code>hermes model</code>。ターミナルバックエンドは local / Docker / SSH / Singularity / Modal / Daytona / Vercel Sandbox の7つ。メッセは Telegram / Discord / Slack / WhatsApp / Signal / CLI。cron は自然言語。サブエージェントと RPC でパイプラインをゼロコンテキストコストに落とす、と書いてある。</p>
+<p>インストールは Linux/macOS/WSL2/Termux が <code>curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash</code>。Windows は PowerShell の <code>iex (irm …/install.ps1)</code>。ネイティブ Windows は <code>%LOCALAPPDATA%\hermes</code>、WSL/Linux は <code>~/.hermes</code>。Windows Defender が <code>uv.exe</code> をマルウェア扱いする false positive の節が長い。</p>
+<h2>今日のコミットで skill_manage / bot-profile</h2>
+<p>窓内の実装差分として見えるもの：</p>
+<p><code>72874b0</code>（08-28 19:15 UTC）<code>feat(skill_manage): operations[] is the call</code> — 原子バッチ。詳細は 0001。</p>
+<p><code>a73b14c</code>（08-28 20:06 UTC）<code>Merge pull request #96726 … bb/bot-mode-design-system</code>。公式 docs <code>website/docs/user-guide/bot-mode.md</code> は「A Bot is a profile」と明記。実体は <code>~/.hermes/profiles/&lt;name&gt;/</code> の隔離された config / memory / skills / creds。Bot Mode はデスクトップの UI で、デフォルト ON。CLI からは <code>hermes -p &lt;bot&gt; chat</code>、ルーチンは <code>hermes cron list</code> に出る。</p>
+<p><code>website/docs/user-guide/profiles.md</code>：プロファイルは別ホーム。同じプロファイルに2プロセスを向けてはいけない（メモリが互いを汚染する）。<code>hermes profile create coder</code> で <code>coder</code> コマンドが生える。クローンは <code>--clone</code>（config/skills/SOUL、メモリは空）と <code>--clone-all</code>（全部、ただし history/state.db は除外）。プロファイルはサンドボックスではない。local バックエンドではユーザーと同じ FS 権限。</p>
+<p>同日の他コミット：desktop の cwd/HUD 修正、a2a client tools を未設定なら無効（−561 tok/call）、patch の V4A を OpenAI 系にゲート、vision_analyze の経路逆転。install の Node 24.0–24.10 / uv ロック修正も混ざっている。</p>
+<h2>体験</h2>
+<p>gh で README・直近15コミット・profiles.md / bot-mode.md / skill_manager_tool.py を開いた。install.sh は流していない。Hermes CLI / Desktop / Bot Mode は起動していない。スター数と push 時刻は API の今日の値。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

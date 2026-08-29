@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dcbuilder831/MiniMax-H3-Longvideos · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Dcbuilder831/MiniMax-H3-Longvideos</h1>
+<p class="primary"><a href="https://huggingface.co/Dcbuilder831/MiniMax-H3-Longvideos" target="_blank" rel="noopener">https://huggingface.co/Dcbuilder831/MiniMax-H3-Longvideos</a></p>
+<div class="thread">
+<p>公式ではなく作者配布の ComfyUI カスタムノード。1プロンプトから最大約120秒の video+同期音声。H3 は1ショットずつなので、ビート分割→ショット長→前ショット最終フレームでチェーン→キャラ/衣装/小道具の一貫。</p>
+<blockquote><p>従来はLoRA専用のsigmaスケジュールがsamplerへ渡らず、最初の評価で停止。今回、外部sigma入力を追加して修正されています。最大約120秒は複数ショットを連結する方式。MiniMax公式ではなく作者配布の更新です。 — @C_of_Creativity</p></blockquote>
+<p>ツイートは PDD Acc（Parallel Decoding Distillation Acceleration）LoRA 対応。HF 本文は sigma 修正そのものより、auto_shift を消した理由を長く書く：4-step distill は ~0.80 noise から clean へ飛ぶ訓練で、shift を下げると LoRA が見たことのないノイズに落ち artifact する。turbo/lightx2v LoRA は metadata に schedule を持たない。</p>
+<h2>今日のカード</h2>
+<p>likes 0、downloads 0、pipeline text-to-video。siblings は README / REFERENCE.md / sampler.py / shot_length.py / overlay.py 等。lastModified 2026-08-27 07:28 UTC。ComfyUI 0.31+（テスト 0.33）。0.30 は audio shift が違う。依存は Pillow（overlay）。negative は空（CFG-free、cfg 1）。denoise 固定 1.0。</p>
+<p>prompt は段落＝ショット。最初の段落がアンカー（全ショットに乗る）。<code>plan_only</code> で分割と警告だけ先に見ろ、と。解像度は shape と megapixels を分離。1.00MP がネイティブ相当。120秒は連結であり、1ショット120秒ではない。</p>
+<p>紹介される別ツール：<code>LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler</code>（0055）、<code>ComfyUI-sol-attn</code>（0056）。REFERENCE.md は outdated と自己宣言（total_seconds が残っている、69フィールド中17が欠ける）。</p>
+<h2>体験</h2>
+<p>HF カード全文を読んだ。ComfyUI にノードは入れておらず、PDD Acc LoRA も sigma 修正も走らせていない。120秒動画は見ていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

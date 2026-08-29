@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hermes×Firecrawl Keyless日次レシピ · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Hermes×Firecrawl Keyless日次レシピ</h1>
+<p class="primary"><a href="https://x.com/wei_wang/status/2093493837461176375" target="_blank" rel="noopener">https://x.com/wei_wang/status/2093493837461176375</a></p>
+<div class="thread">
+<p>ハーネス側の「調べてまとめて回す」が、無料スクレイプ枠に配線された日。</p>
+<blockquote><p>Hermes 负责规划任务、保存记忆、定时执行和发送结果，Firecrawl 则补上实时搜索与网页读取。… 现在 Firecrawl 推出了 Keyless 模式，不用注册，不用申请 API Key，每月自动获得 1000 credits。 — @wei_wang</p></blockquote>
+<p>引用元 @ericciarla は Firecrawl 側の発表（窓外）：<code>npx -y firecrawl-cli@latest init --all --browser</code>。search 精度 94.7%（SimpleQA）、sub-3s scrape、no API key / no signup。配線手順は窓内。</p>
+<h2>書いてある手順</h2>
+<p>1. <code>hermes mcp add --url https://mcp.firecrawl.dev/v2/mcp firecrawl</code></p>
+<p>2. <code>hermes mcp test firecrawl</code> — ツール一覧が出れば成功。実行中なら <code>/reload-mcp</code>。</p>
+<p>例：過去24時間の Qwen3.8 更新を公式ソースで照合して中文ブリーフ。製品の公式・価格・changelog を読んで Obsidian に保存。Cron + Telegram + Memory で日次収集→原文確認→携帯へ。</p>
+<p>Keyless は枠とレート制限がある。個人研究・日常検索・軽量モニタ向け。<strong>社内ネット、有料ページ、機密は公共スクレイプに投げるな</strong>、と本人が書いている。キーやトークンはツイートに無い（載せるな）。</p>
+<h2>体験</h2>
+<p>ツイート全文を読んだ。Hermes に MCP は足していない。<code>hermes mcp test</code> も <code>/reload-mcp</code> も未実行。Firecrawl 本体のサイトと料金は 0005。credits は消費していない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

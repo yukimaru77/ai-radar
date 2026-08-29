@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qwen3.8-FN 2×DGX Spark 181 tok/s agg @512K · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>Qwen3.8-FN 2×DGX Spark 181 tok/s agg @512K</h1>
+<p class="primary"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1486l/" target="_blank" rel="noopener">https://www.reddit.com/r/LocalLLaMA/comments/1w1486l/</a></p>
+<div class="thread">
+
+<p>r/LocalLLaMA の <strong>StartupTim</strong>。2× DGX Spark 上の Qwen3.8-Flash-Next で、512K 文脈・複数エージェント共有時に aggregate 181 tok/s を出した、というレポート。こちらはベンチしていない——投稿の数字と条件をそのまま残す。</p>
+
+<blockquote><p>Today I hit 181 toks/s (aggregate) on Qwen3.8-Flash-Next on 2x DGX Sparks</p></blockquote>
+
+<blockquote><p>181 tok/s aggregate… Single-stream decode is 30–50 tok/s — the 181 is total throughput with ~9 concurrent agent sessions sharing the engine. I actually peaked to 195 while writing this.</p></blockquote>
+
+<h2>条件</h2>
+<p>・HW: 2× NVIDIA DGX Spark（GB10、各128GB unified、20-core ARM）。ConnectX-7 直結、NCCL over RDMA（RoCE 200Gb）、<strong>TP=2</strong>。<code>Using network IB</code> をログで確認せよ——TCP フォールバックは静かで速度半減、と警告。<br>
+・モデル: Qwen3.8-Flash-Next、RadixArk <strong>NVFP4</strong>（4-bit routed experts、FP8 n-gram table）。ハイブリッド注意（3/4 linear + 1/4 sparse full）、512-expert MoE、MTP speculative k=3（受理~40%）。ネイティブ 262K を YaRN 2.0 で <strong>512K</strong>（needle 487K で確認）。</p>
+
+<blockquote><p>We mmap it straight off NVMe instead of loading it: weights per node dropped <strong>65 → 41 GiB</strong></p></blockquote>
+
+<p>PLE（n-gram embedding）テーブルが 320M 行・FP8 で 47.7 GiB。トークンごとに触るのは 16 行（~2.5KB）なので NVMe に mmap。<code>madvise(MADV_RANDOM)</code> 前は 405K prefill がディスクから 603GB 読んだが、後は 19GB。64 gather threads。空いたメモリは KV へ——プール 2.89M tokens / 40.6 GiB pin。ベースは blazux/qwen3.8-Flash-DGX（Apache-2.0）を TP=2 向けに改修。</p>
+
+<p>vLLM（公式 day-0 イメージ）: <code>--kv-cache-memory 40600000000</code>（手動 pin は <code>--gpu-memory-utilization</code> を無視）、<code>--max-num-batched-tokens 8192</code>、<code>--long-prefill-token-threshold 4096</code>、<code>--enforce-eager</code>（GB10/SM121 で CUDA graph が落ちる）、prefix caching、MTP speculative。cold long prefill の同時数を抑えるスケジューラパッチ。前面に llama-swap + nginx TLS、watchdog は earlyoom の絶対フロア（unified memory では「空きが少ない＝異常」ではない）。</p>
+
+<p>負荷例は Deepseek Harness / OpenwebUI の「build a game」系。数字は著者環境の一人称。こちらは再測定していない。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

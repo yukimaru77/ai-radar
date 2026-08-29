@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saganaki22/ComfyUI-sol-attn · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Saganaki22/ComfyUI-sol-attn</h1>
+<p class="primary"><a href="https://github.com/Saganaki22/ComfyUI-sol-attn" target="_blank" rel="noopener">https://github.com/Saganaki22/ComfyUI-sol-attn</a></p>
+<div class="thread">
+<p>0020 が「Speed: Sol-Attn」で指す別パック。今日：スター <strong>115</strong>。README 見出し Version <strong>v0.6.2</strong>。Apache-2.0。NVIDIA Sol-Attn の Triton 参照カーネル（<code>sol_kernel/</code> は vendored NVIDIA ソース）。Windows 消費者 Blackwell（SM120 / RTX 50）向けにチューン。汎用 Sol-Attn patch と、H3 専用4ノード（copy-free attention、scheduled sparsity、exact modulation fusion、FFN peak-memory 削減）。</p>
+<h2>v0.6.2 が足したもの</h2>
+<p>MiniMax H3 Sol Attention が Ampere <strong>SM86</strong>（RTX 30）を既存 pointer-kernel 経由でサポート。SM90/100/121 は従来の TMA。コミュニティ検証：RTX 3090 Ti で 25,323-token の H3 workflow が Sol active で完走。int8_qk / int8_pv を切った二本目も完走。SM86 の6テスト + contributor の runtime-stack。数値変更なし。SM86 の正式ベンチはまだ無い、と明記。</p>
+<p>v0.6.1：KJNodes Low-VRAM との手渡し修正（<code>'list' object has no attribute 'shape'</code>）。KJ の <code>MiniMax H3 Low VRAM Attention</code> と <code>MiniMax H3 Fused Modulation</code> は両方とも block forward を patch するので今も併用するな。</p>
+<p>v0.6.0：SM120 は pointer forward。H3 shape B=1,T=8192,H=56,D=128 で TMA 比 1.25× bf16、出力 bit-identical。32K token で residual-int8 Q 準備の inline 化が peak を 189 MiB 削減、と測定。0020 本文の 1.38–1.65× vs SageAttention は Longvideos 側の引用。</p>
+<p>Longvideos 側の注意：SLA LoRA（ファイル名に区切られた <code>sla</code>）と組まないと sparse が同一人物を二重化する。Triton は ComfyUI portable の embed Python に dev headers が無く黙って遅いパスになる。</p>
+<h2>体験</h2>
+<p>README を gh した。GPU が無く Triton カーネルはビルドしていない。H3 との速度差は未計測。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

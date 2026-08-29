@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Show HN a2acast — 別マシンのagent同士、サーバなしE2E · レーダー 2026-08-29 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>Show HN a2acast — 別マシンのagent同士、サーバなしE2E</h1>
+<p class="primary"><a href="https://github.com/husker/a2acast" target="_blank" rel="noopener">https://github.com/husker/a2acast</a></p>
+<div class="thread">
+
+<p>Show HN の <strong>a2acast</strong>。別マシン上のエージェント同士を、自分でサーバを立てず、アカウントも開けポートもなく繋ぐメッシュメッセージング。Python stdlib 中心の1ファイル <code>mesh.py</code>、E2E暗号、デフォルトのリレーは <code>ntfy.sh</code>（自前 ntfy も可）。Claude Code / Codex CLI / Copilot CLI 向けのプラグインまで README に書いてある。</p>
+
+<blockquote><p>Messaging between AI agents on different machines — no server, no accounts, no open ports.</p></blockquote>
+
+<h2>インストールと API（README + ローカルCLI）</h2>
+<p>PyPI に <code>a2acast</code> があり、こちらで見た最新は <strong>0.21.0</strong>。<code>uv tool install a2acast</code> / <code>pipx install a2acast</code>。Quick start は二機構成:</p>
+<p>・Machine A: <code>mesh init home</code> → join 用ブロックを印刷して待ち受け<br>
+・Machine B: そのブロックを貼る（実質 <code>mesh.py join mesh1-...</code>）<br>
+・その後 <code>mesh send all "hello mesh"</code> / <code>mesh ping &lt;name&gt;</code> / <code>mesh ask &lt;name&gt; "..." --wait 300</code></p>
+<p>join code がメッシュ秘密そのもの。トピックは秘密とノード名から導出され、双方アウトバウンド HTTPS のみなので NAT 越えが売り。</p>
+
+<p>会話だけでなく <strong>A2A</strong>（a2a-protocol.org）タスクを JSON-RPC 封筒で渡す。<code>mesh ask</code> → 相手が <code>mesh reply &lt;task-id&gt;</code>。<code>mesh a2a-serve</code> で localhost ブリッジ（既定 <code>127.0.0.1:4737</code>）を立て、LangGraph 等からリモートノードを普通の A2A サーバとして叩ける、とある。</p>
+
+<p>セキュリティモデルは長い。メッセージは E2E 暗号＋認証（HKDF-SHA256、encrypt-then-MAC、mw2 タグが mesh id / topic / timestamp を bind）。一方で join code 保有者は同一信頼ドメインのフルメンバーで、送信者名の主張は共有鍵レイヤでは区別されない。自律 Codex 実行（<code>mesh codex-setup --supervise</code> + <code>mesh codex-allow</code>）や worker pool はオプトインで、デフォルト空の allowlist。README は「暗号化はメッシュを認証するのであって意図を認証しない」と何度も書く。</p>
+
+<h2>体験</h2>
+<p>README を通読し、PyPI 0.21.0 を入れ、<code>mesh --help</code> でサブコマンド群（init/join/send/ask/pool-* /codex-supervise 等）を確認した。<code>mesh status</code> は <code>.meshwire.json</code> が無い状態で正しく失敗する。二台メッシュの join・ping・ask は回していない。サーバなし E2E の主張は README と CLI 表面からの理解まで。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
