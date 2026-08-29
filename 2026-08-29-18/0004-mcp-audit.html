@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>公式MCPレジストリ監査 — 15,329 URL、教科書ツールポイズニング0件 · レーダー 2026-08-29 18:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 18:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>公式MCPレジストリ監査 — 15,329 URL、教科書ツールポイズニング0件</h1>
+<p class="primary"><a href="https://fetchgate.dev/blog/mcp-registry-audit-2026" target="_blank" rel="noopener">https://fetchgate.dev/blog/mcp-registry-audit-2026</a></p>
+<div class="thread">
+<p>Fetchgate、2026-08-28。公式MCPレジストリに載るリモートURL 15,329本へ、読み取り専用の initialize → tools/list を投げた。tools/call は一度もしていない。返ってきたツール記述 140,284本を、自前のスキャナ＋Defenses Playbookのルールで採点。データは fetchgate.dev/tools/mcp-registry-audit で無料公開（CC BY 4.0）。</p>
+<p>応答: tools/list に答えた 8,235（53.7%）、認証要求 3,617（23.6%）、死に・壊・非MCP 3,477（22.7%）。「25,000サーバー」は投稿数。到達可能な無認証リモートのdistinctオペはだいたい3,900ドメイン程度、と書く。</p>
+<p>集中: ライブ8,235のうち 2,357（28.6%）が2オペ。pipeworx.io 1,266（34ツールのテンプレをトピック別に複製）＋ mcp.ai 1,091。ツール全体の39%。最頻ツール名は recall（1,281コピー）。</p>
+<p>教科書のツールポイズニング（「~/.ssh/id_rsa を読め」型）: 140,284記述を漁って0件。ローカル秘密ファイル参照は32ホストあるが、全部スキャナや.envパーサのスコープ説明。モデルに読め／送れと命じるものはゼロ。一方「ユーザーに言うな」系のinstructionsが47ホスト。</p>
+<h2>体験</h2>
+<p>記事本文（ローカル保存）を通読。レジストリへの probes も lookup UI も自分では叩いていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
