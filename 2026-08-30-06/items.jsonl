@@ -1,0 +1,93 @@
+{"id": "0001-tibo-official-reset", "tag": "X", "title": "Tibo公式：Codex/ChatGPT Work全有料をリセット＋バグ一覧", "url": "https://x.com/thsottiaux/status/2093801758665715784", "file": "0001-tibo-official-reset.html"}
+{"id": "0002-xiax-reset-unfair", "tag": "X", "title": "早期リセットは週末温存勢を罰する（日15%仮説）", "url": "https://x.com/xiax0603/status/2093808648824963230", "file": "0002-xiax-reset-unfair.html"}
+{"id": "0003-walid-25k-weekend", "tag": "X", "title": "週末にCodexへ$2.5K溶かした人「週末に落とすな」", "url": "https://x.com/walidbelr/status/2093799707625538033", "file": "0003-walid-25k-weekend.html"}
+{"id": "0004-codex-ultrafast-ui", "tag": "X", "title": "Codex UIにUltrafast Modelが見え始めた", "url": "https://x.com/MrMSpencer/status/2093809349139255578", "file": "0004-codex-ultrafast-ui.html"}
+{"id": "0005-cc-cost-cache", "tag": "X", "title": "Claude Code /costにキャッシュ行。権限はShift+Tabで6段", "url": "https://x.com/JOSA_blog/status/2093809119946063970", "file": "0005-cc-cost-cache.html"}
+{"id": "0006-herdr-failover-cc", "tag": "X", "title": "Codex枠死→HerdrでCCがPiを奪う。background waitがボスになる", "url": "https://x.com/Michaelzsguo/status/2093808408528855533", "file": "0006-herdr-failover-cc.html"}
+{"id": "0007-openclaw-key-scope", "tag": "X", "title": "OpenClawがスコープ不足キーを読んでSol 5.6直叩き、€20消失", "url": "https://x.com/The_Guy_55/status/2093808487578861985", "file": "0007-openclaw-key-scope.html"}
+{"id": "0008-amp-plugins-site", "tag": "X", "title": "Ampのプラグイン実行モデル解説（一年使い手の一人称）", "url": "https://how-amp-plugins-work.oaleinyk.xyz/", "file": "0008-amp-plugins-site.html"}
+{"id": "0009-fable-20x-dies", "tag": "X", "title": "Fable 20xが3日で死ぬ。同期間Codex/Cursorは20%", "url": "https://x.com/YabinWeDev/status/2093809009744544238", "file": "0009-fable-20x-dies.html"}
+{"id": "0010-zai-claim-button", "tag": "X", "title": "z.aiのclaimボタンはchatではなくAPI側。Max≠Flashの無料枠", "url": "https://x.com/EthanChuAI/status/2093809140275827142", "file": "0010-zai-claim-button.html"}
+{"id": "0011-grokbot-extra-melt", "tag": "X", "title": "Grok Bot Extra：$10入れて$7.50が2分で消えた", "url": "https://x.com/jclarke/status/2093806753133613498", "file": "0011-grokbot-extra-melt.html"}
+{"id": "0012-lichtfeld-32k", "tag": "X", "title": "LichtFeld：32Kの360パノラマ45枚をマスクなしで3DGS化", "url": "https://x.com/pentacoxian_dev/status/2093808233383334082", "file": "0012-lichtfeld-32k.html"}
+{"id": "0013-h3max-weights-reddit", "tag": "X", "title": "fal H3 Max：公式比35x、重み解禁予定（Reddit着地）", "url": "https://www.reddit.com/r/StableDiffusion/comments/1w0noif/fal_will_release_the_weights_of_h3_max/", "file": "0013-h3max-weights-reddit.html"}
+{"id": "0014-fasth3-t2va-only", "tag": "X", "title": "FastH3 PreviewはT2VAのみ。i2vはまだdistillされていない", "url": "https://x.com/grok/status/2093807339874681067", "file": "0014-fasth3-t2va-only.html"}
+{"id": "0015-glm-mac-iq1", "tag": "X", "title": "Mac128GB：GLM-5.3-Flash IQ1_Sで27tok/s（品質未確認）", "url": "https://x.com/petruspennanen/status/2093809467972591686", "file": "0015-glm-mac-iq1.html"}
+{"id": "0016-spark-glm-4x", "tag": "X", "title": "4×DGX Spark：GLM Flash EXL3がstructured 104tok/s", "url": "https://x.com/nuonrg/status/2093809027985617244", "file": "0016-spark-glm-4x.html"}
+{"id": "0017-wesche-solar-demo", "tag": "X", "title": "Flash TP2 vs Full743B TP4：同じ太陽系プロンプトの実デモ", "url": "https://wesche.com/dgx/solar-system/", "file": "0017-wesche-solar-demo.html"}
+{"id": "0018-opencode-tui-vs-desktop", "tag": "X", "title": "OpenCode v2：TUIのほうがDesktopよりマシ（現場声）", "url": "https://x.com/_3morais/status/2093809330785001926", "file": "0018-opencode-tui-vs-desktop.html"}
+{"id": "0019-hermes-android-repo", "tag": "X", "title": "Hermes Android：公式アプリが無いので既存セッションを携帯から", "url": "https://github.com/adebnar/hermes-android", "file": "0019-hermes-android-repo.html"}
+{"id": "0020-pymss-studio", "tag": "X", "title": "CodexがSuno分離を見つけてWav化：pymss-studio", "url": "https://github.com/pymss-project/pymss-studio", "file": "0020-pymss-studio.html"}
+{"id": "0021-diy-grokbot-recipe", "tag": "X", "title": "自作Grok Botレシピ：Pi脳＋box本体＋Composio手＋Cua目", "url": "https://x.com/pravxjha/status/2093795807434834057", "file": "0021-diy-grokbot-recipe.html"}
+{"id": "0022-cc-vs-codex-obs", "tag": "X", "title": "CCがまだ勝つ3点：思考全文・bash常時・オンデマンドcompact", "url": "https://x.com/thedesihobbit/status/2093809323415879759", "file": "0022-cc-vs-codex-obs.html"}
+{"id": "0023-google-ai-pro-promo", "tag": "X", "title": "Google AI Pro初月€2.19でAntigravity枠を延命", "url": "https://x.com/binancechiller/status/2093806841080021336", "file": "0023-google-ai-pro-promo.html"}
+{"id": "0024-miro-800m-tokens", "tag": "X", "title": "Pro x5でSol xhigh終日、8億tokenでも週枠未到達", "url": "https://x.com/mirochill/status/2093808474274603172", "file": "0024-miro-800m-tokens.html"}
+{"id": "0101-ask-hn-openclaw", "tag": "英語圏", "title": "Ask HN: OpenClawはまだ掘る価値があるか、もう去年の話か", "url": "https://news.ycombinator.com/item?id=49491979", "file": "0101-ask-hn-openclaw.html"}
+{"id": "0102-ship-the-tool", "tag": "英語圏", "title": "Ship the Tool, Not the Agent（ツールを出せ、エージェントを包むな）", "url": "https://ttvl.co/notes/ship-the-tool-not-the-agent/", "file": "0102-ship-the-tool.html"}
+{"id": "0103-hn-ship-tool", "tag": "英語圏", "title": "HN: Ship the Tool, Not the Agent", "url": "https://news.ycombinator.com/item?id=49492062", "file": "0103-hn-ship-tool.html"}
+{"id": "0104-vllm-028-release", "tag": "英語圏", "title": "vLLM v0.28.0：Kimi-K3最適化・DeepSeek V4・DFlash2", "url": "https://github.com/vllm-project/vllm/releases/tag/v0.28.0", "file": "0104-vllm-028-release.html"}
+{"id": "0105-hn-vllm", "tag": "英語圏", "title": "HN: vLLM v0.28.0（出力が苦痛のゴミを吐く現場声）", "url": "https://news.ycombinator.com/item?id=49492067", "file": "0105-hn-vllm.html"}
+{"id": "0106-llmspeed", "tag": "英語圏", "title": "llmspeed.dev：買う前にローカルLLMの体感速度を感じる", "url": "https://llmspeed.dev/", "file": "0106-llmspeed.html"}
+{"id": "0107-hn-llmspeed", "tag": "英語圏", "title": "HN: Feel the tokens/s before you buy the GPU", "url": "https://news.ycombinator.com/item?id=49492103", "file": "0107-hn-llmspeed.html"}
+{"id": "0108-verge-sony-warner", "tag": "英語圏", "title": "Sony MusicとWarner ChappellがAnthropicを提訴", "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic", "file": "0108-verge-sony-warner.html"}
+{"id": "0109-hn-sony-warner", "tag": "英語圏", "title": "HN: Sony Music and Warner Chappell Are Suing Anthropic", "url": "https://news.ycombinator.com/item?id=49492119", "file": "0109-hn-sony-warner.html"}
+{"id": "0111-hn-rysh", "tag": "英語圏", "title": "Show HN: graph of Codex and Claude intercommunicate（rysh）", "url": "https://news.ycombinator.com/item?id=49492155", "file": "0111-hn-rysh.html"}
+{"id": "0112-losing-savviness", "tag": "英語圏", "title": "LLMs are making me lose my savviness", "url": "https://pgaleone.eu/ai/2026/08/29/losing-savviness/", "file": "0112-losing-savviness.html"}
+{"id": "0113-hn-losing-savviness", "tag": "英語圏", "title": "HN: LLMs are making me lose my savviness", "url": "https://news.ycombinator.com/item?id=49492184", "file": "0113-hn-losing-savviness.html"}
+{"id": "0114-ms-foundry-claude", "tag": "英語圏", "title": "MS Foundry：Claudeのエージェント向け5機能が追加", "url": "https://devblogs.microsoft.com/foundry/five-new-claude-capabilities-now-available-in-foundry/", "file": "0114-ms-foundry-claude.html"}
+{"id": "0115-hn-ms-foundry", "tag": "英語圏", "title": "HN: five new Claude capabilities in MS Foundry", "url": "https://news.ycombinator.com/item?id=49492204", "file": "0115-hn-ms-foundry.html"}
+{"id": "0116-infinite-slop", "tag": "英語圏", "title": "levelsio：無限に生成され続けるAIスロップ配信", "url": "https://skunkworks.levels.io/infinite-slop/", "file": "0116-infinite-slop.html"}
+{"id": "0117-hn-infinite-slop", "tag": "英語圏", "title": "HN: An infinite and interactive AI generated live stream of slop", "url": "https://news.ycombinator.com/item?id=49492243", "file": "0117-hn-infinite-slop.html"}
+{"id": "0118-moe-direct", "tag": "英語圏", "title": "MoE-Direct：RAMを超えるMoEをNVMeからストリーム", "url": "https://github.com/tmxkzm1925-max/MoE-Direct", "file": "0118-moe-direct.html"}
+{"id": "0119-hn-moe-direct", "tag": "英語圏", "title": "Show HN: Moe-Direct – MoE larger than RAM on consumer desktop", "url": "https://news.ycombinator.com/item?id=49492409", "file": "0119-hn-moe-direct.html"}
+{"id": "0120-warp-claude-agents", "tag": "英語圏", "title": "WarpがClaude上に自己改善エージェントを組む（公式ブログ）", "url": "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude", "file": "0120-warp-claude-agents.html"}
+{"id": "0121-hn-warp", "tag": "英語圏", "title": "HN: Warp builds self-improving agents on Claude（44点）", "url": "https://news.ycombinator.com/item?id=49492432", "file": "0121-hn-warp.html"}
+{"id": "0122-pickup-incident", "tag": "英語圏", "title": "shitposting.ai：小学校の迎えインシデントとこの先の道", "url": "https://shitposting.ai/pickup-incident/", "file": "0122-pickup-incident.html"}
+{"id": "0123-hn-pickup", "tag": "英語圏", "title": "HN: The elementary school pickup incident and the road ahead", "url": "https://news.ycombinator.com/item?id=49492554", "file": "0123-hn-pickup.html"}
+{"id": "0125-hn-subs", "tag": "英語圏", "title": "HN: Subs, the cloud native agent harness", "url": "https://news.ycombinator.com/item?id=49492583", "file": "0125-hn-subs.html"}
+{"id": "0126-domain-driven-agents", "tag": "英語圏", "title": "Domain-Driven Agents", "url": "https://coldtake.dev/blog/domain-driven-agents", "file": "0126-domain-driven-agents.html"}
+{"id": "0127-hn-dda", "tag": "英語圏", "title": "HN: Domain-Driven Agents", "url": "https://news.ycombinator.com/item?id=49492584", "file": "0127-hn-dda.html"}
+{"id": "0128-ai-commons", "tag": "英語圏", "title": "AI and the Commons（Creative Commons）", "url": "https://creativecommons.org/ai-and-the-commons/", "file": "0128-ai-commons.html"}
+{"id": "0129-hn-ai-commons", "tag": "英語圏", "title": "HN: AI and the Commons", "url": "https://news.ycombinator.com/item?id=49492603", "file": "0129-hn-ai-commons.html"}
+{"id": "0130-tencent-hy4", "tag": "英語圏", "title": "Tencent Hy4 Previewをオープンソース公開", "url": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/", "file": "0130-tencent-hy4.html"}
+{"id": "0131-hn-hy4", "tag": "英語圏", "title": "HN: Tencent Releases and Open-Sources Tencent Hy4 Preview（58点）", "url": "https://news.ycombinator.com/item?id=49492632", "file": "0131-hn-hy4.html"}
+{"id": "0132-stop-that-shit", "tag": "英語圏", "title": "Stop That Shit：コーディングエージェントの不要ハッシュをガード", "url": "https://github.com/lennney/stop-that-shit", "file": "0132-stop-that-shit.html"}
+{"id": "0133-hn-stop-that-shit", "tag": "英語圏", "title": "Show HN: Stop That Shit – guard against unrequested hashes", "url": "https://news.ycombinator.com/item?id=49492705", "file": "0133-hn-stop-that-shit.html"}
+{"id": "0134-ssh-ache", "tag": "英語圏", "title": "SSH Ache：ローカル優先のOSSデスクトップSSH＋MCP", "url": "https://github.com/SSH-Ache/ssh-ache", "file": "0134-ssh-ache.html"}
+{"id": "0135-hn-ssh-ache", "tag": "英語圏", "title": "Show HN: SSH Ache – desktop SSH with SFTP, tunnels and MCP", "url": "https://news.ycombinator.com/item?id=49492712", "file": "0135-hn-ssh-ache.html"}
+{"id": "0136-jalapeno-chip", "tag": "英語圏", "title": "OpenAI Jalapeño：推論ネイティブチップ再設計の長い分解", "url": "https://zartbot.github.io/blog/arch/jalapeno/en.html", "file": "0136-jalapeno-chip.html"}
+{"id": "0137-hn-jalapeno", "tag": "英語圏", "title": "HN: Redesigning the Inference Chip … OpenAI Jalapeño", "url": "https://news.ycombinator.com/item?id=49492798", "file": "0137-hn-jalapeno.html"}
+{"id": "0138-ai-docs-standard", "tag": "英語圏", "title": "Documentation.ai.md：人ではなくエージェント向けdocs標準", "url": "https://github.com/iwasoftcom/ai-docs-standard", "file": "0138-ai-docs-standard.html"}
+{"id": "0139-hn-ai-docs", "tag": "英語圏", "title": "Show HN: Documentation.ai.md – docs standard for AI agents", "url": "https://news.ycombinator.com/item?id=49493041", "file": "0139-hn-ai-docs.html"}
+{"id": "0140-slm-tool-calling", "tag": "英語圏", "title": "ツール呼び出し特化のSLM（neurometricブログ）", "url": "https://blog.neurometric.ai/p/introducing-a-task-specific-tool", "file": "0140-slm-tool-calling.html"}
+{"id": "0141-hn-slm-tool", "tag": "英語圏", "title": "Show HN: A SLM Optimized for Tool Calling", "url": "https://news.ycombinator.com/item?id=49493085", "file": "0141-hn-slm-tool.html"}
+{"id": "0142-astra-testingcatalog", "tag": "英語圏", "title": "GPT-6 Astraの初期出力（testingcatalog）", "url": "https://www.testingcatalog.com/first-outputs-from-gpt-6-astra-model-from-openai/", "file": "0142-astra-testingcatalog.html"}
+{"id": "0143-hn-astra", "tag": "英語圏", "title": "HN: First outputs from GPT-6 Astra model from OpenAI", "url": "https://news.ycombinator.com/item?id=49493237", "file": "0143-hn-astra.html"}
+{"id": "0144-cnbc-cursor-openai", "tag": "英語圏", "title": "CNBC：CursorがOpenAIに触れなくなったあとAnthropicかxAIか", "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html", "file": "0144-cnbc-cursor-openai.html"}
+{"id": "0145-hn-cursor-openai", "tag": "英語圏", "title": "HN: Will it be Anthropic or X AI after Cursor getting no access to OpenAI?", "url": "https://news.ycombinator.com/item?id=49493319", "file": "0145-hn-cursor-openai.html"}
+{"id": "0146-lobsters-glm-hardware", "tag": "英語圏", "title": "Lobsters: GLM-5.3 Flashを中国製ハードで回す意味", "url": "https://martinalderson.com/posts/glm-5-3-flash-chinese-hardware/", "file": "0146-lobsters-glm-hardware.html"}
+{"id": "0147-lobsters-canonical", "tag": "英語圏", "title": "Lobsters: Canonical-basis（Transformer隠れ軸を測れる座標へ）", "url": "https://lobste.rs/s/wg65qn", "file": "0147-lobsters-canonical.html"}
+{"id": "0148-canonical-basis-repo", "tag": "英語圏", "title": "todotge/canonical-basis：隠れ空間を可測・可制御にする座標変換", "url": "https://github.com/todotge/canonical-basis", "file": "0148-canonical-basis-repo.html"}
+{"id": "0149-reddit-reset-7th", "tag": "英語圏", "title": "Reddit: またリセット。30日で7回目——共有リセット全履歴", "url": "https://www.reddit.com/r/codex/comments/1w1y9k3/it_reset_again_today_7th_in_30_days_heres_every/", "file": "0149-reddit-reset-7th.html"}
+{"id": "0150-reddit-fuel-tank", "tag": "英語圏", "title": "Reddit: Codex燃料タンクの自動補充についての観測（貯蓄数学）", "url": "https://www.reddit.com/r/codex/comments/1w1vmn5/some_observations_concerning_the_automatic/", "file": "0150-reddit-fuel-tank.html"}
+{"id": "0151-reddit-penalise-save", "tag": "英語圏", "title": "Reddit: 週枠はすぐ使わないと罰せられる", "url": "https://www.reddit.com/r/codex/comments/1w1tq8t/codex_weekly_limits_penalise_you_for_not_using/", "file": "0151-reddit-penalise-save.html"}
+{"id": "0152-reddit-h3-roundup", "tag": "英語圏", "title": "Reddit: MiniMax H3 news round-up（2026-08-29）", "url": "https://www.reddit.com/r/comfyui/comments/1w1wpkz/a_quick_minimax_h3_news_roundup_29th_august_2026/", "file": "0152-reddit-h3-roundup.html"}
+{"id": "0153-reddit-ninfer-1m", "tag": "英語圏", "title": "Reddit: NInfer forkでQwen3.8 27Bを1M ctx・TP2・dual 5090", "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1txyk/ninfer_fork_i_wanted_to_have_a_1m_context_qwen38/", "file": "0153-reddit-ninfer-1m.html"}
+{"id": "0154-reddit-return-current", "tag": "英語圏", "title": "Reddit: Return Current — スマホからComfyUI/H3を操作", "url": "https://www.reddit.com/r/StableDiffusion/comments/1w1wzln/return_current_control_comfyui_from_your_phone/", "file": "0154-reddit-return-current.html"}
+{"id": "0155-reddit-tibo-10-50", "tag": "英語圏", "title": "Reddit: Tiboが10–50%伸び＋リセットを主張（スクショ付き）", "url": "https://www.reddit.com/r/codex/comments/1w1xjlz/update_from_tibo_claims_1050_more_usage_limits/", "file": "0155-reddit-tibo-10-50.html"}
+{"id": "0156-reddit-flashnext-mmap", "tag": "英語圏", "title": "Reddit: Flash-Nextのtensor-read-lazyにはload-mode mmapが必要", "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1y3yo/qwen38flashnext_protip_tensorreadlazy_on_requires/", "file": "0156-reddit-flashnext-mmap.html"}
+{"id": "0157-reddit-claude-orgtree", "tag": "英語圏", "title": "Reddit: claude-orgtree — CC/Codex/Geminiのマルチエージェントorchestrator", "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1w1v8ip/maurdekyeclaudeorgtree_a_multiagent_orchestrator/", "file": "0157-reddit-claude-orgtree.html"}
+{"id": "0301-v2ex-vid2notes", "tag": "中国圏", "title": "V2EX: Vid2notes——画面を見る動画→ノート", "url": "https://www.v2ex.com/t/1238109", "file": "0301-v2ex-vid2notes.html"}
+{"id": "0302-vid2notes-product", "tag": "中国圏", "title": "vid2notes.com：無料3本/日の動画ノート（実際に開いた）", "url": "https://vid2notes.com/", "file": "0302-vid2notes-product.html"}
+{"id": "0303-linuxdo-h3-prompts", "tag": "中国圏", "title": "LINUX DO: MiniMax H3公式プロンプトを今夜探る（実験）", "url": "https://linux.do/t/topic/2830319", "file": "0303-linuxdo-h3-prompts.html"}
+{"id": "0304-linuxdo-pro20x-reset", "tag": "中国圏", "title": "LINUX DO: あの男が髪を切ったらPRO 20Xの週限が消えた", "url": "https://linux.do/t/topic/2830339", "file": "0304-linuxdo-pro20x-reset.html"}
+{"id": "0305-linuxdo-kimi-k3", "tag": "中国圏", "title": "LINUX DO: kimi K3好在哪里？（贵・遅い・前端強い）", "url": "https://linux.do/t/topic/2830358", "file": "0305-linuxdo-kimi-k3.html"}
+{"id": "0306-linuxdo-chatgpt-reset", "tag": "中国圏", "title": "LINUX DO: chatgpt重置了（着地実況）", "url": "https://linux.do/t/topic/2830383", "file": "0306-linuxdo-chatgpt-reset.html"}
+{"id": "0307-linuxdo-codex-reset-fear", "tag": "中国圏", "title": "LINUX DO: 坏了，codex不会不重置了吧", "url": "https://linux.do/t/topic/2830373", "file": "0307-linuxdo-codex-reset-fear.html"}
+{"id": "0308-linuxdo-tibo-time", "tag": "中国圏", "title": "LINUX DO: Tibo: 是时候了", "url": "https://linux.do/t/topic/2830307", "file": "0308-linuxdo-tibo-time.html"}
+{"id": "0309-modelscope-glm-quants", "tag": "中国圏", "title": "ModelScope差分：GLM-5.3-Flashの新量子化が窓内に着地", "url": "https://www.modelscope.cn/models/cyankiwi/GLM-5.3-Flash-AWQ-INT4", "file": "0309-modelscope-glm-quants.html"}
+{"id": "0310-linuxdo-harness-future", "tag": "中国圏", "title": "LINUX DO: 大家想象中未来的harness是什么样子的", "url": "https://linux.do/t/topic/2830368", "file": "0310-linuxdo-harness-future.html"}
+{"id": "0311-linuxdo-gpt-fast", "tag": "中国圏", "title": "LINUX DO: 现在GPT的fast模式到底是几倍消耗几倍速度？", "url": "https://linux.do/t/topic/2830347", "file": "0311-linuxdo-gpt-fast.html"}
+{"id": "0312-linuxdo-gptpro-20x", "tag": "中国圏", "title": "LINUX DO: gptpro 20x开了，token太多、何を作るか問題", "url": "https://linux.do/t/topic/2830367", "file": "0312-linuxdo-gptpro-20x.html"}
+{"id": "0124-subs-harness", "tag": "英語圏", "title": "subs：クラウドネイティブなエージェントハーネス（substructure.ai）", "url": "https://substructure.ai/", "file": "0124-subs-harness.html"}
+{"id": "0110-rysh-cli-code", "tag": "英語圏", "title": "rysh-cli-code：CodexとClaudeがグラフで会話するエージェントTUI", "url": "https://github.com/rysh-ai/rysh-cli-code", "file": "0110-rysh-cli-code.html"}
