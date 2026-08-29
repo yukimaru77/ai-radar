@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>opencode-go-limits — monthly request estimates from Go quotas · レーダー 2026-08-29 12:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 12:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>opencode-go-limits — monthly request estimates from Go quotas</h1>
+<p class="primary"><a href="https://github.com/mousebomb/opencode-go-limits" target="_blank" rel="noopener">https://github.com/mousebomb/opencode-go-limits</a></p>
+<div class="thread">
+<p>一个零依赖的单文件 HTML 工具：打开页面即自动抓取 [OpenCode Go 官方文档](https://opencode.ai/docs/zh-cn/go/#usage-limits) 中&quot;每 1M tokens 价格 + 每月使用额度&quot;表格数据，根据单价与额度估算每个模型的**每月可用请求数**，绘制横向条状图（对数刻度，用量越大条越长）。</p>
+<p>**在线预览**：[mousebomb.org/opencode-go-limits/](https://mousebomb.org/opencode-go-limits/)</p>
+<p>本地使用：双击打开 `index.html` 即可，无需安装、无需服务器、无需手动刷新。</p>
+<p>打开页面时自动抓取最新数据；抓取失败自动回退到上一次成功的本地缓存（localStorage）。</p>
+<p>顶部&quot;立即刷新&quot;按钮可强制重新抓取。</p>
+<p>悬停任意条显示明细：单价、每月额度、每请求成本、token 请求模式、官方对照值。</p>
+<p>底部&quot;查看原始数据明细&quot;可展开完整计算过程表。</p>
+<p>数据源为 GitHub 仓库 `anomalyco/opencode` 的 `dev` 分支原始 mdx（与 opencode.ai 文档页同源同步），备用源为 jsdelivr CDN。两者均返回 `Access-Control-Allow-Origin: *`，浏览器可直接跨域拉取。</p>
+<p>解析三块数据：</p>
+<p>1. **价格 + 额度表**：每个价格档位一行（模型名、输入/输出/缓存读取/缓存写入单价、每月使用额度 $15/$30/$60）。</p>
+<p>2. **请求模式表**：每个模型每次请求的 token 构成（输入/缓存/输出）。</p>
+<p>3. **官方请求数表**：官方给出的&quot;每月请求数&quot;，用作对照。</p>
+<p>```</p>
+<p>每请求成本 = (输入token×输入价 + 缓存token×缓存价 + 输出token×输出价) / 1,000,000</p>
+<p>每月请求数 = 每月使用额度 ÷ 每请求成本</p>
+<p>```</p>
+<p>此公式即 OpenCode Go 官方生成其&quot;请求数估算表&quot;所采用的逻辑。模型名匹配做了归一化（去空格/连字符/大小写）+ 最长前缀匹配，以兼容官方合并写法（如 `GLM-5.3/5.2/5.1`、`Kimi K2.7 Code`）。</p><h2>体験</h2><p>READMEを通読。実行・インストールはしていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
