@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Otterflow — 科研 workflow。マーケが厚い · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>Otterflow — 科研 workflow。マーケが厚い</h1>
+<p class="primary"><a href="https://www.v2ex.com/t/1238071" target="_blank" rel="noopener">https://www.v2ex.com/t/1238071</a></p>
+<div class="thread">
+<p>V2EX。lazyRabbit、2026-08-29 21:38 JST。タイトル「# Otterflow：对话只是一个开始」。返信0。科研エージェントの宣伝。公式は https://otterflow.ai/ 。0318。</p>
+<h2>読み方</h2>
+<p>失敗実験やパラメータが対話に埋もれる、が動機。論文の継続改稿、文献の核查、実験の文脈、管理パネルを謳う。文体は製品ページ。一次の現場ログではない。</p>
+<h2>スレの声（原文）</h2>
+<p>lazyRabbit#0（2026-08-29 21:38 JST）。「通用大模型发展到今天，我们发现 agent ，已经可以解决了大部分场景的能力，在通用的场景下，通用的模型仅通过对话而不需要帮助你关注过程，就能得到一个完整接近符合你预期的一个结果，这种感觉近乎于“造神”。
+
+但是这只是 AI 发展到现在的第一步！
+
+“‘对话模式’不是 AI 交互的最优解～！”
+
+这个是我们思考并提出来一个观点，无论是什么领域，完整的一条属于自己垂类领域的 workflow 和 AI 的交互都有一套自己的标准，它不仅仅只是聊天，更是对于自己领域的整理、管理与沉淀。
+
+每个行业都有自己的工作流程。做科研的、做设计的、做开发的，流程完全不同，需要看到的东西也完全不同。但不管哪个行业，应该都希望能有一个东西，把 AI 和人的每一次交互里真正有价值的部分沉淀下来，用某种方式呈现出来——可能是进度图，可能是知识图谱，可能是一个你随时可以拖拽时间轴回去看的画板。
+
+关键是，AI 需要能看到项目的全貌，人也需要能看到 AI 帮自己梳理出的脉络。这样才叫协同，不然只是你一句我一句的聊天。
+
+在未来，好的 AI 交互模式一定是在其特有领域的 workflow 上交互更贴合。
+
+在跟几个做科研的朋友聊过以后，发现他们能用现在的对于传统的 agent 框架用起来得心应手，但是但整个课题做下来，失败的实验记录、中间某个想法的演变以及成功的参数组合的调试，全部淹没在上千条对话里了。
+
+所以对于科研领域来说，我们认为需要下一代科研工具来去提升我们用户对于科研 AI 方面的体感，我们在现有的通用 agent 基础上研发了下一代基于科研领域的 agent 科学实验平台：&lt;https://otterflow.ai/&gt;
+
+&lt;br /&gt;
+
+* **让 AI 围绕整个项目生成和持续修改论文**：论文、结构和研究报告会结合项目里的文稿、资料、数据与历史一起生成和修改。无论用户正在使用 Word 还是 LaTeX ，内容发生变化后，AI 都能继续接着改。Word 支持文档内的联机交互，也有离线文档生成路径。
+
+* **让文献能被核查，而不是只出现在一段看似正确的回答里**：文献检索、引用验证和文中落点连在一起。用户可以回到具体来源，查看对应内容和高亮，知道这条引用究竟支撑了哪一句话。
+
+* **让每一轮实验都成为下一轮实验的上下文**：旧数据、实验结果和中间结论会被持续记录下来。AI 可以基于已有实验继续迭代，也能回到某一次历史实验，重新分析数据或换一种处理方式。
+
+* **让项目有一个能看见全貌的管理面板**：文稿、文献、实验、数据、任务和进展可以留在同一个项目里。研究者看到的是课题如何推进，而不只是散落在聊天记录里的几千句话。
+
+* **让 AI 适配科研真实发生的流程**：科研通常会经历文献梳理、提出问题、实验或数据分析、修正思路、写作和验证。Otterflow 希望让 AI 沿着这条流程工作，并把每一步留下来，方便继续、审阅和回看。
+
+  &lt;br /&gt;
+
+对于科研的人来说，这不再只是一个 AI ，而是 AI 真正融入了你的工作和你所需的日常项目管理，AI 真正的了解你的完整项目并能完整管理，它不再仅仅只是一个个聊天，他会真正的识别出你需要和不需要的数据。
+
+我认为我们的思路也是未来各个垂类行业的思路，对不同领域来说，AI 会适配不同的工作流模式，而不再像是现在只是一个通用的绘画。
+
+回到最开始那个“对话就能解决一切”的想象。现在我觉得，对话只是一个入口。真正有价值的东西，发生在对话结束之后——当那些散落的信息被串起来，当你发现自己可以像翻一本有目录的书一样回顾整个项目，那时候 AI 才真正成了你工作里的一部分，而不只是一个高级一点的搜索引擎。
+
+如果你对我现在做的事情感兴趣，并想一起参与到生态开发，可以查看官网， 参与讨论或者联系我们。
+
+**企业微信名片**：\
+![企业微信联系卡]( https://i.postimg.cc/BZDRBytN/wecom-card-small.jpg)
+
+**Twitter**:\
+&lt;https://x.com/otterflow_ai&gt;
+
+**Discord**:\
+&lt;https://discord.gg/6PQRAdwcR&gt;」</p>
+<h2>体験</h2>
+<p>1238071.api.json を通読。作者 lazyRabbit、2026-08-29 21:38 JST。返信0。マーケが厚い、と先に書く。サイトは 0318。サインアップしていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grok Bot は Heavy の特典ではない — CSV 一次監査 · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Grok Bot は Heavy の特典ではない — CSV 一次監査</h1>
+<p class="primary"><a href="https://x.com/woodheat/status/2093690145278992459" target="_blank" rel="noopener">https://x.com/woodheat/status/2093690145278992459</a></p>
+<div class="thread">
+<p>＠woodheat（13:20 UTC、18連）が SuperGrok Heavy で Grok Bot を回した 2.7 日分（8/26 19:25 → 8/29 12:34 UTC）の Cursor Usage CSV を公開した。集計は 13,160 events / 10.97億 tokens / on-demand $235.73 / Included 相当 ~$1,019。Heavy 週次バーは 33% のまま動いていない。Bot の請求は Cursor 台帳に載り、Stripe Link の商人名も Cursor（「token-based usage calls to non-max…」）。xAI extra credits と Heavy の $50 auto top-up は Bot トークンを払わない。</p>
+<p>単価の芯: on-demand 実効 $1.28/M（87% が cache read）。fresh+out は $9.61/M。現金の 75% が Grok 4.6 Fast。Fast は standard の正確に 2×。反実仮想として Fast を全部 non-Fast にすると ~$140 vs $236（約 41% 減）。全部 Composer 2.5 に寄せると ~$46（ただし推論は渡すな、と本人）。「I went looking for a “don’t use Fast” switch on Grok Bot.」無い。公式は model picker を出す予定なし。唯一のハードストップは Cursor Spending cap。Cloud Agents 側で Fast をオフにしても、既知バグで follow-up が Fast に戻る。</p>
+<p>本人の要約が一番硬い。「The mistake is treating Grok Bot as a Heavy perk. Heavy is subsidized chat and Build. Bot is usage-priced agent compute that happens to be unlocked by Heavy.」実務レバーとして挙げているのは、Cursor on-demand cap $20–30 / 長寿命スレを切る（cache tax）/ 定期ルーチン停止 / grind は IDE Agent か Grok Build CLI に逃がして Fast オフ。</p>
+<p>前窓までの「3メーター、Pro は Bot を refill しない」議論の上に、本窓で初めて CSV のドルと Fast 2× が乗った。Heavy 週次バーを見て安心するのは誤読で、Bot を回すなら Cursor の on-demand メーターだけが現金の真実になる。</p>
+<h2>体験</h2>
+<p>18連スレの数字をスキャン記載どおり転記。自分の Cursor Usage CSV は未出力。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

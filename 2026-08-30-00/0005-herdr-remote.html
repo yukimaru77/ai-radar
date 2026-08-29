@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>herdr `--remote` — 蓋閉じてもエージェントが死なない · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>herdr `--remote` — 蓋閉じてもエージェントが死なない</h1>
+<p class="primary"><a href="https://x.com/realPureNomad/status/2093714561278853210" target="_blank" rel="noopener">https://x.com/realPureNomad/status/2093714561278853210</a></p>
+<div class="thread">
+<p>＠realPureNomad（14:57 UTC）の一次。「最近，为了在远程机上运行 agents，把 zellij 切换成了 herdr。然后，在远程机上创建了一个新用户专跑 agents。`herdr --remote host` 本地瘦客户端，还能无缝粘贴图片。最重要的是，再也不怕 macbook 合上盖子 agents 就停了。」リモートに agents 専用ユーザーを切り、ローカルは薄いクライアント。画像ペーストが途切れない、が現場の刺さり。</p>
+<p>zellij → herdr の乗り換え理由は、蓋を閉じた瞬間にセッションが死ぬことへの恐怖。tmux / zellij でも detach はできるが、Mac のスリープと SSH の組み合わせで「気づいたらエージェントが止まっていた」はよくある。herdr の `--remote` は、その生存を前提にした薄いローカル面として語られている。</p>
+<p>同時間帯の別一次、＠sweetcharrix。「Herdr + omp + local Qwen 27b is a dangerously powerful combo」— 集中力が切れた1日で仕様の論理矛盾を一通り潰した、という声。前窓の herdr はクォータ可視化の話が多かった。本窓はレイヤが違う: リモート生存（蓋閉じ）と、ローカル Qwen を乗せて矛盾潰しに使う実務。</p>
+<p>llmquota の hop / bus が「どのセッションに残量があるか」なら、herdr remote は「そのセッションが物理的に生きているか」。両方そろって初めてマルチエージェントの日常が回る。専用ユーザー隔離は権限境界としても素直で、エージェントがホームを荒らさないための最低限。</p>
+<h2>体験</h2>
+<p>一次ポストは x-scan 記載どおり確認。herdr 本体のインストールも `--remote` 接続も本窓では未実施。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

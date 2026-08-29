@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pi-usage — Pi/pi-web の Codex 5h/7d と CPA 残額 · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>pi-usage — Pi/pi-web の Codex 5h/7d と CPA 残額</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2829648" target="_blank" rel="noopener">https://linux.do/t/topic/2829648</a></p>
+<div class="thread">
+<p>LINUX DO 開発調優。wayner6（豆包）、2026-08-29 23:19 JST。タイトル「【开源推广】在 Pi或pi-web中查看各模型提供商的余额与额度」。投稿1。V2EX は 0303、GitHub は 0304。このページは LD スレの一人称だけ。</p>
+<h2>読み方</h2>
+<p>非プログラマが Pi に助けてもらって書いた残額プラグイン。DeepSeek 残高、Codex の 5小时と 7天、自建 CPA の共有额度。Claude / Grok / GLM は未検証と本人。次は Skill 呼び出し回数。</p>
+<h2>スレの声（原文）</h2>
+<p>wayner6#1（2026-08-29 23:19 JST）。「本帖使用社区开源推广，符合推广要求。我申明并遵循社区要求的以下内容： 我的帖子已经打上 开源推广 标签： 是 我的开源项目完整开源，无未开源部分： 是 我的开源项目已链接认可 LINUX DO 社区： 是 我帖子内的项目介绍，AI生成、润色内容部分已截图发出： 是 以上选择我承诺是永久有效的，接受社区和佬友监督： 是 以下为项目介绍正文内容，AI生成、润色内容已使用截图方式发出 项目简介 大家都有在使用pi agent吗？我最近经常用，感觉用起来很丝滑，比Codex要舒服不少，我不是程序员，不习惯终端操作，所以我找了个前端界面，pi-web。在使用的过程中，我经常要看一下各个供应商额度剩余情况，于是我在Pi的帮助下写了一个额度查看插件：pi-usage。 主要功能如下： 在底部状态栏显示当前模型对应的余额或剩余额度，会跟随你当前使用的模型自动变动和刷新 使用 /usage 命令查看所有已配置提供商的用量 支持pi和pi-web 如图所示，使用pi-web时，额度显示在聊天界面底部 2148×195 64.2 KB 使用pi时，额度显示在对话框下面 1534×422 71.7 KB 额度显示支持情况 我自己主要使用以下三个供应商一个是自己搭建的 CLIProxyAPI（CPA），主要使用里面Gemini会员赠送的反重力模型，里面有Gemini额度和Claude额度；还有就是ChatGPT会员的Codex额度，这里采用的是pi支持的OAuth登录方式，不是API，最后一个就是DeepSeek API了 目前插件可以显示： DeepSeek余额；Codex的5小时和7天额度；自建CPA中模型组的共享额度，如下图所示为在pi-web执行/usage命令后显示的所有提供商的额度 551×386 9.69 KB 在pi中执行/usage命令后显示的所有提供商的额度如图所示 1520×409 59.4 KB 安装方法 Pi 终端 直接执行： pi install npm:@wayner6/pi-usage pi-web 打开左下角的设置； 进入 Plugins / 插件； 点击 Add Plugin / 添加插件； 在 Source 中填写： npm:@wayner6/pi-usage Scope 选择 global； 安装完成后重新加载会话。 安装后可以输入在pi或pi-web使用以下命令查看全部用量： /usage 插件也实现了 Claude、xAI / Grok 和 GLM 等提供商的支持，不过由于我没有Claude、grok的会员，也没有GLM的coding plan，所以这些还没有经过测试，欢迎大家反馈 项目地址 GitHub： https://github.com/wayner6/pi-usage 下一步计划 我起的名字为pi-usage，比较通用，我想的是这个插件不仅仅局限于提供商的统计情况，我下一步打算做一个调用Skill的统计，可以用来查看自己安装的Skill平时被ai调用了多少次 感谢AI让每个人都能够实现自己的编程梦，大家有什么意见和建议都可以提，也烦请大佬指正，我这个不懂编程的人可能有时候不理解大佬们的意思，请谅解」</p>
+<h2>体験</h2>
+<p>2829648.json と 2829648.md を通読。投稿1、閲覧43、likes 4。Pi CLI が箱に無いので入れてない。リポの clone は 0304。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

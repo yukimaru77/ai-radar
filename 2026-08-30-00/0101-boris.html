@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Boris Uses Claude Code · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>How Boris Uses Claude Code</h1>
+<p class="primary"><a href="https://howborisusesclaudecode.com" target="_blank" rel="noopener">https://howborisusesclaudecode.com</a></p>
+<div class="thread">
+<p>How Boris Uses Claude Code。レーダー窓 2026-08-30 00:00 JST。 英語圏。</p>
+<p>Boris Cherny's Claude Code Tips — How He Actually Uses It (132+ Tips) not affiliated with Anthropic claude-cli — How Boris Uses Claude Code About Claudeonomics Code w/ Claude Recap Dreaming — Research Preview Origins Part 1 13 Part 2 10 Part 3 12 Part 4 5 Part 5 2 Part 6 3 Part 7 8 Part 8 4 Part 9 15 Part 10 7 Part 11 8 Part 12 2 Part 13 3 Part 14 6 Part 15 4 Part 16 3 Part 17 2 Part 18 4 Part 19 4 Part 20 3 Part 21 3 Part 22 6 Part 23 5 New Install /boris — Claude Code tips Install /thariq-skills — How to write skills ~ intro 1 parallel 2 web+mobile 3 opus 4 CLAUDE.md 5 @.claude 6 plan 7 slash 8 subagents 9 hooks 10 perms 11 tools 12 long-run 13 verify ~ intro 1 worktrees 2 plan 3 CLAUDE.md 4 skills 5 bugs 6 prompting 7 terminal 8 subagents 9 data 10 learning ~ intro 1 terminal 2 effort 3 plugins 4 agents 5 permissions 6 sandbox 7 statusline 8 keybindings 9 hooks 10 spinners 11 output 12 customize ~ intro 1 cli 2 desktop 3 subagents 4 agents 5 non-git ~ intro 1 /simplify 2 /batch ~ intro 1 /loop 2 code-review 3 /btw ~ intro 1 /effort 2 remote 3 voice 4 setup 5 --name 6 auto-name 7 /color 8 postcompact ~ intro 1 auto mode 2 /schedule 3 iMessage 4 memory ~ intro 1 mobile 2 teleport 3 loops 4 hooks 5 dispatch 6 chrome 7 desktop 8 fork 9 /btw 10 worktrees 11 /batch 12 --bare 13 --add-dir 14 --agent 15 /voice ~ intro 1 routines 2 /rewind 3 /compact vs /clear 4 auto-compact 5 delegate 6 full context 7 xhigh ~ intro 1 auto mode 2 /fewer-perms 3 recaps 4 /focus 5 effort 6 /go 7 4.6→4.7 8 notifications ~ intro 1 agent view 2 /goal ~ intro 1 opus 4.8 2 effort + limits 3 dyn workflows ~ intro 1 why workflows 2 primitives 3 six patterns 4 use cases 5 loop + budgets 6 save + share ~ intro 1 plan → auto 2 minimalism 3 write it down 4 auto mode safety ~ intro 1 nested agents 2 fork: true 3 use a workflow ~ intro 1 fable 5 2 what changes ~ intro 1 4 unknowns 2 before 3 during 4 after ~ intro 1 4 loops 2 you drive 3 autonomous 4 make good ~ intro 1 /checkup 2 safe by default 3 the run ~ intro 1 highest leverage 2 fixes into code 3 knowledge as infra ~ intro 1 judgement 2 interfaces 3 progressive disclosure 4 memory &amp; references 5 your context 6 opus 5 ~ intro 1 what to automate 2 probe, then delete 3 truth tables 4 tune the routine 5 the yield ~ guide ~ install How Boris Cherny Uses Claude Code A fan-made collection by @carolinacherry Boris created Claude Code at Anthropic.</p>
+<p>When asked how he uses it, he shared 13 practical tips from his daily workflow. His setup is "surprisingly vanilla" — proof that CC works great out of the box.</p>
+<p>@bcherny's January 2, 2026 thread Click the tabs above to explore each tip → or use ← → arrow keys 1 Run 5 Claudes in Parallel Boris runs 5 instances of Claude Code simultaneously in his terminal using 5 separate git checkouts of the same repo.</p>
+<p>He numbers his tabs 1-5 for easy reference and uses system notifications to know when any Claude needs input. Key detail Each tab runs in its own git checkout, so Claude can make changes in parallel without conflicts. Configure iTerm2 notifications to know when any Claude needs attention.</p>
+<p>~/repo-1 $ Tab 1: Working on feature ~/repo-2 $ Tab 2: Running tests ~/repo-3 $ Tab 3: Code review ~/repo-4 $ Tab 4: Debugging ~/repo-5 $ Tab 5: Documentation View original post ← intro web+mobile → 2 Parallel Web and Mobile Sessions Beyond the terminal, Boris runs 5-10 additional sessions on claude.ai/code .</p>
+<p>He fluidly hands off between local and web using the &amp; command or --teleport flag. He also kicks off sessions from his phone via the Claude iOS app in the morning, then picks them up on his computer later.</p>
+<p>Key commands &amp; — Background a session --teleport — Switch contexts between local and web View original post ← parallel opus → 3 Opus 4.5 with Thinking for Everything Boris uses Opus 4.5 with thinking mode for every task.</p>
+<p>His reasoning: Why Opus over Sonnet "It's the best coding model I've ever used, and even though it's bigger &amp; slower than Sonnet, since you have to steer it less and it's better at tool use, it is almost always faster than using a smaller model in the end." The takeaway: less steering + better tool use = faster overall results , even with a larger model.</p>
+<h2>体験</h2>
+<p>howborisusesclaudecode.comをcurl。チップ一覧を通読。全部は実行していない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GLM Coding Plan 切れと paas/v4。Axonhub に user_id · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>GLM Coding Plan 切れと paas/v4。Axonhub に user_id</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2829297" target="_blank" rel="noopener">https://linux.do/t/topic/2829297</a></p>
+<div class="thread">
+<p>LINUX DO。Superlinuxdo、published 2026-08-29 21:29 JST。タイトル「ccswith 如何为claude配置glm api（非coding plan）」。Coding Plan 期限切れと paas/v4 の opus モデル名。Haleclipse が Axonhub + user_id。</p>
+<h2>読み方</h2>
+<p>anthropic エンドポイントは Coding Plan 期限切れ 429 [1309]。paas/v4 は Codex で通っても CC は claude-opus-4-8[1M] で弾く。処方箋は OAI 互換に user_id を最外層。</p>
+<h2>スレの声（原文）</h2>
+<p>Superlinuxdo#1（）。「超级侠Superlinuxdo
+
+3h
+
+glm做了充值，准备搭配claude使用。
+
+开始使用ccw默认的api地址：https://open.bigmodel.cn/api/anthropic，跑起来提示： 提示： 429 [1309]您的GLM Coding Plan套餐已到期，暂无法使用，前往官方续订后即可恢复。
+
+后面改成文档中的地址（这个地址codex可以配置成功）：[https://open.bigmodel.cn/api/paas/v4， 提示： There’s an issue with the selected model (claude-opus-4-8[1M]). It may not exist or you may not have access to it. Run /model to pick a different model.
+
+有点整不会了。搜了一下没找到方案，grok还一直让我用https://open.bigmodel.cn/api/anthropic这个地址。
+
+### Solved
+
+ 哈雷彗星3h
+
+ ​ 
+
+&gt;  智谱的客服告诉我，他们的服务，claudecode如果使用了codingplan就不能使用api余额了？？
+&gt; 
+&gt; 
+&gt; &gt;   Screenshot_2026-08-28-20-24-44-358_com.android.chrome-edit 1116×373 109 KB
+&gt; &gt; 
+&gt; &gt; 
+&gt; &gt; 还有啥好争的 我还充了十块钱试了一下
+&gt; &gt; 
+&gt; &gt; 
+&gt; &gt; 啥比智谱
+&gt; 
+&gt; 
+&gt; 用 Axonhub 转一下oai兼容
+&gt; 
+&gt;  并且在请求体最外层追加 user_id
+&gt; 
+&gt; 
+&gt; 
+&gt;   image 2328×266 19.9 KB
+&gt; 
+&gt; 
+&gt; 
+&gt;   image 1734×952 74 KB
+
+read more
+
+Me too
+
+ ​ 
+
+ ​ 
+
+75 views 
+
+ 5
+
+ 2」</p>
+<p>yixiaochuan1#2（）。「易小川yixiaochuan1
+
+3h
+
+There’s an issue with the selected model (claude-opus-4-8 [1M]). It may not exist or you may not have access to it. Run /model to pick a different model
+
+ 自己切换模型就行了 一看就是没变成 glm
+
+ 然后默认api 地址就是codingplan的
+
+  1 
+
+1 Reply
+
+ ​ 
+
+ ​」</p>
+<p>Superlinuxdo#3（）。「超级侠Superlinuxdo
+
+ 易小川
+
+3h
+
+做了手动切换也是同样的提示，配置中我把所有的模型都指向了glm-5.3-flash
+
+1 Reply
+
+ ​ 
+
+ ​」</p>
+<p>lost_myself#4（）。「Muelsyselost_myself 指导顾问  
+
+ 超级侠
+
+3h
+
+/models 切换一下模型看看呢，有可能是没切换
+
+不行的话reload一下再试试
+
+1 Reply
+
+ ​ 
+
+ ​」</p>
+<p>HeriX#5（）。「HeriX
+
+3h
+
+https://open.bigmodel.cn/api/paas/v4 这个端点只是completion接口
+
+ 可以接入opencode pi等用是没有问题的
+
+ 我使用ccs的路由功能接到claude code里也是报错， 不知道为什么
+
+1 Reply
+
+ ​ 
+
+ ​」</p>
+<p>Superlinuxdo#6（）。「超级侠Superlinuxdo
+
+ Muelsyse
+
+3h
+
+手动切了，一样的问题，reload指的是重新进claude对吧？也试了没用
+
+ ​ 
+
+ ​」</p>
+<p>Superlinuxdo#7（）。「超级侠Superlinuxdo
+
+ HeriX
+
+3h
+
+你报什么错误？ 在codex中，走ccs的的路由模式，可以正常。 claude就不行
+
+ ​ 
+
+ ​」</p>
+<p>Haleclipse#8（）。「哈雷彗星Haleclipse 领域专家  
+
+[](https://linux.do/badges/47/-?username=Haleclipse)
+
+1
+
+3h
+
+ 智谱的客服告诉我，他们的服务，claudecode如果使用了codingplan就不能使用api余额了？？
+
+&gt;   Screenshot_2026-08-28-20-24-44-358_com.android.chrome-edit 1116×373 109 KB
+&gt; 
+&gt; 
+&gt; 还有啥好争的 我还充了十块钱试了一下
+&gt; 
+&gt; 
+&gt; 啥比智谱
+
+用 Axonhub 转一下oai兼容
+
+ 并且在请求体最外层追加 user_id
+
+  image 2328×266 19.9 KB
+
+  image 1734×952 74 KB
+
+  1 
+
+1 Reply
+
+ Solution 
+
+ ​ 
+
+ ​」</p>
+<h2>体験</h2>
+<p>2829297.page.jina.txt を通読。75 views、1/10。投稿後半は jina が切れている箇所がある。open.bigmodel.cn へ課金リクエストは送っていない。Axonhub も立てていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

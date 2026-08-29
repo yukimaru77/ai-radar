@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkillBuddy — Skills / MCP をエージェント横断で同期 · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>SkillBuddy — Skills / MCP をエージェント横断で同期</h1>
+<p class="primary"><a href="https://x.com/konnga6/status/2093714511706685804" target="_blank" rel="noopener">https://x.com/konnga6/status/2093714511706685804</a></p>
+<div class="thread">
+<p>＠konnga6（14:56 UTC）がデスクトップアプリ SkillBuddy を出した。散らばった Skills と MCP を、エージェント横断で install / sync する。対応名は Codex、Claude Code、Cursor、Kimi、ZCode。ハーネスが増えるほど「同じ skill.md を5か所にコピー」が日常になるので、同期レイヤ自体が道具になる、という打ち出し。</p>
+<p>ツイート本文は短く、機能の芯はリポ側にある。README（v0.1.9）だと Unified inventory で各 Agent の Skills / MCP を自動発見し、1つの Skill を user / project の複数ターゲットへ一括インストール、コピー同士の drift を比較して基準から同期、enable / disable / trash+undo、skills.sh / SkillHub / GitHub からの発見、MCP の change plan プレビュー、Presets / bundles、チーム用 Git ライブラリ、まで並ぶ。紹介ポストは入口、中身の約束はここ。</p>
+<p>前窓までの「Skills を Git に置いて Hermes + Claude + Codex が同じファイルを読む」（＠BrianFOConnor など）はファイル共有の一次解だった。SkillBuddy はそれを GUI の inventory + drift に持ち上げた。llmquota が「どのセッションに残量があるか」を読むのと対で、こちらは「どのツールに同じ Skill が入っているか」を読む。どちらもホスト型コーディネータや新規 API キーを増やさない方向。</p>
+<p>注意点もある。対応表に OpenCode / Pi / Goose はまだ出ていない。Electron デスクトップなのでヘッドレス常駐とは別物。MCP の transport やパス検出は Agent 側のレイアウト依存で、README の Screenshots が約束している「衝突の可視化」がどこまで実機で効くかは起動してみないと分からない。</p>
+<h2>体験</h2>
+<p>紹介ツイートは x-scan 記載どおり確認。Electron 本体は起動していない。リポ clone と README 通読は兄弟ページ 0004。このページはツイート一次だけ。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

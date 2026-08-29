@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Codex リセット直後が溶ける · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Codex リセット直後が溶ける</h1>
+<p class="primary"><a href="https://x.com/sizn/status/2093716833128124767" target="_blank" rel="noopener">https://x.com/sizn/status/2093716833128124767</a></p>
+<div class="thread">
+<p>＠sizn「なんか今日のCodex、リセットされてからめちゃくちゃ消費早いんだけどなんだこれ」。リセット直後にバーンレートが跳ねる体感の一次。週次や数日周期の枠が戻った瞬間に、溜めていた長コンテキスト作業を一気に流すと、戻った量が見た目より早く溶ける、という現場あるある。</p>
+<p>同時間帯の相関ボイス。＠b6AXNOEdPO58356「Codexの容量復活4日って事は昨日リセットされたと考えると昨日今日で使用上限使い切って事？？キツくない？？」— 復活周期を4日と読んだ上で、リセット翌日〜翌々日で上限まで使い切るきつさ。＠8796n「Codexさんまあまあ頻繁にコンテキストの自動圧縮で時間取られるのでつらい」— クォータとは別軸の、自動 compact 待ち。＠mahatarukaja は Codex CLI 監視にコンテキスト詰まり可視化を足そうとしている。</p>
+<p>前窓の Codex / Sol トークン数学や Tibo リセット話の延長。本窓の差分は「リセット後の溶ける速さ」と「自動圧縮の待ち」が同時に一次で並んだこと。枠が戻った＝余裕、ではなく、戻った直後がいちばん危険、という運用則になる。</p>
+<p>Grok Bot の CSV 監査（0006）が「Heavy バーは Bot を救わない」なら、こちらは「Codex のリセット表示は溶ける速度を教えてくれない」。監視を自分で足す人（＠mahatarukaja）が出るのは自然。llmquota の burn-rate 表示と組み合わせると、どのセッションが危険かが見える。</p>
+<h2>体験</h2>
+<p>一次ポスト群を x-scan で確認。自分の Codex 使用量ダッシュボードは本窓では未取得。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

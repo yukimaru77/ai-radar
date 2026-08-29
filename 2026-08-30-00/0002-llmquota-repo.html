@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0xNyk/llmquota v0.2.1 · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>0xNyk/llmquota v0.2.1</h1>
+<p class="primary"><a href="https://github.com/0xNyk/llmquota" target="_blank" rel="noopener">https://github.com/0xNyk/llmquota</a></p>
+<div class="thread">
+<p>0xNyk/llmquota v0.2.1。レーダー窓 2026-08-30 00:00 JST。 X一次。</p>
+<p>llmquota Social preview Fun terminal roster for Claude Code · Codex · Cursor · Grok · Hermes rate limits: who's installed, which provider/model is active, what's left on the plan, and when you can fight again. Every coding CLI meters you differently.</p>
+<p>Claude uses a rolling window, Grok is weekly, and Codex and Cursor use their own dashboards. None of them tell you which one still has headroom right now. llmquota reads what's already on your machine and lines them up on one screen, so you can pick a fighter before hitting a wall mid-task.</p>
+<p>bash git clone https://github.com/0xNyk/llmquota.git cd llmquota pnpm install pnpm build once (or after pulling src changes) ./llmquota live TUI arena (default) ./llmquota --once classic one-shot text ./llmquota who one-liner pick ./llmquota hop next best ready fighter ./llmquota usage account usage profile URL (pick) ./llmquota usage grok --open open real SuperGrok usage page ./llmquota bus cross-CLI ring messages ./llmquota doctor PATH + auth + terminal/mouse probe ./llmquota --no-mouse keyboard-only arena (tmux/zellij-friendly) ./llmquota --anon screenshot-safe arena (toggle anytime with a) ./llmquota --json scripts / statuslines Requires Node 22+ (uses built-in node:sqlite for Cursor).</p>
+<p>Ring bus (talk across open CLIs) Shared mailbox at ~/.local/share/llmquota/bus/ring.jsonl no daemon and no TTY injection.</p>
+<p>Already-running sessions join when the arena is LIVE: bash one command: arms Claude · Codex · Cursor · Grok · Hermes ./llmquota bus arm then start the arena: sets LIVE marker + announces on the ring ./llmquota | CLI | After bus arm | |---|---| | Claude | Hook injects unread on the next prompt (even in an open session) | | Codex / Cursor / Grok / Hermes | Instructions/rules/skills for new sessions; open ones run llmquota bus pull | Addressing (multi-session): each session needs a unique id (claude/personal, codexttys004).</p>
+<p>Auto from CLAUDE_CONFIG_DIR / tty, or set LLMQUOTA_BUS_FROM. Presence also records cwd + git repo so peers in the same directory show up.</p>
+<p>bash llmquota bus who list ids + same-directory peers llmquota bus send -t all "broadcast" llmquota bus send -t here "only sessions in this cwd" llmquota bus send -t repo "same git root" llmquota bus send -t @myproject "same project name" llmquota bus send -t claude "all Claude sessions" llmquota bus send -t claude/work "one silo" LLMQUOTA_BUS_FROM=claude/personal llmquota bus pull llmquota bus handoff "objective=fix auth; state=parser done; files=src/auth.ts; tests=unit green; next=integration" llmquota bus resume replacement CLI reads latest repo checkpoint llmquota bus work -m "fix auth parser" src/auth.ts test/auth.test.ts llmquota bus done release the advisory write lane Before editing, each session can publish the files or directories it intends to touch.</p>
+<p>bus who shows active work, and bus work warns when another same-repo session claims an overlapping path. Claims are advisory coordination signals, not locks, so agents should message the named peer before continuing through a warning.</p>
+<h2>体験</h2>
+<p>git clone --depth 1を/tmp/llmquota。READMEとpackage.json（0.2.1）を通読。installはAuto-reviewでブロック、llmquota whoは未実行。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

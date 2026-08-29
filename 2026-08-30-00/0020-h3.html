@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>H3: 向きでドリフト、ローカル vs fal 速度 · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>H3: 向きでドリフト、ローカル vs fal 速度</h1>
+<p class="primary"><a href="https://x.com/uzuki425/status/2093717444582105148" target="_blank" rel="noopener">https://x.com/uzuki425/status/2093717444582105148</a></p>
+<div class="thread">
+<p>＠uzuki425「Minimax-H3のキャラクタアップでのドリフトは、参照画像内の被写体の『向き』で決まるようです。正面向いていればドリフトは出ない。」品質トラブルをサンプラや step 数ではなく、参照のポーズ幾何に帰した一次。キャラアップで顔が流れる人は、まず正面参照を試せ、という実務則。</p>
+<p>速度側の一次、＠chilla_note「手元のローカルMiniMax H3(4070 TiSuper)は、768p・15秒だと今でも生成に10分以上… falのH3 Maxは公称で5秒動画を3秒未満。」ローカル実測 vs fal 公称の開きが大きい。H3 Max 無料5本/日は既出で、本窓の新しいのは 4070 Ti Super 上の 10分以上という数字。Codex でローカル H3 高速化を回している人に刺さる。</p>
+<p>英語圏 Reddit でも同窓に H3 が厚い。4-step Turbo LoRA の品質不満（0115）、Max 級の prompt adherence を native 20 step で出せるか（0116）、fal 上の検閲がきつい（0123）。X の向きドリフトとローカル分は、それらの上に乗る現場ノウハウ。</p>
+<p>まとめると、見た目のドリフトは参照の向き、待ち時間はローカルでは桁が違う、クラウド Max は速いが検閲と無料本数の制約がある。ローカルを捨てる・残すの判断材料が、本窓で数字付きで並んだ。</p>
+<h2>体験</h2>
+<p>一次ポストを x-scan で確認。H3 / H3 Max の生成自体は本窓では未実行。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

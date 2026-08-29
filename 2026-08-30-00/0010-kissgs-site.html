@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KISS-GS project page · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>KISS-GS project page</h1>
+<p class="primary"><a href="https://fraunhoferhhi.github.io/KISS-GS/" target="_blank" rel="noopener">https://fraunhoferhhi.github.io/KISS-GS/</a></p>
+<div class="thread">
+<p>KISS-GS project page。レーダー窓 2026-08-30 00:00 JST。 X一次。</p>
+<p>KISS-GS: 3D Gaussian Splatting Compression Kept Simple Skip to the project page KISS-GS : 3D Gaussian Splatting Compression Kept Simple Wieland Morgenstern 1,2 Friedrich Elias Branschke 1,3 Florian Fleischmann 1,3 Adrian Szatmari 1,3 Paul Schlack 1 Florian Barthel 1,2 Peter Eisert 1,2 Anna Hilsmann 1,2 1 Fraunhofer HHI, Germany 2 Humboldt-Universität zu Berlin, Germany 3 Technische Universität Berlin, Germany ECCV 2026 Paper arXiv Code (coming soon) BibTeX KISS-GS 3.94 MB 256k splats · 123 b/splat Loading – FPS Scene Clean view Fullscreen Rendering on Rendering is off The scene above is a still.</p>
+<p>KISS-GS stores this complete 3D Gaussian Splatting scene as ordinary images totalling 3.94 MB , whether or not your browser can render it live.</p>
+<p>Retry renderer KISS-GS 3.94 MB 256k splats · – fps Scene Camera Motion Paused while the scene loads Reset view Encoded size Attributes Position (coarse) Always on: without coarse positions every splat collapses to one point and there is no scene.</p>
+<p>XYZ Position detail ΔXYZ Base colour RGB Opacity α Scale s Rotation q View-dependent colour SH In short Intro Size vs quality How it works Compaction What's inside Encoding Results Paper &amp; code Hide scene In short The paper in four points TL;DR: KISS-GS compresses 3D Gaussian Splatting scenes 228× at the quality of vanilla 3DGS and stores each scene as nine ordinary images.</p>
+<p>KISS-GS is a compression pipeline for 3D Gaussian Splatting scenes. Its output is a set of ordinary images that any device can decode.</p>
+<p>The 228× is the Mip-NeRF 360 average at the quality of the uncompressed reference; the factor depends on the dataset, 85× on Deep Blending, 228× on Mip-NeRF 360 and 319× on Tanks and Temples. On Mip-NeRF 360 and Tanks and Temples no published method reaches that quality from a smaller file.</p>
+<p>The paper makes four contributions. A modular pipeline whose gains are attributable. Reconstruction, compaction, encoding and optional encoding-aware fine-tuning are separate stages, and each hands on a standard 3DGS scene.</p>
+<p>So each stage is measured on its own, 15.7×, 6.6× and 2.2× on Mip-NeRF 360, and any of them can be swapped for a better one. → How it works POPSpa: fewer primitives, chosen well. A compaction recipe assembled from published pruning schemes.</p>
+<h2>体験</h2>
+<p>プロジェクトページをcurl。WebGL未再生。splat未圧縮。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V2EX の pi-usage。itechify が sub2api を聞く · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>V2EX の pi-usage。itechify が sub2api を聞く</h1>
+<p class="primary"><a href="https://www.v2ex.com/t/1238081" target="_blank" rel="noopener">https://www.v2ex.com/t/1238081</a></p>
+<div class="thread">
+<p>V2EX。wayne3602、2026-08-29 22:36 JST。LD 2829648 と同趣旨の別URL。作者名が wayner6 ではなく wayne3602。itechify が sub2api を聞く。返答は replies に無い。リポは 0304。</p>
+<h2>このURLにしか無い返信</h2>
+<p>itechify: 「支持 sub2api 吗」。OP 返答は JSON に無い。</p>
+<h2>スレの声（原文）</h2>
+<p>wayne3602#0（2026-08-29 22:36 JST）。「# 项目简介
+
+大家都有在使用 pi agent 吗？我最近经常用，感觉用起来很丝滑，比 Codex 要舒服不少，我不是程序员，不习惯终端操作，所以我找了个前端界面，pi-web 。在使用的过程中，我经常要看一下各个供应商额度剩余情况，于是我在 Pi 的帮助下写了一个额度查看插件：`pi-usage`。
+
+主要功能如下：
+
+- 在底部状态栏显示当前模型对应的余额或剩余额度，会跟随你当前使用的模型自动变动和刷新
+- 使用 `/usage` 命令查看所有已配置提供商的用量
+- 支持 pi 和 pi-web
+
+如图所示，使用 pi-web 时，额度显示在聊天界面底部
+![]( https://pub-c84d97a350ed4cc28061354413a4fd68.r2.dev/2026/08/Pi-web%E6%8F%92%E4%BB%B6%E6%BC%94%E7%A4%BA1.png)
+
+使用 pi 时，额度显示在对话框下面
+![]( https://pub-c84d97a350ed4cc28061354413a4fd68.r2.dev/2026/08/pi%E7%BB%88%E7%AB%AF%E6%8F%92%E4%BB%B6%E6%BC%94%E7%A4%BA1.png)
+
+## 额度显示支持情况
+
+我自己主要使用以下三个供应商一个是自己搭建的 CLIProxyAPI （ CPA ），主要使用里面 Gemini 会员赠送的反重力模型，里面有 Gemini 额度和 Claude 额度；还有就是 ChatGPT 会员的 Codex 额度，这里采用的是 pi 支持的 OAuth 登录方式，不是 API ，最后一个就是 DeepSeek API 了
+
+目前插件可以显示：DeepSeek 余额； Codex 的 5 小时和 7 天额度；自建 CPA 中模型组的共享额度，如下图所示为在`pi-web`执行`/usage`命令后显示的所有提供商的额度
+![]( https://pub-c84d97a350ed4cc28061354413a4fd68.r2.dev/2026/08/Pi-web%E6%8F%92%E4%BB%B6%E6%BC%94%E7%A4%BA3.png)
+
+在 pi 中执行`/usage`命令后显示的所有提供商的额度如图所示
+![]( https://pub-c84d97a350ed4cc28061354413a4fd68.r2.dev/2026/08/pi%E7%BB%88%E7%AB%AF%E6%8F%92%E4%BB%B6%E6%BC%94%E7%A4%BA3.png)
+## 安装方法
+
+### Pi 终端
+
+直接执行：
+
+```bash
+pi install npm:@wayner6/pi-usage
+```
+
+### pi-web
+
+1. 打开左下角的设置；
+2. 进入 `Plugins / 插件`；
+3. 点击 `Add Plugin / 添加插件`；
+4. 在 Source 中填写：
+
+```
+npm:@wayner6/pi-usage
+```
+
+5. Scope 选择 `global`；
+6. 安装完成后重新加载会话。
+
+安装后可以输入在 pi 或 pi-web 使用以下命令查看全部用量：
+
+```
+/usage
+```
+
+插件也实现了 Claude 、xAI / Grok 和 GLM 等提供商的支持，不过由于我没有 Claude 、grok 的会员，也没有 GLM 的 coding plan ，所以这些还没有经过测试，欢迎大家反馈
+
+## 项目地址
+
+GitHub：
+
+[https://github.com/wayner6/pi-usage]( https://github.com/wayner6/pi-usage)
+
+# 下一步计划
+
+我起的名字为`pi-usage`，比较通用，我想的是这个插件不仅仅局限于提供商的统计情况，我下一步打算做一个调用 Skill 的统计，可以用来查看自己安装的 Skill 平时被 ai 调用了多少次
+
+感谢 AI 让每个人都能够实现自己的编程梦，大家有什么意见和建议都可以提，也烦请大佬指正，我这个不懂编程的人可能有时候不理解大佬们的意思，请谅解」</p>
+<p>itechify#1（）。「支持 sub2api 吗」</p>
+<h2>体験</h2>
+<p>1238081.api.json と replies と md を通読。作成 2026-08-29 22:36 JST。作者 wayne3602。返信1件。sub2api は試していない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wayner6/pi-usage v0.1.4 — usage と provider adapters · レーダー 2026-08-30 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>wayner6/pi-usage v0.1.4 — usage と provider adapters</h1>
+<p class="primary"><a href="https://github.com/wayner6/pi-usage" target="_blank" rel="noopener">https://github.com/wayner6/pi-usage</a></p>
+<div class="thread">
+<p>GitHub wayner6/pi-usage。package.json name は @wayner6/pi-usage、version 0.1.4、MIT。description は Provider balance and quota monitoring for Pi and pi-web。peer は pi-coding-agent と pi-tui。dev に 0.84.4。</p>
+<h2>README から</h2>
+<p>Pi Usage is a Pi and pi-web plugin that shows the balance or quota of the provider behind the active model.</p>
+<p>- A compact status line for the active model, such as `Codex · 5h 92% · 7d 85%`.</p>
+<p>- Remaining balance, rate-limit windows, and reset times when the provider exposes them.</p>
+<p>- Details for every configured provider through `/usage`.</p>
+<p>The display follows the active model. It does not turn request failures into a zero balance.</p>
+<p>| Provider | Authentication | Available information |</p>
+<h2>clone して見たコード</h2>
+<p>src/index.ts は STATUS_ID が pi-usage、WIDGET_ID が pi-usage-provider。750ms の modelWatchTimer で provider/id/baseUrl の変化を見る。adapters は anthropic, cliproxy-pi-bridge, deepseek, glm, openai-codex, opencode-go, openrouter, siliconflow, xai。LD スレでは Claude / Grok / GLM は未検証。Skill 統計は README に無い。</p>
+<h2>体験</h2>
+<p>clone を /tmp/radar-try-0030/pi-usage に取った。README と package.json 0.1.4 と src/index.ts、adapters 9本を読んだ。which pi は空。pi も pack も走らせていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
