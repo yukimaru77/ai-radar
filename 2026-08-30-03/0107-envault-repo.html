@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ask HN: Claude Code依存をどう断つか（スロットマシン） · レーダー 2026-08-30 03:00</title>
+<title>MildyNora/envault v0.7.0 — エージェントはcipherだけ見る · レーダー 2026-08-30 03:00</title>
 <style>
 
 :root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
@@ -37,17 +37,16 @@ footer { color:var(--dim); font-size:12px; margin-top: 36px; }
 <p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 03:00</a></p>
 <article class="card">
 <div class="meta"><span class="tag en">英語圏</span></div>
-<h1>Ask HN: Claude Code依存をどう断つか（スロットマシン）</h1>
-<p class="primary"><a href="https://news.ycombinator.com/item?id=49491745" target="_blank" rel="noopener">https://news.ycombinator.com/item?id=49491745</a></p>
+<h1>MildyNora/envault v0.7.0 — エージェントはcipherだけ見る</h1>
+<p class="primary"><a href="https://github.com/MildyNora/envault" target="_blank" rel="noopener">https://github.com/MildyNora/envault</a></p>
 <div class="thread">
-<p>isomorph の Ask。ゴールは「その日に触ったコードを理解したまま、だいたい定時で終われること」。問題は、昼は LLM 補助、夕方から純粋バイブに滑り、夜遅くまでセッションが続くこと。Claude Code 以前はそんな残業は稀だった。</p>
-<h2>本人が試したこと</h2>
-<p>完全禁欲。提案を自分で打ち直す（Frank King 由来）。low / manual で毎 diff を喧嘩する。ハードな終業時刻。「仕事はプロジェクト全体を最速で終わらせることではない」と唱える。終業後に Claude へ stop を頼む（長いセッションで忘れる）。小さく切って PR と同僚レビューで強制中断。</p>
-<p>本人の言葉: vibe coding は「ハードな仕事」に感じないから続けられる。リモートの自律が、同僚との会話を Claude との会話に置き換えた。</p>
-<h2>スレ</h2>
-<p>kay_o「仕事なのか依存なのか。usable code のジャックポットを狙ってスロットを引き続けている。Claude に時間の感覚はない。翌日から話せばいい」。ungreased0675「Vibe coding is addictive for the same reasons slot machines are. Sometimes the output is great, sometimes not, but it always feels like a change to the prompt will get you closer to the prize」。</p>
+<p>Rust。age 暗号化。秘密鍵は OS キーチェーン。エージェントが見るのは名前と cipher。平文は <code>envault run</code> が起動したプロセスの中だけ。出力はマスク。ダッシュボード（TUI）で追加・Touch ID / Windows Hello・監査ログ・鍵回転。設定変更は生体認証ゲートなので、エージェントが代わりに回せない。</p>
+<h2>エージェント側</h2>
+<p><code>envault link OPENAI_API_KEY openai</code> のあと <code>envault run -- python app.py</code>。無い鍵は <code>request</code> で人間側ウィンドウが開く。チャットに貼らせない。<code>envault skill install</code> が Claude Code / Codex / OpenCode に教える。その他: ls --json（値なし）、fill（ブラウザ、opt-in）、import .env。</p>
+<h2>境界（README が正直）</h2>
+<p>プロンプト漏洩とファイルへの露出は防ぐ。ランタイムサンドボックスではない。あなたとして動く悪意プロセスは <code>envault run</code> 経由で鍵を使える。機械が完全に落ちていれば監査も止まる。</p>
 <h2>体験</h2>
-<p>Ask 本文とコメントを JSON から読んだ。依存の臨床データはなく、現場の一人称。自分の Claude Code を禁欲実験してはいない。ここまで触った／ここは触れなかった。</p>
+<p><code>git clone --depth 1</code>。Cargo.toml は name=envault version=0.7.0、age 0.11、ratatui、portable-pty。README.zh-CN あり。Homebrew <code>MildyNora/envault/envault</code>。コンパイルも TUI も未実行。skill を Claude Code に入れて試していない。ここまで触った／ここは触れなかった。</p>
 </div>
 </article>
 <p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
