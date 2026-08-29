@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dsh-plugin-hub — DSH内で検証済みプラグインを検索 · レーダー 2026-08-29 15:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 15:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>dsh-plugin-hub — DSH内で検証済みプラグインを検索</h1>
+<p class="primary"><a href="https://github.com/czj-git/dsh-plugin-hub" target="_blank" rel="noopener">https://github.com/czj-git/dsh-plugin-hub</a></p>
+<div class="thread">
+<p>czj-git/dsh-plugin-hub。DeepSeek Harnessの設定→プラグイン中心、または会話から検索。公開の読み取り専用 API（GET /api/v1/plugins/search）。APIキー不要。ユーザー身分・お気に入り・私有は読まない。インストールは実行しない。返すのは検証済みコミュニティプラグインの情報、インストールコマンド、互換、指標、ソース。コマンドを打つかはHarnessの権限。</p>
+<p>入れ方: Node <code>^22.19.0 || &gt;=24</code>、DSH Web profile。<code>dsh plugin --profile web add @czj-git/dsh-plugin-hub</code>。設定ページはWebクライアント拡張が要る。無い環境では会話ツールだけ。Xの @ChuZhaojun が同じコマンドを投げていた。</p>
+<p>設定内: キーワード・9分類・ページ。カードは作者、検証、Stars、閲覧、言語、コピー用 <code>dsh plugin --profile ... add ...</code>。ランキングは日成長 / Star総 / 最新上架 / 最近活躍。会話ツールは <code>dsh_plugin_search</code> と <code>dsh_plugin_rankings</code>。Nativeは短いテキスト、Code Modeは構造化。429とキャンセル信号を扱う。</p>
+<h2>体験</h2>
+<p>README通読。DSHは入れておらず、プラグインもaddしていない。市場APIは叩いていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
