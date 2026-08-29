@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenCode内蔵compactはDetails/Next Moveに全置換。claude-mem＋magic-contextで切る · レーダー 2026-08-29 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>OpenCode内蔵compactはDetails/Next Moveに全置換。claude-mem＋magic-contextで切る</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2829071" target="_blank" rel="noopener">https://linux.do/t/topic/2829071</a></p>
+<div class="thread">
+<p>LINUX DO 開発調優。brilliantrough、2026-08-29 19:53 JST（UTC 10:53）。タイトルは「个人的 OpenCode 的跨会话记忆配置＋会话内不失真压缩裁剪上下文（compact）方案」。投稿2、閲覧43。タグ 人工智能 / Agent / AgentMemory。topic JSONが取れた本窓のヒーロー。</p>
+<p>省流は本人が先に置いている。claude-memが細部を全部覚え、跨セッションの現行トップ。magic-contextがセッション内の裁剪と近期記憶。Strict-Docが人間が読めるプロジェクト文書。AGENTS.md末尾に短いtail。自制のload-mem / save-mem / migrate-memが上と噛み合う。</p>
+<p>いちばん強い現場の声はここ。「一定要记得禁用 opencode 内置的 compact 功能，不然和 magic-context 冲突」。内蔵を切らないと、下の裁剪が二重圧縮になる。</p>
+<h2>内蔵compactが何を壊すか</h2>
+<p>本人の対比がはっきりしている。「不像 opencode 内置的 compact，真的就是全盘替换内容，替换成他压缩的那么一套 Details, Next Move 那一套文本，那套基本上全乱套了，各种细节全没了。」</p>
+<p>magic-context側は「挑选哪些块留下，哪些块压缩，但同时能给出一个 context 的索引」。ユーザー入力と一度書いた規範は残りやすい。だから長文の規格をgrillingしたあと、同じセッションで次の仕事に進める。内蔵compactだと初手の意味が Details/Next Move に置き換わり、バッチで同じ意味の変更をかけても最初のタスク語義が変わる。</p>
+<p>「目前的想法就是这样，现在这样 gpt-5.6-sol 的 372K 上下文是完全够用的，并且全程用下来就是不会失忆的。」「不用再频繁的进行 HANDOFF 然后去新的会话中进行 HANDOFF 的转接了。」「真的不虚 codex 和 claude code 了~~~」</p>
+<h2>役割分担（本人の言葉）</h2>
+<p>claude-memはhookで裏にdumpする。「会记住许许多多的细节信息，但是这个系统并不知道任务主线，项目细节是怎样的，只是有什么就记下来」。機械的な行動ログ。検索は ~/.config/opencode/plugins の claude-mem.js が search だけ。残りは bun で mcp-server.cjs をローカル起動。設定は ~/.claude-mem/settings.json。現場はだいたい NewAPI なので初期化で OpenRouter を選び、中身は openai-compatible。</p>
+<p>magic-contextの記憶はclaude-memより弱い、と本人も書く。代わりに「上下文超限的时候，由模型来进行合适的上下文裁剪」「由Agent通过工具调用自主决策记忆什么内容」。historian / dreamer を opencode.jsonc の提供商/模型に合わせ、embeddingは別。execute_threshold_percentage 65 で input の65%から記憶と裁剪。sidekickはdisable。インストールは公式の curl | bash。設定は ~/.config/cortexkit/magic-context.jsonc。opencode.jsonc では compaction.auto / prune を false にし、plugin に @cortexkit/opencode-magic-context@latest。</p>
+<p>Strict DocはPython環境をAgentに組ませるだけ、と本人。「claude-mem 和 magic-context 本质是面向 Agent，面向会话上下文的，而 Strict Doc 是面向开发者用户的」。docs/project_memory（decisions.sdoc / journal.sdoc）と docs/handbook。STATUS: Active だけが現行canon。ノードは消さず Deprecated / Superseded。書いたらすぐ strictdoc export 。0.28.3で単括弧 [SECTION] が死ぬので [[SECTION]] だけ。</p>
+<h2>load / save / migrate と口頭の閉じ</h2>
+<p>SKILLは本人のartifacts。「每个人都有自己的爱好」。load-memは注入済みの project-memory を再取得せず、StrictDocのActiveだけをcanon、claude-memはleadであってgospelではない、とコードで接地。save-memは運用事実をctx_memory、物語をproject_memory、仕様をhandbook、後続をctx_note、コマンド詳細は書かない（claude-memが取る）。migrate-memは分類表を人間が承認するまで書かない。RATIONALEの捏造禁止。</p>
+<p>会話では「超绝不经意」に足す。「记得在明确所有规范后保存一下记忆」「记得在完成所有的任务内容后，也更新一下记忆」「你感觉你踩了哪些坑，也可以记录一下」。例: LD_LIBRARY_PATH 未設定で libxx.so が見つからない、を二度踏まない。</p>
+<p>末尾は現場の温度そのもの。「干项目在Agent转呀转呀的时候去并行的陪人熬夜打游戏，起来之后牙没刷，饭还没吃想着来发个帖子，饿了，觅食~~」</p>
+<h2>返信</h2>
+<p>wktan（xxxxt、11:30Z）: 「这套组合拳打得挺扎实，magic-context 的裁剪策略确实比内置 compact 聪明多了，至少任务」。JSON上はここで切れている。likesはOPにheart 1。</p>
+<p>リポ本体は別ページ。claude-mem は 0302、magic-context は 0303。このページはスレの一人称だけ。</p>
+<h2>体験</h2>
+<p>linux.do/t/2829071.json と 2829071.md を通読。OpenCodeにclaude-memもmagic-contextも入れていない。npx / curl|bash はホームを汚すので走らせていない。公式READMEは0302/0303。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

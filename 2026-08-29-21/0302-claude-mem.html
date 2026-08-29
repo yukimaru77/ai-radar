@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>claude-mem 13.4.0 — 跨セッション観察ログ。npxはプラグイン、globalはSDKだけ · レーダー 2026-08-29 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>claude-mem 13.4.0 — 跨セッション観察ログ。npxはプラグイン、globalはSDKだけ</h1>
+<p class="primary"><a href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">https://github.com/thedotmack/claude-mem</a></p>
+<div class="thread">
+<p>thedotmack/claude-mem。README badge は version 13.4.0、Node &gt;=20、Apache-2.0。キャッチは Persistent memory compression system built for Claude Code。作者 Alex Newman。0301のbrilliantroughが OpenCode 側の現行トップとして使っているリポ。
+</p>
+<p>入れ方はREADME Quick Startの単コマンド。OpenCode向けは --ide opencode。Antigravity もある。Claude Code内は marketplace add thedotmack/claude-mem のあと plugin 側で入れる。再起動すると前セッションの文脈が新しいセッションに出る、とREADME。
+</p>
+<h2>中身（README）
+</h2>
+<p>Lifecycle hook が SessionStart / UserPromptSubmit / PostToolUse / Stop / SessionEnd。WorkerはBun管理のローカルHTTP。SQLiteに sessions / observations / summaries。検索は mem-search skill と Chroma の hybrid。MCPは search で index、timeline で前後、get_observations で全文。先に絞ってから詳細、で約10xのtoken節約と書いてある。
+</p>
+<p>設定は ~/.claude-mem/settings.json。CLAUDE_MEM_MODE で code / code--zh / code--ja。中国語観測は code--zh が組み込み。プライバシーは private タグで保存除外。Web viewerがworker起動時URL。Claude Desktop skillもある。
+</p>
+<h2>0301現場との差分
+</h2>
+<p>brilliantroughの実測: 公式の --ide opencode は ~/.config/opencode/plugins/claude-mem.js を置き、実体は ~/.claude/plugins/cache/thedotmack/claude-mem 。このjsはsearchだけ。残りツールは bun で marketplace の plugin/scripts/mcp-server.cjs を opencode.jsonc の local MCP にする。NewAPI勢は初期化で OpenRouter を選び、jsonで BASE URL / model / API key を直す。CLAUDE_MEM_CONTEXT_OBSERVATIONS は 20。worker のフォールバックは 127.0.0.1:37700。
+</p>
+<p>本人評価: 細部は強い、タスク主線は知らない。主線と規範の継続はmagic-context、人間向け文書はStrictDoc、という分担。
+</p>
+<h2>体験</h2>
+<p>取得済み README（/workspace/radar-21-fetch/repos/thedotmack_claude-mem_README.md）を通読。docs-only。公式インストーラは走らせていない。workerもMCPも立てていない。0301の設定例はスレ本文の転記。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
