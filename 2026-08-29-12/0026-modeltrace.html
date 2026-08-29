@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xqy2006/ModelTrace · レーダー 2026-08-29 12:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-29 12:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>xqy2006/ModelTrace</h1>
+<p class="primary"><a href="https://github.com/xqy2006/ModelTrace" target="_blank" rel="noopener">https://github.com/xqy2006/ModelTrace</a></p>
+<div class="thread">
+<p>ModelTrace 是一个本地运行的主动模型归因工具。它通过三条独立的长整数生成挑战提取输出指纹，在统一候选库中自动判断模型家族和具体版本。</p>
+<p>```powershell</p>
+<p>python -m pip install -r requirements.txt</p>
+<p>python start.py</p>
+<p>```</p>
+<p>页面地址为 `http://127.0.0.1:7860/`。</p>
+<p>**手动测试**：复制三条挑战，分别发送给同一个待测模型，再粘贴每次完整输出。</p>
+<p>**API 自动测试**：填写 Base URL、API Key 和模型名。程序会自动尝试 OpenAI Chat Completions 与 Anthropic Messages 格式，以三份有效回答为目标完成归因。</p>
+<p>**指纹库管理**：可以新建指纹库，或通过 API 为现有指纹库添加模型指纹。</p>
+<p>API Key 只用于当前页面发起请求，不写入磁盘。</p>
+<p>新执行的自动采集会在对应的 `*_reference.jsonl` 中保存实际 user prompt、base prompt、system prompt 和 user prefix；拟合后的 `*_bank.json` 与 `unified_bank.json` 只保存统计指纹和校准参数。</p>
+<p>所有模型使用同一个全局特征空间、同一套特征与权重：</p>
+<p>```text</p>
+<p>0.75 × 去除环境方向后的 Hellinger 模型中心相似度</p>
+<p>+ 0.25 × 有序块数字序列特征</p>
+<p>```</p>
+<p>建库时使用共享环境的平均偏移估计主要干扰方向。归因时先从数字分布和有序特征中投影掉这些方向，再同时与全部模型中心比较。三份回答分别评分后取平均，并使用与查询数量对应的校准温度转换为概率。</p>
+<p>具体模型概率由一次全局 softmax 得到，家族概率是该家族下各模型概率之和：</p>
+<p>```text</p>
+<p>P(具体模型) = softmax(β × 全局模型得分)</p>
+<p>P(模型家族) = Σ P(该家族中的具体模型)</p>
+<p>```</p>
+<p>结果是当前候选库内、均匀先验下的闭集概率。未收录模型仍会被归到最相似的现有候选。</p>
+<p>```text</p>
+<p>app.py              Web 接口</p>
+<p>fingerprint.py      指纹提取与归因</p><h2>体験</h2><p>READMEを通読。実行・インストールはしていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
