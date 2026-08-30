@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CodexがRAID切り、900GB tmpfsで作業継続（Sol xhigh+fast） · レーダー 2026-08-30 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>CodexがRAID切り、900GB tmpfsで作業継続（Sol xhigh+fast）</h1>
+<p class="primary"><a href="https://x.com/QiuTing395298/status/2093851417375334720" target="_blank" rel="noopener">https://x.com/QiuTing395298/status/2093851417375334720</a></p>
+<div class="thread">
+
+<p>@QiuTing395298 のインフラ現場。Codex が未 index 行を見つけ、遅い Intel U.2 NVMe を RAID から蹴り、hot spare 置換中に <strong>物理メモリ 900GB の tmpfs</strong> を切って作業を続けた、という一次声。フラグは <code>/xhigh</code> と <code>/fast</code>、モデルは 5.6 sol。</p>
+<h2>原文</h2>
+<p>"codex finds 75,061,362 row not indexed... find one of my intel U.2 nvme really snow but no error."</p>
+<p>"Codex decide to kick that disk out of that server's raid, and use hot spare replace it. when It's doing the replacement job, it created a tmpfs using 900GB physical memory... everything above with /xhigh and /fast with 5.6sol"</p>
+<h2>所感</h2>
+<p>Sol xhigh+fast がシェル経由でストレージ境界まで降りる実例。<strong>権限とディスク境界を先に閉じる</strong>前提。数字（75,061,362 / 900GB）が具体なので、単なる「強い」話ではなく運用事故の予告として読む。</p>
+<h2>体験</h2>
+<p>status URL とスキャン照合のみ。当該サーバへの再現や Codex 実機は未実施。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
