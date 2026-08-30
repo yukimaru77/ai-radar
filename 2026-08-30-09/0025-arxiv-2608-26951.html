@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>arXiv:2608.26951 — Training-Free Distractor Filtering in Feed-Forward 3DGS · レーダー 2026-08-30 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>arXiv:2608.26951 — Training-Free Distractor Filtering in Feed-Forward 3DGS</h1>
+<p class="primary"><a href="https://arxiv.org/abs/2608.26951v1" target="_blank" rel="noopener">https://arxiv.org/abs/2608.26951v1</a></p>
+<div class="thread">
+
+<p>Title: <strong>Per-View Gaussian Predictions Enable Training-Free Distractor Filtering in Feed-Forward 3DGS</strong>。Authors: Kangmin Seo, Jae-Pil Heo。</p>
+<h2>Abstract（取得）</h2>
+<p>Feed-forward 3DGS は複数画像から一回のネットワーク実行で explicit Gaussian を復元するが、一部ビューにしか出ない transient が per-view Gaussian に残り、novel view でぼけ・重複・浮遊アーティファクトになる。本手法は training-free の filtering：各入力の関連 Gaussian を除外して同カメラを描画し不一致を可視化 → feature similarity で候補 → 他入力ビューの再構成誤差が下がる候補だけ残す。単一の frozen prediction 上で動き、再学習やシーン最適化なし。3 reconstruction models × 2 distractor benchmarks で novel-view 品質向上。clean scenes では元再構成をほぼ保持（4 models）。</p>
+<h2>所感</h2>
+<p>「再学習なしで通過物を落とす」がキャッチ。実装依存は論文側のモデル対応表を見る必要あり。</p>
+<h2>体験</h2>
+<p><code>curl https://arxiv.org/abs/2608.26951v1</code> で abstract/authors を抽出。PDF 通読・コード実行は未実施。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
