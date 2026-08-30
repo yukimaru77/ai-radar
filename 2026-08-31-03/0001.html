@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herdrの1ペインで5h+週次を%表示。Claude/Codex/Grok/Agy/OpenCode/Pi · レーダー 2026-08-31 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Herdrの1ペインで5h+週次を%表示。Claude/Codex/Grok/Agy/OpenCode/Pi</h1>
+<p class="primary"><a href="https://x.com/guannanjiayou/status/2094124468654551304" target="_blank" rel="noopener">https://x.com/guannanjiayou/status/2094124468654551304</a></p>
+<div class="thread">
+<p>Herdr に全部載せている理由は「一つのペインで全部見る」だと @guannanjiayou。そこに 5h と週次の残り%をライブで出す小さなプラグインをボルトオンした、という一人称。対象は Claude / Codex / Grok / Agy / OpenCode / Pi。llmquota や statusline 燃料計の次の OSS として、メーターとセッション観測が同じ面に乗った。</p>
+<p>「Same reason I keep everything in Herdr — one pane to watch them all. I bolted on a small plugin that also shows live % quota left per session (5h + weekly, Claude/Codex/Grok/Agy/OpenCode/Pi)」</p>
+<p>親スレで @theaaron が Grok Bot を Herdr に載せたい理由は terminal sessions を見たい、だった（<code>https://x.com/theaaron/status/2094107274394677754</code>）。この投稿はその面にクォータ%を足した実装報告。</p>
+<p>GitHub は <code>https://github.com/levi-qiao/herdr-agent-quota</code>。この窓の SKIP に既出なので別ページは切らない。README を gh api で読んだ実体: サイドバー例は <code>5h 100% 3h07m · 7d 31% 2d3h</code>、cache 99.6%、context 23%。Herdr 0.8.0+ / Rust 1.95+ / macOS or Linux。<code>./install.sh</code>。</p>
+<p>Coverage 表（README 原文）: Claude Code は 5h+7d と statusLine の prompt_cache expiry。Codex は Canonical ChatGPT login（API key は subscription quota ではない）。Grok は 7d。Agy は 5h+7d。OpenCode は Go の 5h+7d（30d は dashboard）。Pi は openai-codex OAuth が同じ Codex account id のときだけ既存 Codex quota を安全にマッチ。色は残り%と残り時間のペース比較（緑=on pace、琥珀=ahead、赤=ahead かつ 20% 未満）。</p>
+<p>OpenCode Go はメンテナー自身がサブスクを持っていない。ローカル session / credential / fail-closed は OpenCode 1.18.20 でテスト。成功時の usage 形は CodexBar 由来で、このリポが観測した応答ではない、と README が先に書いてある。401/403 を 0% にしない。</p>
+<h2>所感</h2>
+<p>ハーネス横断の燃料計は「見えた数字を信じる」より attribution 規則の方が本体。Pi が Codex 枠を借りる条件、OpenCode Go が未実測、という fail-closed の書き方が現場向け。</p>
+<h2>体験</h2>
+<p>X 本文はスキャン原文。製品ページ URL は SKIP 済みなのでこの窓では切らない。gh api repos/levi-qiao/herdr-agent-quota: 38★ / MIT / Rust / default main / created 2026-08-15T03:56:49Z / pushed 2026-08-30T02:26:12Z / homepage <code>https://herdr.dev/plugins/</code>。README 本文を base64 デコードして読んだ。clone・Herdr 起動・実ペインへの install はしていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
