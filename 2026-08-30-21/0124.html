@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpeakoFlow Mini — 0.8B dictation cleanup（HF） · レーダー 2026-08-30 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>SpeakoFlow Mini — 0.8B dictation cleanup（HF）</h1>
+<p class="primary"><a href="https://huggingface.co/SpeakoFlow/speakoflow-mini" target="_blank" rel="noopener">https://huggingface.co/SpeakoFlow/speakoflow-mini</a></p>
+<div class="thread">
+<p>SpeakoFlow/speakoflow-mini（HF）。Reddit 1w2elkb から導入。Qwen3.5-0.8B を dictation cleanup 専用に FT。Apache-2.0。</p>
+<p>KEEP 数値: SpeakoFlow Mini 70.7% vs GPT-5.6 Luna 65.0%（+5.8, 95%CI [-1.5,+12.9]=タイ）。base 47.3%→70.7%（+23.4, CI[+16.3,+30.3]）。Q8_0 833MB offline。固定短プロンプト・reasoning off。</p>
+<p>「大きい汎用モデルより、狭い作業に振った 0.8B の方が勝ちうる」系の現場数字。CI がタイをまたぐ点も KEEP 通り残す。</p>
+<p>fetch: id: SpeakoFlow/speakoflow-mini / pipeline_tag: text-generation / downloads: 498 · likes: 2 / sha: 835431771f72820251fe6c6b4b07f12b000e2647 / createdAt: 2026-08-29T14:13:11.000Z / lastModified: 2026-08-29T16:12:14.000Z / cardData.license: apache-2.0 / cardData.base_model: Qwen/Qwen3.5-0.8B (finetune) / siblings include SpeakoFlow-Mini-0.8B-BF16.gguf, Q4_K_M, Q5_K_M (and README) / README title: SpeakoFlow Mini 0.8B, GGUF</p>
+<p>「Dictation cleanup for transcribed speech. It applies the correction the speaker actually made, and leaves everything else exactly as you said it.」</p>
+<p>「833 MB at Q8_0, 2,509 ms median on a desktop CPU.」</p>
+<p>「English. Not a chat model, not a rewriter.」</p>
+<p>「| SpeakoFlow Mini (0.8B, local CPU) | 70.7% | 92.6% | 48.8% | 10.7% |」</p>
+<p>「| GPT-5.6 Luna (hosted frontier) | 65.0% | 82.4% | 47.6% | 12.0% |」</p>
+<h2>体験</h2>
+<p>ここまで触った: HF API と README（likes=2, downloads=498, Apache-2.0）。数値はカード記載どおり。</p>
+<p>ここは触れなかった: GGUF 実行、アプリ。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
