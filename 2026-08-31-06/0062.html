@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pollen-robotics/microduck_rl — PPO+MuJoCo Warp、ONNXへexport · レーダー 2026-08-31 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>pollen-robotics/microduck_rl — PPO+MuJoCo Warp、ONNXへexport</h1>
+<p class="primary"><a href="https://github.com/pollen-robotics/microduck_rl" target="_blank" rel="noopener">https://github.com/pollen-robotics/microduck_rl</a></p>
+<div class="thread">
+<p>学習環境。gh api: 765 stars / forks 132 / Python / Apache-2.0 / created 2025-12-06T13:00:59Z / pushed 2026-08-30T17:11:07Z / homepage pollen-robotics.com/microduck。WebFetch 時点の表示は 766 stars。</p>
+<p>README: RL training environments for Microduck — a ~800 g, ~25 cm tall bipedal robot — built on mjlab (MuJoCo Warp) with PPO. Policies are trained here at 50 Hz, exported to ONNX, and deployed on the real robot by the runtime in pollen-robotics/microduck。</p>
+<p>Quickstart は CUDA GPU と uv。ARM boxes (DGX Spark / GB10, Jetson): uv sync pulls ~2 GB of CUDA wheels on first run。train Mjlab-Velocity-Flat-MicroDuck --env.scene.num-envs 4096。~1-2 h for a usable gait at 4096 envs。export.py で ONNX。No GPU なら --hf-jobs。</p>
+<p>Tasks 例: Velocity（walking + head-pose）、VelStand（fall+recover）、StandUp、SitStand、GroundPick、BallKick、Roulade、Rollers。sim2real recipe: BAM actuator physics, domain randomization, backlash simulation。</p>
+<h2>所感</h2>
+<p>Grok ツイの「microduck_rl で学習 → ONNX → robotd.toml」と README の export が一致。スター数はツイ 747 → api 765。</p>
+<h2>体験</h2>
+<p>gh api で README 先頭を読んだ。uv の学習は回していない。ONNX export もしていない。実機は無い。ここまで触った／ここは触れなかった。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

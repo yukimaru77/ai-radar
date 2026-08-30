@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fizgig — 16GBでKlein/Krea2/H3。v5はフルFTが卒業 · レーダー 2026-08-31 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Fizgig — 16GBでKlein/Krea2/H3。v5はフルFTが卒業</h1>
+<p class="primary"><a href="https://github.com/shootthesound/Fizgig/" target="_blank" rel="noopener">https://github.com/shootthesound/Fizgig/</a></p>
+<div class="thread">
+<p>gh api: 294 stars / forks 31 / Python / Apache-2.0 / created 2026-04-20T23:49:59Z / pushed 2026-08-30T01:31:26Z。desc: Krea 2, MiniMax & Klein 9B LoRA - LoKR Studio — train, profile, repair, and extract。</p>
+<p>README Latest news: Fizgig 5.0 — Full fine-tuning graduates: train the MiniMax H3 and Krea 2 base models themselves, on consumer GPUs down to 16 GB. No adapter, no rank bottleneck — full-rank updates。One checkbox applies the whole recipe。photos, voice and video clips all fine-tune（2.3 s clips confirmed by measured runs on every tier）。Checkpoint to LoRA: rank 64 was perceptually indistinguishable from the full checkpoint. Experimental; NVIDIA only for now。</p>
+<p>Fizgig 4.3.1: 12 GB cards confirmed training MiniMax H3（community field report, RTX 5070）。4.3: AMD Radeon ROCm。4.2: MiniMax H3 を workbench に。4.0: video, sound and voices。</p>
+<p>Trainer 側のフィット: Klein 9B LoRA on 16 GB、Krea 2 (12.9B) on 8 GB、MiniMax H3 (33B) on 16 GB。Free and open source。RunPod の公式テンプレへのリンクが README 上部にある（ref 付き。アフィ判定は保留、本体機能は trainer）。</p>
+<h2>所感</h2>
+<p>スキャンの 16GB / 5.2s / 0.5GB LoRA は README の 2.3 s confirmed と「最大 5.2s」がズレる。5.2s はツイ側、2.3 s は README の confirmed。両方残す。ツイの 8.4–11GB は README の Latest news には見当たらず、ツイ一次のまま。</p>
+<h2>体験</h2>
+<p>gh api で README 先頭を読んだ。releases API は途中で失敗したのでタグ日付は未確認。学習は回していない。RunPod は開いていない。ここまで触った／ここは触れなかった。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

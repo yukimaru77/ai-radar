@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yachen4ever/ModelApiTester — Rust+Vue の LLM API 測速 · レーダー 2026-08-31 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>yachen4ever/ModelApiTester — Rust+Vue の LLM API 測速</h1>
+<p class="primary"><a href="https://github.com/yachen4ever/ModelApiTester" target="_blank" rel="noopener">https://github.com/yachen4ever/ModelApiTester</a></p>
+<div class="thread">
+<p>公開リポ。星はまだ 0、fork 0、MIT。作ったのは 2026-08-29、最後の push は 2026-08-30 17:47Z。言語バイトは Vue 61106 / Rust 36481 / JavaScript 33402。Cargo.toml の workspace version は <code>0.5.4</code>。GitHub の description は古い「Single-file HTML」のままだが、README はすでに Rust+Vue+Tauri。</p>
+<p>README: 「填地址 → 发消息 → 看结果」。OpenAI / Anthropic / Gemini の SSE を自動適応。返信ごとに prefill、decode、生成 token 数、tok/s、総耗时、モデル名。Vision 複数画像、Claude document 添付、<code>/v1/models</code> の一覧、コンテキスト on/off、i18n と明暗。</p>
+<p>三つの入口: (1) <code>mat-server</code> 単体バイナリ + 静的フロント、既定 <code>127.0.0.1:52081</code>。(2) Tauri デスクトップ単ファイル、データ <code>~/.mat-desktop/</code>。(3) ソースからフロントとバックを別起動（5173 が 52081 へ）。CLI は host / port / db-path / static-dir の引数のみ。環境変数は v0.5.4 で削除。</p>
+<p>Credits: 初版は RunningFelix/openai-api-tester（MIT）改造 → Bun+SQLite → いまの Rust+Vue。</p>
+<h2>Releases</h2>
+<p>最新 <strong>v0.5.4</strong>（2026-08-30T15:17:04Z / 2026-08-31 00:17 JST）。CHANGELOG（CST）: markdown-it + KaTeX、動画リンクを video controls、showdown を外した。v0.5.3 で About の GitHub 更新検査とデスクトップを単ファイル化。v0.5.2 で 8分類×4=32 のプリセット。linux-x64 サーバは 8948488 bytes。</p>
+<h2>体験</h2>
+<p>ここまで触った: GitHub API（repo / languages / releases / contents）、README、Cargo.toml、CHANGELOG.md、<code>mat-server-linux-x64</code> と <code>mat-frontend-dist.zip</code> をダウンロードして展開。zip 中身は <code>index.html</code> + <code>assets/</code> + <code>app-icon.svg</code>。index の script パスは <code>/api-tester-rust/assets/...</code> になっていて、ローカルの静的ディレクトリ指定ではアセットが 404 になりうる（未実行のため未確認）。</p>
+<p>ここは触れなかった: ダウンロードしたバイナリの実行はこの環境で拒否された。help と health、実 API を叩いて tok/s を出すところまでは未確認。リポの clone はしていない。デスクトップ版も未起動。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

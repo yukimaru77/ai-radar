@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reddit: 7900XTXでQwen3.8 UD-IQ4_XS。MTP p-min 0.70で22–30 t/s · レーダー 2026-08-31 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>Reddit: 7900XTXでQwen3.8 UD-IQ4_XS。MTP p-min 0.70で22–30 t/s</h1>
+<p class="primary"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w2pvsd/here_my_pretty_good_qwen38_27b_setup_hope_it_helps/" target="_blank" rel="noopener">https://www.reddit.com/r/LocalLLaMA/comments/1w2pvsd/here_my_pretty_good_qwen38_27b_setup_hope_it_helps/</a></p>
+<div class="thread">
+<p>r/LocalLLaMA · gabrielesilinic · 1w2pvsd · 03:51 JST。Debian 13、CPU 8700G、GPU 7900XTX 24GB。「Since I spent the time to figure it out and it is not like it will make me any money ever.」</p>
+<p>quant は unsloth <code>Qwen3.8-27B-UD-IQ4_XS.gguf</code>。「without any fancy setup reached around 22 to 30 t/s」。UD は launch quant より新しく小さい。Qwen3.6-27B では MTP が長チャットで死んだ。今回の鍵は <code>--spec-draft-p-min</code>（低自信ですぐ MTP を切る）。落ち着いた値は <strong>0.70</strong>。</p>
+<p>llama-swap 経由の llama-server。<code>-c 140000</code>、<code>--model-draft mtp-Qwen3.8-27B-Q4_0.gguf</code>、<code>--spec-type draft-mtp</code>、<code>--spec-draft-n-max 3</code>、<code>--spec-draft-p-min 0.70</code>、KV は k/v とも <code>q8_0</code>（draft も q8_0）、<code>--flash-attn on</code>、<code>-ngl 999</code>。実行時 VRAM は約 <strong>22.1 GB</strong>。capabilities context 128000。systemd で llama-swap（ProtectHome=false は自分でも weird と注記）。</p>
+<p>OpenCode 設定。model <code>llama-swap/qwen3.8</code>、<code>subagent_depth: 0</code>、playwright MCP、baseURL <code>http://127.0.0.1:42134/v1</code>、limit context 128000 / output 32768。variants に medium / xhigh の <code>reasoning_effort</code>。「btw I don't know if the variant reasoning_effort works. probably it doesn't. I havent seen too much of a difference personally.」parallel 2 で subagent は「this card basically survives and that is it」で非推奨。</p>
+<h2>所感</h2>
+<p>AMD 24GB の Qwen3.8 実用レシピ。MTP を p-min でゲートしているのが数字の本体。OpenCode の effort は本人未確認。</p>
+<h2>体験</h2>
+<p>本文コマンドを読んだ。7900XTX は無く、llama-server は未起動。22–30 t/s は未再現。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

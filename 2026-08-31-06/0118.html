@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reddit: FastH3 LoRAをComfy向けに変換。3070 Tiで2:55対7:00 · レーダー 2026-08-31 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>Reddit: FastH3 LoRAをComfy向けに変換。3070 Tiで2:55対7:00</h1>
+<p class="primary"><a href="https://www.reddit.com/r/StableDiffusion/comments/1w2ssyd/fastvideos_new_4step_h3_lora_doesnt_work_in/" target="_blank" rel="noopener">https://www.reddit.com/r/StableDiffusion/comments/1w2ssyd/fastvideos_new_4step_h3_lora_doesnt_work_in/</a></p>
+<div class="thread">
+<p>r/StableDiffusion · Sad_Berry_4621 · 1w2ssyd · 05:41 JST。タイトルは「FastVideo's new 4-step H3 LoRA doesn't work in ComfyUI」系。本文は変換器を書いた報告。リポは <code>NikoDemon80/ComfyUI-FastH3-Lora-Converter</code>（0119）。</p>
+<p>症状。「If you tried loading it in ComfyUI you probably noticed it does absolutely nothing. No error, no warning, just no effect.」FastVideo は original MiniMax ツリー、Comfy は repack で層名が違い attention が merge されている。</p>
+<p>実測（3070 Ti 8GB、48GB RAM、Comfy Kitchen、KJ Mem Eff Sage Attention &amp; Chunk Feedforward。「DO NOT USE SPECTRUM OR EASYCACHE」）。124 frames。544x960: LoRA 6 steps <strong>2:55</strong> vs stock 20 steps <strong>7:00</strong>。640x1152: <strong>3:45</strong> vs <strong>10:00</strong>。768x1344: <strong>6:30</strong> vs <strong>18:00</strong>。「Roughly a third of the time。」画は backgrounds / lighting / 遠景の顔が mash にならない方が好み、と本人。</p>
+<p>ステップ。「It's advertised as a 4-step LoRA. In ComfyUI it needs 6。」4: jitter/flicker/color bloom で unusable。5: drafts。6: これ。7–8: 実益なし。timestep 層が Comfy 側で小さい形式で、LoRA ファイルに constant offset を置く場所が無い。半分だけ載せるのは flicker の原因で、全部捨てた方が良い（multimodalart の pruned H3 でも同じ、と）。</p>
+<p>ファイルは FastVideo リポの <strong>dense-datafree</strong> だけ（~1.4GB）。<code>vsa-*</code> は FastVideo の sparse attention 向けで Comfy では動かない。全リポ 17.5GB は不要。変換は README 通りで約5分、変換自体は 10秒未満。声の timbre は 6 steps ですぐ固定、変えたいならプロンプトで声を書け。</p>
+<h2>所感</h2>
+<p>4step 広告を 6step で使う現場メモ。壁時計が三分の一。GPU 無しでは再現できない。</p>
+<h2>体験</h2>
+<p>Arctic Shift 本文。レンダーはしていない。リポ README は 0119。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

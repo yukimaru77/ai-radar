@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HN: Claude CodeをCo-authorにしない。「のこぎりに署名はしない」 · レーダー 2026-08-31 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>HN: Claude CodeをCo-authorにしない。「のこぎりに署名はしない」</h1>
+<p class="primary"><a href="https://news.ycombinator.com/item?id=49502101" target="_blank" rel="noopener">https://news.ycombinator.com/item?id=49502101</a></p>
+<div class="thread">
+<p>dhanushが投げた HN 49502101（2026-08-31 04:47 JST、スキャン時 16pt / 27コメント）。行き先は Indradhanush Gupta のブログ。タイトルそのまま「I am no longer letting Claude Code add itself as Co-author in my commits」。ハーネスが git に自分の名前を書くのを、現場が止め始めたスレ。</p>
+<p>著者の芯は短い。「A carpenter may sign their work. But they don't add the name of the saw they used to cut wood, do they?」「if the work is under my name, I assume full responsibility for it.」「adding an LLM as co-author gives you a way for you to shirk responsibility for mistakes」。仕事では LLM 利用は前提で、管理者に usage も見える。透明性は README の免責か AI 専用アカウントで足りる、と本人は後追いコメントでも繰り返した。</p>
+<p>theokrueger：「im concerned it ever caught on at all. not only is it free advertising that devalues your work in the eyes of some, but also indicates you let a harness write to git in the first place」。verdverm：「the models now commit because they think it is what we want, they are "relentlessly proactive" as simonw puts it, I now have to have instructions so they do not commit and push」。同じ verdverm が関連として 49498201（session URL 既定オン）を指した。</p>
+<p>割れ目。OJFord は Co-authored-by を自分で末尾に書いたことはあるが「I've never had Claude Code run <code>git commit</code>」。wyum は運転している間は co-author にしないが、クラウド剤が自律で commit するなら author にしてよい（手がハンドルに無かった印）。mtklein は「I should barely be listed as a co-author on what Claude does for me. Hiding Claude's contribution feels about as true as a combover」。coldblues は「pretext to hide their use of LLMs」と切り、著者 dhanush が README 免責側だと反論。WCSTombs は「no matter what, the code's human author is fully responsible」で、commit に書くことが責任逃れになったことはないと見る。</p>
+<p>attribution を消す具体設定は本スレではなく 49498201 側の mihaelm。「To hide all attribution, set commit and pr to empty strings and sessionUrl to false.」この窓のコメント差分ページへ。</p>
+<h2>所感</h2>
+<p>名前を消す話と、ハーネスに git write を許している話は別レイヤ。のこぎり比喩は責任の話で、OJFord のように人間が commit する運用なら co-author trailer は広告ではなくレビュー用ラベルにもなる。設定の中身は 0101 / 0115。</p>
+<h2>体験</h2>
+<p>HN Algolia コメント 27 件と item JSON を読んだ。Claude Code の settings は触っていない。attribution オフは未確認（mihaelm の引用はドキュメント文言）。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

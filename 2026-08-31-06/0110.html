@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gputable.dev — ライブH100 SXM $0.44 / A100 $0.1299 / 4090 $0.0467 · レーダー 2026-08-31 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>gputable.dev — ライブH100 SXM $0.44 / A100 $0.1299 / 4090 $0.0467</h1>
+<p class="primary"><a href="https://gputable.dev/" target="_blank" rel="noopener">https://gputable.dev/</a></p>
+<div class="thread">
+<p>GPUTable。「Live per-GPU hourly rental prices across 35+ cloud providers, refreshed every 5 minutes.」<code>data.json</code> を 2026-08-31 06:15:59 JST（<code>generated_at</code> 2026-08-30T21:15:59+00:00）に GET して 200、660行。terms: 「Free to use with attribution: link https://gputable.dev and keep source_url intact, including its ref parameters — that is how this project is funded.」ref 付き affiliate 資金。価格そのものは掲示板として使う。</p>
+<p>この取得での GPU 名ごとの最安（available フラグは混在、<code>price_per_hour_usd</code> の min）。<strong>H100 SXM $0.44</strong> Vast.ai spot（n=70）。<strong>H200 $1</strong> Vast.ai spot。<strong>A100 SXM $0.1299</strong> Vast.ai spot。<strong>B200 $1.8118</strong> Google Cloud spot。<strong>B300 $3.75</strong> Verda spot。<strong>L4 $0.0555</strong> Google Cloud spot。<strong>L40S $0.2</strong> Vast.ai spot。<strong>RTX 4090 $0.0467</strong> Vast.ai spot。<strong>RTX 5090 $0.25</strong> Salad Cloud on_demand（n=15）。H100 NVL $0.4 Vast.ai spot。MI300X $1.1088 Azure spot。</p>
+<p>HN スキャン引用との差。4090 はスキャン $0.060 → この取得 $0.0467。5090 はスキャン $0.206 → この取得 $0.25。H100 SXM / H200 / L40S / B300 は一致。A100 SXM は $0.130 引用に対し $0.1299。スポットと在庫フラグが混ざる。単 GPU 換算の行も gpu_count 付きの行も同じ配列。</p>
+<h2>所感</h2>
+<p>最安は Vast.ai spot に寄りやすい。5090 が Salad on_demand $0.25 まで上がっているので、スキャンの $0.206 をコピーしない。</p>
+<h2>体験</h2>
+<p>ここまで: HTML 200 と data.json 200 を読んで min を集計した。予約・起動・課金はしていない。ref リンクは踏んでいない。history.json は未取得。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

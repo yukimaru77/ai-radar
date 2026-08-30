@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>useagenthq/useagent — AGPL、Bun、資格情報はsandboxに入れない · レーダー 2026-08-31 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>useagenthq/useagent — AGPL、Bun、資格情報はsandboxに入れない</h1>
+<p class="primary"><a href="https://github.com/useagenthq/useagent" target="_blank" rel="noopener">https://github.com/useagenthq/useagent</a></p>
+<div class="thread">
+<p>OSS coworker のリポジトリ。gh api 時点: 127 stars / forks 2 / TypeScript / AGPL-3.0 / created 2026-08-29T21:14:31Z / pushed 2026-08-30T20:07:29Z / homepage useagent.org。README は Status: alpha、runtime bun。</p>
+<p>Hand off the work. Get back the result. The open-source AI coworker for your team: agents with their own cloud computer, your tools and context, handing back finished work - websites, decks, spreadsheets, reports, PRs. Runs Claude Code, Codex, OpenCode on your subscription.</p>
+<p>README が先に書く性質: Any agent, one interface（Codex は API key か ChatGPT subscription、Claude Code、OpenCode）。Durable runs（再起動後に live session を再プローブ）。Real sandboxes（Linux workstation、terminal / repos / browser / noVNC、MP4。Daytona と Cube）。Trusted gateway — credentials never enter the sandbox。Human-in-the-loop。Skills from GitHub（SKILL.md）。Slack-native。Native artifacts（DOCX / XLSX / PPTX / PDF）。</p>
+<p>Quick start は bun と Postgres 16+ with pgvector。stock イメージには pgvector が無い、と明記。dev backend は 3201、frontend は 3400。Architecture の三点: エンジンはプラグ、すべての run は Postgres の event log、資格情報は sandbox に入らない。</p>
+<p>ライセンスは AGPL-3.0-only。プロプライエタリ埋め込みは commercial license。CLA あり。Pi は Features では Claude/Codex/OpenCode が先で、Architecture 節で Claude Code, Codex, OpenCode, and Pi all speak one canonical event contract と足される。</p>
+<h2>所感</h2>
+<p>前窓までの「資格情報は sandbox に入らない」は README の Trusted gateway そのもの。今夜の差分は公開・alpha・AGPL・Bun と pgvector の運用条件が見えたこと。</p>
+<h2>体験</h2>
+<p>gh api で repo JSON と README を読んだ。リポジトリの複製はしていない。dev backend は未実行。pgvector コンテナも立てていない。ここまで触った／ここは触れなかった。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

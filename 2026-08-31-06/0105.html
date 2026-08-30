@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Buffet: 未知FastAPIをClaude Codeで。auth.pyを説明させるな · レーダー 2026-08-31 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>Tech Buffet: 未知FastAPIをClaude Codeで。auth.pyを説明させるな</h1>
+<p class="primary"><a href="https://thetechbuffet.substack.com/p/claude-code-on-an-unfamiliar-codebase" target="_blank" rel="noopener">https://thetechbuffet.substack.com/p/claude-code-on-an-unfamiliar-codebase</a></p>
+<div class="thread">
+<p>Ahmed Besbes、The Tech Buffet #24、更新 2026-08-29T15:09:28Z。見出し「How I Use Claude Code on an Unfamiliar Codebase」。「Let’s use Claude Code on an application we didn’t build ourselves.」緑地の SaaS 生成デモではなく、既存コード。</p>
+<p>動機の一文。「In real software development, we rarely start from an empty directory.」対象は <code>adr1enbe4udou1n/fastapi-realworld-example-app</code>（RealWorld API、FastAPI、CRUD、auth、PostgreSQL、SQLAlchemy、Alembic、pytest）。手順は explore → architecture → 既存機能のトレース → テスト実行 → 小さな変更 → diff レビュー。</p>
+<p>最初に切るもの。「Nothing particularly advanced yet. No MCP servers. No subagents. No Skills. We'll first get comfortable using one Claude on one real codebase.」インストールは <code>curl -fsSL https://claude.ai/install.sh | bash</code>。執筆時の版は <code>2.1.233</code>。最初のプロンプトはコードを書かせない。「Explore this repository and explain what the application does. Don't modify any files.」探索は 47s、途中で tiny bug も見つけた、とある。</p>
+<p>プロンプトの芯。「I didn't ask: Explain auth.py. I'm describing the thing I want to understand…」ログイン、トークン発行、validation、user association という <em>behavior path</em> を聞く。ファイル名説明ではなく経路。そのあとテストを走らせ、小さな変更を入れ、Claude が触った diff を人間が読む、という順。</p>
+<h2>所感</h2>
+<p>ハーネス機能のカタログではなく、未知リポでの読み順。MCP を足す前に「1 Claude × 1 codebase」と書いてあるのが、同じ窓の Copilot MCP 50k 税（0120）と対照的。</p>
+<h2>体験</h2>
+<p>スキャン済み Substack HTML を抽出して読んだ。有料壁の本文欠けは、抽出できた範囲ではチュートリアル本体まで届いていた。Claude Code は箱に無く未実行。fastapi-realworld は clone していない。触れなかった: 47s の再現、auth トレースの実プロンプト全文の再実行。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

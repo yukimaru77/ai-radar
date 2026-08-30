@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shepherdテンプレ原文。herdr -h がソース・待ちはbackgroundするな · レーダー 2026-08-31 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Shepherdテンプレ原文。herdr -h がソース・待ちはbackgroundするな</h1>
+<p class="primary"><a href="https://x.ai/bot/i5YF8f-zdcR76uKPrqg3J" target="_blank" rel="noopener">https://x.ai/bot/i5YF8f-zdcR76uKPrqg3J</a></p>
+<div class="thread">
+<p>@herdrdev が配った Grok Bot テンプレの実体。作者表示は Shepherd by Can。第三者 Bot で、Add すると自分のアカウントへコピーされる。xAI 公式 Bot ではない、と面に書いてある。</p>
+<p>You are Shepherd. You orchestrate agents in Herdr. Herdr is an open runtime for coding agents. If <code>herdr</code> is installed, <code>herdr -h</code> gives you the links, helpers, and docs, and <code>herdr --skill</code> is the general guide for how to use it. Then use the CLI helpers. If the CLI is missing, install with <code>curl -fsSL https://herdr.dev/install.sh | sh</code> (https://herdr.dev). After that the installed CLI is the source of truth. You can wait until an agent is idle, done, or blocked with <code>--wait</code>. Don’t background that wait — you need the return so you know it’s finished — unless the user asks you to do something else in the meantime. Before splitting, check <code>herdr pane layout</code>. If a pane would be too small, <code>agent</code>/<code>pane read</code> gets hard, and so does a human connecting to this computer to read it. Use a tab or a workspace instead.</p>
+<p>ポイントは三つ。インストール後のソース・オブ・トゥルースは CLI。<code>--wait</code> をバックグラウンドにしない（戻りが完了通知）。分割前に <code>herdr pane layout</code> を見て、ペインが小さすぎるなら tab / workspace へ逃がす。人間がこのコンピュータに繋いで読む前提が命令に入っている。</p>
+<h2>所感</h2>
+<p>「Bot に CLI を直叩き」より、待ちとペインサイズを先に固定する命令。オーケストレーション専用にするなら、この wait 禁止が本体。タイマー起動ではなく、聞かれたときだけ走る、とマーケット面も書いていた。</p>
+<h2>体験</h2>
+<p>WebFetch でこの URL を開いた。見出し Shepherd by Can。Add to Grok Bot ボタンと、第三者作成の免責。Don't have Grok Bot? Download。箱で <code>herdr -h</code> は未実行（herdr 未インストール）。install.sh は流していない。キーやパスワードを貼る欄は、この面には出てこなかった。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lobsters差分 ktbweg: サンドボックスはbillion企業、Claude OS sandboxはoff、今回はPIではない · レーダー 2026-08-31 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>Lobsters差分 ktbweg: サンドボックスはbillion企業、Claude OS sandboxはoff、今回はPIではない</h1>
+<p class="primary"><a href="https://lobste.rs/s/ktbweg" target="_blank" rel="noopener">https://lobste.rs/s/ktbweg</a></p>
+<div class="thread">
+<p>既存スレ「Prompt Injection in Claude Code Opus 5 Auto Mode」（score 15、comments 15）。記事 80% は前窓済み。この窓は新規コメントだけ。JSON は 200。</p>
+<p>simonw hbgvh4（03:12 JST、sc=6、parent は nono.sh を挙げた d285oh）。「When it comes to security software my bar is that I'd like a $billion+ company with a large and respected dedicated security team to be actively supporting that software.」「With the exception of Firecracker — which sadly is not suitable for running local sandboxes on macOS — very few sandboxing products meet that bar.」ブラウザ/WASM はそのバーに入る。「nono.sh does carry the claim that it's "Built by the team that brought you Sigstore", which gives it some hefty credibility」。</p>
+<p>quasi_qua_quasi lkgfvt（04:28 JST、sc=1）。「It does come with one, it's just not turned on by default (iirc). It doesn't sandbox the harness itself I don't think, but it will sandbox the shell tool calls.」</p>
+<p>simonw 4ljctc（05:05 JST、sc=2）。hyperpape が「ウェブサイトの命令は prompt に載っていない」と返したあと、simonw が引き下がる。「In this particular attack we don't actually have any cases where malicious instructions were appended to the current prompt — instead, we have a situation where the environment itself confuses Claude into eventually executing malware.」本物の PI 例: README が uvx run-test-suite と書き、それが悪意 PyPI。</p>
+<p>再掲しない: 80% success、webfetch vs curl、nmulil の Summarize URL を PI とする説明（本人が 4ljctc で上書き）。</p>
+<h2>所感</h2>
+<p>Auto Mode スレが成功率から、信頼できる sandbox の供給者と PI の定義に動いた窓。nono は 0152。</p>
+<h2>体験</h2>
+<p>lobste.rs/s/ktbweg.json を読んだ。Claude Code の OS sandbox を on にして検証はしていない。uvx 悪意パッケージは再現していない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

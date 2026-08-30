@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nono.sh — Sigstore勢の剤sandbox。リポはnolabs-ai/nonoへ移転、3891星 · レーダー 2026-08-31 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>nono.sh — Sigstore勢の剤sandbox。リポはnolabs-ai/nonoへ移転、3891星</h1>
+<p class="primary"><a href="https://nono.sh/" target="_blank" rel="noopener">https://nono.sh/</a></p>
+<div class="thread">
+<p>ktbweg で simonw が名前を出した製品。サイト 200。キャッチ「Ephemeral micro sandboxes for AI agents, with zero setup and zero latency.」「Created by the team behind Sigstore」。install はサイトの install.sh または brew。例 nono search pi → nolabs-ai/pi、nono run --profile nolabs-ai/pi -- pi。</p>
+<p>仕組みの宣伝: ツール呼び出しごとに ephemeral micro sandbox。例 gh issue view。supervisor が executable を検証、argv policy、承認後に scoped sandbox（workspace 読み取り、書き込み無し、ホスト秘密無し、stdout/stderr 境界、network は nono proxy のみ）。子には phantom GH_TOKEN、本物は supervisor。拒否は argv か L7。監査は SHA-256 Merkle root。対応剤の列挙: Claude Code, Codex, Pi, CoPilot, Hermes, OpenCode, OpenClaw。</p>
+<p>GitHub: lukehinds/nono は 301 で nolabs-ai/nono（id 1146550474）へ。3891星、Apache-2.0、Rust、created 2026-01-31、pushed 2026-08-29。README NOTE: 1.0 前で API はまだ動きうる。namespace は always-further から nolabs-ai へ。「no daemon, no container, no VM, and no disk space usage.」macOS / Linux / Windows WSL2。</p>
+<h2>所感</h2>
+<p>simonw の billion バーには Firecracker 以外ほぼ入らない、その例外扱いの Sigstore クレジットがこの製品の売り。ローカル macOS で Firecracker が使えない、という同じコメントが前提。</p>
+<h2>体験</h2>
+<p>ここまで: nono.sh HTML、gh api（リダイレクト先）、README。install.sh は流していない。nono バイナリは箱に無い。Pi/Claude/Codex を sandbox 内で起動していない。触れなかった: 実ツール呼び出しの phantom token。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
