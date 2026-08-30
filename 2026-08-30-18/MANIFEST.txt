@@ -1,0 +1,105 @@
+2026-08-30-18/0001-pi-shrink-tweet.html	Pi：成功したテストログを tool_result フックで潰す	https://x.com/vi2q_cela/status/2093968927256986098
+2026-08-30-18/0002-pi-shrink-github.html	vi2q/pi-test-output-shrink	https://github.com/vi2q/pi-test-output-shrink
+2026-08-30-18/0003-pi-picker-tweet.html	Pi：/m でプロバイダ左右・モデル上下。RECENT 4件	https://x.com/vi2q_cela/status/2093971499233464697
+2026-08-30-18/0004-pi-picker-github.html	vi2q/pi-model-picker	https://github.com/vi2q/pi-model-picker
+2026-08-30-18/0005-herdr-quota-tweet.html	Herdr：残量をスキルに聞くな。サイドバーに 5h+週次を出せ	https://x.com/guannanjiayou/status/2093977700860145876
+2026-08-30-18/0006-herdr-quota-github.html	levi-qiao/herdr-agent-quota	https://github.com/levi-qiao/herdr-agent-quota
+2026-08-30-18/0007-herdr-sandbox-tweet.html	Codex sandbox を Herdr で外に逃がすと穴になる	https://x.com/usadamasa/status/2093960918216695874
+2026-08-30-18/0008-codexos-tweet.html	Codex を QEMU に閉じ込めたら 64KiB で minify	https://x.com/TheChronium/status/2093989118199898481
+2026-08-30-18/0009-codexos-github.html	chronium/CodexOS	https://github.com/chronium/CodexOS
+2026-08-30-18/0010-codexos-tag.html	CodexOS tag generation-0002	https://github.com/chronium/CodexOS/releases/tag/experiment-002%2Fgeneration-0002
+2026-08-30-18/0011-omp-pstack-tweet.html	Oh My Pi に pstack	https://x.com/nobitoshii/status/2093964095313817629
+2026-08-30-18/0012-omp-pstack-github.html	hieusats/omp-pstack	https://github.com/hieusats/omp-pstack
+2026-08-30-18/0013-isaaclab-tweet.html	Isaac Lab で Microduck キック RL	https://x.com/kabilankb2003/status/2093979301809164519
+2026-08-30-18/0014-isaaclab-github.html	kabilankb/isaaclab-microduck	https://github.com/kabilankb/isaaclab-microduck
+2026-08-30-18/0015-warmswap-tweet.html	Blackwell 上で 671B ブロックを 0.93s ホットスワップ	https://x.com/naklitechie/status/2093988503214546985
+2026-08-30-18/0016-warmswap-github.html	NakliTechie/warmswap	https://github.com/NakliTechie/warmswap
+2026-08-30-18/0017-infinte-tv-tweet.html	無限ライブ配信のソースが落ちた	https://x.com/mylifcc/status/2093988515713626204
+2026-08-30-18/0018-infinte-tv-github.html	alex-remade/infinte-tv	https://github.com/alex-remade/infinte-tv
+2026-08-30-18/0019-kissgs-tweet.html	KISS-GS：splat を普通画像9枚に 228倍	https://x.com/HussneM27687/status/2093973344484044971
+2026-08-30-18/0020-kissgs-landing.html	KISS-GS ランディング	https://fraunhoferhhi.github.io/KISS-GS/
+2026-08-30-18/0021-h3-rewriter-tweet.html	H3 Prompt-Rewriter LoRA は T2VA 専用と作者	https://x.com/Toshi_nyaruo_AI/status/2093970043260576177
+2026-08-30-18/0022-h3-rewriter-hf.html	MiniMax-H3-Prompt-Rewriter-LoRA-8B	https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B
+2026-08-30-18/0023-hy4-mix-tweet.html	Hy4 MIX-STQ1_0：1.5TB を約200GB、ほぼ落ちない	https://x.com/NFT_Chen/status/2093984503580770635
+2026-08-30-18/0024-hy4-gguf-hf.html	AngelSlim/Hy4-preview-GGUF	https://huggingface.co/AngelSlim/Hy4-preview-GGUF
+2026-08-30-18/0025-cc-compact-tweet.html	CC は 4M 窓でも約1M で auto-compact	https://x.com/milocodes_/status/2093971987206897832
+2026-08-30-18/0026-codex-5h-tweet.html	Codex 5h が先に死んで週次が余る	https://x.com/miraium/status/2093967934691426668
+2026-08-30-18/0027-codex-extra-tweet.html	Codex 5h 後にクレジット課金？	https://x.com/HAL1986____/status/2093984335728922725
+2026-08-30-18/0028-cline-v4-free-tweet.html	Cline CLI で V4 Flash も無料	https://x.com/math_manify/status/2093984305881940207
+2026-08-30-18/0029-grokbot-billing-tweet.html	Grok Bot の請求 UI が Cursor 脳	https://x.com/RosyDogg/status/2093985633232617897
+2026-08-30-18/0030-cursor-cloud-200-tweet.html	Cursor Cloud Agents Max が週200ドル	https://x.com/loekbosman/status/2093982131479367833
+2026-08-30-18/0031-gota-10-tweet.html	Command Code GOTA 10ドルの中身	https://x.com/_o0whatever0o_/status/2093977482798178435
+2026-08-30-18/0032-dollar-go-tweet.html	1ドル Go を10枚積む方がキャッシュが当たる	https://x.com/keethesh_/status/2093960859596869971
+2026-08-30-18/0033-codex-gift-tweet.html	Codex クレジットを他人に贈る	https://x.com/Naoya_Hishida/status/2093947363274703134
+2026-08-30-18/0034-luna-webmcp-tweet.html	Luna の Browser Use は webmcp_list_tools 非対応	https://x.com/jun1228909/status/2093989431745335364
+2026-08-30-18/0035-cc-comments-tweet.html	呼び出し側コメントが /code-review で溶ける	https://x.com/h_akihiro_jp/status/2093989221308813676
+2026-08-30-18/0036-agmsg-leader-tweet.html	#agmsg で CC が勝手にリーダーになる	https://x.com/necoco_note/status/2093988866734928061
+2026-08-30-18/0037-omp-orchestrator-tweet.html	OMP：GLM をオーケストレータに	https://x.com/parthshr370/status/2093985503326376438
+2026-08-30-18/0038-grilling-sol-tweet.html	CC+Fable grilling のあと OC2+Sol 実装	https://x.com/srathsara1/status/2093954527976440154
+2026-08-30-18/0039-qwen-omp-oc2-tweet.html	Qwen3.8-27B は OMP で弱く OC2 で Opus 感	https://x.com/mehmed_bazdar/status/2093978131589669206
+2026-08-30-18/0040-fasth3-3step-tweet.html	FastH3：動きが少なければ 3 step	https://x.com/ITOKtw/status/2093956701070516401
+2026-08-30-18/0101-lobsters-iocaine.html	ayushnix：iocaine 24h で OpenAI がゴミ 1.23M	https://lobste.rs/s/nbjo0i#c_byeesh
+2026-08-30-18/0102-lobsters-skill50.html	binjip978：直す代わりに毎回 50 cents の skill	https://lobste.rs/s/pxmp9r#c_7yi2ve
+2026-08-30-18/0103-hn-memctl.html	HN: Memctl versioned memory	https://news.ycombinator.com/item?id=49496852
+2026-08-30-18/0104-memctl-github.html	EltonCherrington/memctl	https://github.com/EltonCherrington/memctl
+2026-08-30-18/0105-hn-agentgate.html	HN: AgentGate signed receipts	https://news.ycombinator.com/item?id=49496333
+2026-08-30-18/0106-agentgate-github.html	Clawdlinux/agentgate	https://github.com/Clawdlinux/agentgate
+2026-08-30-18/0107-hn-aipass.html	HN: AIPass memory is small JSON	https://news.ycombinator.com/item?id=49496317
+2026-08-30-18/0108-aipass-landing.html	aipass.ai	https://aipass.ai
+2026-08-30-18/0109-aipass-github.html	AIOSAI/AIPass	https://github.com/AIOSAI/AIPass
+2026-08-30-18/0110-hn-velocitynote.html	HN: VelocityNote local AI notebook	https://news.ycombinator.com/item?id=49496137
+2026-08-30-18/0111-velocitynote-app.html	velocitynote.app	https://velocitynote.app
+2026-08-30-18/0112-hn-qwen2013.html	HN: Resurrecting 2013 with Qwen3.8 27B	https://news.ycombinator.com/item?id=49496380
+2026-08-30-18/0113-qwen2013-blog.html	Resurrecting 2013 with Qwen3.8 27B	https://xcjs.com/blog/2026/08/29/resurrecting-2013-with-qwen3.8-27b
+2026-08-30-18/0114-hn-sol-proactive.html	HN: GPT-5.6 Sol が少し proactive すぎる	https://news.ycombinator.com/item?id=49496887
+2026-08-30-18/0115-taoofmac-sol.html	taoofmac: Sol はもう ship できる	https://taoofmac.com/space/notes/2026/08/28/2130#addendum-apparently-it-can-ship-things-now
+2026-08-30-18/0116-hn-metr.html	HN: METR が HF インシデントを独立調査	https://news.ycombinator.com/item?id=49496545
+2026-08-30-18/0117-metr-blog.html	METR: OpenAI Hugging Face incident	https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
+2026-08-30-18/0118-hn-agenthotline.html	HN: Hotline for AI Agents	https://news.ycombinator.com/item?id=49496388
+2026-08-30-18/0119-agenthotline-ai.html	agenthotline.ai	https://agenthotline.ai
+2026-08-30-18/0120-hn-debian-lwn.html	HN: Debian weighs eight options on LLM	https://news.ycombinator.com/item?id=49496476
+2026-08-30-18/0121-lwn-debian.html	LWN: Debian vote on LLM usage	https://lwn.net/Articles/1087134/
+2026-08-30-18/0122-hn-imagesage.html	HN: ImageSage local screenshot AI	https://news.ycombinator.com/item?id=49496500
+2026-08-30-18/0123-imagesage.html	ImageSage	https://ringlochid.me/imagesage/index.html
+2026-08-30-18/0124-hn-vibe-memory.html	HN: Vibe-coding a memory tool	https://news.ycombinator.com/item?id=49496960
+2026-08-30-18/0125-substack-vibe-memory.html	Vibe-Coding a Memory Tool for Agents	https://arbustoemchamas.substack.com/p/i-naively-tried-vibe-coding-a-memory
+2026-08-30-18/0126-hn-attention.html	HN: A decision tree for picking attention	https://news.ycombinator.com/item?id=49496203
+2026-08-30-18/0127-attention-substack.html	A decision tree for picking attention	https://efficientagent.substack.com/p/a-decision-tree-for-picking-attention
+2026-08-30-18/0128-askhn-write-code.html	Ask HN: Do you still write code by yourself?	https://news.ycombinator.com/item?id=49496248
+2026-08-30-18/0129-reddit-sol-luna.html	Reddit: Sol+Luna で Codex 枠を延命	https://www.reddit.com/r/codex/comments/1w2ac32/how_ive_been_making_my_codex_limits_last_much/
+2026-08-30-18/0130-sol-luna-github.html	breko861-hash/sol-luna-codex-orchestrator	https://github.com/breko861-hash/sol-luna-codex-orchestrator
+2026-08-30-18/0131-reddit-plus-alt.html	Reddit: Plus 向け Codex 代替（5h が問題）	https://www.reddit.com/r/codex/comments/1w2cjhd/what_are_good_codex_alternatives_for_plus_users/
+2026-08-30-18/0132-reddit-touchbar.html	Reddit: Touch Bar に Codex 残量	https://www.reddit.com/r/codex/comments/1w2c529/i_made_a_mac_app_to_show_codex_usage_on_touchbar/
+2026-08-30-18/0133-reddit-tibo-chat.html	Reddit: Tibo リセットがチャット Pro を戻さない	https://www.reddit.com/r/codex/comments/1w2c00d/resets_dont_reset_pro_usage_on_the_chat_interface/
+2026-08-30-18/0134-reddit-plus-weekly.html	Reddit: Plus は週次枠でよかった	https://www.reddit.com/r/codex/comments/1w2budc/plus_users_never_asked_for_this_much_do_u_agree/
+2026-08-30-18/0135-reddit-5h-regression.html	Reddit: 5h が途中で死んで回帰する	https://www.reddit.com/r/codex/comments/1w2bq7f/if_you_whined_to_get_the_5hour_back_were_not/
+2026-08-30-18/0136-reddit-56-iq.html	Reddit: 5.6 が今日 50 IQ 落ちた	https://www.reddit.com/r/codex/comments/1w2bmra/are_we_in_the_terminal_phase_of_the_cycle_again/
+2026-08-30-18/0137-reddit-chatgpt-work.html	Reddit: ChatGPT Work と Codex の橋	https://www.reddit.com/r/OpenaiCodex/comments/1w2bbki/can_anyone_recommend_an_optimal_workflowprocess/
+2026-08-30-18/0138-reddit-flash-next.html	Reddit: Flash-Next 170K ctx on 96GB	https://www.reddit.com/r/LocalLLaMA/comments/1w2b2j0/qwen38flashnext_at_170k_context_on_a_single_96_gb/
+2026-08-30-18/0139-koboldcpp-1120.html	Koboldcpp v1.120	https://github.com/LostRuins/koboldcpp/releases/tag/v1.120
+2026-08-30-18/0140-reddit-local-coding.html	Reddit: ローカル LLM はコーディングに弱い	https://www.reddit.com/r/LocalLLaMA/comments/1w2au8s/unpopular_opinion_whats_your_viewpoint/
+2026-08-30-18/0301-v2ex-webgpt.html	V2EX: 网页 GPT+GitHub は Codex 枠を食わない	https://www.v2ex.com/t/1238180
+2026-08-30-18/0302-v2ex-invite.html	V2EX: Codex 1000 credits 招待が再開放	https://www.v2ex.com/t/1238154
+2026-08-30-18/0303-v2ex-knowhere.html	V2EX: Knowhere VISION-MAP	https://www.v2ex.com/t/1238167
+2026-08-30-18/0304-knowhere.html	Knowhere Brain	https://notebook.knowhereto.ai/
+2026-08-30-18/0305-v2ex-htmlshare.html	V2EX: HTML をリンクにする	https://www.v2ex.com/t/1238169
+2026-08-30-18/0306-htmlshare.html	htmlshare.page	https://www.htmlshare.page
+2026-08-30-18/0307-juejin-looks-right.html	掘金: AI コードは見て正しくて実は間違い	https://juejin.cn/post/7679323690518429734
+2026-08-30-18/0308-juejin-langchain4j.html	掘金: LangChain4j 双バックエンド	https://juejin.cn/post/7679309679990358031
+2026-08-30-18/0309-ld-mac-codex.html	LD: Mac で複数 Codex を切り替える	https://linux.do/t/topic/2831936
+2026-08-30-18/0310-atm-github.html	cubezhao/ai-tools-mng	https://github.com/cubezhao/ai-tools-mng
+2026-08-30-18/0311-atm-home.html	AI Tools Manager サイト	https://cubezhao.github.io/ai-tools-mng/
+2026-08-30-18/0312-ld-codex-quota.html	LD: Codex 枠を切られたか	https://linux.do/t/topic/2831851
+2026-08-30-18/0313-ld-hermes.html	LD: Hermes を何に使うか	https://linux.do/t/topic/2831749
+2026-08-30-18/0314-ld-zcode.html	LD: ZCode reasoning 透传パッチ	https://linux.do/t/topic/2831832
+2026-08-30-18/0315-ld-checkclaude.html	LD: CC 環境検出と修復	https://linux.do/t/topic/2831591
+2026-08-30-18/0316-checkclaude-github.html	zzusec/CheckClaude	https://github.com/zzusec/CheckClaude
+2026-08-30-18/0317-ld-codex-rg.html	LD: Codex が CPU とディスクを食う	https://linux.do/t/topic/2831549
+2026-08-30-18/0318-ld-session.html	LD: CodexHome をソフトリンクして session 共有	https://linux.do/t/topic/2831445
+2026-08-30-18/0319-ld-k12.html	LD: k12 の枠はまだ多い	https://linux.do/t/topic/2831876
+2026-08-30-18/0320-ld-cc-switch.html	LD: cc switch がローカル路由でも Claude に行く	https://linux.do/t/topic/2831503
+2026-08-30-18/0321-ld-h3-8g.html	LD: MiniMax-H3 を 8G 5060 laptop で	https://linux.do/t/topic/2831506
+2026-08-30-18/0322-ld-dsh.html	LD: DSH MCP 管理プラグイン	https://linux.do/t/topic/2831430
+2026-08-30-18/0323-dsh-github.html	Imzl-zl/dsh-mcp-manager-ui	https://github.com/Imzl-zl/dsh-mcp-manager-ui
+2026-08-30-18/0324-ld-guomo.html	LD: 国模サブスクは降智するか	https://linux.do/t/topic/2831779
+2026-08-30-18/0325-ms-hy4-fp8.html	ModelScope: Hy4-preview-FP8-nvidia-FlagOS	https://www.modelscope.cn/models/FlagRelease/Hy4-preview-FP8-nvidia-FlagOS
