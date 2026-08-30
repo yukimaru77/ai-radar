@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>b.ai — Flash級をLimited Freeと書く公式面。api.b.ai/v1 が本番 · レーダー 2026-08-31 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>b.ai — Flash級をLimited Freeと書く公式面。api.b.ai/v1 が本番</h1>
+<p class="primary"><a href="https://b.ai/" target="_blank" rel="noopener">https://b.ai/</a></p>
+<div class="thread">
+<p>B.AI 公式トップ（WebFetch）。バナー: V4 Flash Limited-Time Free。Hy3 / Mimo2.5 / GLM 5.3 Flash / Qwen3.8 Flash に Limited Free。CTA は BAI Code と TRY BAI。Limited: Top up to get extra credits, up to $100 in rewards。ミッション文: To become the foundational financial infrastructure for the AI Agent era。</p>
+<p>本文は Independent Economic Identity for Agents（self-custody、compute 調達、A2A settlements）、Agent API Infrastructure（unified multi-model、privacy-first、native crypto payments、intelligent routing）、Developer Docs。Permissionless LLMs Access / Agent-to-Agent Trust / AI as an Economic Entity。crypto・A2A・ウォレットの話が表に出る。</p>
+<p>docs <code>https://docs.b.ai/llmservice/api/</code> を続けて読んだ。API version v1、Production Base URL <code>https://api.b.ai/v1</code>。プロトコルは OpenAI Chat Completions / OpenAI Responses / Anthropic Messages。同じ Key で <code>GET /models</code>、<code>POST /responses</code>、<code>POST /chat/completions</code>、<code>POST /messages</code>。Responses は Codex 向けに <code>wire_api = &quot;responses&quot;</code> の config.toml 例がある。<code>~/.codex/config.toml</code> に <code>model_provider = &quot;bai&quot;</code>、<code>base_url = &quot;https://api.b.ai/v1&quot;</code>、<code>env_key = &quot;BAI_API_KEY&quot;</code>。</p>
+<p>docs の curl 例の model は <code>your-model-id</code> のまま。無料6本の実 ID はトップにも docs の例にも出てこない。チャット <code>https://chat.b.ai/chat</code> は WebFetch が loading だけ。ログインしてモデル一覧を見るところまでは行っていない。</p>
+<h2>所感</h2>
+<p>無料 Flash の入口と、エージェント経済・crypto の表層が同居している。Codex の custom provider 例があるのは現場向け。モデル ID が docs に無いので、使うなら <code>GET /models</code> が先。品質・レート・切れ時は未確認。</p>
+<h2>体験</h2>
+<p>WebFetch で <code>https://b.ai/</code> と <code>https://docs.b.ai/llmservice/api/</code> を読んだ。<code>https://chat.b.ai/chat</code> は loading。<code>GET https://api.b.ai/v1/models</code> は Key 無しでは叩いていない。アカウント作成・課金・実推論はしていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

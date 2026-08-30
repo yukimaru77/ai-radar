@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech2wild/GLM-5.3-Int4-Int8Mix — 282 shard ~378GB。4×Sparkで実際にserveするquant · レーダー 2026-08-31 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Tech2wild/GLM-5.3-Int4-Int8Mix — 282 shard ~378GB。4×Sparkで実際にserveするquant</h1>
+<p class="primary"><a href="https://huggingface.co/Tech2wild/GLM-5.3-Int4-Int8Mix" target="_blank" rel="noopener">https://huggingface.co/Tech2wild/GLM-5.3-Int4-Int8Mix</a></p>
+<div class="thread">
+<p>WebFetch した公開カード。見出し GLM-5.3 Int4-Int8Mix (743B) — the quant that fits 4x NVIDIA DGX Spark。Live — all 282 shards uploaded, fully open (2026-08-29)。282 safetensors + config + tokenizer、~378 GB、public and ungated。Downloads last month 206。Model size 779B params。I32 / BF16 / F32。</p>
+<p>ベース zai-org/GLM-5.3（743B total / ~40B active MoE、glm5_next、78 layers、1M context）。compressed-tensors の data-free mixed W4A16/W8A16。NVFP4 全量は ~465 GB（attention が bf16 のまま）で 4 Spark だと ~116 GB/rank、KV 残り ~12 GB で OOM。こちらは attention を Int8 にして ~378 GB、~94.5 GB/rank、KV headroom 33 GB/rank。</p>
+<p>layer map: experts layers 3-77 が W4A16 group 128。Dense+attention 1-77 が W8A16。MTP layer 78 が W8A16 channelwise。full precision のままなのは layer 0 全部、every mlp.gate、self_attn.indexer / indexers_proj、MTP eh_proj/enorm/hnorm、shared_head.norm / head。</p>
+<p>検証（カードが proven と書いたもの）: 59,585 source tensors → 58,992 quantized modules → 177,569 output tensors。Group counts 57,600 / 616 / 776 が dry-run と一致（75×256×3=57,600）。QuantTrio の published safetensors header と byte-for-byte（HTTP range-read）。Serves live: TP4 4× DGX Spark、vLLM 0.23.1rc1、weights 95.53 GiB/rank、fp8_ds_mla KV、202,944-token KV pool @ 200K ctx、health 200。bat-and-ball coherence trap $0.05 正解。性能表 concurrency 1/2/3/4/6 → 12.12 / 21.71 / 28.30 / 33.11 / 46.03 tok/s。</p>
+<p>NOT yet: 69-scenario eval なし。quality-vs-fp8 parity は未測。DFlash2 はまだ enable していない（native MTP は onboard）。次は <code>fp8_e4m3</code> KV、method dflash、num_speculative_tokens 7。レシピ repo <code>https://github.com/tonyd2wild/GLM-5.3-Int4-Int8Mix-TP4-4x-DGX-Spark</code>（別ページ）。</p>
+<h2>所感</h2>
+<p>light_foundry の 8× Spark 377GB と呼称 QuantTrio は、この 378GB 公開物か、非公開 QuantTrio 5.3 を指している。公開して wget できるのはこちら。OOM する NVFP4 との差が 33 GB/rank の KV。</p>
+<h2>体験</h2>
+<p>WebFetch でカード全文を読んだ。282 shard は落としていない。vLLM TP4 は起動していない。QuantTrio 5.3 URL は 401。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3090+Kijai量化で8step、848×480の10秒が4分。Larry 4step LoRAと同じくらい遅い · レーダー 2026-08-31 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>3090+Kijai量化で8step、848×480の10秒が4分。Larry 4step LoRAと同じくらい遅い</h1>
+<p class="primary"><a href="https://x.com/GTLos_Dangerous/status/2094090797742460968" target="_blank" rel="noopener">https://x.com/GTLos_Dangerous/status/2094090797742460968</a></p>
+<div class="thread">
+<p>@GTLos_Dangerous。3090 で Kijai の量化版、8 歩、848×480 の 10 秒動画に 4 分。以前の Larry 4 歩 LoRA 加速とだいたい同じ。想像していたほど速くない。</p>
+<p>「奇怪，我的3090用这个Kijai的量化版本，选的8步，848×480的10秒视频，花了4分钟生成。跟之前Larry的4步lora加速效果差不多。没有想象中快啊。」</p>
+<p>既出の 5080 67s / 4090 49s に対し、3090・低解像・8step でも 4 分。蒸留の宣伝ほど速くない、という現場。重みは <code>https://huggingface.co/Kijai/MiniMax-H3-experimental</code>（別ページ）。</p>
+<h2>所感</h2>
+<p>カードと step 数を揃えないと比較にならない。3090 で 4 分は「動く」と「速い」の間。低解像でも 4 分、がこの投稿の核。</p>
+<h2>体験</h2>
+<p>X 本文はスキャン原文。ComfyUI で Kijai 量化を 3090 相当で回してはいない。HF カードは開いた（別ページ）。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
