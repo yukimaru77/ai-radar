@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code：同じ仕事でもトークンが倍になる4点 · レーダー 2026-08-30 12:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 12:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Claude Code：同じ仕事でもトークンが倍になる4点</h1>
+<p class="primary"><a href="https://x.com/oikon48/status/2093897746159935924" target="_blank" rel="noopener">https://x.com/oikon48/status/2093897746159935924</a></p>
+<div class="thread">
+<p>@oikon48。<code>/clear</code> vs <code>/compact</code> 自体は既出。<strong>新規は運用手順の束ね方</strong>。</p>
+<h2>4点</h2>
+<p>1. 長いセッションは毎ターン全文再送 → タスク終了で <code>/clear</code>、要約が要るときだけ <code>/compact</code>。</p>
+<p>2. 読んだファイルとコマンド出力はセッション終了まで残る → 説明せず <code>@</code> で指す。出力が多いコマンドはサブエージェントへ。</p>
+<p>3. モデルと effort はコストを倍増させ、<strong>デフォルトは前回セッションの設定</strong> → 開始前に <code>/model</code> <code>/effort</code> を確認。</p>
+<p>4. プロンプトキャッシュは <strong>モデル / effort / モード切替で消える</strong> → 会話途中で切り替えない。</p>
+<h2>所感</h2>
+<p>「同じ仕事なのに倍」の原因が、モデルの賢さではなくセッション衛生。Command Code 側の prefix 死（時刻挿入）と同じ系統の現場知。</p>
+<h2>体験</h2>
+<p>スキャン原文。公式 prompt-caching docs は別ページ。CC 実機で切替コストは測っていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
