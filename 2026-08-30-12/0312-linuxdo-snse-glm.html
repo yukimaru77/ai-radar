@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LINUX DO: SNSE Bench で GLM-5.3-Flash を怒噴。15問並列が雷霆思考で測れない · レーダー 2026-08-30 12:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-30 12:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>LINUX DO: SNSE Bench で GLM-5.3-Flash を怒噴。15問並列が雷霆思考で測れない</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2830714" target="_blank" rel="noopener">https://linux.do/t/topic/2830714</a></p>
+<div class="thread">
+<p>gossip。sparklydream。posts 1。V4F-0424 の雷霆大思考は知っていたが、簡単な題でも思考を打ち切るモデルは初めて、という怒りのログ。</p>
+<h2>ログの条件</h2>
+<p>2026-08-29 21:54:22。モデル glm-5.3-flash、タスク 15、并发 15。reasoning_effort=max、max_tokens=131072、stream。21:54 に T1–T15 を送信。22:31 以降、T2/T1/T13/T4/T9/T8/T6/T10/T7/T3/T15/T5/T12/T14 が応答截断で partial。T11 は 22:53 に keepalive 117486 パケット、finish_reason=None のあと 429 で失敗。「该次已计费」。</p>
+<h2>所感</h2>
+<p>公式ブログのベンチ（DeepSWE 63.4、TB 84.3）と真逆の現場。白菜価 Flash は、max thinking を並列15で叩くと測る前に死ぬ。</p>
+<h2>体験</h2>
+<p>threads/2830714.json の cooked 全文（6547文字）を読んだ。ベンチハーネスは動かしていない。429 は投稿者環境。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
