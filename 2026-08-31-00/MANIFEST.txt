@@ -1,0 +1,105 @@
+2026-08-31-00/0001.html	OMPが自分のハーネスでなくなったので素のPiに戻した	https://x.com/KuuminDa/status/2094068881786806566
+2026-08-31-00/0002.html	Pi/OMP×GLM-5.3-Flash が 3倍請求しうる。当面 OpenCode TUI か ZCode	https://x.com/crispy_freshnes/status/2094074831683612723
+2026-08-31-00/0003.html	Piが知能、Herdrがワークスペース。Hermes軽量クローンの実測	https://x.com/arnoldgamboa/status/2094076712539886063
+2026-08-31-00/0004.html	Herdr現場ルーティング：探索Pi、実装Grok、難問Sol、実測agy	https://x.com/weixiong0/status/2094076157675348092
+2026-08-31-00/0005.html	CC auto-compactは「やるな」を落とす。制約はCLAUDE.mdへ	https://x.com/paul_pbng/status/2094046795899023776
+2026-08-31-00/0006.html	CC statusline燃料計は公式OAuth usage 1本で足りる。追加キー不要	https://x.com/aiedwardyi/status/2094076384725598574
+2026-08-31-00/0007.html	hermes mcp serve — コーディング剤からTelegram/DiscordをHermesに寄せる	https://x.com/HermesWatcher/status/2094070897552572656
+2026-08-31-00/0008.html	CCトークンの92–97%は文脈再読。読み取り専用DeepSeekワーカーで99%減	https://zenn.dev/megu0xxx0x/articles/5d7c11d406fa2c
+2026-08-31-00/0009.html	Code Replay — 生成コードの「なぜ」を再生する。fixture比較	https://x.com/YuriOQueiroz/status/2094069704784527600
+2026-08-31-00/0010.html	Lob0Garou/code-replay — 剤の意思決定を再生するfixture	https://github.com/Lob0Garou/code-replay
+2026-08-31-00/0011.html	useAgent再拡散 — 資格情報をサンドボックスに入れない	https://x.com/andreaposti/status/2094067440942497916
+2026-08-31-00/0012.html	useagenthq/useagent — 鍵はサンドボックスに入らない。AGPL alpha	https://github.com/useagenthq/useagent
+2026-08-31-00/0013.html	DeepSeek Harnessの中身はCordis。Harnessという語が邪魔をしている	https://x.com/shaogefenhao/status/2094076709695889744
+2026-08-31-00/0014.html	deepseek-ai/deepseek-harness — Everything is a Plugin（Cordis）	https://github.com/deepseek-ai/deepseek-harness
+2026-08-31-00/0015.html	$100は$20の5倍ではなく約3倍。席を分けた方が総使用量が多い	https://x.com/LauriLehtinen/status/2094076640926068840
+2026-08-31-00/0016.html	GPT Pro課金後、週次を5h窓で食い潰す形になった	https://x.com/rakurakusan_app/status/2094074790026109070
+2026-08-31-00/0017.html	Computer Useは回線不良でクォータを空焚きする。ネットワーク不安定時は切る	https://x.com/officially__adi/status/2094076358972559413
+2026-08-31-00/0018.html	キャッシュ込みだとLunaの方がGLM-5.3-Flashより20%超安い	https://x.com/egilewski/status/2094067968049127593
+2026-08-31-00/0019.html	zcode週末300M GLM-5.3-Flash無料。本体の方がdecodeが速いという体感も	https://x.com/batra99/status/2094065752559309250
+2026-08-31-00/0020.html	Grok BotがCursor Proを1日で焼いた。設計がinfinite token前提	https://x.com/mrjoshwu/status/2094071640954945833
+2026-08-31-00/0021.html	SuperGrok Heavyプロモ$100（通常$300）。上限未達のうちにHermesへmemory統合	https://x.com/emilylai/status/2094077746934591653
+2026-08-31-00/0022.html	FastH3 5080実測：1280×736 / 5s を 67.30s。4090 49s と 5090 35s の間	https://x.com/AndreaFunaro/status/2094048075488927868
+2026-08-31-00/0023.html	Qwen3.8-Flash-Next：5060 Ti 16GB+RAM128GB、prompt 72.5 / 生成 9.06 tok/s	https://x.com/nabeyakitwin/status/2094075465753665799
+2026-08-31-00/0024.html	Apodex-1.1-mini-NVFP4 — 20B研究ネイティブ剤。証拠不足は自己差し戻し	https://huggingface.co/apodex/Apodex-1.1-mini-NVFP4
+2026-08-31-00/0025.html	unslop skillを全ハーネスに入れている。poteto-mode専用という既出制限の外側	https://x.com/EWDOB/status/2094066508951634114
+2026-08-31-00/0026.html	/snapshotに入れるべきは要約ではなく、fresh sessionが会話なしで再開できるか	https://x.com/Secondmindsys/status/2094063421264204213
+2026-08-31-00/0027.html	Grokのリセットはweeklyで倍。Codexの5hは週次の蛇口	https://x.com/usaturn/status/2094072984906641467
+2026-08-31-00/0028.html	herdrをデフォルト運用。zshrcをどのペインが読んだか以外は快適	https://x.com/IAMNuN999/status/2094074320205316226
+2026-08-31-00/0029.html	Orcaは荒くて不具合が多い。結局herdrに戻ってきた	https://x.com/kotaro_dev_f/status/2094070609013870677
+2026-08-31-00/0030.html	worktreeをハーネスから剥がすmonkey。APFS上RiftコピーでCOW	https://x.com/isninkhamiss/status/2094052199844422077
+2026-08-31-00/0031.html	Grok Bot×Stripe Link。調べて終わるAIから手続きまで進むAIへ	https://x.com/IROHANI_shotime/status/2094078602849767887
+2026-08-31-00/0032.html	Grok BotのクラウドComputer Useがローカルより滑らか。スマホからも継続	https://x.com/hunter_jia228/status/2094077727037145374
+2026-08-31-00/0033.html	Qwen 3.8 MaxはFable級ではない。Gemini SDKのvoice agentを5–10分でも未完成	https://x.com/Prateek14163056/status/2094078124195823921
+2026-08-31-00/0034.html	Pi主戦だがtoo minimal。OMPはextremely bloated。本家に入れる順	https://x.com/mjlbach/status/2094070277781254289
+2026-08-31-00/0035.html	GPT Plus 5h対策のサブ剤GLM Flashは0.06x。qwen3.8の0.2折より安い	https://x.com/wikili7477/status/2094078506494025832
+2026-08-31-00/0036.html	数式はweekly 16%。スクショ2枚のComputer Useで60%	https://x.com/CrimeDecoder/status/2094073055458812375
+2026-08-31-00/0037.html	$9000で2×DGX SparkにGLM Flash / Qwen3.8 Flash / DS v4 Flash全部	https://x.com/MiaAI_lab/status/2094071914390056998
+2026-08-31-00/0038.html	空セッション税：タスク入力前に51,400 tokens占有。先に/context	https://x.com/milocodes_/status/2094039936140017668
+2026-08-31-00/0039.html	モデル独占はfrontier labのハーネスだけ。OpenCodeは全モデル・独立・OSS	https://x.com/GergelyOrosz/status/2094068428009001304
+2026-08-31-00/0040.html	hard nosをCLAUDE.mdに移したらcompactを超えて残った。チャット制約は毎回蒸発	https://x.com/promptprobe/status/2094049789574860872
+2026-08-31-00/0101.html	HN: Memctl — CLAUDE.md / AGENTS.md を版管理するゼロ依存CLI	https://news.ycombinator.com/item?id=49496852
+2026-08-31-00/0102.html	EltonCherrington/memctl — 剤メモリを中央ストアから save/use/pack	https://github.com/EltonCherrington/memctl
+2026-08-31-00/0103.html	HN: AgentGate — 剤がSaaSを叩く署名付きレシート	https://news.ycombinator.com/item?id=49496333
+2026-08-31-00/0104.html	Clawdlinux/agentgate — 剤はトークンを見ない薄いAPIゲートウェイ	https://github.com/Clawdlinux/agentgate
+2026-08-31-00/0105.html	HN: AIPass — 剤の記憶は小さなJSONファイル	https://news.ycombinator.com/item?id=49496317
+2026-08-31-00/0106.html	aipass.ai — 剤メモリを小さなJSONとして所有させる	https://aipass.ai
+2026-08-31-00/0107.html	HN: Mac extension で LLM usage を見せる	https://news.ycombinator.com/item?id=49495867
+2026-08-31-00/0108.html	usage-notch — CCとCodexの枠をMac画面端にクリップ	https://github.com/abhayKashyap03/usage-notch
+2026-08-31-00/0109.html	HN: Memnest — pi/CC/Codex が共有する local-first memory	https://news.ycombinator.com/item?id=49495320
+2026-08-31-00/0110.html	Blue-B/memnest — Rust 1サービス MCP/HTTP	https://github.com/Blue-B/memnest
+2026-08-31-00/0111.html	HN: Crbro — ファイルベース持続記憶 MCP	https://news.ycombinator.com/item?id=49494676
+2026-08-31-00/0112.html	Octonove/crbro-memory — 剤向けファイルベース脳	https://github.com/Octonove/crbro-memory
+2026-08-31-00/0113.html	HN: Breaking Claude Code Opus 5 Auto Mode	https://news.ycombinator.com/item?id=49495858
+2026-08-31-00/0114.html	Auto Modeは保安境界ではない。0.00%と独立チェーンは両立する	https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/
+2026-08-31-00/0115.html	HN: 片方のアプリでトークンが尽きたのに他方に未使用枠	https://news.ycombinator.com/item?id=49495398
+2026-08-31-00/0116.html	HN: OpenRouterが人気中国モデルをシンガポール拠点と広告	https://news.ycombinator.com/item?id=49495527
+2026-08-31-00/0117.html	Ask HN: How to break Claude Code addiction?	https://news.ycombinator.com/item?id=49491745
+2026-08-31-00/0118.html	HN: Domain-Driven Agents — レガシーでは4つ目の綴りを発明する	https://news.ycombinator.com/item?id=49492584
+2026-08-31-00/0119.html	coldtake: 戦略は人間、戦術は剤。コンテキストマップを交差検査	https://coldtake.dev/blog/domain-driven-agents
+2026-08-31-00/0120.html	Lobsters 9naffr: But where does taste come from?	https://lobste.rs/s/9naffr
+2026-08-31-00/0121.html	dustycloud: 実践者がLLMなら平均をキュレートしている	https://dustycloud.org/blog/but-where-does-taste-come-from/
+2026-08-31-00/0122.html	Lobsters pxmp9r#c_ap4ra8: 中堅事前学習は最低$5M	https://lobste.rs/s/pxmp9r#c_ap4ra8
+2026-08-31-00/0123.html	Reddit: Plusで5h枠を30分で当てた	https://www.reddit.com/r/ChatGPT/comments/1w2hfv7/5_hr_limit_and_weekly_usage_limit/
+2026-08-31-00/0124.html	Reddit: Chat high が100分から25–27分ハードキャップ	https://www.reddit.com/r/ChatGPT/comments/1w2hrd0/chat_high_25_minute_consecutive_work_cap/
+2026-08-31-00/0125.html	Reddit: Solの委譲が20時間空回り。一人で2時間で直った	https://www.reddit.com/r/codex/comments/1w2iw8b/delegation_seems_like_such_a_wrong_way_right_now/
+2026-08-31-00/0126.html	Reddit: Windows Codex に Control other devices が無い	https://www.reddit.com/r/codex/comments/1w2igs8/windows_codex_remote_control_workaround/
+2026-08-31-00/0127.html	drarvindc/codex-remote-launcher — 非公式 Windows ランチャ	https://github.com/drarvindc/codex-remote-launcher
+2026-08-31-00/0128.html	Reddit: Terraで一度枠を使って AGENTS.md を作り以降の再読を減らす	https://www.reddit.com/r/codex/comments/1w2hcem/waste_tokens_once_to_optimize_token_usage/
+2026-08-31-00/0129.html	Reddit: Codex CLI 1M ctx は自動で上位課金ルールになるか	https://www.reddit.com/r/codex/comments/1w2hay4/does_the_1m_context_window_on_codex_cli_cause/
+2026-08-31-00/0130.html	Reddit: AIコードを信じる前に回す5プロンプト	https://www.reddit.com/r/ChatGPTCoding/comments/1w2hqd9/the_5_prompt_sequence_i_run_on_every_chunk_of/
+2026-08-31-00/0131.html	Reddit: Codex is no longer useful — Sol medium 2日で枠が死んだ	https://www.reddit.com/r/OpenAI/comments/1w2fy4p/codex_is_no_longer_usefull/
+2026-08-31-00/0132.html	Reddit: Flash-Next Q4 は Unsloth だと RAM を食い AtomicChat は n-gram を SSD へ	https://www.reddit.com/r/LocalLLaMA/comments/1w2jwvy/guys_if_you_are_starved_for_ram_to_run/
+2026-08-31-00/0133.html	Reddit: Qwen3.8-Flash-Next NVFP4 2x Spark decode 50 t/s	https://www.reddit.com/r/LocalLLaMA/comments/1w2inlp/qwen38flashnext_nvfp4_2xdgx_spark_config_50ts/
+2026-08-31-00/0134.html	Reddit: EXL3 3.00bpw の 30B が 12GB VRAM で 100K ctx	https://www.reddit.com/r/LocalLLaMA/comments/1w2i963/dont_sleep_on_exl3_quants/
+2026-08-31-00/0135.html	Reddit: Qwen3.8-27B on 5090 — prose 144 / code 256 t/s	https://www.reddit.com/r/LocalLLaMA/comments/1w2g5se/qwen3827b_on_rtx_5090_144256_ts_prosecode_256451/
+2026-08-31-00/0136.html	Reddit: llama.cpp --numa mirror で dual EPYC decode +64%	https://www.reddit.com/r/LocalLLaMA/comments/1w2hlm8/numa_mirror_for_llamacpp_replicate_weights_per/
+2026-08-31-00/0137.html	Reddit: GLM-5.3-Flash は agent 能力の段差だが long tail が怖い	https://www.reddit.com/r/LocalLLaMA/comments/1w2germ/glm53flash_is_100_a_step_change_in_agential/
+2026-08-31-00/0301.html	V2EX: Codex 用量を Touch Bar / メニューバーに	https://www.v2ex.com/t/1238225
+2026-08-31-00/0302.html	yizhigou/codex-usage-bar — macOS の Codex 燃料計	https://github.com/yizhigou/codex-usage-bar
+2026-08-31-00/0303.html	V2EX: GLM 開発事故。8億 token で Work ごと消した	https://www.v2ex.com/t/1238217
+2026-08-31-00/0304.html	V2EX: 六爻サイトを OxAlpha / 5.6 Sol で蒸留	https://www.v2ex.com/t/1238224
+2026-08-31-00/0305.html	lemonteaau/binary-liuyao — 六爻チャート	https://github.com/lemonteaau/binary-liuyao
+2026-08-31-00/0306.html	lemonteaau/liuyao-eight-lesson-interpreter — 八講 skill	https://github.com/lemonteaau/liuyao-eight-lesson-interpreter
+2026-08-31-00/0307.html	liuyao.lemontea.xyz — 自作六爻サイト	https://liuyao.lemontea.xyz
+2026-08-31-00/0308.html	V2EX: vibe で履歴書。anti-slop skill と HITL 論争	https://www.v2ex.com/t/1238220
+2026-08-31-00/0309.html	nscTechArt/are-you-sure — AI Slop 回避 skill	https://github.com/nscTechArt/are-you-sure
+2026-08-31-00/0310.html	V2EX 1238180 返信差分: 自前 MCP と Plus/Codex 共有 5h	https://www.v2ex.com/t/1238180
+2026-08-31-00/0311.html	掘金: archify — Agent のアーキ図に fail-closed 验收	https://juejin.cn/post/7679618338582888458
+2026-08-31-00/0312.html	tt-a1i/archify — 検証つきアーキ図 skill（33k★）	https://github.com/tt-a1i/archify
+2026-08-31-00/0313.html	掘金: MyCodeAgent 容错 — 分類してからリトライ	https://juejin.cn/post/7679623224662245419
+2026-08-31-00/0314.html	chendongqi/MyCodeAgent — 自作 coding agent の容错	https://github.com/chendongqi/MyCodeAgent
+2026-08-31-00/0315.html	掘金: Needle 2 — 14MB 端側 tool-calling	https://juejin.cn/post/7679542577528815670
+2026-08-31-00/0316.html	cactus-compute/needle — 14MB 端側 tool-calling	https://github.com/cactus-compute/needle
+2026-08-31-00/0317.html	HF: Cactus-Compute/needle2 重み	https://huggingface.co/Cactus-Compute/needle2
+2026-08-31-00/0318.html	LD: Codex の半透明サイドバーと動的効果を切れ	https://linux.do/t/topic/2832976
+2026-08-31-00/0319.html	LD: Kimi K3 は 50 元がすぐ消え公式に token 記録が無い	https://linux.do/t/topic/2832870
+2026-08-31-00/0320.html	LD: Team 号のリセットで毎回ログインが落ちる	https://linux.do/t/topic/2832916
+2026-08-31-00/0321.html	LD: 波区 GPT Plus は前日に仮売上	https://linux.do/t/topic/2832904
+2026-08-31-00/0322.html	LD: 中転は平文コンテキストを取れる	https://linux.do/t/topic/2832832
+2026-08-31-00/0323.html	LD: CC/Codex/OpenCode/pi の Win コマンドパネル	https://linux.do/t/topic/2832860
+2026-08-31-00/0324.html	yc-2018/agent-cli-palette — 斜杠コマンドをボタン化	https://github.com/yc-2018/agent-cli-palette
+2026-08-31-00/0325.html	LD: 豆包 2.2 が 8 月予定から延期	https://linux.do/t/topic/2832789
+2026-08-31-00/0326.html	LD: 降智は主観か。Sol がキャンディ題を落とすのが目印	https://linux.do/t/topic/2832955
+2026-08-31-00/0327.html	LD: GLM-5.3-Flash が詐欺 APK の続きを拒否した	https://linux.do/t/topic/2832535
+2026-08-31-00/0328.html	ModelScope: Qwen3.8-Flash-Next-FP8	https://www.modelscope.cn/models/Qwen/Qwen3.8-Flash-Next-FP8
