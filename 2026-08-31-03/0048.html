@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HermesがHy4 mixed quantのツイート+HFからQwen 3.6用レシピを自作。Mac版も聞く · レーダー 2026-08-31 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>HermesがHy4 mixed quantのツイート+HFからQwen 3.6用レシピを自作。Mac版も聞く</h1>
+<p class="primary"><a href="https://x.com/hermitdave/status/2094120791205949941" target="_blank" rel="noopener">https://x.com/hermitdave/status/2094120791205949941</a></p>
+<div class="thread">
+<p>@hermitdave。Hy4 mixed quant のツイートと HF を Hermes に渡し、Qwen 3.6 向けプランを生成させた。Mac compatible variant が欲しいかまで聞いてきた。</p>
+<p>「it even asked if I wanted mac compatible variant」</p>
+<p>quant レシピを人間が読む代わりに、剤に「この tweet + この repo から自分のモデル用に書け」と渡している。出力の正否・どの Hy4 カードかは、この投稿では未検証。スキャンも HF URL を置いていないので発明しない。</p>
+<p>同じ窓の mixed quant 実体は GLM-5.3 側: light_foundry が 8× Spark で Int4-Int8Mix 377GB + DFlash2 k=7。公開カードは QuantTrio 5.3 URL が 401/404 で、Tech2wild が 282 shard ~378GB、「QuantTrio-style recipe」と自分で書く。Hermes がやっているのはその類の移植下書きを、Qwen 3.6 向けにエージェントへ外注する作業。</p>
+<h2>所感</h2>
+<p>現場のグレー: 他人の mixed quant 手順を別モデルへ移植する下書きを剤にやらせる。Mac 分岐を聞いてくるのが Hermes らしい。正否は人間が header / layer map を照合するまで分からない。</p>
+<h2>体験</h2>
+<p>X 本文はスキャン原文。Hy4 の HF カードも Qwen 3.6 レシピも開いていない。Hermes に同じ作業は投げていない。GLM mix の方は Tech2wild / DFlash2 カードを WebFetch 済み（別ページ）。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

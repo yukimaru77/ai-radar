@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GLM 5.3 Flashはgroundingが弱い。Qwen 3.8 Flash Nextは自前benchで397B並み · レーダー 2026-08-31 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>GLM 5.3 Flashはgroundingが弱い。Qwen 3.8 Flash Nextは自前benchで397B並み</h1>
+<p class="primary"><a href="https://x.com/JBChalnot/status/2094124807302386090" target="_blank" rel="noopener">https://x.com/JBChalnot/status/2094124807302386090</a></p>
+<div class="thread">
+<p>@JBChalnot。GLM 5.3 Flash の vision を general と grounding に分けた一人称。</p>
+<p>「GLM 5.3 flash is indeed bad at grounding even if general vision is OK. You should test Qwen 3.8 flash next. It matches Qwen 3.5 397b on my own grounding benchs.」</p>
+<p>Flash-Next vision の既出（off → llama.cpp+mmproj）とは別スレ。接地ベンチの話。general vision は OK、grounding が悪い、と GLM Flash を分けている。Qwen 3.8 flash next は自前 grounding bench で Qwen 3.5 397b に並ぶ、と主張。ベンチの項目・枚数・スコア表はこの投稿に無い。</p>
+<p>同じ窓のローカル: V100 で Qwen3.8 Flash 35 tok/s（MTP 不可）、5060 Ti 半減、9070XT×2 の 27B。速度側と接地側が別軸。</p>
+<h2>所感</h2>
+<p>自前 bench で 397B 並みは再現セットが無いので主張として置く。切り方（vision OK / grounding NG）は次に測るときの軸になる。</p>
+<h2>体験</h2>
+<p>X 本文はスキャン原文。grounding bench の中身も Flash-Next の vision も箱では回していない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

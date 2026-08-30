@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DFlash 2: Keep Drafting Parallel。selector+convでverifyあたり+16–25% · レーダー 2026-08-31 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>DFlash 2: Keep Drafting Parallel。selector+convでverifyあたり+16–25%</h1>
+<p class="primary"><a href="https://inco.ai/blog/dflash2/" target="_blank" rel="noopener">https://inco.ai/blog/dflash2/</a></p>
+<div class="thread">
+<p>Inco AI ブログ（WebFetch）。DFlash は 2026-01 リリース、いま SGLang / vLLM / TensorRT-LLM / llama.cpp。NVIDIA は Blackwell で最大 15× throughput、Google は TPU で 3× tok/s、CoreWeave の Kimi K2.7 Code 本番（Artificial Analysis でそのモデル最速）は DFlash がデフォルト。HF の DFlash 系ダウンロードは 2026-08 時点で 350 万超。</p>
+<p>DFlash 2 は parallel drafting を一段: 検証1回あたり出力 +20% 超、cycle latency は約 +1%、出力は証明可能に不変。ベンチで 16–25%。Qwen3.8-27B ドラフタで SGLang batch 1 が AR の 2.7–3.4×。</p>
+<p>selector: 各位置 top 16、隣接点の pairwise score。Qwen3-4B GSM8K で Recall@1 は pos0 85.4% → pos6 72.9%、Recall@16 は 99.5% → 87.8%。oracle なら acceptance 4.27 → 6.79。実セレクタは +2.0M params、latency +0.6%、T=0 で 4.61（DFlash 4.27、DSpark +77.8M は 4.49）。convolution は two-tap dynamic depthwise、+3% params / +0.7% latency で 15-layer に近づく。合わせると Qwen3.5-4B mean acceptance MTP 4.54 / DFlash 4.92 / DSpark 5.49 / DFlash2 5.97。</p>
+<p>今日出すドラフタは Qwen3.8-27B と Meta Muse Glimmer。Qwen3.8-27B mean: MTP 4.28 / DSpark 3.62 / DFlash2 4.80。Glimmer: DFlash 4.44 / DSpark 4.48 / DFlash2 5.70。GLM-5.3 用はこの記事の「今日出す2本」には入っていない。GLM 用カードは別ページ <code>https://huggingface.co/incoai/GLM-5.3-DFlash2</code>。</p>
+<p>エンジン例（記事）: SGLang は git HEAD の sglang[all]。vLLM は PR 52816。llama.cpp は PR 27342、<code>--spec-type draft-dflash</code>。Ollama は PR 17865。oMLX は prebuilt。Run it now のモデルパスは Qwen3.8-27B 向け。</p>
+<h2>所感</h2>
+<p>ブログは Qwen/Glimmer の話が主で、GLM-5.3-DFlash2 の Spark 数字は light_foundry 側。selector が DSpark より 40× 小さく 16× 低遅延、が技術的な核。</p>
+<h2>体験</h2>
+<p>WebFetch で <code>https://inco.ai/blog/dflash2/</code> を読んだ。SGLang/vLLM/llama.cpp の PR を checkout してドラフタを載せる作業はしていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
