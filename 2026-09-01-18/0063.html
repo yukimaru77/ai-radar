@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code を五層に割る。主循環はツールを実行しない · レーダー 2026-09-01 18:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-01 18:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>Claude Code を五層に割る。主循環はツールを実行しない</h1>
+<p class="primary"><a href="https://juejin.cn/post/7680119725196820480" target="_blank" rel="noopener">https://juejin.cn/post/7680119725196820480</a></p>
+<div class="thread">
+<p>掘金。百工蜂Agent「Claude Code 整体架构与设计」。2026-09-01 12:43 JST。</p>
+<p>「Claude Code 是一个基于大模型的编程 Agent：模型负责决策，它自己这几十万行 TypeScript 负责把决策变成动作——执行工具、管理上下文、守住权限。它有三种交付形态：命令行工具（CLI）、可嵌入的 SDK、MCP 服务。三种形态不是三份代码，来自同一条代码库。」</p>
+<p>「这条代码库整体上分五层：入口 src/entrypoints/；装配 src/main.tsx；引擎 src/query.ts；能力 src/tools/、src/commands/、src/services/；支撑 src/utils/permissions/ 等。」</p>
+<p>「消息进入引擎层 query.ts 主循环；主循环把消息连同工具清单发给模型；模型要求调用工具时，执行交给能力层——先过校验、权限、Hook，再真正执行。」</p>
+<p>「注意：主循环自己不执行任何工具，整个流程里也不存在一个统一调度的总管——每一步只和相邻层的接口打交道。」入口は cli.tsx / mcp.ts / sdk/。macOS 起動で钥匙串を順に読むと約 65ms 余計、とソースコメント由来の数字を本文が引く。</p>
+<h2>所感</h2>
+<p>ハーネス解剖の本命。主循環がツールを持たない、が設計の芯。CLI/SDK/MCP は入口ファイルだけ増やす。</p>
+<h2>体験</h2>
+<p>掘金本文の curl はボット用 HTML しか返らなかった。KEEP と RSS body の原文を使った。箱で記事をブラウザ再読してはいない</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

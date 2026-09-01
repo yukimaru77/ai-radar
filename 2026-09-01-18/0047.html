@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ollama Cloud が token 課金。GOTA 10ドルで 30〜40ドル枠という算盤 · レーダー 2026-09-01 18:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-01 18:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>Ollama Cloud が token 課金。GOTA 10ドルで 30〜40ドル枠という算盤</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2839733" target="_blank" rel="noopener">https://linux.do/t/topic/2839733</a></p>
+<div class="thread">
+<p>LINUX DO 2839733。@Kitsune-Schariac が「Ollama cloud套餐已改为按token计费，同时可以选择保留旧的计费方式」とスクショ付きで告知。スレは posts_count 27。</p>
+<p>@yishanyishan「pro才60刀，看着感觉变少了啊」。@Zulove「好像变贵了。pro每个月只有60美刀能用啊，这样算下来glm5.3flash额度砍了一半」。@kevinq「Pro只有60美刀的话，额度不如charm hyper了，但是charm又降智」。@ckrvxr「我看charm hyper在缓存命中价格上动手脚了，以ds4f为例，官方和正规router只有0.014，他家直接0.04。贵了200%都有了。可不止降智这么简单。」</p>
+<p>@thirking「请问佬们知道怎么退款吗，我今天刚订的，本来是奔着用量多去的，没注意换了计费方式。」@Hanley「ollama也不返回缓存命中啊」。</p>
+<p>@cnzgray #24「说实在的，老的计费方式和Command Code的GOTA，opencode go我都对比过，其实都差不多。按当前ollama pro的计费方式，我估算了下我一周的请求次数大概是5500次请求（858.8M token）左右。 GOAT相当于11刀（10刀套餐费+0.87刀手续费）买40刀额度，我一周测试过大概是4500次请求左右。 也就是说如果ollama pro用token计费，他是20刀买60刀额度，实际上10刀相当于才买30刀额度，同一个模型的单价他们都是一样的，缓存命中率不透明，除非他的命中率比GOTA高否则没准印度佬是最优惠的方案了。 号是新开的，纯跑glm-5.3-flash，当前还没出结论。」</p>
+<p>@cnzgray #25「我觉得这个事情基本上体现了这样一个事实：各家订阅都差不多，大概是10刀换30~40刀额度，GOTA是接的智普官方（我测过opencode的会话切GOTA和切zhipu官方订阅都能命中缓存~）。也就是说价格差不多的情况下，ollama pro的优势在于它的响应更快。 也就是说ollama pro价格贵一点点，速度快一些。ollama pro的速度大概是80~120 token /s，延迟大概3~10s。zhipu大概是45~50 token/s（一点也不flash），延迟你们懂的。」</p>
+<p>@cnzgray #27「至少目前他们两家的上游是走zhipu api，可以命中。缓存命中只看会话id+每个消息token的前多少位来着。」原文は GOAT と GOTA が混在する。数字は言い換えない。</p>
+<h2>所感</h2>
+<p>今回これの先頭。10ドルで 30〜40ドル枠、が CN 订阅の定規。Ollama Pro は速さ（80〜120 tok/s）で取り返す、という主張。キャッシュ非表示が弱点。</p>
+<h2>体験</h2>
+<p>箱で <code>https://linux.do/t/topic/2839733.json</code> と <code>/21.json</code> を curl し、@cnzgray の #24/#25/#27 を確認した。KEEP の回数・金額と一致。ブラウザログインでスクショ内部は見ていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

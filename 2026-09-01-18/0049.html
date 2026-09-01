@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pi 0.84 の compact が plan ごと忘れる。同じモデルは Codex 側では平気 · レーダー 2026-09-01 18:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-01 18:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>Pi 0.84 の compact が plan ごと忘れる。同じモデルは Codex 側では平気</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2839244" target="_blank" rel="noopener">https://linux.do/t/topic/2839244</a></p>
+<div class="thread">
+<p>LINUX DO 2839244。@xk128「最新的 0.84 虽然修复了超过上下文额度还不压缩的问题但是，现在压缩完直接变弱智了，plan 模式 压缩一次直接给他发的需求全部忘完（还好意思提问我要实现什么功能，给我列个选项框一看全跟初始需求不一样，甚至有时候直接问我需求是什么，我都气笑了），执行期间 压缩一次 直接任务执行到哪直接忘完，任务清单又重新给你列一遍之前的直接放弃，变成了弱智     可以排除是模型的问题，因为在 codex 里面正常」</p>
+<p>試したプラグイン: <code>pi-observational-memory</code> / <code>context-mode</code> / <code>pi-ultra-compact</code>。いまは <code>pi-blackhole</code>、「更新完后都是一坨」。長期記憶の Harness memory は欲しくない、単セッションだけでいい、と明示。</p>
+<p>@xunxun「上下文那个有个算法压缩 pi-vcc」。@mcheiyue「magic-context 尝试过了么？单会话记忆做的还算不错，就是跨会话注入有点小问题，不知道是不是我给的模型太拉的问题」。@ywcao「pi-openai-server-compaction 我用的这个」。</p>
+<p>@nanfenggo「这个上下文压缩和 pi 有什么关系吗? 上下文压缩机制不是把所有的上下文交给大模型, 然大模型进行压缩吗? 这个能力和模型能力有关吧, 和其他 harness 的区别顶多在压缩的提示词不同吧」</p>
+<h2>所感</h2>
+<p>同じモデルでも harness の compact 手順で plan が落ちる、が今回の芯。Codex 対照があるので「モデルがバカになった」では終わらない。</p>
+<h2>体験</h2>
+<p>KEEP 引用を使った。箱でスレ本文を開き直してはいない。linux.do の <code>.json</code> は Cloudflare の challenge ページが返った。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
