@@ -1,0 +1,136 @@
+2026-09-02-03/0093.html	Claude Fable 5.1 / Mythos 5.1 正式リリース — 入出力据え置き、cache読み75%安	https://x.com/claudeai/status/2094848572143407483
+2026-09-02-03/0094.html	Fable 5.1と同時にClaudeの5hと週次が0%に戻った — 公式は「リセットします」と未言明	https://x.com/argofowl/status/2094854000969683187
+2026-09-02-03/0095.html	Claude Code 2.1.257 — 104 CLI変更、デフォルトがFable 5.1、cache miss修正	https://x.com/ClaudeCodeLog/status/2094851915007828101
+2026-09-02-03/0096.html	Elon: Grok Botトークンの無料リセット — 着弾確認で週次4%	https://x.com/elonmusk/status/2094813795742847123
+2026-09-02-03/0097.html	QuotaPulse — Codex残量をmacOSメニューバーで見る（v0.1.1はソースのみ）	https://x.com/Yin_Cheng0106/status/2094850867816214943
+2026-09-02-03/0098.html	GLM Reset CardはLiteに来ない — 現行契約者には着弾、使い切ってから押せ	https://x.com/duggal_piyush/status/2094839755183956284
+2026-09-02-03/0099.html	OpenCode GoのGLM Flashは実質$5ボーナス — $15超えたらAPI定価	https://x.com/thezealot/status/2094832850767896772
+2026-09-02-03/0100.html	Grokを親、OpenCode Luna Maxを子 — Bot週次が戻った直後の分担	https://x.com/ishizaka_dev/status/2094821288825274870
+2026-09-02-03/0101.html	Codex /ponytail: Fullはコードが増える。効くのはUltra（-22.4%）	https://x.com/tiny_frontier/status/2094851209685332140
+2026-09-02-03/0102.html	Qwen3.8-Flash-NextをM4 Max 128GBでネイティブ262K — decode 28.5 t/s	https://x.com/Neuralwerk/status/2094852477505970459
+2026-09-02-03/0103.html	vLLM-Omni+FastH3: 10.1s映像+音声を8.7sで出す — 再生より速い	https://x.com/vllm_project/status/2094849929487552663
+2026-09-02-03/0104.html	World Labs Atlas — カメラ制御つきmultimodal world model。30枚で5部屋splat	https://x.com/theworldlabs/status/2094839756329041984
+2026-09-02-03/0105.html	LichtFeld現場パイプライン — DJI Mini 4 Pro 5–7分 → RealityScan 3分 → 学習~40分	https://x.com/michaelybecker/status/2094822203292631351
+2026-09-02-03/0106.html	YinCheng0106/QuotaPulse — Codex残量のmacOSメニューバー（ソースのみ）	https://github.com/YinCheng0106/QuotaPulse
+2026-09-02-03/0107.html	TinyFrontier/codex-ponytail-txcheck — /ponytail Full vs Ultra のA/B	https://github.com/TinyFrontier/codex-ponytail-txcheck
+2026-09-02-03/0108.html	Anthropic EFS — 顧客クラウドに置くZDR相当、今秋段階投入	https://www.anthropic.com/news/enterprise-frontier-safeguards
+2026-09-02-03/0001.html	Claude Fable 5.1 / Mythos 5.1 — cache読み $0.25/M、典型~25%安・高エージェント最大~45%	https://www.anthropic.com/claude-fable-and-mythos-5-1
+2026-09-02-03/0002.html	Fable 5.1 docs overview — 1M ctx / 128K out、cache read $0.25、5m write $12.50、1h write $20	https://platform.claude.com/docs/en/models/fable-5-1/overview
+2026-09-02-03/0003.html	What's new in Fable 5.1 — 破壊的3・追加5。HN 103点スレの一次が集まる	https://platform.claude.com/docs/en/models/fable-5-1/whats-new-fable-5-1
+2026-09-02-03/0004.html	Prompting Fable 5.1 — append-only、display:updates、effort は high から測り直せ	https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1
+2026-09-02-03/0005.html	Fable 5.1 / Mythos 5.1 System Card — CB-1・cyber 最強、alignment risk は low のまま	https://www.anthropic.com/document/claude-fable-5-1-mythos-5-1-system-card
+2026-09-02-03/0006.html	Bloomberg: Anthropic says Fable 5.1 is cheaper, better at coding — ペイウォール	https://www.bloomberg.com/news/articles/2026-09-01/anthropic-says-new-fable-5-1-ai-model-is-cheaper-better-at-coding
+2026-09-02-03/0007.html	@claudeai Fable 5.1 発表ツイート	https://twitter.com/claudeai/status/2094848572143407483
+2026-09-02-03/0008.html	Fable 5.1 Announcement [video]	https://www.youtube.com/watch?v=ROF2Nv_KjOM
+2026-09-02-03/0009.html	anthropic.com/news/claude-fable-5-1 は 404。正本は /claude-fable-and-mythos-5-1	https://www.anthropic.com/news/claude-fable-5-1
+2026-09-02-03/0010.html	HN 49525378 Fable 5.1 コメント — cache 40x、95% hit で compact 200K→400K、Pro 非対応	https://news.ycombinator.com/item?id=49525378
+2026-09-02-03/0023.html	HuggingFace kernels — WebGPU 207本、ORT 比 geo 2.57x	https://huggingface.co/blog/webgpu-kernels
+2026-09-02-03/0024.html	Fleet — ブラウザ内 GPU ベンチ（WebGPU kernels）	https://webgpu-kernels-fleet.hf.space/
+2026-09-02-03/0025.html	Massive x402 — エージェントが USDC で株データ都度払い	https://massive.com/blog/x402-payments-for-ai-agents
+2026-09-02-03/0034.html	codex 5h 18 to 0	https://www.reddit.com/r/codex/comments/1w4jkul/wow_my_5h_usage_limit_went_from_18_to_0_in_less/
+2026-09-02-03/0035.html	seedeep	https://github.com/duqaXxX/seedeep
+2026-09-02-03/0036.html	yul pin hook	https://github.com/chains-project/yul
+2026-09-02-03/0037.html	Claude Code Field Kit	https://github.com/OactoDev/claude-code-field-kit
+2026-09-02-03/0038.html	GitSpawn coding-agent git startup class	https://www.manifold.security/blog/ai-coding-agents-git-hijack
+2026-09-02-03/0039.html	Wasmer SDK local agent sandbox 0.1ms	https://wasmer.io/posts/wasmer-local-sandboxes-for-ai-agents
+2026-09-02-03/0040.html	Nori Robotics YC S26 1688 USD humanoid	https://www.norirobotics.com/
+2026-09-02-03/0041.html	Atlas world model spatial intelligence	https://www.worldlabs.ai/blog/atlas
+2026-09-02-03/0042.html	The Harness Does not Matter — Omnara	https://www.omnara.com/blog/the-harness-doesnt-matter
+2026-09-02-03/0043.html	Semantic Overlays prompt-injection adapters	https://semantic-overlays.vercel.app/
+2026-09-02-03/0044.html	Keenable SELECT agent searches web in SQL	https://keenableai.github.io/select-showcase/
+2026-09-02-03/0045.html	shed git repos for terminal agents	https://github.com/AndrewHannigan/shed
+2026-09-02-03/0046.html	Aplexica portable agent state Cursor to Claude	https://github.com/Aplexica/Aplexica
+2026-09-02-03/0047.html	aimake incremental AI pipeline make	https://github.com/arjun988/aimake
+2026-09-02-03/0048.html	vpipe local MiniMax H3 on Apple Silicon 16GB	https://github.com/tgo-app-dev/vpipe
+2026-09-02-03/0049.html	Laser Jeans AI Weirdness	https://www.aiweirdness.com/laser-jeans/
+2026-09-02-03/0050.html	r/ClaudeAI usage windows restarted on a Tuesday	https://www.reddit.com/r/ClaudeAI/comments/1w4k0ay/claude_just_restarted_all_usage_windows_today_on/
+2026-09-02-03/0051.html	r/codex Why cant I buy a reset (UK Plus 0pct)	https://www.reddit.com/r/codex/comments/1w4jfnu/why_cant_i_buy_a_reset/
+2026-09-02-03/0052.html	r/codex first time I felt need to complain usage	https://www.reddit.com/r/codex/comments/1w4hkmq/first_time_ive_felt_the_need_to_complain/
+2026-09-02-03/0053.html	r/codex Dont use Codex TODAY	https://www.reddit.com/r/codex/comments/1w4h75o/dont_use_codex_today/
+2026-09-02-03/0054.html	r/codex Tape suite 1476 lines 136KB eating Codex context	https://www.reddit.com/r/codex/comments/1w4hqc9/ive_been_experimenting_with_a_skill_that_keeps/
+2026-09-02-03/0055.html	r/GithubCopilot weekly and daily limit 85pct popup	https://www.reddit.com/r/GithubCopilot/comments/1w4jwhz/vscode_on_the_mac_where_is_the_weekly_and_daily/
+2026-09-02-03/0056.html	r/ChatGPT Work usage vs Plus 5h credits	https://www.reddit.com/r/ChatGPT/comments/1w4hw8b/how_many_credit_does_the_work_usage_either_per/
+2026-09-02-03/0057.html	r/Ollama New Max plan confusion	https://www.reddit.com/r/ollama/comments/1w4j3y3/new_max_plan/
+2026-09-02-03/0058.html	r/LocalLLaMA vLLM prefill 5000pp DS4F 7500pp Qwen3.8	https://www.reddit.com/r/LocalLLaMA/comments/1w4i2id/question_why_is_prefill_unbelievably_faster_in/
+2026-09-02-03/0059.html	r/LocalLLaMA finetune away GQA Qwen 3.8 27B	https://www.reddit.com/r/LocalLLaMA/comments/1w4jsrj/finetuning_away_the_gqa_qwen_38_27b/
+2026-09-02-03/0060.html	r/LocalLLaMA 64GB Strix Halo 2000 USD for H3 and Qwen	https://www.reddit.com/r/LocalLLaMA/comments/1w4iaf9/is_it_silly_to_get_a_64gb_strix_halo_framework/
+2026-09-02-03/0061.html	r/comfyui Flux2-dev ControlNet after 0.30.1	https://www.reddit.com/r/comfyui/comments/1w4jkq0/flux2dev_are_controlnets_still_working/
+2026-09-02-03/0062.html	r/comfyui OpenGPEX browser editor plus ComfyUI	https://www.reddit.com/r/comfyui/comments/1w4jdki/introducing_opengpex_opensource_browser_image/
+2026-09-02-03/0063.html	r/comfyui fast MiniMax M3 on Mac M3 Ultra 96GB	https://www.reddit.com/r/comfyui/comments/1w4iwox/fast_minimax_m3_flow_for_mac_m3_ultra/
+2026-09-02-03/0064.html	r/StableDiffusion H3 3D Latent Upscaler first satisfying videos	https://www.reddit.com/r/StableDiffusion/comments/1w4ja0u/i_didnt_know_bigfoot_visited_my_kitchen_and/
+2026-09-02-03/0065.html	r/StableDiffusion H3 Turbo RTX 3000 6GB VRAM	https://www.reddit.com/r/StableDiffusion/comments/1w4ib5t/how_to_improve_quality_when_using_h3_with_turbo/
+2026-09-02-03/0066.html	r/singularity A wild Fable 5.1 has appeared	https://www.reddit.com/r/singularity/comments/1w4jl9b/a_wild_fable_51_has_appeared/
+2026-09-02-03/0067.html	r/MachineLearning 112 RL envs 54 reward-hackable	https://www.reddit.com/r/MachineLearning/comments/1w4h6c1/i_audited_112_real_rl_posttraining_environments/
+2026-09-02-03/0068.html	r/OpenaiCodex Agent Coordinator long-job skill	https://www.reddit.com/r/OpenaiCodex/comments/1w4j83j/i_built_a_codex_skill_for_long_jobs_that_need_to/
+2026-09-02-03/0069.html	OpenAI cuts Cursor model access after SpaceX deal	https://devops.com/openai-cuts-off-cursors-model-access-after-spacex-acquisition/
+2026-09-02-03/0070.html	CNBC AI token prices hitting record lows	https://www.cnbc.com/2026/09/01/ai-token-prices-lows.html
+2026-09-02-03/0071.html	Agentic Video in Gemini	https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/
+2026-09-02-03/0072.html	Heaviside-1 EM foundation model 500B samples	https://fields-studio.arenaphysica.com/
+2026-09-02-03/0073.html	Perplexity Hybrid Compute on Mac	https://www.perplexity.ai/hub/products/hybrid-compute
+2026-09-02-03/0074.html	DLSS 5 3D-guided neural rendering	https://www.nvidia.com/en-us/geforce/news/dlss-5-3d-guided-neural-rendering/
+2026-09-02-03/0075.html	Guardian Anthropic not perfectly aligned	https://www.theguardian.com/technology/2026/sep/01/anthropic-claude-ai-hacking-human-value
+2026-09-02-03/0076.html	Ajeya Cotra OpenAI agent swarm Hugging Face hack	https://www.dwarkesh.com/p/ajeya-cotra
+2026-09-02-03/0077.html	Supafork share and fork sessions across harnesses	https://www.supafork.com
+2026-09-02-03/0078.html	Dwarf Fortress creator industry in shambles over AI (full URL)	https://www.pcgamer.com/gaming-industry/dwarf-fortress-creator-says-the-industrys-in-shambles-over-ai-and-layoff-happy-ceos-everyone-i-know-their-bosses-are-slowly-getting-psychosis/
+2026-09-02-03/0079.html	Orthogonal one integration for agents to discover and pay APIs	https://www.orthogonal.com/
+2026-09-02-03/0080.html	Amendable on-demand Git repos for AI agents	https://amendable.io
+2026-09-02-03/0081.html	Unslop Cursor plugin	https://www.skills.sh/cursor/plugins/unslop
+2026-09-02-03/0082.html	HF ContextBias T2I stereotype persistence	https://huggingface.co/papers/2608.29847
+2026-09-02-03/0083.html	HF SpanCalib-VLM hallucination spans	https://huggingface.co/papers/2608.29974
+2026-09-02-03/0084.html	HF MMMMM multilingual multimodal misinfo taxonomy	https://huggingface.co/papers/2608.29681
+2026-09-02-03/0085.html	HF CoVA-SFT visual abstraction CoT	https://huggingface.co/papers/2608.28958
+2026-09-02-03/0086.html	semantic-overlays GitHub adapters	https://github.com/JoshuaSP/semantic-overlays
+2026-09-02-03/0087.html	r/LocalLLaMA Gemini 3.7 Flash vs Sonnet 5 embedded	https://www.reddit.com/r/LocalLLaMA/comments/1w4hb1b/gemini_37_flash_outperforming_sonnet_5/
+2026-09-02-03/0088.html	r/codex Do you guys use pets	https://www.reddit.com/r/codex/comments/1w4h2nm/do_you_guys_use_pets/
+2026-09-02-03/0089.html	r/GithubCopilot banned model Kimi 2.7 appeared in SSMS	https://www.reddit.com/r/GithubCopilot/comments/1w4i4jj/out_of_nowhere_github_copilot_in_ssms_allowed/
+2026-09-02-03/0090.html	Lovable the model picker is a dead end	https://lovable.dev/blog/the-model-picker-is-a-dead-end
+2026-09-02-03/0091.html	Ars Meta AI agents disruptive actions	https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/
+2026-09-02-03/0092.html	skforecast-ai agentic time series	https://github.com/skforecast/skforecast-ai
+2026-09-02-03/0112.html	Estonia local LLM diary RX480 vs 9070 XT 10-20x Qwen3.8 27B	https://ounapuu.ee/posts/2026/09/01/open-weights-llm/
+2026-09-02-03/0113.html	Executor Superpowers-style skill pack	https://github.com/Atri10/executor
+2026-09-02-03/0114.html	pstack Cursor plugin poteto-mode playbooks	https://github.com/cursor/plugins/blob/main/pstack/docs/guide/README.md
+2026-09-02-03/0115.html	Zvi METR Redwood HuggingFace hack postmortem	https://thezvi.substack.com/p/metr-and-redwood-offer-holy-postmortem
+2026-09-02-03/0116.html	Zvi HuggingFace attack civilizations postmortem	https://thezvi.substack.com/p/huggingface-attack-postmortem-civilizations
+2026-09-02-03/0117.html	Meta Muse Code new plans	https://developer.meta.com/ai/resources/blog/muse-code-new-plans-and-features/
+2026-09-02-03/0118.html	DSPy cascading pipelines field note	https://martnquesada.github.io/blog/2026/01/cascading-pipelines-with-dspy-are-kind-of-good
+2026-09-02-03/0119.html	Independent AI reviewers were the same model	https://python-visuals.com/papers/
+2026-09-02-03/0120.html	Latent Space PRs Not Welcome AI OSS	https://www.latent.space/p/pr-not-welcome
+2026-09-02-03/0121.html	Nosedive notes repo drives all git repos	https://nosedive.dev
+2026-09-02-03/0122.html	State of Open Models Summer 2026 blog	https://huggingface.co/blog/state-of-open-models-summer-2026
+2026-09-02-03/0123.html	SWE-in-a-team software factory bench	https://letsship.ai/blog/swe-in-a-team
+2026-09-02-03/0011.html	GPTウェブ「降智修復」自称solだがキャンディ/水杯が秒出で誤り	https://www.v2ex.com/t/1238797
+2026-09-02-03/0012.html	Image2Layer：扁平JPG/PNGをAIで編集可能なPSDレイヤに	https://www.v2ex.com/t/1238790
+2026-09-02-03/0013.html	Image2Layer 公式トップ — 登録10クレジット、生成20、最大10レイヤ	https://image2layer.com
+2026-09-02-03/0014.html	Fable 5.1 / Mythos 5.1 system card — 開こうとしたが404	https://www.anthropic.com/document/claude-fable-5-1-mythos-5-1
+2026-09-02-03/0015.html	WorkBuddy：カスタムモデルの xhigh/max が High に落ちる	https://linux.do/t/2842157
+2026-09-02-03/0016.html	Claude Pro 週次〜400ドル — 韓Azure初回テレメトリON、WinでOFF	https://linux.do/t/2842175
+2026-09-02-03/0017.html	stu Azure ソウル — Codex/CC が TLS close_notify なしで切断	https://linux.do/t/2842180
+2026-09-02-03/0018.html	ZCode 23:40に枠復活 — クライアント再起動、9/2 10:00 JST 切れ	https://linux.do/t/2842197
+2026-09-02-03/0019.html	ZCode 1億tokenを1万枠追加 — Zixuan Li、5000+10000	https://linux.do/t/2842203
+2026-09-02-03/0020.html	十国产モデルでコード監査 — 旗艦よりFlash、豆包は最下位ではない	https://linux.do/t/2842202
+2026-09-02-03/0021.html	三体名場面：GLM-5.3-Flash vs DeepSeek-V4、ZCode OneShot	https://linux.do/t/2842216
+2026-09-02-03/0022.html	sub2api の Plus 降額 — 週120→70-80ドル、降智はキャンディ通過	https://linux.do/t/2842238
+2026-09-02-03/0026.html	ZCode公式が夜中に飛書へ来て履歴ロードを調査 — 智譜に転粉	https://linux.do/t/2842267
+2026-09-02-03/0027.html	Codex xhigh が3分に1回 — 「力竭」でも Claude/Grok より安い	https://linux.do/t/2842276
+2026-09-02-03/0028.html	ZCode にルーティングなし — 1億token切れても他社へ自動切替しない	https://linux.do/t/2842285
+2026-09-02-03/0029.html	Fable 5.1 リリーススクショ — 本文なし、画像3枚	https://linux.do/t/2842397
+2026-09-02-03/0030.html	ZCode 無料1億tokenの画面が「驢頭不对馬嘴」	https://linux.do/t/2842301
+2026-09-02-03/0031.html	Grok動画モデルは「スーパー拉垮」— 中文理解弱、NSFW以外は怪しい物理	https://linux.do/t/2842310
+2026-09-02-03/0032.html	Tibo画像圧縮前の8月 — ChatGPT往来847.87G、うちアップロード766.78G	https://linux.do/t/2842320
+2026-09-02-03/0033.html	Grok Bot はリセット、ウェブGrokとHeavyはリセットしていない	https://linux.do/t/2842325
+2026-09-02-03/0109.html	Agent開発の3方向 — 垂直はSkill/MCP止まり、基盤はpi/Codex/dsh	https://linux.do/t/2842329
+2026-09-02-03/0110.html	9/2 GPTリセット投票 — Tibo未投稿、Fable5.1で「性格的に来る」説	https://linux.do/t/2842350
+2026-09-02-03/0111.html	GPTウェブの Work は普通チャットより弱いこともあるが、小タスクは Codex より速い	https://linux.do/t/2842352
+2026-09-02-03/0124.html	転岗AI：Fableで12週計画、Solでコード検査、次は総合プロジェクト	https://linux.do/t/2842355
+2026-09-02-03/0125.html	【無権威】Fable 5.1が一部に開放 — kiroにFable無し、高すぎて使えない	https://linux.do/t/2842356
+2026-09-02-03/0126.html	国内科研の Codex 用量 — CPA放棄、Gemini後は月10ドル以内	https://linux.do/t/2842362
+2026-09-02-03/0127.html	Codex中転後の文脈圧縮がキャッシュに当たらない — CCは当たる	https://linux.do/t/2842364
+2026-09-02-03/0128.html	GPT Team 席 — 額はPlusの2/3前後、WebはProとxhigh、Plusは枠死んだら待ち	https://linux.do/t/2842366
+2026-09-02-03/0129.html	kiro の Opus 5 は8192出力上限を超えた — 1万超でも未切断	https://linux.do/t/2842367
+2026-09-02-03/0130.html	pi のコミュニティプラグインより自作 — system prompt 10k→5k	https://linux.do/t/2842371
+2026-09-02-03/0131.html	Leo：Fable/Mythos 5.1 が Claude Code 2.1.257 へ — 週次リセットは公式未確認	https://linux.do/t/2842373
+2026-09-02-03/0132.html	鹈鹕自転車で Opus 5 が関節運動学に2000秒ハマる	https://linux.do/t/2842388
+2026-09-02-03/0133.html	Fable 5.1 が切り替えできるように見えた — スクショ1枚	https://linux.do/t/2842392
+2026-09-02-03/0134.html	fable5.1 が Anthropic 公式と Platform Docs に掲載	https://linux.do/t/2842394
+2026-09-02-03/0135.html	Fable 5.1 キャッシュ安 — MythosはGlasswing限定、分類器は同じ	https://linux.do/t/2842398
+2026-09-02-03/0136.html	Fable 5.1 は CC 2.1.257 から — 「A社が週次をリセット」は公式未確認	https://linux.do/t/2842402
