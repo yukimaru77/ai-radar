@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>请问有没有有人味能用来角色扮演的本地部署小模型 · レーダー 2026-09-02 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>请问有没有有人味能用来角色扮演的本地部署小模型</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2841897" target="_blank" rel="noopener">https://linux.do/t/topic/2841897</a></p>
+<div class="thread">
+<p>LINUX DO topic/2841897 · author @nanbloom001。claude/qwen/local；请问有没有有人味能用来角色扮演的本地部署小模型</p>
+<h2>所感</h2>
+<p>中国圏一次声。枠・認証・価格・ハーネスを優先。</p>
+<h2>体験</h2>
+<p>KEEP引用/スレッドJSONを確認／ログイン操作は未実施</p>
+<h2>引用</h2>
+<p><strong>@nanbloom001</strong>「我想部署一个本地小模型，我实验室有空闲 4*A10（Ampere架构 24GB），之前的是四卡部署 qwen3.8 27B W4A16，然后我优化了一下压缩到了 2 卡可用，在claude code 中也能有 100tok/s 左右的输出速度。现在多出了 2 张卡，想用一张卡来部署一下能用来聊天有人味的小模型。   最近星火出了 Spark X2.5 1.7B/4B 原生支持 1M 上下文，有点想尝试部署一下试试。   image 1405×729 320 KB    但是不知道本地单卡部署有什么比较好的有人味的模型，qwen3.8 感觉是编程特化过的，而且输出也不是很快，不是很适合用来聊天。  不知道这些模型怎么样：  Qwen3.5-9B  Gemma 4 12B  Ministral 3 14B  Granite 4.2-8B  MiniCPM5-1B  都是小模型，不知道好不好用，请问有没有佬友部署过相关的模型？」</p>
+<p><strong>@sman</strong>「你可以先别那么麻烦，LM Studio 直接下载 gguf，点几下鼠标的事，先跑起来聊几轮，粗筛之后留下两三个你觉得还行的，再详细调配置   另外，qwen3.5-9b 和 gemma4-e4b 我玩过，怎么说呢，纯聊天玩都还行吧，然后 gemma4 nsfw 胆子更加大一点点 ，记得去下载去审查版，RP 的话你要给它详细设定，不然会出戏聊不起来，但人格设定内容太多之后 prefill 又慢了，或者聊一会儿就开始不能专注，这没什么办法，小模型的通病   我现在玩自己设定的 RP 都不高兴搞本地小模型了，直接 OR 上 ds4f-0731 api，反正 ds 没道德感，纯娱乐随便瞎搞，注意峰谷计费的话一天也就大概 $0.05-0.15 左右吧」</p>
+<p><strong>@superben</strong>「中文有点太博大精深了，  想把中文整出人味不太容易。   英语好可以考虑用英语，  直接把 AI 能输出的词库限制在常用单词里面占比在 80%。   出来的效果挺好的，  已经用上面的方案和国外甲方沟通很久了，  再也没有被老板或者同事批评说写出来的内容不好了。」</p>
+<p><strong>@superben</strong>「我是觉得还可以，  而且你可以把词库压得很小，  我现在是词库压到 1000 左右，  出来的句子基本上都是秒看懂。   就当玩纯英语游戏的生肉了，  后面可以慢慢把词库给他扩大了。     中文我就没办法了，  太博大精深了，没啥好思路。」</p>
+<p><strong>@nanbloom001</strong>「这个工程量好大，我有一点技术强迫症，qwen3.8 27B 优化性能优化了两个星期，结果 vllm 都从 0.27.1 出到 0.28 了，又想去迁移一次了」</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
