@@ -1,0 +1,159 @@
+2026-09-02-06/0001.html	Fable 5.1がMax 20xでも10–15分で5h死 — 並列2本で週42%、使える出力なし	https://x.com/materkel/status/2094870087597498526
+2026-09-02-06/0002.html	向き合いだけで5hの55% — コーディングなしのorientationが溶かす	https://x.com/nomdk1/status/2094867513104564588
+2026-09-02-06/0003.html	Fable 5.1の5h溶け報告が連続 — XHigh+サブエージェント、5x/20x同型、Devin $200も5分で5%	https://x.com/jeeacheff/status/2094894252018860451
+2026-09-02-06/0004.html	逆声: 週次の減りは遅くなった — 5hは溶ける／週はcacheで持ちやすいが両立	https://x.com/gamemangaanime/status/2094888030687621413
+2026-09-02-06/0005.html	ClaudeDevs: Fable 5.1発売で5h+週次を全ユーザー重置 — 元のリセット曜日は動かない	https://x.com/ClaudeDevs/status/2094856679250919746
+2026-09-02-06/0006.html	週次+50%が9/13まで延長 — 今日の溶け報告はその上で起きている	https://x.com/bOpen_AI/status/2094856898801508848
+2026-09-02-06/0007.html	MaxのFableは週キャップの半分まで、Proは枠外クレジット — 日常はOpus 5	https://x.com/JOSA_blog/status/2094891250520649920
+2026-09-02-06/0008.html	Max effortは3.5x消費 — Fable 5の1.5–2xから跳ねた警告ラベル	https://x.com/aipulseda1ly/status/2094854509315133738
+2026-09-02-06/0009.html	Artificial Analysis: Fable 5.1はIndex66だがタスク単価はFable 5より+20% — xhighが頂点	https://artificialanalysis.ai/models/claude-fable-5-1
+2026-09-02-06/0010.html	Snorkel Senior SWE: Fable 5.1がトップだが最善effortはMedium — Highは366行手書きTarjan	https://senior-swe-bench.snorkel.ai
+2026-09-02-06/0011.html	/compactの値段は頻度ではなくcache温度 — warm~$0.70 / cold~$5.20	https://x.com/YuriKushch/status/2094891204668461146
+2026-09-02-06/0012.html	`/effort`+`s`はセッション限定、引数渡しは恒久 — cacheキー警告とセット	https://x.com/muscle_coding/status/2094858917755191432
+2026-09-02-06/0013.html	git commitにClaude-Session URLが混入 — attribution.sessionUrl:falseで止める	https://x.com/kuizinas/status/2094879201258029395
+2026-09-02-06/0014.html	Claude Code 2.1.257の現場追加 — timeFormat、remote-control既定モデル無視修正、zsh確認	https://x.com/oikon48/status/2094865625206112741
+2026-09-02-06/0015.html	Omperor: Markdownに画像・sidebar diff — ボトルネックはomp rpc	https://x.com/theodorvaryag/status/2094858392963559506
+2026-09-02-06/0016.html	Fable 5.1をCursorプロバイダ経由でOpenCode/Pi/ompへ — CC枠を溶かさず試す	https://x.com/oa_munich/status/2094888314021073014
+2026-09-02-06/0018.html	herdr-serve — カスタムハーネスを電話から操るライブ端末リレー	https://x.com/carlo_taleon/status/2094885889533223083
+2026-09-02-06/0019.html	NotchAgent — herdrの状態をMacBookノッチから監視・承認	https://github.com/ykushch/notchagent
+2026-09-02-06/0020.html	codex-relay — Codexの5h+週次をDock横表示、マルチ垢切替	https://github.com/agavovich/codex-relay
+2026-09-02-06/0021.html	OpenCode Planモードでedit失敗時にsedで改変 — Goはzen credits	https://x.com/dahrkael/status/2094889680110030946
+2026-09-02-06/0022.html	Command Code: 枠は減らしていない、GOATはcache 99%+	https://x.com/CommandCodeAI/status/2094873899754492000
+2026-09-02-06/0023.html	Vercel AI Gatewayを全ハーネスの予算キーに	https://x.com/christianelton_/status/2094872816164409654
+2026-09-02-06/0024.html	amika.dev — PiとOpenCodeをクラウドWSのfirst-classに	https://www.amika.dev/
+2026-09-02-06/0025.html	Hermes: Nous Portal $100が正しいモデルなら事実上無制限	https://x.com/EXM7777/status/2094892558463959063
+2026-09-02-06/0026.html	Grok BotをルーターにしてSuperHeavy枠を吸う	https://x.com/TheNicholasNick/status/2094894267886141735
+2026-09-02-06/0027.html	CCデスクトップ vs Codexアプリ — 音声はClaude、diffはCodex	https://x.com/filscotthenriq/status/2094883869027934408
+2026-09-02-06/0028.html	OpenAI Astra — Criticalサイバー閾値（high-levelのみ）	https://openai.com/index/path-to-astra/
+2026-09-02-06/0029.html	ComfyUI MiniMax H3 Director — 監督台wfをドラッグ投入	https://github.com/huangserva/ComfyUI_MiniMaxH3_Director
+2026-09-02-06/0030.html	llama.cpp→blender-mcp→Blender — Qwen3.8-Flash-Next 11t/s	https://x.com/knights_sirius/status/2094894172465696854
+2026-09-02-06/0031.html	FireworksのGLM-5.3 reasoningがOpenRouter比6–8x	https://x.com/priestessofdada/status/2094893837613146605
+2026-09-02-06/0032.html	Sol運用 — Highが馬、Ultraほぼ不要、Luna Maxは計画済み機械仕事	https://x.com/strugglerCL/status/2094893948363833567
+2026-09-02-06/0033.html	fable5.1跑分速览（A/自己发的版本）	https://linux.do/t/topic/2842406
+2026-09-02-06/0034.html	鹈鹕骑自行车	https://linux.do/t/topic/2842413
+2026-09-02-06/0035.html	Claude Fable 5.1 正式发布并重置周限额，1M 上下文窗口、定价与前代持平，缓存读取价格降至四分之一；Mythos 5.1 仅可受邀使用	https://linux.do/t/topic/2842408
+2026-09-02-06/0036.html	A/发布新模型，顺便把额度重置了	https://linux.do/t/topic/2842412
+2026-09-02-06/0037.html	OpenCode Go 自动续费忘关，扣款失败后申请退款，结果旧订单（5刀）也给我退了	https://linux.do/t/topic/2842407
+2026-09-02-06/0038.html	Fable 5.1 部分 Benchmark	https://linux.do/t/topic/2842405
+2026-09-02-06/0040.html	想自己翻译漫画,想发出来,但是有很多问题.	https://linux.do/t/topic/2842418
+2026-09-02-06/0041.html	fable5.1有没有能用的佬跑个鹈鹕测试品味一下	https://linux.do/t/topic/2842420
+2026-09-02-06/0042.html	深夜水 这次a/发布了新模型，怎么感觉佬友们不是很积极啊	https://linux.do/t/topic/2842426
+2026-09-02-06/0043.html	fable5.1 鹈鹕骑自行车	https://linux.do/t/topic/2842434
+2026-09-02-06/0044.html	小道消息说 Fable 5.1 的文风可能更像人?	https://linux.do/t/topic/2842428
+2026-09-02-06/0045.html	fable 5.1 鹈鹕骑自行车	https://linux.do/t/topic/2842433
+2026-09-02-06/0046.html	Claude Fable 5.1 来了！Azure上可以开了	https://linux.do/t/topic/2842431
+2026-09-02-06/0047.html	再订阅一次Claude max 5	https://linux.do/t/topic/2842438
+2026-09-02-06/0048.html	google play 或者 apple store 订阅 claude max 会员的可能的省钱思路（立省 50 刀）【未证明】	https://linux.do/t/topic/2842441
+2026-09-02-06/0049.html	Fable 5.1上线 首测 一个问题直接干我450k上下文?	https://linux.do/t/topic/2842435
+2026-09-02-06/0050.html	Fable 5.1 MAX 鹈鹕测试	https://linux.do/t/topic/2842444
+2026-09-02-06/0051.html	Claude周限额重置了	https://linux.do/t/topic/2842442
+2026-09-02-06/0052.html	claude code罕见重置了，并且可以用fable 5.1了	https://linux.do/t/topic/2842436
+2026-09-02-06/0053.html	Agent memory as a file format — Lobsters vibecoding KEEP	https://calpaterson.com/memoryfields.html
+2026-09-02-06/0054.html	RECAP-Forcing — 長尺動画生成の見た目メモリ（HF daily KEEP）	https://huggingface.co/papers/2608.26671
+2026-09-02-06/0055.html	xXuHaiyang/RECAP-Forcing — 長尺AR動画の見た目KVメモリ実装	https://github.com/xXuHaiyang/RECAP-Forcing
+2026-09-02-06/0056.html	Fable5.1 也许是OpenAI的一辈子吧	https://linux.do/t/topic/2842479
+2026-09-02-06/0057.html	Fable5.1，四冲程柴油机测试	https://linux.do/t/topic/2842487
+2026-09-02-06/0058.html	O÷你倒是学学A÷重置不刷新周限时间😡	https://linux.do/t/topic/2842470
+2026-09-02-06/0059.html	关于真随机数的问题，除了用 抛硬币， 还有其他好办法吗？	https://linux.do/t/topic/2842490
+2026-09-02-06/0060.html	Cursor已上Fable 5.1	https://linux.do/t/topic/2842478
+2026-09-02-06/0061.html	学机器人解算学崩溃了，是不是学习方法有点问题	https://linux.do/t/topic/2842466
+2026-09-02-06/0062.html	48个月business打开网页端概率弹红框警告(甚至无法对话)	https://linux.do/t/topic/2842468
+2026-09-02-06/0063.html	Fable 5.1 max 消耗 3.5 倍 usage	https://linux.do/t/topic/2842452
+2026-09-02-06/0064.html	OpenAI预热Astra：Astra 在 ExploitBench 拿到满分（目前最高Mythos 5 : 78%）	https://linux.do/t/topic/2842491
+2026-09-02-06/0065.html	佬们还在用Hermes吗，接的哪个模型	https://linux.do/t/topic/2842492
+2026-09-02-06/0066.html	Fable 5.1的防蒸馏	https://linux.do/t/topic/2842493
+2026-09-02-06/0067.html	CD: vs yesterday 17%: today after ~5hrs normal usage already 25% — something spe	https://www.reddit.com/comments/1w4b35h/_/p799wk2/
+2026-09-02-06/0068.html	CD: Luna Max on Plus: /goal chewed 5h in <1h without finishing; normally cannot 	https://www.reddit.com/comments/1w4oo1c/_/p7991li/
+2026-09-02-06/0069.html	CD: after Codex update: 5h in 45min with 2 Luna High + Terra XHigh critic + terr	https://www.reddit.com/comments/1w4oo1c/_/p7931qp/
+2026-09-02-06/0070.html	CD: Sol eating 5h in one or two prompts; switched to Luna on purpose	https://www.reddit.com/comments/1w4h75o/_/p796fvk/
+2026-09-02-06/0071.html	CD: 10 passes of Luna max ≈ one sol xhigh (maybe more); Luna max as ephemeral 1–	https://www.reddit.com/comments/1w4h75o/_/p7964y6/
+2026-09-02-06/0072.html	CD: same prompt: Grok 4.6 extra high 24 min vs Luna Max 108 min (~4×)	https://www.reddit.com/comments/1w4dy06/_/p792f5n/
+2026-09-02-06/0073.html	CD: handoff threshold 40%; push to 50% if need uncompacted ctx; after that degra	https://www.reddit.com/comments/1w4gwzw/_/p791boz/
+2026-09-02-06/0074.html	CD: Fable 5.1 ~30 min burned 36% weekly + basically a full 5h; Max 20x; weekly r	https://www.reddit.com/comments/1w46dbl/_/p79aeqi/
+2026-09-02-06/0075.html	CD: Fable 5.1 ultra code nuked 5h window (weekly reset in a few hours)	https://www.reddit.com/comments/1w4k7yd/_/p79bz9v/
+2026-09-02-06/0076.html	CD: 5h limit killed almost instantly on update; pity weekly reset	https://www.reddit.com/comments/1w4juj2/_/p79aygr/
+2026-09-02-06/0077.html	CD: same 4–5 concurrent windows: Fable 5 lasted ~3× as long as 5.1 this morning;	https://www.reddit.com/comments/1w4juj2/_/p797dbg/
+2026-09-02-06/0078.html	CD: AA: Max 17.5% more expensive; High same intelligence as Fable 5 but 54% chea	https://www.reddit.com/comments/1w4lsf3/_/p79cmrm/
+2026-09-02-06/0079.html	CD: Qwen3.8-Flash-Next vLLM 2×3060 12GB Ampere; tested 24/28/30/32, 32 passed; p	https://www.reddit.com/comments/1w42biu/_/p79aq24/
+2026-09-02-06/0080.html	CD: Ling 3 vLLM Rocmfp4 8–900 pp down to 600 by 100k; usable budget agent on Str	https://www.reddit.com/comments/1w4kwyr/_/p79ckay/
+2026-09-02-06/0081.html	CD: 5080: 10 min for 1 mp 10-sec gen, 8-step turbo, few refs; voice ref +5 min; 	https://www.reddit.com/comments/1w4cmgv/_/p79cjy0/
+2026-09-02-06/0082.html	CD: 1.3 MP 8-sec clip, 8 steps, 7.5 min on Kijai (MATLOWAI failed camera angle)	https://www.reddit.com/comments/1w4dvpv/_/p79aspe/
+2026-09-02-06/0083.html	CD: retries hopped slug mid-run; 5h window filled with resubmits before job fini	https://www.reddit.com/comments/1w4m8sm/_/p79bp7l/
+2026-09-02-06/0084.html	CD: sol max status: 5.3 usage dropped to 0% though never used 5.3 — subagents	https://www.reddit.com/comments/1w3r5s1/_/p78zez6/
+2026-09-02-06/0085.html	CD: new: pay $20 receive $60 credit; OpenRouter discounts often better; old sub 	https://www.reddit.com/comments/1w48tmx/_/p78trgd/
+2026-09-02-06/0086.html	CD: cache reads weren't billed as cache before (except kimik3); now cache-read c	https://www.reddit.com/comments/1w48tmx/_/p78c969/
+2026-09-02-06/0087.html	CD: $100/mo Claude Max almost unlimited vs $100 in Copilot Anthropic API tokens	https://www.reddit.com/comments/1w4lm3b/_/p791kv6/
+2026-09-02-06/0088.html	CD: AA lists Fable 5.1 nearly 4× more expensive than Sol (max) per task	https://www.reddit.com/comments/1w4kgg6/_/p7927as/
+2026-09-02-06/0089.html	sangimed/codex-menubar — Reddit窓のリポ候補	https://github.com/sangimed/codex-menubar
+2026-09-02-06/0090.html	Mcpasi/AGENTCODI — Reddit窓のリポ候補	https://github.com/Mcpasi/AGENTCODI
+2026-09-02-06/0091.html	Hansehart/o3s — Reddit窓のリポ候補	https://github.com/Hansehart/o3s
+2026-09-02-06/0092.html	giuseppe-sirigu/polyglot — Reddit窓のリポ候補	https://github.com/giuseppe-sirigu/polyglot
+2026-09-02-06/0093.html	Nekodificador/ComfyUI-NKD-Radial-Menu — Reddit窓のリポ候補	https://github.com/Nekodificador/ComfyUI-NKD-Radial-Menu
+2026-09-02-06/0094.html	dsguffey/LoRA-Image-Curator — Reddit窓のリポ候補	https://github.com/dsguffey/LoRA-Image-Curator
+2026-09-02-06/0095.html	Hearmeman24/ComfyUI-CivitAI-Publisher — Reddit窓のリポ候補	https://github.com/Hearmeman24/ComfyUI-CivitAI-Publisher
+2026-09-02-06/0096.html	AlixAsset/minimax-h3-prompt-queue — Reddit窓のリポ候補	https://github.com/AlixAsset/minimax-h3-prompt-queue
+2026-09-02-06/0097.html	TagirovAlex/BatchMiniMax — Reddit窓のリポ候補	https://github.com/TagirovAlex/BatchMiniMax
+2026-09-02-06/0098.html	mkhamra/quibble-h3 — Reddit窓のリポ候補	https://github.com/mkhamra/quibble-h3
+2026-09-02-06/0099.html	nazgut/ComfyUI-MiniMaxH3-CLSS — Reddit窓のリポ候補	https://github.com/nazgut/ComfyUI-MiniMaxH3-CLSS
+2026-09-02-06/0100.html	GeeKanJi/MiniMax-H3---Workflow-for-The-Mole-Beyond-the-Stars — Reddit窓のリポ候補	https://github.com/GeeKanJi/MiniMax-H3---Workflow-for-The-Mole-Beyond-the-Stars
+2026-09-02-06/0101.html	OpenShot/OpenShot-ComfyUI — Reddit窓のリポ候補	https://github.com/OpenShot/OpenShot-ComfyUI
+2026-09-02-06/0102.html	PixCtrol/Tiger — Reddit窓のリポ候補	https://github.com/PixCtrol/Tiger
+2026-09-02-06/0103.html	reactor-team/infinite-livestream — Reddit窓のリポ候補	https://github.com/reactor-team/infinite-livestream
+2026-09-02-06/0104.html	petmal/MindTrial — Reddit窓のリポ候補	https://github.com/petmal/MindTrial
+2026-09-02-06/0105.html	AmitTzah/ahkllm — Reddit窓のリポ候補	https://github.com/AmitTzah/ahkllm
+2026-09-02-06/0106.html	Ollama Cloud's Sept 1 quota change is effectively a 2.9–6.7× price hike (measured)	https://www.reddit.com/r/ollama/comments/1w4q9c6/ollama_clouds_sept_1_quota_change_is_effectively/
+2026-09-02-06/0107.html	Task stops when limit hit (new behaviour on Plus)	https://www.reddit.com/r/codex/comments/1w4pwoj/task_stops_when_limit_hit_new_behaviour_on_plus/
+2026-09-02-06/0108.html	Ollama “transparent” paid plans are a scam. DO NOT SWITCH.	https://www.reddit.com/r/ollama/comments/1w4p2gk/ollama_transparent_paid_plans_are_a_scam_do_not/
+2026-09-02-06/0109.html	Got OSS invite, 6 free months of Pro 20x right after paying for plus annual, pain	https://www.reddit.com/r/ChatGPT/comments/1w4oxfl/got_oss_invite_6_free_months_of_pro_20x_right/
+2026-09-02-06/0110.html	Codex Verbrauch seit 23.08. 4,5× mehr Tokens	https://www.reddit.com/r/OpenaiCodex/comments/1w4ocs2/codex_verbrauch_seit_2308_45_mehr_tokens/
+2026-09-02-06/0111.html	Claude.ai instructions are now 138.2k tokens	https://www.reddit.com/r/ClaudeAI/comments/1w4oblt/claudeai_instructions_are_now_1382k_tokens/
+2026-09-02-06/0112.html	On a plus account and just consumed all weekly limit, should I use a reset? I don't wan…	https://www.reddit.com/r/codex/comments/1w4nk4q/on_a_plus_account_and_just_consumed_all_weekly/
+2026-09-02-06/0113.html	Did we just hit another reset?	https://www.reddit.com/r/codex/comments/1w4nfuy/did_we_just_hit_another_reset/
+2026-09-02-06/0114.html	ChatGPT Monthly Usage Limit (No more weekly + 5hr)	https://www.reddit.com/r/ChatGPT/comments/1w4kva3/chatgpt_monthly_usage_limit_no_more_weekly_5hr/
+2026-09-02-06/0115.html	No Reset Despite Paying	https://www.reddit.com/r/ChatGPT/comments/1w4kw1d/no_reset_despite_paying/
+2026-09-02-06/0116.html	If I use a usage reset before hitting 0%, do I lose my remaining usage?	https://www.reddit.com/r/ChatGPT/comments/1w4lk8y/if_i_use_a_usage_reset_before_hitting_0_do_i_lose/
+2026-09-02-06/0117.html	My usage was 96% Fable and 80+% on all models. It was supposed to reset on Thursday 5:3…	https://www.reddit.com/r/ClaudeAI/comments/1w4lj6o/my_usage_was_96_fable_and_80_on_all_models_it_was/
+2026-09-02-06/0118.html	And there is a reset ! Thanks Fable 5.1 😁	https://www.reddit.com/r/ClaudeAI/comments/1w4mewf/and_there_is_a_reset_thanks_fable_51/
+2026-09-02-06/0119.html	New Reset Incoming soon	https://www.reddit.com/r/codex/comments/1w4khap/new_reset_incoming_soon/
+2026-09-02-06/0120.html	The craziest thing about Fable 5.1 for me personally	https://www.reddit.com/r/singularity/comments/1w4kdy4/the_craziest_thing_about_fable_51_for_me/
+2026-09-02-06/0121.html	Fable 5.1 released. Significant benchmark improvements, what do you think?	https://www.reddit.com/r/OpenAI/comments/1w4kgg6/fable_51_released_significant_benchmark/
+2026-09-02-06/0122.html	GPT 5.6 in Claude Code	https://www.reddit.com/r/codex/comments/1w4lm16/gpt_56_in_claude_code/
+2026-09-02-06/0123.html	All my web/app chat queries are clearly being routed to a (faster) less capable model?	https://www.reddit.com/r/ChatGPT/comments/1w4n659/all_my_webapp_chat_queries_are_clearly_being/
+2026-09-02-06/0124.html	Image generation timer keeps moving the goal post?	https://www.reddit.com/r/ChatGPT/comments/1w4o9kx/image_generation_timer_keeps_moving_the_goal_post/
+2026-09-02-06/0125.html	Trying out Codex after using Claude Code for the next month, any advice?	https://www.reddit.com/r/codex/comments/1w4neva/trying_out_codex_after_using_claude_code_for_the/
+2026-09-02-06/0126.html	The system card showed that 5.1 fakes user auth to bypass perms about .01% of completio…	https://www.reddit.com/r/ClaudeAI/comments/1w4p2tv/the_system_card_showed_that_51_fakes_user_auth_to/
+2026-09-02-06/0127.html	Got DeepSeek-V4-Flash-Vision running reliably on 2× RTX PRO 6000 Blackwell (SM120) with…	https://www.reddit.com/r/LocalLLaMA/comments/1w4prsg/got_deepseekv4flashvision_running_reliably_on_2/
+2026-09-02-06/0128.html	Benchmark notes: DeepSeek V4 Flash Vision Exp	https://www.reddit.com/r/DeepSeek/comments/1w4nzyq/benchmark_notes_deepseek_v4_flash_vision_exp/
+2026-09-02-06/0129.html	CMP170Hx “Spark” Machine	https://www.reddit.com/r/LocalLLaMA/comments/1w4mxhl/cmp170hx_spark_machine/
+2026-09-02-06/0130.html	Kaitchup posted Qwen3.8 27B Benchmarks for quants from Q4 to Q1	https://www.reddit.com/r/LocalLLaMA/comments/1w4mevo/kaitchup_posted_qwen38_27b_benchmarks_for_quants/
+2026-09-02-06/0131.html	Hope my humble work would inspire the low vram folks!	https://www.reddit.com/r/StableDiffusion/comments/1w4pspk/hope_my_humble_work_would_inspire_the_low_vram/
+2026-09-02-06/0132.html	Infinite AI Twitch Streaming Project (2xB200 480p Minimax FastH3)	https://www.reddit.com/r/StableDiffusion/comments/1w4l3c3/infinite_ai_twitch_streaming_project_2xb200_480p/
+2026-09-02-06/0133.html	MiniMax H3 acceleration arena/leaderbord: 15+ H3 LoRAs, fine-tunes, Max	https://www.reddit.com/r/StableDiffusion/comments/1w4mmst/minimax_h3_acceleration_arenaleaderbord_15_h3/
+2026-09-02-06/0134.html	A quick Minimax H3 news round-up - 1st September 2026	https://www.reddit.com/r/comfyui/comments/1w4m8r4/a_quick_minimax_h3_news_roundup_1st_september_2026/
+2026-09-02-06/0135.html	World Labs just dropped Atlas: An omni world model that simulates space-time and accele…	https://www.reddit.com/r/singularity/comments/1w4mai2/world_labs_just_dropped_atlas_an_omni_world_model/
+2026-09-02-06/0136.html	One of these nodes, Spectrum or Sage attention, effed up my 5070ti so bad that the syst…	https://www.reddit.com/r/StableDiffusion/comments/1w4kn26/one_of_these_nodes_spectrum_or_sage_attention/
+2026-09-02-06/0137.html	Slow interference is great	https://www.reddit.com/r/LocalLLaMA/comments/1w4ndne/slow_interference_is_great/
+2026-09-02-06/0138.html	Deterministic coding harness reads LESS source code to write better quality code	https://www.reddit.com/r/OpenAI/comments/1w4nczm/deterministic_coding_harness_reads_less_source/
+2026-09-02-06/0139.html	I read Anthropic's and OpenAI's agent devcontainers line by line. Here's what both leav…	https://www.reddit.com/r/ChatGPTCoding/comments/1w4kz33/i_read_anthropics_and_openais_agent_devcontainers/
+2026-09-02-06/0140.html	CodexMenuBar — an open-source native macOS menu bar app for monitoring Codex usage limits	https://www.reddit.com/r/codex/comments/1w4otzy/codexmenubar_an_opensource_native_macos_menu_bar/
+2026-09-02-06/0141.html	Imagine you're on a train with just your phone and need to work on a project... Enter A…	https://www.reddit.com/r/OpenaiCodex/comments/1w4n10n/imagine_youre_on_a_train_with_just_your_phone_and/
+2026-09-02-06/0142.html	Point an agent at your Ollama server and have the loop survive a 3B model's tool calls	https://www.reddit.com/r/ollama/comments/1w4nnwm/point_an_agent_at_your_ollama_server_and_have_the/
+2026-09-02-06/0143.html	I built TokenRace - a public leaderboard for verified Codex usage	https://www.reddit.com/r/codex/comments/1w4kai4/i_built_tokenrace_a_public_leaderboard_for/
+2026-09-02-06/0144.html	EvoUndo: Recoverability-Constrained Self-Evolution for LLM Agent Harnesses [R]	https://www.reddit.com/r/MachineLearning/comments/1w4m0hq/evoundo_recoverabilityconstrained_selfevolution/
+2026-09-02-06/0145.html	Senior SWE-Bench is out now with Claude Fable 5.1 Results	https://www.reddit.com/r/ClaudeAI/comments/1w4on84/senior_swebench_is_out_now_with_claude_fable_51/
+2026-09-02-06/0146.html	Claude Code vs GitHub Copilot: Token burn comparison using identical models & repos?	https://www.reddit.com/r/ChatGPTCoding/comments/1w4lm3b/claude_code_vs_github_copilot_token_burn/
+2026-09-02-06/0147.html	Heads up, Fable 5.1 now carries Anthropic's statistical text watermark	https://www.reddit.com/r/ClaudeAI/comments/1w4lcu4/heads_up_fable_51_now_carries_anthropics/
+2026-09-02-06/0148.html	C2PA manifest warning	https://www.reddit.com/r/ClaudeAI/comments/1w4pfg1/c2pa_manifest_warning/
+2026-09-02-06/0149.html	Fable 5.1 and Mythos 5.1 Release Discussion Hub	https://www.reddit.com/r/ClaudeAI/comments/1w4qgue/fable_51_and_mythos_51_release_discussion_hub/
+2026-09-02-06/0150.html	Where do you host Codex so overnight jobs dont die with the laptop	https://www.reddit.com/r/OpenAI/comments/1w4m8sm/where_do_you_host_codex_so_overnight_jobs_dont/
+2026-09-02-06/0151.html	"Skipping Politics" in thought output	https://www.reddit.com/r/codex/comments/1w4kdaw/skipping_politics_in_thought_output/
+2026-09-02-06/0152.html	3 hours after Anthropic announces Fable 5.1, OpenAI comes swinging with Astra	https://www.reddit.com/r/codex/comments/1w4pbl5/3_hours_after_anthropic_announces_fable_51_openai/
+2026-09-02-06/0153.html	Fable 5.2 wishlist?	https://www.reddit.com/r/ClaudeAI/comments/1w4ldgy/fable_52_wishlist/
+2026-09-02-06/0154.html	I added a FreshCtx pre-tool hook for Agno 2.9 - does this match how you use tool_hooks?	https://www.reddit.com/r/LangChain/comments/1w4pkux/i_added_a_freshctx_pretool_hook_for_agno_29_does/
+2026-09-02-06/0155.html	A radial menu for ComfyUI: 😺 NKD Radial Menu	https://www.reddit.com/r/comfyui/comments/1w4ossf/a_radial_menu_for_comfyui_nkd_radial_menu/
+2026-09-02-06/0156.html	Further Benchmarks for Fable 5.1	https://www.reddit.com/r/singularity/comments/1w4l50v/further_benchmarks_for_fable_51/
+2026-09-02-06/0157.html	Letting image-to-video artifacts compound into an impossible world	https://www.reddit.com/r/StableDiffusion/comments/1w4py5q/letting_imagetovideo_artifacts_compound_into_an/
+2026-09-02-06/0158.html	Something that's not appreciated nearly enough about Deepseek: the FIM Completion endpo…	https://www.reddit.com/r/DeepSeek/comments/1w4meeu/something_thats_not_appreciated_nearly_enough/
+2026-09-02-06/0159.html	Why nothing good lasts in this world?	https://www.reddit.com/r/ollama/comments/1w4o9ka/why_nothing_good_lasts_in_this_world/
+2026-09-02-06/0160.html	DeepSeek V4 Flash + new pricing	https://www.reddit.com/r/ollama/comments/1w4mnce/deepseek_v4_flash_new_pricing/
+2026-09-02-06/0161.html	Is it (un)safe to install comfyui-umeairt-toolkit?	https://www.reddit.com/r/comfyui/comments/1w4nqr8/is_it_unsafe_to_install_comfyuiumeairttoolkit/
