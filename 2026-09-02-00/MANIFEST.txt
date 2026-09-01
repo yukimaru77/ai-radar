@@ -1,0 +1,187 @@
+2026-09-02-00/0001.html	z.ai Coding Plan一周年 Reset Card — 週次と5hを同時満タン	https://x.com/Zai_org/status/2094769612730532172
+2026-09-02-00/0002.html	Claude Code auto-compactが180s watchdogに殺される — 要約≈12k超で「ユーザーが止めた」	https://x.com/lucas_builds/status/2094808749051417085
+2026-09-02-00/0003.html	ninferが5090でllama.cppを大きく上回る — Qwen3.8-27B 149 t/s / 3.6-35B-A3B 557	https://x.com/truffle/status/2094808184602935489
+2026-09-02-00/0004.html	OpenCodeでLunaを役割分けすると5hに届かない — 設計sol-high / 実装luna max	https://x.com/siouni_unia/status/2094805443361296613
+2026-09-02-00/0005.html	GoのLuna Maxが1タスクで5hの99% — モデルリストにQwen3.8 Flash追加	https://x.com/big_spiral/status/2094809126836822131
+2026-09-02-00/0006.html	FastH3 Colab A100 — 1888×1056 15sが9分50秒、Ref2Va通る	https://x.com/zasuko_michiksa/status/2094804124609200455
+2026-09-02-00/0007.html	Omperor — omp2をRust+UIKitのMacネイティブに（Electronなし）	https://x.com/theodorvaryag/status/2094804022641213785
+2026-09-02-00/0008.html	herdr --remote grokboxでGrok Bot枠を守る — 入門SuperGrok2日70%	https://x.com/cavalzheng/status/2094798178721878497
+2026-09-02-00/0009.html	Orca現場確認 — CC実装/Codexレビューのセッション間通信+内蔵ブラウザ+行指定diff	https://x.com/iriya0624/status/2094808262453723424
+2026-09-02-00/0010.html	Grok Bot: チャット+メールだけで週次死。Cursor Proを足しても枠は増えない	https://x.com/mjm4088/status/2094808701077008867
+2026-09-02-00/0011.html	Sol Ultra: 日曜3h焼けたスレの監査が昨日8分で5h死	https://x.com/Croczillak/status/2094799874009227407
+2026-09-02-00/0012.html	Ration — Claude/Codex/Cursor残量ビューア（認証なし・収集なし）	https://x.com/DevuDilip/status/2094803568721326132
+2026-09-02-00/0013.html	Hy4 vs GLM-5.3 vs Qwen3.8 Max — 塔3本実測、Hy4最安$0.54・GLM修正最少	https://x.com/thehypedotnews/status/2094802466260799655
+2026-09-02-00/0014.html	LichtFeld onnx依存削除 → DGX Sparkでビルド成功	https://x.com/todashuta/status/2094778475404251261
+2026-09-02-00/0015.html	grok CLI×CPA: XAI_API_KEY→GROK_XAI_API_BASE_URLの順。GROK_MODELS_BASE_URLは罠	https://x.com/showmybrain/status/2094774420921549215
+2026-09-02-00/0016.html	OMPから素のPiへ戻す — agent call増でコンテキスト制御喪失	https://x.com/DavidSchlter2/status/2094801616167674207
+2026-09-02-00/0017.html	OpenCode Webモード — ローカルサーバ→ブラウザ。uBOとコピーボタン衝突あり	https://x.com/yinyu985/status/2094804840585261240
+2026-09-02-00/0018.html	Celld+Pi+Firecrackerで安いagent cloud — ざっくり他社サンドボックスの1/10	https://x.com/DXhusni/status/2094802067395342566
+2026-09-02-00/0019.html	CCは速いが抜け漏れ多、Codexは遅いが/goal放置が安心 — 現場対比	https://x.com/hanafusa_y/status/2094805895138136516
+2026-09-02-00/0020.html	OpenClaw 2026.8.1でも無限ループが残る	https://x.com/cg_ftLab/status/2094806118044426310
+2026-09-02-00/0021.html	BlockRunAI ClawRouter系 — OpenClaw/Hermes/CC/Codex/DSHのUSDC支払いルータ	https://x.com/bc1beat/status/2094806736943128907
+2026-09-02-00/0022.html	x20更新してもCodex枠が戻らない現場	https://x.com/PhongQuach239/status/2094808629136564301
+2026-09-02-00/0023.html	ego lite vs Hermes Discord調査 — 13m53s/38 API vs 14m29s/48、レポートはegoが詳しい	https://x.com/ego_agent/status/2094802661455597998
+2026-09-02-00/0024.html	WebMCP/Lectern + agenticschema — ページがMCPサーバ、JPEGをチャットに載せない	https://x.com/SearchStefano/status/2094808677261652252
+2026-09-02-00/0025.html	grilling運用 — 動かす前に必ず質問させ、自明な答えをcontextの先頭へ	https://x.com/lucasmeijer/status/2094783294915117566
+2026-09-02-00/0026.html	Shopify: 0.8B特化がGPT-5.6-sol xhighを抜く（超特化タスク）	https://x.com/tobi/status/2094808564355191249
+2026-09-02-00/0027.html	MiniMax H3は内部SSDへ — 外付けHDDに移すと速度が異常低下	https://x.com/shuwest/status/2094807351262126082
+2026-09-02-00/0028.html	Unsloth MTP追試 — 自分のシーンで約+40%（Qwen3.8-Flash-Next GGUF）	https://x.com/ryan4yin/status/2094803307844059200
+2026-09-02-00/0029.html	PACT規則遵守ベンチ — GLM-5.3が#5、Flash#8	https://x.com/baseten/status/2094808902688768483
+2026-09-02-00/0030.html	Grok年齢選択でアカウント即BAN — X認証とGrokが未連携	https://x.com/yyhxiaolang/status/2094782551575453721
+2026-09-02-00/0031.html	GLM Coding Planの体感知能低下 — Reset Cardと同時期	https://x.com/JustinGorya/status/2094807415313015002
+2026-09-02-00/0032.html	Codex SDKでGrok Botを組む — computer use込みでOpenAI側SDKで足りる	https://x.com/Carlos_Arthurr/status/2094803894006088062
+2026-09-02-00/0033.html	dingsim — 自前simでone shot sim2realを狙う（花粉分布への転送後に公開予定）	https://x.com/yacineMTB/status/2094791291624186317
+2026-09-02-00/0034.html	devudilip/ration — Claude/Codex/Cursor残量ビューア	https://github.com/devudilip/ration
+2026-09-02-00/0035.html	searchstefano/agenticschema — JSON-LD→WebMCP	https://github.com/searchstefano/agenticschema
+2026-09-02-00/0036.html	BlockRunAI/ClawRouter — OpenClaw向けUSDC支払いルータ	https://github.com/BlockRunAI/ClawRouter
+2026-09-02-00/0050.html	z.ai Coding Plan 個人usageダッシュ（Reset Card使用先）	https://z.ai/manage-apikey/coding-plan/personal/usage
+2026-09-02-00/0051.html	PACT — 規則遵守ベンチ（trace-ai-labs）	https://trace-ai-labs.github.io/pact/
+2026-09-02-00/0052.html	Unsloth Qwen3.8-Flash-Next GGUF MTP	https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/tree/main/MTP
+2026-09-02-00/0053.html	H3 Character Sheet Generator (HF)	https://huggingface.co/PoopMan333/H3_Character_Sheet_Generator/tree/main
+2026-09-02-00/0037.html	adam-s/lanes — Claude 0.1x cache-read マルチチャット調整	https://github.com/adam-s/lanes
+2026-09-02-00/0038.html	ringlochid/oh-my-subagents — Codex/Claude永続サブエージェントruntime	https://github.com/ringlochid/oh-my-subagents
+2026-09-02-00/0039.html	BariBariGood/manzanas — Mac一台でiOSシミュ複数をエージェントへ貸与	https://github.com/BariBariGood/manzanas
+2026-09-02-00/0040.html	iamskeole/burrito-core — gpt-oss toolcall推論ハーネス	https://github.com/iamskeole/burrito-core
+2026-09-02-00/0041.html	milpster/gfx906-llama-cpp — gfx906向けllama.cppフォーク	https://github.com/milpster/gfx906-llama-cpp
+2026-09-02-00/0042.html	kirodotdev/KiroCrew — Amazon Kiroコーディング前端のOSS	https://github.com/kirodotdev/KiroCrew
+2026-09-02-00/0043.html	recommend-agentic-trust-layer — エージェント向けfact-check MCP	https://github.com/recommend-dev/recommend-agentic-trust-layer
+2026-09-02-00/0056.html	Luna high委譲の直後に5hが約4%落ちる	https://www.reddit.com/r/codex/comments/1w4bggc/
+2026-09-02-00/0057.html	20x週次が午前セッションで48%まで溶ける	https://www.reddit.com/r/codex/comments/1w4b35h/
+2026-09-02-00/0058.html	Sol Mediumをデフォルトに、失敗時だけHigh — 「2 Mediumが1 Highに勝つ」	https://www.reddit.com/r/codex/comments/1w4bhnc/
+2026-09-02-00/0059.html	同じCodexでも片アカウントだけ5h窓があるA/B	https://www.reddit.com/r/codex/comments/1w4f5d9/
+2026-09-02-00/0060.html	Codexが遅くなった？ユーザー6M→25M+、同プロンプトでGrok≈3× Claude≈2×速い	https://www.reddit.com/r/codex/comments/1w4dy06/
+2026-09-02-00/0061.html	20分かけてSQL1行 — lobotomized体感	https://www.reddit.com/r/codex/comments/1w4ex13/
+2026-09-02-00/0062.html	接続/コンピュートエラー多発。Astra近いか？週次50%×2アカでリセット待ち	https://www.reddit.com/r/codex/comments/1w4e2ll/
+2026-09-02-00/0063.html	SOLの状態は「新モデル前のlobotomy」	https://www.reddit.com/r/codex/comments/1w4amec/
+2026-09-02-00/0064.html	Yep, I feel Astra coming — 週次50%×2アカ準備	https://www.reddit.com/r/codex/comments/1w4aaq6/
+2026-09-02-00/0065.html	自作skillsをProjectにzip → 仕事の~90%がチャットで済む	https://www.reddit.com/r/codex/comments/1w4bask/
+2026-09-02-00/0066.html	Pro reasoning上限到達。sol xhigh/ultraの計画パリティを問う	https://www.reddit.com/r/codex/comments/1w4a763/
+2026-09-02-00/0067.html	リセットが多い。$100ではなく$20を買ったことを後悔	https://www.reddit.com/r/codex/comments/1w4b008/
+2026-09-02-00/0068.html	Gateway Routingでトークン効率 — Codexを最終ジェネラリストに	https://www.reddit.com/r/codex/comments/1w4eyos/
+2026-09-02-00/0069.html	~/.codex のskysight — 10分ごとのComputerUse日記、改善OFFでもアップロード疑い	https://www.reddit.com/r/OpenAI/comments/1w4c0nd/
+2026-09-02-00/0070.html	利用制限低下を正当化する人への反論	https://www.reddit.com/r/codex/comments/1w4acl0/
+2026-09-02-00/0071.html	Ollama Pro月$20→年額でトークン課金強制になる？	https://www.reddit.com/r/ollama/comments/1w4ajon/
+2026-09-02-00/0072.html	Ollama Cloudはq4_k_mで他社q8と同額 — 長期タスク品質が落ちる	https://www.reddit.com/r/ollama/comments/1w4awlo/
+2026-09-02-00/0073.html	新しいProに失望。代替サブを探す	https://www.reddit.com/r/ollama/comments/1w4dv9j/
+2026-09-02-00/0074.html	kimi-k2.7-codeが$4/M outで高い — 軽いコーディング代替求む	https://www.reddit.com/r/ollama/comments/1w4eb4o/
+2026-09-02-00/0075.html	Continue in ChatGPT Work — 作業窓が~100分→~25分に縮んだ後のハンドオフ	https://www.reddit.com/r/ChatGPT/comments/1w4e486/
+2026-09-02-00/0076.html	ChatGPTは会話が長くなりすぎても黙って文脈を落とす	https://www.reddit.com/r/ChatGPT/comments/1w4chah/
+2026-09-02-00/0077.html	Pattern MCP — UIスコープをコーディング前にチェック	https://www.reddit.com/r/OpenAI/comments/1w4ddn5/
+2026-09-02-00/0078.html	recommend-agentic-trust-layer — エージェント向けfact-check OSS	https://www.reddit.com/r/LangChain/comments/1w4f5j8/
+2026-09-02-00/0079.html	gfx906 llama.cppフォーク更新 — Qwen3.8-27BでPP +14.1%	https://www.reddit.com/r/LocalLLaMA/comments/1w4d52c/
+2026-09-02-00/0080.html	burrito-core — 3.49B tok / 320k evals / 1062 GPU-hでgpt-oss toolcallを直す推論ハーネス	https://www.reddit.com/r/LocalLLaMA/comments/1w4f7x5/
+2026-09-02-00/0081.html	AtomicChatのQwen3.8-Flash-Next「Q4_K_M」が実質IQ2_S級？	https://www.reddit.com/r/LocalLLaMA/comments/1w4f8t2/
+2026-09-02-00/0082.html	Gemma4 12B QATでMTPすると逆に遅い（9060XT Vulkan）	https://www.reddit.com/r/LocalLLaMA/comments/1w4dfi1/
+2026-09-02-00/0083.html	MiniMax H3 Lip-sync続報 — ref2v編集は3s@2MPで>40GB VRAM	https://www.reddit.com/r/StableDiffusion/comments/1w4d0nh/
+2026-09-02-00/0084.html	Fast H3 t2va — 4060Ti 16GBで0.4mp≈1分 / 0.5mp≈2分	https://www.reddit.com/r/comfyui/comments/1w4cjcb/
+2026-09-02-00/0085.html	PlayCanvasがsplat forward passで線形depth — DOF/fog、proxy mesh不要	https://www.reddit.com/r/GaussianSplatting/comments/1w4cx5j/
+2026-09-02-00/0086.html	Kiro Crew（Amazonコーディング前端）がOSS化	https://www.reddit.com/r/LocalLLaMA/comments/1w4d3th/
+2026-09-02-00/0087.html	Codex vs Claude Code for RTL / AI推論チップ設計	https://www.reddit.com/r/codex/comments/1w4f4ik/
+2026-09-02-00/0088.html	Windows向け自作usageトラッカー	https://www.reddit.com/r/ChatGPT/comments/1w4asov/
+2026-09-02-00/0089.html	Redshift Hub — Git worktree横断でエージェント並列	https://news.ycombinator.com/item?id=49520913
+2026-09-02-00/0090.html	負荷時のAIスロットリングが需要を増やして逆効果になり得る	https://news.ycombinator.com/item?id=49521092
+2026-09-02-00/0091.html	OpenAI is pulling its models from Cursor after SpaceX acquisition	https://news.ycombinator.com/item?id=49521111
+2026-09-02-00/0092.html	Puro-2B — RTX 5090 $5090以内でQwen2-1.5B訓練	https://news.ycombinator.com/item?id=49521117
+2026-09-02-00/0093.html	Fuck you, show me the prompt — mitmproxyでプロンプトを見る	https://news.ycombinator.com/item?id=49521180
+2026-09-02-00/0094.html	Nemotron 3 Ultra Explained	https://news.ycombinator.com/item?id=49521192
+2026-09-02-00/0095.html	Foremerge — エージェント間コンフリクトをコーディング前に検出	https://news.ycombinator.com/item?id=49521212
+2026-09-02-00/0096.html	naw103/foremerge（HN 49521212経由）	https://github.com/naw103/foremerge
+2026-09-02-00/0097.html	EFF to Courts: Don't Rewrite Copyright over AI Hype	https://news.ycombinator.com/item?id=49521315
+2026-09-02-00/0098.html	I Built My Agent Computer in the Cloud	https://news.ycombinator.com/item?id=49521387
+2026-09-02-00/0099.html	Manzanas — Mac一台でiOSシミュ多数をコーディングエージェントへ貸与	https://news.ycombinator.com/item?id=49521405
+2026-09-02-00/0100.html	oh-my-subagents — Codex/Claudeサブエージェントの永続runtime	https://news.ycombinator.com/item?id=49521409
+2026-09-02-00/0101.html	58 PRs / 572k行 — 合間時間のレビュー運用	https://news.ycombinator.com/item?id=49521662
+2026-09-02-00/0102.html	Squiglyy — CLIPゼロショットモデレーションの毎日落書きゲーム	https://news.ycombinator.com/item?id=49521752
+2026-09-02-00/0103.html	Shaide — K8sネイティブ分散マルチモデル推論	https://news.ycombinator.com/item?id=49521905
+2026-09-02-00/0104.html	axem-solutions/shaide（HN 49521905経由）	https://github.com/axem-solutions/shaide
+2026-09-02-00/0105.html	Berget Code Pro/Summit Plans	https://news.ycombinator.com/item?id=49521969
+2026-09-02-00/0106.html	Whisper for Free: How to Clone a SaaS with a Prompt	https://news.ycombinator.com/item?id=49522015
+2026-09-02-00/0107.html	Openheim — Rust製マルチプロバイダLLMエージェントruntime	https://news.ycombinator.com/item?id=49522064
+2026-09-02-00/0108.html	Managing AI agents is still a full-time job	https://news.ycombinator.com/item?id=49522152
+2026-09-02-00/0109.html	Model Arena: Qwen3-ASR vs faster-whisper	https://news.ycombinator.com/item?id=49522166
+2026-09-02-00/0110.html	HookLayer — ChatGPT/Claude内MCPのコンテンツ知能	https://news.ycombinator.com/item?id=49522180
+2026-09-02-00/0111.html	Agentic Determinism Index — 決定的AIの適用所を探すOSS	https://news.ycombinator.com/item?id=49522378
+2026-09-02-00/0112.html	lemma-ventures/agentic-determinism-index（HN 49522378経由）	https://github.com/lemma-ventures/agentic-determinism-index
+2026-09-02-00/0113.html	The hard parts of AI-assisted science	https://news.ycombinator.com/item?id=49522392
+2026-09-02-00/0114.html	ModelGate — バックエンドの反復・高額LLM呼び出しを見つける	https://news.ycombinator.com/item?id=49522433
+2026-09-02-00/0115.html	razdgann/modelgate-oss（HN 49522433経由）	https://github.com/razdgann/modelgate-oss
+2026-09-02-00/0116.html	South Korea AI for All — 全市民に無料AIアクセス	https://news.ycombinator.com/item?id=49522446
+2026-09-02-00/0117.html	H3 Max Live — リアルタイムより速いAI動画	https://news.ycombinator.com/item?id=49522498
+2026-09-02-00/0118.html	PearPie — アカウント無しP2P同期のプライベートAIチャット	https://news.ycombinator.com/item?id=49522541
+2026-09-02-00/0119.html	Seventy Minutes of Nothing — クラウド切断でローカルOllama+piがテトリス	https://news.ycombinator.com/item?id=49522679
+2026-09-02-00/0120.html	Openvisor — 自ホストAIソフトウェアコンサル	https://news.ycombinator.com/item?id=49522751
+2026-09-02-00/0121.html	scalevisor-io/openvisor（HN 49522751経由）	https://github.com/scalevisor-io/openvisor
+2026-09-02-00/0122.html	Expanding access to AI with ChatGPT ads	https://news.ycombinator.com/item?id=49522780
+2026-09-02-00/0123.html	Language Models Are Anomaly Detectors	https://news.ycombinator.com/item?id=49522801
+2026-09-02-00/0124.html	State of Open Models: Summer 2026	https://news.ycombinator.com/item?id=49522816
+2026-09-02-00/0125.html	Selfship.ai — agenticアプリの問題を可視化して直す	https://news.ycombinator.com/item?id=49522967
+2026-09-02-00/0126.html	Lanes — Claudeの0.1x cache-readを突くマルチチャット調整	https://news.ycombinator.com/item?id=49523092
+2026-09-02-00/0127.html	SWE-in-a-team — ソフトウェア工場向けコーディングベンチ	https://news.ycombinator.com/item?id=49523147
+2026-09-02-00/0128.html	DHH: Future of Programming, AI, Agentic Engineering	https://news.ycombinator.com/item?id=49523168
+2026-09-02-00/0129.html	Foundational Models Became Superhuman in Bash	https://news.ycombinator.com/item?id=49523213
+2026-09-02-00/0130.html	Thank u, next: Replacing Next.js with a vibe-coded framework	https://news.ycombinator.com/item?id=49523229
+2026-09-02-00/0131.html	ClaudeCodeでZedのストレージ層をDagrに置換	https://news.ycombinator.com/item?id=49523234
+2026-09-02-00/0132.html	Agentに『私は専門家』と伝える理由	https://news.ycombinator.com/item?id=49523258
+2026-09-02-00/0133.html	MCPはツール問題を解くはずが一段足りない（ARDへ）	https://news.ycombinator.com/item?id=49523284
+2026-09-02-00/0134.html	RedashフォークにAI機能	https://news.ycombinator.com/item?id=49523302
+2026-09-02-00/0135.html	freaker2k7/redash（HN 49523302経由）	https://github.com/freaker2k7/redash
+2026-09-02-00/0136.html	A bicycle for the mind	https://lobste.rs/s/y58e86
+2026-09-02-00/0137.html	Zuzai, a new word, indicates the absence of AI	https://lobste.rs/s/6ejigt
+2026-09-02-00/0044.html	huangruiteng/loopx — LoopX（掘金経由）	https://github.com/huangruiteng/loopx
+2026-09-02-00/0045.html	ashuai/dsh-s2s — DeepSeek Harness session-to-session	https://github.com/ashuai/dsh-s2s
+2026-09-02-00/0046.html	isguang2024/fast-spider — Fast Spider	https://github.com/isguang2024/fast-spider
+2026-09-02-00/0047.html	Laihiujin/Prism — 開源マトリクス配信	https://github.com/Laihiujin/Prism
+2026-09-02-00/0048.html	noaul/nono — 自ホスト個人ナビ/デジタル作業台	https://github.com/noaul/nono
+2026-09-02-00/0049.html	codex-cli-portable-setup-kit — Codex CLI携帯セットアップ	https://github.com/2akouwu/codex-cli-portable-setup-kit
+2026-09-02-00/0054.html	OpenAI Gift Cards 公式ヘルプ	https://help.openai.com/en/articles/20001491-buying-and-redeeming-openai-gift-cards
+2026-09-02-00/0055.html	codingplan-price — GLM Coding Plan価格シート	https://codingplan-price.pages.dev/
+2026-09-02-00/0138.html	OpenAI 也出礼品卡了，可以用礼品卡订阅 Plus 和 Pro 了？	https://www.v2ex.com/t/1238786
+2026-09-02-00/0139.html	AI 账号重置问题请教	https://www.v2ex.com/t/1238759
+2026-09-02-00/0140.html	现在还有人自己配主机跑本地大模型吗?	https://www.v2ex.com/t/1238769
+2026-09-02-00/0141.html	为什么 AI 在 win 平台天天都在肘击 powershell？	https://www.v2ex.com/t/1238722
+2026-09-02-00/0142.html	DSH 插件: session to session 让多个会话能互相喊话,不分 live 还是 idle 都能拉起	https://www.v2ex.com/t/1238750
+2026-09-02-00/0143.html	一只虾到多只虾：先聊聊我为什么要“拆虾”	https://juejin.cn/post/7680376772703617030
+2026-09-02-00/0144.html	架构图 SKILL 封装好了，顺便做了虾的适配	https://juejin.cn/post/7680381449195765823
+2026-09-02-00/0145.html	大模型为什么能记住上一轮？从 InMemoryChatMessageHistory 看对话 Memory	https://juejin.cn/post/7680467550774001714
+2026-09-02-00/0146.html	聊天记录越来越长怎么办？从消息数量截断到 Token 截断	https://juejin.cn/post/7680376772703502342
+2026-09-02-00/0147.html	Code Agent 解剖（16）：AgentTeams——为什么一个 agent 不够用？	https://juejin.cn/post/7680482479992799258
+2026-09-02-00/0148.html	程序重启后，AI 为什么把你忘了？从 InMemory 到持久化 Memory	https://juejin.cn/post/7680467550773821490
+2026-09-02-00/0149.html	开源项目第204期：LoopX — 长周期 Agent 控制平面，跑在 Codex/Claude Code 之上的状态管理层	https://juejin.cn/post/7680456045866041353
+2026-09-02-00/0150.html	AI 协作开发新范式：我用 SDD 做了个排版 npm 包	https://juejin.cn/post/7680405261429194788
+2026-09-02-00/0151.html	chatGPT：修复了降智问题 ❌ 实际：修复了降智被用户发现的问题	https://linux.do/t/topic/2842048
+2026-09-02-00/0152.html	有佬openai cyber认证这两天过的吗	https://linux.do/t/topic/2841784
+2026-09-02-00/0153.html	推特發了個開源項目只有29個閱讀量，被演算法幹沉默了，求佬們支招	https://linux.do/t/topic/2842125
+2026-09-02-00/0154.html	Codex桌面版打不开，后台进程里面打转	https://linux.do/t/topic/2842134
+2026-09-02-00/0155.html	疑问：模型智商跟使用人数的关系	https://linux.do/t/topic/2842128
+2026-09-02-00/0156.html	sub2api、newapi这种站点如何防止破甲和违规请求	https://linux.do/t/topic/2842073
+2026-09-02-00/0157.html	Fable5.1疑似已对部分用户推出	https://linux.do/t/topic/2842136
+2026-09-02-00/0158.html	GPT pro20 一直 429 怎么办，6 个并发都够呛	https://linux.do/t/topic/2841843
+2026-09-02-00/0159.html	【600star达成】加入SSH/WSL AI身份感知！以及IDEA同款Git 以及Everything同款文件搜索！ 加入命令管理器！这可能是Windows最	https://linux.do/t/topic/2842126
+2026-09-02-00/0160.html	太好了，是X上关于gemini3.8flash消息，那不得不“信”了	https://linux.do/t/topic/2841970
+2026-09-02-00/0161.html	智谱的重置卡，到现在一张没用过，都过期了...	https://linux.do/t/topic/2842111
+2026-09-02-00/0162.html	这会的Codex额度是不掉么？写了一个多小时了，一直没掉！	https://linux.do/t/topic/2842127
+2026-09-02-00/0163.html	新注册一个Gmail然后开GPT 20x会不会被风控	https://linux.do/t/topic/2842046
+2026-09-02-00/0164.html	gemini pro 学生优惠 sheerid验证用大陆学校真实信息验证通过了！	https://linux.do/t/topic/2841974
+2026-09-02-00/0165.html	ZCode 免费领取 100M tokens，用于GLM-5.3-Flash	https://linux.do/t/topic/2841958
+2026-09-02-00/0166.html	【开源推广】Fast Spider	https://linux.do/t/topic/2842123
+2026-09-02-00/0167.html	[开源推广] Prism 搓了半年的开源矩阵发布项目	https://linux.do/t/topic/2842024
+2026-09-02-00/0168.html	GPT PRO 5x 升级 20X 转区	https://linux.do/t/topic/2841815
+2026-09-02-00/0169.html	OpenAI上线官方礼品卡，可赠送他人、可订阅及续费套餐（9月1日）	https://linux.do/t/topic/2841789
+2026-09-02-00/0170.html	gpt 5.6sol 破限工具 v6.4.0更新 模型不再拒绝逆向开发	https://linux.do/t/topic/2841754
+2026-09-02-00/0171.html	关于grok降智问题的请教	https://linux.do/t/topic/2841806
+2026-09-02-00/0172.html	贴一下 OpenAI、Anthropic、Kimi 和各种其他订阅，比如 OpenCode Go、Cline、Ollama 等的订阅模型价格对比	https://linux.do/t/topic/2842099
+2026-09-02-00/0173.html	问一下佬 gpt team的纯web车位大概多钱	https://linux.do/t/topic/2842083
+2026-09-02-00/0174.html	GLM：一周年，周重置卡已送达 ！！🎉	https://linux.do/t/topic/2842049
+2026-09-02-00/0175.html	还有兄台在vscode里用codex-cli和claude code cli吗	https://linux.do/t/topic/2842004
+2026-09-02-00/0176.html	现在plus账号的周限变高了么？	https://linux.do/t/topic/2842038
+2026-09-02-00/0177.html	关于Gemini获取的途径	https://linux.do/t/topic/2842029
+2026-09-02-00/0179.html	请问有没有有人味能用来角色扮演的本地部署小模型	https://linux.do/t/topic/2841897
+2026-09-02-00/0180.html	gpt最近怎么又慢又难用啊	https://linux.do/t/topic/2842042
+2026-09-02-00/0181.html	可自托管的个人导航和数字工作台：NoNo	https://linux.do/t/topic/2842027
+2026-09-02-00/0182.html	ZCode赛博鸡蛋GLM-5.3-Flash 一亿	https://linux.do/t/topic/2841956
+2026-09-02-00/0183.html	关于ds天卡	https://linux.do/t/topic/2842018
+2026-09-02-00/0184.html	居然足足送了【100万】token诶~	https://linux.do/t/topic/2841785
+2026-09-02-00/0185.html	分享一下自用obsidian知识库构建及可视化	https://linux.do/t/topic/2841990
+2026-09-02-00/0186.html	[V2.2 更新]MetaGateway--站点聚合网关/全量更新，重构UI，新增模型名统一，按需勾选模型等功能。	https://linux.do/t/topic/2841989
+2026-09-02-00/0187.html	関連リポ（LD 2841989）	https://github.com/ZiChuanLan/meta-gateway
+2026-09-02-00/0188.html	GPT使用纯网页版是否还有优惠方案 (RE-KEEP)	https://linux.do/t/topic/2841518
