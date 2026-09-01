@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SPAC89の自測記事。Build 500k / Cursor 256k · レーダー 2026-08-31 09:00</title>
+<title>Bezalel capability plane。MCP URL+bearer、/apiはok · レーダー 2026-08-31 09:00</title>
 <style>
 
 :root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
@@ -37,15 +37,17 @@ footer { color:var(--dim); font-size:12px; margin-top: 36px; }
 <p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 09:00</a></p>
 <article class="card">
 <div class="meta"><span class="tag x">X</span></div>
-<h1>SPAC89の自測記事。Build 500k / Cursor 256k</h1>
-<p class="primary"><a href="https://x.com/i/article/2094198600859308032" target="_blank" rel="noopener">https://x.com/i/article/2094198600859308032</a></p>
+<h1>Bezalel capability plane。MCP URL+bearer、/apiはok</h1>
+<p class="primary"><a href="https://bezalel.sh" target="_blank" rel="noopener">https://bezalel.sh</a></p>
 <div class="thread">
-<p>@SPAC89 ツイが指す X Article。スキャンが要約した中身は、Grok 4.6 の文脈が Build 500k / Cursor 256k、Heavy の月 ~25億 tok 対 Ultra の月 90–100億 + $400 API。</p>
-<p>記事本文そのものはこの箱から開けなかった（下記）。数字の一次ソース扱いはツイ側ページに置く。</p>
+<p>見出し Bezalel — super powers for your agent。A capability plane for personal agents: memory, email, money, texting, a computer, sandboxes, and connectors behind one MCP URL.</p>
+<p>Connecting takes exactly two values — a URL and a bearer token。MCP <code>https://bezalel.sh/api/mcp</code>。トークンは <code>bzl_…</code>。Claude Code / Codex CLI / Cursor / OpenClaw / eve 向けの登録コマンドが docs.md にある。</p>
+<p>GET https://bezalel.sh/api をこの箱から叩いた JSON: service=bezalel, version=0.0.1, status=ok, mcp=/mcp。domains は health/finance/cards/email/imessage/memory/computer/sandbox/connectors が configured true。uptimeMs は約 1.03e8（約28.6時間ではない、もっと長い）。</p>
+<p>スキャンの 300ユーザー / 2200+ operations はツイ側。サイト面にはその数字は出てこなかった。</p>
 <h2>所感</h2>
-<p>耐久 URL ではある。中身を確認できない記事を、確認したように書かない。</p>
+<p>ハーネスを跨いでも同じ URL+token。仮想カードは coming soon と docs。トークンを発行してはいない。</p>
 <h2>体験</h2>
-<p>curl は http=404、size=29152。WebFetch は 403。本文は未確認。スキャンの数字はツイ側。ログイン壁の可能性はあるが、中を見ていない。</p>
+<p>トップ、docs.md、GET /api を開いた。ダッシュボードには入っていない。bzl_ トークンは作っていない。MCP は未接続。signup していない。</p>
 </div>
 </article>
 <p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SPAC89の自測記事。Build 500k / Cursor 256k · レーダー 2026-08-31 09:00</title>
+<title>openai/codex rust-v0.151.0。拡張がMCP結果をinspect/replace · レーダー 2026-08-31 09:00</title>
 <style>
 
 :root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
@@ -37,15 +37,16 @@ footer { color:var(--dim); font-size:12px; margin-top: 36px; }
 <p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 09:00</a></p>
 <article class="card">
 <div class="meta"><span class="tag x">X</span></div>
-<h1>SPAC89の自測記事。Build 500k / Cursor 256k</h1>
-<p class="primary"><a href="https://x.com/i/article/2094198600859308032" target="_blank" rel="noopener">https://x.com/i/article/2094198600859308032</a></p>
+<h1>openai/codex rust-v0.151.0。拡張がMCP結果をinspect/replace</h1>
+<p class="primary"><a href="https://github.com/openai/codex/releases/tag/rust-v0.151.0" target="_blank" rel="noopener">https://github.com/openai/codex/releases/tag/rust-v0.151.0</a></p>
 <div class="thread">
-<p>@SPAC89 ツイが指す X Article。スキャンが要約した中身は、Grok 4.6 の文脈が Build 500k / Cursor 256k、Heavy の月 ~25億 tok 対 Ultra の月 90–100億 + $400 API。</p>
-<p>記事本文そのものはこの箱から開けなかった（下記）。数字の一次ソース扱いはツイ側ページに置く。</p>
+<p>タグ rust-v0.151.0、表示名 0.151.0。Published 2026-08-29T09:55:39Z。github-actions[bot]。</p>
+<p>New Features 原文: Extensions can now inspect or replace MCP tool results before they reach the model. (#41202)。ほか Configurable grace period for discovering tools from optional MCP servers (#41199)。Plugin catalogs combine per-repository configuration (#41208)。</p>
+<p>Bug Fixes から実務寄り: Counted nested subagent token usage toward root goal budgets (#41183)。Preserved restored permission profiles across TUI turns and prevented /cd from weakening sandbox restrictions (#41192)。</p>
 <h2>所感</h2>
-<p>耐久 URL ではある。中身を確認できない記事を、確認したように書かない。</p>
+<p>rsensui が拾ったのは #41202。サブエージェントのトークンを root に足す #41183 も枠の話。</p>
 <h2>体験</h2>
-<p>curl は http=404、size=29152。WebFetch は 403。本文は未確認。スキャンの数字はツイ側。ログイン壁の可能性はあるが、中を見ていない。</p>
+<p>リリースページを WebFetch で開いた。箱に <code>codex</code> は無く、0.151.0 は入れてない。拡張の inspect/replace は未使用。</p>
 </div>
 </article>
 <p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
