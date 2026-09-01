@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pattern MCP — UIスコープをコーディング前にチェック · レーダー 2026-09-02 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>Pattern MCP — UIスコープをコーディング前にチェック</h1>
+<p class="primary"><a href="https://www.reddit.com/r/OpenAI/comments/1w4ddn5/" target="_blank" rel="noopener">https://www.reddit.com/r/OpenAI/comments/1w4ddn5/</a></p>
+<div class="thread">
+<p>r/OpenAI · id <code>1w4ddn5</code> · score 1 · comments 0 · by u/DonR954.</p>
+<p>手数料/税/汎用コンポーネントの取り違え防止。GH URLは本文に無し。</p>
+<p>OP本文:
+I kept running into the same problem with coding My coding agent kept building the wrong UI. So I built an MCP to check its work first.  
+agents. The code was usually fine. The design decision was wrong. And then have to spend time improving what the agent built.
+
+For example, I might ask for a price breakdown in a booking checkout. The agent could:  
+\- Miss fees or taxes that should be included  
+\- Add interactions I never asked for  
+\- Pick a generic pricing component that doesn’t fit the product  
+\- Turn a small component into a much bigger system
+
+So I started thinking: what if the agent checked the design scope before writing the code?  
+That led me to build Pattern, an MCP server that helps coding agents make better UI component decisions. It’s to help the agent answer: “Is this actually the thing I should build?”  
+Pattern MCP on GitHub
+
+How it works  
+The agent gives Pattern a component need and some context:  
+{  
+&quot;component\_need&quot;: &quot;price breakdown with nightly rate, cleaning fee, service fee, taxes, and total&quot;,  
+&quot;domain&quot;: &quot;Airbnb-style rental marketplace&quot;,  
+&quot;framework&quot;: &quot;React + Tailwind&quot;  
+}
+
+Pattern turns that into a requirements checklist, then checks real components from shadcn/ui and 21st.dev against it. It returns one of two decisions:  
+\- use\_existing - An existing component is a good enough fit.  
+\- custom\_build - Nothing fits well enough, so build it using a concrete reference from Mobbin or Figma Community.
+
+Why I think this matters  
+Coding agents are getting very good at implementation. But implementation comes after a bunch of design decisions:  
+\- What belongs in this component?  
+\- What doesn’t?  
+\- Is there already a good fit?  
+\- Is the existing component too generic or too complex?  
+\- Should we build something custom?
+
+If tho</p>
+<p>耐久URL: https://www.reddit.com/r/OpenAI/comments/1w4ddn5/</p>
+<h2>所感</h2>
+<p>クォータ/ハーネス/ローカル速度の英語圏一次声。数字はOP文言ベース。</p>
+<h2>体験</h2>
+<p>Arctic Shiftダンプの本文を確認／Redditへの投稿や再現実験は未実施</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

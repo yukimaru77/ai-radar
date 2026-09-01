@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gemma4 12B QATでMTPすると逆に遅い（9060XT Vulkan） · レーダー 2026-09-02 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>Gemma4 12B QATでMTPすると逆に遅い（9060XT Vulkan）</h1>
+<p class="primary"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w4dfi1/" target="_blank" rel="noopener">https://www.reddit.com/r/LocalLLaMA/comments/1w4dfi1/</a></p>
+<div class="thread">
+<p>r/LocalLLaMA · id <code>1w4dfi1</code> · score 1 · comments 0 · by u/NovaXeros.</p>
+<p>通常40–50 t/sがdraft n↑で33→23。</p>
+<p>OP本文:
+Hey, wondering if anyone&#x27;s seen this issue themselves?
+
+I&#x27;m using a 16gb 9060XT on a proxmox LXC, llama-server via docker on the Vulkan backend, and it&#x27;s been serving me fantastically - 40-50t/s on most modesl with MTP, even 25t/s with the IQ2 or IQ3 of 3.8 27B with around 100k ctx!
+
+But I&#x27;ve been experimenting with Gemma 4 12B QAT and I&#x27;m noticing something odd: despite being only ca\~ 12gb in VRAM with 262k context and vision enabled, I get around 33t/s though I would expect this to be higher considering its size.  
+  
+Even weirder is if I add MTP - VRAM usage goes up to 12.5gb or so, but the t/s goes DOWN. At draft n max = 1 I get 32 t/s, dropping to 23t/s by draft n max = 4.
+
+I&#x27;ve tried reducing context, disabling vision - hell I&#x27;ve even tried multiple repos of the QAT including Unsloths and HuahuaCS.
+
+Any ideas what could be happening?
+
+If it helps, here&#x27;s my launch commands for the docker stack:
+
+        command: &gt;
+          --models-preset /models/models.ini
+          --models-max 1
+          --timeout 28800
+          --port 8080
+          --host 0.0.0.0
+          --no-mmap
+          --metrics
+          --kv-unified
+          --jinja
+          --sleep-idle-seconds 900
+
+And from my models.ini:
+
+    #version = 1
+    
+    [*]
+    flash-attn = on
+    ngl = 99
+    t = 6
+    tb = 12
+    b = 2048
+    ub = 512
+    #cache-ram = 2048
+    reasoning = on
+    reasoning-budget = 4000
+    reasoning-budget-message = &quot;\n\n[SYSTEM: STOP REASONING. TIME TO RESPOND.]&quot;
+    reasoning-preserve = on
+    
+    [Gemma-4-12B]
+    hf-repo = HauhauCS/Gemma4-12B-QAT-Uncensored-HauhauCS-Balanced:Q4_K_M
+    temp = 0.6
+    top-p = 0.9
+    min-p = 0.05
+    top-k = 64
+    c = 262144
+    np = 1
+    repeat-penalty = 1.1
+    #b = 512
+    #spec-type = draft-mtp
+    #spec-draft-n-max = 4
+    #spec-draft</p>
+<p>耐久URL: https://www.reddit.com/r/LocalLLaMA/comments/1w4dfi1/</p>
+<h2>所感</h2>
+<p>クォータ/ハーネス/ローカル速度の英語圏一次声。数字はOP文言ベース。</p>
+<h2>体験</h2>
+<p>Arctic Shiftダンプの本文を確認／Redditへの投稿や再現実験は未実施</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
