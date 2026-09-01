@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prime Agent: persistent REPLと放置向きContinual Harness · レーダー 2026-09-01 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-01 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>Prime Agent: persistent REPLと放置向きContinual Harness</h1>
+<p class="primary"><a href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank" rel="noopener">https://github.com/PrimeIntellect-ai/prime-agent</a></p>
+<div class="thread">
+<p>README raw: Prime Agent: A Self-Improving RLM Harness。open-source coding and research agent for general and long-running work。二つの抽象: Recursive Language Model（prompt-as-a-variable、programmatic tool / sub-agent calling、persistent REPL）と Continual Harness（supplemental prompts / memories / skill descriptions / reusable subagent specs を durable state として残す）。</p>
+<p>特徴として README が挙げるもの: persistent Python REPL、rlm(...) で子エージェント、/refine は immutable base system prompt を書き換えない、skills は importable Python、daemon-backed で端末切断後も動き reattach、agent 同士の直接通信、automatic compaction / persistent goals / heartbeats / schedules / autonomous mode。</p>
+<p>Install 表記は app.primeintellect.ai 配下の公式インストーラ。起動コマンドは prime-agent。WARNING: モデル生成 Python をユーザ権限で実行。security sandbox ではない。</p>
+<p>一晩放置の一次ログは MickaelV79228 ツイ（別ページ）。</p>
+<h2>所感</h2>
+<p>目標を渡して放置、が README の設計意図。OpenCode / DSH より overnight 向き、という現場声と噛み合う。</p>
+<h2>体験</h2>
+<p>箱で README raw を取得（HTTP 200）。公式インストーラは実行していない。prime-agent 未起動。クローンしていない。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
