@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>想自己翻译漫画,想发出来,但是有很多问题. · レーダー 2026-09-02 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>想自己翻译漫画,想发出来,但是有很多问题.</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2842418" target="_blank" rel="noopener">https://linux.do/t/topic/2842418</a></p>
+<div class="thread">
+<p>LINUX DO。created=2026-09-01T18:22:31.433Z posts=7 category=gossip</p>
+<p>@Ceylan「楼主最近突然有自己翻译漫画( 甚至是本子的 )想法. 好多自己想看的漫画等汉化组汉化真的太漫长了. 因为主播学过日语,所以想采用AI翻译+人工润色的方法. 可是楼主有一个问题,OpenAI或是gemini的模型可不可以翻译成人内容? 有没有什么比较推荐的本本翻译教程? 楼主对嵌字一窍不通,想知道现在的AI嵌字怎么样? 如果要人工嵌字的话有没有什么使用的工具/教程? 如果把自己翻译的本本上传jm e站之类的地方会不会产生法律风险的? 楼主只是想为爱发电不会从中获取任何利益.」</p>
+<p>@mazilian「字幕直接做成 srt 的文件，校准了时间轴（这个可以让 AI 弄），直接拿 FFMpeg 压进去就行了。或者更方便的，做成流媒体格式的(HLS, DASH)，这种都支持 TTML 的字幕，直接把字幕文件打包在一起，改一下 manifest 文件把字幕路径加进去，多字幕一样搞，还能做成多语音。」</p>
+<p>@Sneezing7302「漫画也能这么嵌字吗，你说的是视频类型的嘛？」</p>
+<p>@mazilian「理解错了 ，以为楼主说视频呢，漫画挺复杂吧，不太懂」</p>
+<p>@3979478419「GPT的话成人内容容易风控，如果是日抛号倒是无所谓，自己的号建议不要搞，Gemini大概没那么严，可以尝试。AI自动嵌字据我所知没有能处理的特别好的，现在有一些人是直接拿image2重绘，但是也得抽卡很难一次到位，汉化说到底就是靠着热情，有时候自己哼哧哼哧翻译几十页发出去，其实没什么人看的，如果你肉身在国内我劝你不要上传本子，之前某几个汉化组被抓的事新闻也搜到的到，没必要去赌这种概率，正常翻译点没有汉化组接手的冷门漫画可以。」</p>
+<p>@bean845「以前好奇试过，不太好用，特别楼主嵌字苦手的话不好做。 1，台词顺序识别；就算提前约定阅读顺序，天马行空的气泡位置AI也很难分辨，这里处理不好也直接影响AI的剧情理解和翻译； 2，翻译，楼主应该没什么问题，不过AI不太能把握细微的语气变化、俚语口癖，人工润色的工作量可能偏大； 3，就是楼主提到的嵌字了，自己学PS的话倒不复杂（如果不追求汉化拟声字、旁白，只抠对话文本），但要做好看就很难了，涉及到间距、字体选择，还有各种细节。 为爱发这个电，门槛还是有的，只拿来自己欣赏是够用的」</p>
+<p>@p445148「你搜一下漫画翻译器mtu 可让软件自动化ai翻译 如果效果不好 也自带可手动嵌字工具 我用这个软件跑了一堆生肉漫画 上班空闲时用手机建网来看 github地址和软件图片 我就不发 不清楚会不会违规推广」</p>
+<h2>所感</h2>
+<p>中国圏の一次声。枠・モデル・ハーネスの数字と条件を残す。</p>
+<h2>体験</h2>
+<p>linux.do トピックJSONを取得して本文を読んだ。ログイン操作は未実施。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
