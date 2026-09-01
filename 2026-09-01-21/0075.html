@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luna でキャッシュを温めて Sol に切る、は成立しない。fast 切替でも落ちる · レーダー 2026-09-01 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-01 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>Luna でキャッシュを温めて Sol に切る、は成立しない。fast 切替でも落ちる</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2840610" target="_blank" rel="noopener">https://linux.do/t/topic/2840610</a></p>
+<div class="thread">
+<p>LINUX DO 2840610。posts 10 / views 168。@f14xuanlv「假设我一个窗口有很多上下文且缓存过期了，我想在这个窗口继续任务，我可以切换到一个便宜模型比如 GPT-5.6 Luna 触发一次对话，存入缓存，然后再切换到贵的模型比如 GPT-5.6 Sol，以命中缓存的姿态继续对话吗？如果可以，这样 GPT-5.6 Sol 这次的调用，缓存命中率就很高了，能省下不少额度。」</p>
+<p>@awoaCrim「除非上游用的同一缓存域或支持跨模型复用，都是默认不同的模型之间是不共享缓存的」。@HeriX「不行, 不同模型之间是不能共用缓存的   不同模型的权重也不一样啊, 缓存复用不了」。@asdz「还想偷税漏税，直接收你两次缓存费用哈哈哈」。@Pontus「想法很先进，现实很残酷。厂商含泪赚你两次缓存创建的费用」。</p>
+<p>@ying_lin「不只是不同模型，相同模型都比较苛刻， 比如 codex 的 fast mode，同一模型 fast mode 切换了缓存就命中不了」。@jerry2262「没法复用缓存，跟部署的模型强相关」「在同一会话的情况下，基本只取决于各厂商持久化缓存的策略」。</p>
+<p>@briquet_black「不能复用的； 不同模型权重不同：无法复用 不同速度等级推理架构不同：大概率无法复用 不同思考预算：大多数推理预算会破坏prompt前缀，无法复用」。Luna→Sol だけでなく、同一モデルの fast 切替と思考予算もプレフィックスを壊す、がこのスレの結論。</p>
+<h2>所感</h2>
+<p>跨モデル温めは二次キャッシュ課金になる。Codex は同一モデル fast でも落ちる。思考予算がプレフィックスを壊す、が一番現場に刺さる。</p>
+<h2>体験</h2>
+<p>KEEP 引用と、スキャン箱の thread JSON（/workspace/cn-radar/2026-09-01-18/linuxdo/threads）を読んだ。この窓では linux.do をライブ curl し直していない。10投稿。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
