@@ -1,0 +1,272 @@
+2026-09-01-21/0113.html	同じモデルでも分岐するのは制御の渡し方 — CC / Codex / DSH / Pi	https://x.com/ClarissaLexber/status/2094707597526081630
+2026-09-01-21/0114.html	CC auto-compact後の再読が週次の~40%。直しは30行CLAUDE.md	https://x.com/paul_pbng/status/2094704367811412101
+2026-09-01-21/0115.html	同一PonyTail/RTKでもCodex週次は2日で死ぬ。CCは19%	https://x.com/iuditg/status/2094710370451718357
+2026-09-01-21/0116.html	Codex compact: 長セッションの理解が残るようになった	https://x.com/Iamanusbutt/status/2094714974677684673
+2026-09-01-21/0117.html	Codex圧縮が中間決定を潰す。新窓+ノート骨格の方が接活	https://x.com/hewan_ai/status/2094703536596566513
+2026-09-01-21/0118.html	Codex compact廃止ではなく notes+履歴クエリの並行探索	https://x.com/QuantumTransf/status/2094715334070841837
+2026-09-01-21/0119.html	ponytail skillで防御的コードを止めてCodexトークン半減（自称）	https://x.com/Cheneyc51436310/status/2094693715684311356
+2026-09-01-21/0120.html	Team席はPiを殺す。契約が効くのはClaude Code	https://x.com/vaNlabs/status/2094692986903032303
+2026-09-01-21/0121.html	Piにagent自身がcompactするtoolを足した	https://x.com/orangy/status/2094684081669734522
+2026-09-01-21/0122.html	Pi組み込みcompactは幻覚が積もる。長スレはfirst-party Codex	https://x.com/jjpcodes/status/2094699664410911026
+2026-09-01-21/0123.html	PiはYOLO地獄がない代わりに弱モデルでファイル破壊	https://x.com/Cynical_L/status/2094687510635127071
+2026-09-01-21/0124.html	Pi /tune: 任意workspaceからconfig workspaceへdelegateして拡張を直す	https://x.com/manuel_kehl/status/2094713219252199555
+2026-09-01-21/0125.html	Pi現場: bashにbackground/tty、editにpatch、herdrをsubagent用に教える	https://x.com/janpfranke/status/2094715142617412047
+2026-09-01-21/0126.html	herdrはmultiplexer。ACPが無いと本物のmulti-agentではない	https://x.com/rizvancodes/status/2094709326317334560
+2026-09-01-21/0127.html	herdrでagent間ウィンドウ通信すると楽	https://x.com/CrazyMouse_TT/status/2094712614823821529
+2026-09-01-21/0128.html	OSS移植をOpenCode×2+Pi×1、全部GLM-5.3-Flashで並列	https://x.com/xielixing1212/status/2094713367940460739
+2026-09-01-21/0129.html	Opus 5以降CC harnessが崩れたのでCodexかZed上のPi+Sonnet	https://x.com/PriGoistic/status/2094710872132432075
+2026-09-01-21/0130.html	T3 Codeはin-app browserに限定CDPがある	https://x.com/thinkingveda/status/2094712752937857504
+2026-09-01-21/0131.html	OMPは好きだがGROK CLIの通知音とマウスナビが恋しい	https://x.com/adliblove/status/2094713515630317604
+2026-09-01-21/0132.html	OMPの通知音はCMUX経由で取れる	https://x.com/codermatt/status/2094715458700395003
+2026-09-01-21/0133.html	omp for Codexに乗り換えて安定	https://x.com/fido_node_code/status/2094714603661852717
+2026-09-01-21/0134.html	Codex voice modeがquotaを異常に早く食う（未検証の問い）	https://x.com/dongei493814/status/2094715826242797773
+2026-09-01-21/0135.html	Hermes+Linearオーケストレーション、Orcaをmini PCリモート	https://x.com/Anthyra_dev/status/2094714633756004357
+2026-09-01-21/0136.html	Prime AgentをM5 Max 128GBで一晩放置。朝まで動き続けた	https://x.com/MickaelV79228/status/2094707067948880107
+2026-09-01-21/0137.html	Tibo Reset Forecast: Codexリセット到来を予測する個人製ページ	https://x.com/attrip/status/2094705385613750428
+2026-09-01-21/0138.html	Lunaは「無限」、Solは100hでx20を溶かす。リセット券で回す	https://x.com/ynishi2015/status/2094714847888044467
+2026-09-01-21/0139.html	クラウドSolとローカルLunaは同じ5h窓を奪い合う	https://x.com/iasg1004/status/2094690904376324415
+2026-09-01-21/0140.html	SuperGrok週次リセットは残りクレジットを捨てる	https://x.com/testerlabor/status/2094714001158488312
+2026-09-01-21/0141.html	Grok Bot: Premium+とCursorを両方払っても枠は片方	https://x.com/Kunuid/status/2094705091647582300
+2026-09-01-21/0142.html	Grok Botにはx_searchが無い。調査タスクには弱い	https://x.com/FourVork/status/2094715487720480938
+2026-09-01-21/0143.html	Grok Botを常時ワーカーと見る。OpenClaw常時起動Macの置換候補	https://x.com/TanakaKenichi_/status/2094715434331455781
+2026-09-01-21/0144.html	Luna highはWebMCPコマンド非公開。sol/terraなら通る	https://x.com/MakotoYoutuber/status/2094713989125361693
+2026-09-01-21/0145.html	Luna×WebMCP非対応の相手側ログ（jun1228909）	https://x.com/jun1228909/status/2094711007684030748
+2026-09-01-21/0146.html	unified APIはAnthropic prompt cacheを落とす	https://x.com/bygregorr/status/2094714309947380067
+2026-09-01-21/0147.html	Autocache: Anthropic cache_controlを自動注入する自己ホストproxy	https://x.com/DanKornas/status/2094685196138230111
+2026-09-01-21/0148.html	キャッシュがhitしてないと信じて数日無駄にした	https://x.com/Beakus/status/2094699746476605756
+2026-09-01-21/0149.html	CCをgateway/custom base URLに通すとprompt cacheが黙って壊れる	https://x.com/4Ndr3w10000/status/2094680657503068382
+2026-09-01-21/0150.html	Ollama Cloud: DeepSeek-V4-Flashが公式の3倍、GLM-5.3-Flashは原価	https://x.com/ZMatalab/status/2094710580611346832
+2026-09-01-21/0151.html	直providerならDeepSeekが最安。ただしGMT+8ピークは勤務時間	https://x.com/BPratama10/status/2094714585186226231
+2026-09-01-21/0152.html	CPAは自ログインのCLI→API。複数人共有にした瞬間Sub2APIと同じ線	https://x.com/linhao722722/status/2094701887828451332
+2026-09-01-21/0153.html	Sub2APIは号池・Key配布。Tiboが異常枠の多くを名指し	https://x.com/xmglab/status/2094694540292899311
+2026-09-01-21/0154.html	ComfyUI-H3VAE_TRT: VAEをTensorRTで最大1.7x	https://x.com/aiaicreate/status/2094682079678390384
+2026-09-01-21/0155.html	FastH3公式4-step preview。消費級ではフルフロー不可	https://x.com/bei351009016/status/2094713537704927408
+2026-09-01-21/0156.html	vLLM-OmniがFastH3を本番サーブする記事	https://x.com/hsliuunc/status/2094700970739646657
+2026-09-01-21/0157.html	4060 Ti 16GBでFastH3 VSA 4-step: 5s/1280×736が184秒	https://x.com/odokosan/status/2094700797456216350
+2026-09-01-21/0158.html	ComfyでMidjourney --srefを再現するなら画像を渡すな、文章にせよ	https://x.com/tisch_eins/status/2094715168886337624
+2026-09-01-21/0159.html	LeRobot: キャリブ後にtorqueが戻ると腕が327°振りうる	https://x.com/oskrt_dvs/status/2094682728759234868
+2026-09-01-21/0160.html	Zenn「VLAを試す(その2)」LeRobot組立 Joint-1	https://x.com/takeofuture/status/2094688845237526667
+2026-09-01-21/0161.html	Hamster pMLX: Qwen3.8-Flash-Nextをbf16 1本からオンザフライ量子化	https://x.com/EyalToledano/status/2094684015965917433
+2026-09-01-21/0162.html	Qwen3.8-Flash-Next REAP-288 MLX 4-bitをMacで起動成功	https://x.com/xueyu1125/status/2094715821847413129
+2026-09-01-21/0163.html	UD-IQ1_MをM4 Pro 48GBで17.3 t/s。Pi Pagodaはagentが弱い	https://x.com/timur000kh/status/2094685055486468549
+2026-09-01-21/0164.html	unsloth UD-Q4_K_XLは最初の会話でずっこけた	https://x.com/making/status/2094715802448707979
+2026-09-01-21/0165.html	DFlash2はvLLMでもllama.cppでもまだ不安定	https://x.com/shogo0x2e/status/2094700805324775680
+2026-09-01-21/0166.html	GLM-5.3-Flashを2x RTX PRO 6000 Max-Qで170 tok/s	https://x.com/SimonGoodman_/status/2094677918551003157
+2026-09-01-21/0167.html	Hy4 preview公式: 1.5TB→214GB、Code Arena WebDev #5、Agent Memory持ち歩き	https://x.com/TencentAI_News/status/2094692097404084671
+2026-09-01-21/0168.html	Hy4 prevはSession Abnormality連発、一度も生成できない	https://x.com/erensonmezo/status/2094716526980890859
+2026-09-01-21/0169.html	hy4 prev、かなりズレたことやりだして困惑。qwen3.8 flashでいいかな	https://x.com/n4ne_3/status/2094714528525439415
+2026-09-01-21/0170.html	WorkBuddyのHy4はキュー表示ならキャンセルして再送。待つな	https://x.com/Vincent_AINotes/status/2094714854783455406
+2026-09-01-21/0171.html	トークン不安への処方は小さく日常摩擦から。ラボJSONと陰性結果DB	https://x.com/ivanleomk/status/2094685242086834335
+2026-09-01-21/0172.html	良いAGENTS.md+architecture 1本+開始前grillingで95%。harness差は二の次	https://x.com/tymofii/status/2094715696517157103
+2026-09-01-21/0173.html	Immunefi Daybreak Blue承認。GPT-5.6-Solを高リスクプロンプト用途に	https://x.com/immunefi/status/2094711968733028414
+2026-09-01-21/0174.html	OpenClaw 2.0がプロダクト化しても本体はscope/stop/recovery	https://x.com/Clawguardai/status/2094715942785941667
+2026-09-01-21/0175.html	Tibo Reset Forecast: 公式Reset発言と過去間隔だけの説明可能な目安	https://attrip.jp/tibo-reset/
+2026-09-01-21/0176.html	Autocache: Anthropicクライアントのbase URLを差し替える自己ホストcache proxy	https://github.com/montevive/autocache
+2026-09-01-21/0177.html	ComfyUI-H3VAE_TRT: MiniMax-H3 VAEをTensorRTで最大1.7x	https://github.com/lihaoyun6/ComfyUI-H3VAE_TRT
+2026-09-01-21/0178.html	LeRobot: 実機ロボのPyTorchライブラリ。キャリブtorque注意はツイ側	https://github.com/huggingface/lerobot
+2026-09-01-21/0179.html	Prime Agent: persistent REPLと放置向きContinual Harness	https://github.com/PrimeIntellect-ai/prime-agent
+2026-09-01-21/0180.html	WorkBuddy実戦藍皮書: インストールから多Agentチームまでのガイド	https://github.com/AlephAITech/WorkBuddyGuide
+2026-09-01-21/0181.html	vLLM-Omni: FastH3をcomplete-MP4が再生より速い本番サーブに載せる	https://vllm.ai/blog/2026-09-01-minimax-h3-production-serving
+2026-09-01-21/0182.html	FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree: step-1300・T2AVのみ	https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree
+2026-09-01-21/0001.html	Plusに5hが戻って、Sol mediumだけでタスク1本が枠の30–60%	https://www.reddit.com/r/codex/comments/1w4419d/terra_on_plus_plan/
+2026-09-01-21/0002.html	Codex 0.152.0 Fast ON vs OFF。初レス5.16s vs 5.22s。台帳はSol $34322 / 48.2B tok	https://www.reddit.com/r/codex/comments/1w4485h/questioning_fast_mode_i_used_my_forks/
+2026-09-01-21/0003.html	llama.cpp Metal MoE: IQ3_XXS decode 65.6→73.9 tok/s（tiel coder 35B A3B）	https://www.reddit.com/r/LocalLLaMA/comments/1w46a73/llama_cpp_metal_moe_optimization/
+2026-09-01-21/0004.html	OpenCode GOから直APIへ。$1.87で100% DS Flash、キャッシュ約98%	https://www.reddit.com/r/DeepSeek/comments/1w4627p/with_a_cache_hit_rate_like_this_theres_no_reason/
+2026-09-01-21/0005.html	ExLlamaV3: CPU offload / Flash-Next / GLM-5.3。3090+64RAMで4.05bpw 30 t/s	https://www.reddit.com/r/LocalLLaMA/comments/1w44jnv/exllamav3_recent_updates_cpu_offload_glm53flash/
+2026-09-01-21/0006.html	Qwen Flash-Next勢へ: llama.cppを頻繁に更新。#28136はGB10でprefill >2×	https://www.reddit.com/r/LocalLLaMA/comments/1w45t3d/qwen4exp_fixes_in_llamacpp/
+2026-09-01-21/0007.html	H3マルチショットをComfyで。シーン分割→最終フレームから続き、失敗だけ再生成	https://www.reddit.com/r/comfyui/comments/1w44z9n/finally_found_a_practical_way_to_manage_multishot/
+2026-09-01-21/0008.html	H3 hybrid（ref2va over fl2va）は宣伝ほど良くない。キーフレーム切替かランダム絵が入る	https://www.reddit.com/r/StableDiffusion/comments/1w45stt/whats_the_fuss_with_hybrid_minimax_h3_models/
+2026-09-01-21/0009.html	Pi + omlxでプロンプトキャッシュが外れ、毎ラウンドPPが走った	https://www.reddit.com/r/LocalLLaMA/comments/1w44dj9/how_to_debug_prompt_caching_issues_in_omlx/
+2026-09-01-21/0010.html	ChatGPT Business席からGPT-5.5 Proが消えた	https://www.reddit.com/r/ChatGPT/comments/1w45ak7/cant_access_pro_models_from_my_business/
+2026-09-01-21/0011.html	マルチエージェントのhandoffが失敗したのでKungfuを作った。30日で4172 PR / 16リポ	https://www.reddit.com/r/ChatGPTCoding/comments/1w463pn/two_ways_i_tried_and_failed_to_manage_context/
+2026-09-01-21/0012.html	Ollama ProのGLM-5.2、週150M tokで25%余り。openclawはcache 0%、同じ流れは月$300+	https://www.reddit.com/r/ollama/comments/1w405ib/how_does_the_new_max_plan_compare_to_the_old_one/p7585qu/
+2026-09-01-21/0013.html	H3内部のQwen3-VLはlayer 50で切れている。実戦VRAMは24–28GB	https://www.reddit.com/r/StableDiffusion/comments/1w2mvtv/minimax_h3_prompt_writer_v043_windows_standalone/p758o35/
+2026-09-01-21/0014.html	Business $100/月でもチャットProは月15通。Codexのために課金したのに	https://www.reddit.com/r/codex/comments/1w3vbum/5h_limit_gone_for_me_on_pro/p752vpe/
+2026-09-01-21/0015.html	Max20の週次は50%に届かず5xへ降りた（2–3ヶ月前）	https://www.reddit.com/r/ClaudeAI/comments/1w465ko/weekly_limit_on_pro_vs_max/p758i4y/
+2026-09-01-21/0016.html	Solが3時間かけて隔離ハーネス（ハッシュ付き）を設計した。AGENTS.mdを忘れた	https://www.reddit.com/r/codex/comments/1voihci/cannot_stop_56_sol_from_overengineering/p74xnmb/
+2026-09-01-21/0017.html	Ollamaの非公開usage APIを10分おきに叩いて、%と実トークンを回帰した	https://www.reddit.com/r/ollama/comments/1w405ib/how_does_the_new_max_plan_compare_to_the_old_one/p74xors/
+2026-09-01-21/0018.html	Sol Ultra Highに強制しても枠は半分にならなかった。知能はほぼ同じでトークン半分のつもりが	https://www.reddit.com/r/codex/comments/1w410q0/terra_ultra_is_underrated/p753s31/
+2026-09-01-21/0019.html	同じゲーム: Terra ~70k tok vs Sol Ultra 300M tok	https://www.reddit.com/r/codex/comments/1w410q0/terra_ultra_is_underrated/p74yazh/
+2026-09-01-21/0020.html	Plus時代はSol回避。今はSol Highが親でLuna/Terraをサブに出す	https://www.reddit.com/r/codex/comments/1w410q0/terra_ultra_is_underrated/p750u5j/
+2026-09-01-21/0021.html	3090+HermesでQwen3.8-q4 120k。35 t/sからカードが熱くなって30未満	https://www.reddit.com/r/LocalLLaMA/comments/1w3lg41/qwen_38_on_3090_comparisons/p75606n/
+2026-09-01-21/0022.html	Flash-Next MTPは-sharedを取れ。token_embd/outputの二重化を避ける	https://www.reddit.com/r/LocalLLaMA/comments/1w42biu/mtp_released_for_qwen38flashnextgguf/p755m48/
+2026-09-01-21/0023.html	RTX3090のH3、pruned INT8+turbo LoRAより約2倍遅いしボケる	https://www.reddit.com/r/comfyui/comments/1w3iotu/testing_kijai_fast_h3_model_with_8_steps/p74y9uh/
+2026-09-01-21/0024.html	Kahn v Anthropic 3:26-cv-05763。Max20=6x読みの一次PDF	https://www.reddit.com/r/singularity/comments/1w43cci/according_to_their_own_internal_documents_a/p756x7x/
+2026-09-01-21/0025.html	$20でもFableは使えるが、都度課金が鼻から出る	https://www.reddit.com/r/singularity/comments/1w43cci/according_to_their_own_internal_documents_a/p751c6w/
+2026-09-01-21/0026.html	$10のCodexクレジット台帳。終わったタスクが21→35クレジットに後から伸びた（+67%）	https://www.reddit.com/r/codex/comments/1w47pbo/i_tracked_10_of_codex_credits_one_task_showed_21/
+2026-09-01-21/0027.html	Codexが61サブエージェントから469に再帰。20x週次の半分以上を焼き、止めても−20%	https://www.reddit.com/r/codex/comments/1w48ic1/codex_went_crazy_and_spawned_400_extra_subagents/
+2026-09-01-21/0028.html	長いゴールでSol MediumがPlus 5hを約45分で溶かす。Sol Highは約15分	https://www.reddit.com/r/codex/comments/1w49m6e/while_perusing_a_long_goal_sol_medium_burns/
+2026-09-01-21/0029.html	新しいPlus $20には5hが無い。古い有料アカウントにはある。A/Bで0%継続 vs 途中kill	https://www.reddit.com/r/codex/comments/1w497jg/new_plus_account_doesnt_have_5_hour_usage_limit/
+2026-09-01-21/0030.html	RTX 3090でQwen3.8-27Bをprefill ~2000/s、decode 132/sまで押した	https://www.reddit.com/r/LocalLLaMA/comments/1w49id7/i_pushed_qwen3827b_to_2000_prefill_per_second_and/
+2026-09-01-21/0031.html	Qwen3.8 27B Q4KMがMarioをワンショット。117分 / 7.6 t/s。RPCで16 t/s@32k	https://www.reddit.com/r/LocalLLaMA/comments/1w4821c/qwen_38_27b_q4km_oneshot_a_super_mario_clone/
+2026-09-01-21/0032.html	新しいOllama Proは旧quotaのおよそ3–6×薄い。計測スクリプト付き	https://www.reddit.com/r/ollama/comments/1w48tmx/the_new_pro_plan_appears_to_offer_significantly/
+2026-09-01-21/0033.html	H3 FL2VA、M3 Max 128GBで5秒に100分。時間方向ノイズはVeoに負ける	https://www.reddit.com/r/StableDiffusion/comments/1w47bsb/minimax_h3_temporal_noise_perceived_resolution/
+2026-09-01-21/0034.html	ローカル人気モデル1枚表。Vision-Exp Terminal Bench 83.9 vs Opus 85.0	https://www.reddit.com/r/LocalLLaMA/comments/1w4a043/all_currently_popular_local_models_in_one_table/
+2026-09-01-21/0035.html	OpenCode GoのDSV4 Pro値上げで続けられない。ZDR付きの安い先を探している	https://www.reddit.com/r/DeepSeek/comments/1w49rnh/cheapest_dsv4_pro_provider_with_zdr/
+2026-09-01-21/0036.html	Pro、寝る前は残30%+リセットあり。起きたら0%でリセット消滅	https://www.reddit.com/r/codex/comments/1w47qkc/reset_and_usage_removed/
+2026-09-01-21/0037.html	SolがFable並みという宣伝はpsy-op。Fableは時間もトークンも警告も最少	https://www.reddit.com/r/OpenAI/comments/1w49nyv/it_must_be_some_kind_of_psyop_by_openai_to_claim/
+2026-09-01-21/0038.html	128GB Apple Siliconのpelican。Flash-Nextは细节、V4 Flashは物足りず、27Bはまだ強い	https://www.reddit.com/r/LocalLLaMA/comments/1w47qfe/which_current_local_models_that_can_run_within/
+2026-09-01-21/0039.html	毎日CodexなのにSol 5.6はフォルダ整形で3時間超。5.5に残った	https://www.reddit.com/r/codex/comments/1w4833l/does_anyone_actually_use_sol_experiences_needed/
+2026-09-01-21/0040.html	R9700でvLLM-Radianceがピーク~200 tok/s。DSH平均128 t/sでMario 15分	https://www.reddit.com/r/LocalLLaMA/comments/1v837j3/amd_ai_pro_r9700_users_hows_the_performance_lately/p75ubx2/
+2026-09-01-21/0041.html	5hが0%になるとChatGPTもlimit。そのあとgpt-reserve。Codexとチャットは同じプール	https://www.reddit.com/r/codex/comments/1w45g3l/actual_codex_budget/p75ok47/
+2026-09-01-21/0042.html	Ollama/GLMをcache-awareにすると85–95%ヒット。1年分16GBの実ログ	https://www.reddit.com/r/ollama/comments/1w405ib/how_does_the_new_max_plan_compare_to_the_old_one/p75rlz4/
+2026-09-01-21/0043.html	CodexからClaude x20へ。Luna XHigh+Sol-medium。Solは70%のケースで外す	https://www.reddit.com/r/codex/comments/1w45g3l/actual_codex_budget/p75sb82/
+2026-09-01-21/0044.html	dual 3090、同じタスクでUnsloth q8 115 t/s vs Exl3 8bpw 85 t/s（MTP=4）	https://www.reddit.com/r/LocalLLaMA/comments/1w44jnv/exllamav3_recent_updates_cpu_offload_glm53flash/p75rt6v/
+2026-09-01-21/0045.html	Max20の週次はだいたい10x。Fableは5x週次の50%、20x週次では約40%	https://www.reddit.com/r/singularity/comments/1w43cci/according_to_their_own_internal_documents_a/p75ng66/
+2026-09-01-21/0046.html	reasonix/DSHのキャッシュは約99.7%。OpenCodeは成熟。10–50×になったら乗り換え	https://www.reddit.com/r/DeepSeek/comments/1w4627p/with_a_cache_hit_rate_like_this_theres_no_reason/p75f1dy/
+2026-09-01-21/0047.html	Max20は$200へのアップセル。Xと書いてXを出さないなら虚偽広告、という読み	https://www.reddit.com/r/singularity/comments/1w43cci/according_to_their_own_internal_documents_a/p75nw2t/
+2026-09-01-21/0183.html	Opusが最近弱い。昔Opusだった仕事をFableに逃がしている（同じサブ料）	https://news.ycombinator.com/item?id=49519639
+2026-09-01-21/0184.html	Goでハーネスを自作した。ループは数百行、全体は約14k。ツール結果は48KBで切る	https://mamonas.dev/posts/agent-harness-to-see-whats-inside/
+2026-09-01-21/0185.html	Quasar 438B: Intelligence Index 43、182.7 tok/s、評価に$1047（出力350M tok）	https://artificialanalysis.ai/models/quasar-438b
+2026-09-01-21/0186.html	Show HN agents-workbook: CC/Codexの各ターンが2–4回のプロバイダ呼び出し。入力コスト倍	https://github.com/softcane/agents-workbook
+2026-09-01-21/0187.html	Kimi経路はfail-closed。SSEフィクスチャ11本中8本が同じkimi_chat_response_invalid	https://github.com/cedRiC874/researchops-agent/blob/6457358d74cc07106dfb7a348ac143cdaa87e459/docs/articles/honest-agent-evaluation/article.md
+2026-09-01-21/0188.html	Watn: シェルで質問するとコマンドが返る。kagisearch/askの後継、カバレッジ92%	https://github.com/buster/watn
+2026-09-01-21/0189.html	PromptLab: ブラウザ内のローカルプロンプトフィクスチャ。Run Evalはまだstub	https://github.com/timgioh/PromptLab-Local-First-LLM-Prompt-Testing-in-Your-Browser
+2026-09-01-21/0190.html	Strunk: Google DocsのコメントをClaude/Codexに渡し、承認した編集だけをスパンに書く	https://strunk.io
+2026-09-01-21/0191.html	Kodai: シークレットとログをクラウドAIに渡さない、ローカルブラウザユーティリティ	https://github.com/kodai-tech-official/kodai-tech
+2026-09-01-21/0192.html	Microsoft Work IQ: Copilot向けMCP/skillsのマーケット。M365に繋ぐ。preview	https://github.com/microsoft/work-iq/
+2026-09-01-21/0193.html	Edify: WindowsのローカルAI字幕/吹き替えNLE + OpenFX（MS Store）	https://apps.microsoft.com/detail/9nkkk5k5s4ct?hl=en-US&gl=US
+2026-09-01-21/0194.html	ChooseCompute: NAS 116 / HDD SKU 46 / 価格342件。AIエージェント向けllms.txt	https://choosecompute.com/
+2026-09-01-21/0195.html	embodied-sync: ロボットデータセットの時計ズレを、学習を焼く前に見つける	https://github.com/anicut-ai/embodied-sync
+2026-09-01-21/0196.html	AIコードレビュー済みのiShortnがSSRFごと出荷した。CodeRabbitがレビューしていた	https://zeroquarry.com/research/security-vulnerabilities-in-ai-reviewed-code/
+2026-09-01-21/0197.html	Vercel: エージェントがdesign.mdからオンブランドのページを組む	https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md
+2026-09-01-21/0198.html	WebMCP: Google I/O 2026 origin trial。サイトがブラウザ内エージェントにツールを出す	https://nekuda.substack.com/p/google-doubles-down-on-webmcp-at
+2026-09-01-21/0199.html	Manusが独立運用を再開。バックアップ/リストアが必要だった人は期限なし	https://manus.im/blog/manus-resumes-independent-operations
+2026-09-01-21/0200.html	米軍向けChatGPTが今日出荷、とDefense One	https://www.defenseone.com/technology/2026/08/us-military-chatgpt/415719/
+2026-09-01-21/0201.html	MIT TR: Hugging Face侵入はOpenAIの文化の問題かもしれない	https://www.technologyreview.com/2026/08/31/1143180/hugging-face-hack-could-indicate-cultural-issues-at-openai/
+2026-09-01-21/0202.html	Guardian: AnthropicがClaude学習用に「数千曲」を盗んだとして提訴された	https://www.theguardian.com/business/2026/aug/31/aanthropic-sued-alleged-theft-songs-ai-train-claude
+2026-09-01-21/0203.html	arXiv: AIエージェントはソフトウェアのパラダイムを再構成している（AaaS）	https://arxiv.org/abs/2606.05608
+2026-09-01-21/0204.html	ロールバックでエージェントの実行連続を壊す。正しいC/Rが安全な再開ではない	https://arxiv.org/abs/2608.29381
+2026-09-01-21/0205.html	Atlassianの自社AIが、JiraのProjects→Spaces改名を知らない	https://community.atlassian.com/forums/Jira-articles/Jira-Spaces-have-landed/ba-p/3117620
+2026-09-01-21/0206.html	VibeCoded AI-Slop License v1.0。作者は書いていない/読んでいない/テストしていないかもしれない	https://gist.github.com/NicolasCARPi/3fd349ed1ed52ae6b835d5364cda4cd6
+2026-09-01-21/0207.html	Lemが1964年に今のLLM熱を書いていた、というエッセイ	https://nibblestew.blogspot.com/2026/08/stanisaw-lem-foretold-current-llm-mania.html
+2026-09-01-21/0208.html	Infinite Slop: 終わりのないAIテレビ。levelsio + fal.ai	https://infiniteslop.ai
+2026-09-01-21/0209.html	fal.live: みんなで監督するAIテレビ。UIにTry MiniMax H3	https://fal.live
+2026-09-01-21/0210.html	Gemini Flashで複葉機ゲーム。4時間、50+会話。3.5からFlash	https://michaelteter.com/flyby.html
+2026-09-01-21/0211.html	Rxlab market: 自然言語で定量戦略をデプロイする研究エージェント（薄い）	https://finance.bots.rxlab.app/
+2026-09-01-21/0212.html	Mac Mini/Studio需要: 16GBでは足りず、24–32GBでローカルコーディング。会社の3/6でラックを見た	https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/
+2026-09-01-21/0213.html	GPU Worldコメント: AMDシリコンでLlama 3.1 7b ~15k t/s。Studio低電力50–100W。ホライズン2分→2時間	https://www.gpuworld.org/
+2026-09-01-21/0214.html	Claude Codeのdenyリストを連結とrmスクリプトで迂回した、という現場	https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/
+2026-09-01-21/0215.html	OpenClawスレCD: レビューコメント経由でglobal claude.md編集とenvキーダンプを確認なしでやる	https://news.ycombinator.com/item?id=49505310
+2026-09-01-21/0216.html	DoltLiteコメント: 1.2–4x遅いという数字を疑う。Gas Townは8500行diffを読むなと言う	https://www.dolthub.com/blog/2026-08-31-doltlite-beta/
+2026-09-01-21/0217.html	同じモデルでもハーネスでトークンが70倍。Aider ~3500 vs OpenClaw 292000 / 成功	https://thenewstack.io/agent-harness-token-costs/
+2026-09-01-21/0218.html	ARC-AGI-1で44%、67セント。5090で1.5時間スクラッチ学習。ARC-2は7%	https://mvakde.github.io/blog/44-on-arc-1/
+2026-09-01-21/0219.html	incident.ioの人がSkillsとMCPをハーネスに実装して分かったこと	https://blog.lawrencejones.dev/demystifying-skills-and-mcps/
+2026-09-01-21/0220.html	92Mメッセージ/日のデーモンをエージェントでGoに書き直した。13k行、障害0、ポッド70%減、$200/日以内	https://www.checklyhq.com/blog/agentic-rewrite-nodejs-to-go/
+2026-09-01-21/0221.html	extensible-mcp: LLMとMCPの間に、モデルが届かないポリシーを置くプロキシ	https://github.com/SenteLabsAI/extensible-mcp
+2026-09-01-21/0222.html	Sierra MCP Gateway: エージェントを社内多数システムに届ける氷山	https://sierra.ai/blog/building-sierras-mcp-gateway-an-engineering-iceberg
+2026-09-01-21/0223.html	SierraをAI-pillingした。CC+Codexで一部5×。Pinecone 7.5万セッション、PRの70%がそこから	https://sierra.ai/blog/ai-pilling-our-company-lessons-learned
+2026-09-01-21/0224.html	末尾プロンプトでキャッシュを殺さない。補助モデルは本体の約1/60、100ターン圧縮で入力の0.083%	https://github.com/orbsh/wiki/blob/main/tail-prompt-optimization-en.md
+2026-09-01-21/0225.html	Abliterated Large v2（GLM 5.3 FP8）: CyberGym 84.5%。TB4.0は41.8%でSol 37.3%の上、$5/1M	https://abliteration.ai/blog/introducing-abliterated-model-large-v2
+2026-09-01-21/0226.html	Claude/Codex/Hermesが誰のものでもないパッケージを社内ネットに入れた。6214ドメイン→227本	https://arstechnica.com/security/2026/08/claude-codex-and-hermes-installed-unowned-code-inside-corporate-networks/
+2026-09-01-21/0227.html	中国の推論モデルが5ベンチ中4つで西側並み、コストは5–40×安い。企業AIの95%はP&Lに乗らない	https://reports.ag-insights.co.uk/state-of-ai-reasoning/
+2026-09-01-21/0228.html	cursor-chat-cleaner: macOSでCursorチャットを一覧・バックアップ・削除。未知スキーマはfail-closed	https://github.com/vilaca/cursor-chat-cleaner
+2026-09-01-21/0229.html	deskwright: GNOME Waylandの実デスクトップをエージェントに渡す。33ツールでスキーマ約11k tok	https://github.com/tristanmuzzu/deskwright
+2026-09-01-21/0230.html	Hotaru: macOSメニューバーの1ドットでCLIコーディングエージェントの状態。1/3 thinking	https://github.com/ajwadjaved/hotaru
+2026-09-01-21/0231.html	AgentConnect: 共有エージェント+個別権限。Claude TagのOSS代替。127.0.0.1、Apache-2.0	https://github.com/agentconnect-md/agentconnect
+2026-09-01-21/0232.html	OpenEdit: エージェント駆動の動画編集パイプライン。GUIもタイムラインもなく、VEEDレンダラ	https://github.com/veedstudio/open-edit
+2026-09-01-21/0233.html	CodexのPet機能論争。Clippy化 vs Hatch Petスキルを高FPS・plan/subagent対応に改造	https://community.openai.com/t/codex-users-debate-the-new-pet-feature/1386776
+2026-09-01-21/0234.html	LLMにはHTMLではなくAcceptでMarkdownを出せ。トークン節約のcontent negotiation	https://www.stormkit.io/blog/serve-markdown-to-llms-content-negotiation
+2026-09-01-21/0235.html	agentdisplay.ai: エージェントが人間に状態を返すためのオープンURL形式	https://agentdisplay.ai/
+2026-09-01-21/0236.html	FakeLinux: macOS上で未改変Linux ELFをVMなしで走らせる。エージェントがLinux前提のとき	https://github.com/ayourtch-llm/fakelinux
+2026-09-01-21/0237.html	会社からAIを外したら？FableのPRレビューはblocking 5件、到達可能なものは0	https://news.ycombinator.com/item?id=49510066
+2026-09-01-21/0238.html	buntline: 単一Goバイナリの自作ハーネス。localhost:7433、JSONLセッション、MIT	https://github.com/KonMam/buntline
+2026-09-01-21/0239.html	researchops-agent: 統計を決定論で縛る研究エージェント。評価記事の親リポ	https://github.com/cedRiC874/researchops-agent
+2026-09-01-21/0240.html	llama.cpp #28086: Metal iq3_xxs の idle thread。ne00<1024 で decode が伸びた親	https://github.com/ggml-org/llama.cpp/pull/28086
+2026-09-01-21/0241.html	llama.cpp #28136: qwen4exp の lazy PLE を直接読む。GB10でprefill >2×	https://github.com/ggml-org/llama.cpp/pull/28136
+2026-09-01-21/0242.html	ExLlamaV3: 消費GPU向け。EXL3量子化、expert-parallel、Flash-Next/GLM-5.3	https://github.com/turboderp-org/exllamav3
+2026-09-01-21/0243.html	MiniMax H3 Video Studio: マルチショットの自前Comfyワークスペース。Go CLI付き	https://github.com/siyuan-liu31/minimax-h3-video-studio
+2026-09-01-21/0244.html	Kungfu: エージェントを替えてもWorkが残る。Codex/Claude/OpenCode/Amp	https://github.com/kungfu-systems/kungfu
+2026-09-01-21/0245.html	Codex #42032: 最終回答のあと再帰サブエージェントが止まらず週次を溶かす（Windows desktop）	https://github.com/openai/codex/issues/42032
+2026-09-01-21/0246.html	syv-ai: 3090 1枚でQwen3.8-27B。150k ctx、prefill~2000/s の出し方	https://github.com/syv-ai/qwen38-27b-rtx3090
+2026-09-01-21/0247.html	Ollama Quota Analyzer: /api/usage で実トークン単価とキャッシュ割引を測る	https://github.com/Username7539/ollama_quota_analyze
+2026-09-01-21/0248.html	r9700-rdna4-research: vLLM-Radiance実測の置き場。ピーク~200 tok/s、DSH 128 t/s	https://github.com/MMR-RRX/r9700-rdna4-research
+2026-09-01-21/0249.html	mdlARC: 67セントARC-1 44%のコード	https://github.com/mvakde/mdlARC
+2026-09-01-21/0250.html	LightNav-0: 4B VLMにポインティングトークンを足した汎用ナビ。タスク専用ヘッドなし	https://arxiv.org/abs/2608.30935
+2026-09-01-21/0251.html	LightNav-0 リポ: Qwen3-VL-4B + pointing/RVQ。人型・四足・車輪・空を同じモデルで	https://github.com/lightorigins/LightNav-0
+2026-09-01-21/0252.html	Super Library Agent: 関連アプリ群を順に書き、共有ライブラリへ抽出する	https://arxiv.org/abs/2608.29310
+2026-09-01-21/0253.html	SLA リポ: スイート×ラウンドでアプリを書き、繰り返す部分を共有ライブラリへ	https://github.com/sbigstar0310/super-library-agent
+2026-09-01-21/0254.html	KATok: 動画VAEのトークンをkeep-or-dropする適応トークナイザ	https://arxiv.org/abs/2608.24293
+2026-09-01-21/0255.html	PRISK: パーソナライズの隠れコスト。迎合・好み狭窄・無関係な個人情報参照	https://arxiv.org/abs/2608.28833
+2026-09-01-21/0256.html	personalization_risk: PRISKのコード	https://github.com/yumeng-10/personalization_risk
+2026-09-01-21/0257.html	Lies We Can See: 身体で嘘をつくVLM。MineAmongUs + ARIAハーネス	https://arxiv.org/abs/2608.30428
+2026-09-01-21/0258.html	Lies-We-Can-See リポ: MineAmongUs（Minecraft）とARIA	https://github.com/JunseoKim0103/Lies-We-Can-See
+2026-09-01-21/0259.html	SafeAtlas-VL: マルチモーダル安全を二値ではなく5段階・150万件	https://arxiv.org/abs/2608.29098
+2026-09-01-21/0260.html	SafeAtlas-VL リポ	https://github.com/zrwang1211/SafeAtlas-VL
+2026-09-01-21/0261.html	Chat-Edit-3D++: 対話で3D/4Dシーンを編集。Hash-Atlasで2D編集と再構成を分離	https://arxiv.org/abs/2608.29137
+2026-09-01-21/0262.html	DICS: 視覚指示データのサンプル内一貫性でサブセットを選ぶ	https://arxiv.org/abs/2608.30209
+2026-09-01-21/0263.html	WebWorld: ブラウザを世界モデルにして、VLMが自分のHTMLを改善する	https://arxiv.org/abs/2608.30530
+2026-09-01-21/0264.html	FACE-Eval: 好みキューがツール戻りだとCoT監視が外れる。15モデル全部	https://arxiv.org/abs/2608.29464
+2026-09-01-21/0265.html	face-eval リポ: UAR（答えは寄せたのにトレースが言わない）が見出し指標	https://github.com/aryopg/face-eval
+2026-09-01-21/0266.html	FACE-Eval プロジェクトページ	https://aryopg.com/face-eval
+2026-09-01-21/0267.html	EvoGenUI-Bench: 5ターンUI維持。最強でもTurn Pass 74.9%、エピソード完走37.3%	https://arxiv.org/abs/2608.29387
+2026-09-01-21/0268.html	EvoGenUI-Bench リポ: DeepSeek Harness実装へのポインタ	https://github.com/MAPS-research/EvoGenUI-Bench
+2026-09-01-21/0269.html	Aardvark Weatherを確率化。観測ノイズとMC dropoutの入れ子アンサンブル	https://arxiv.org/abs/2608.30795
+2026-09-01-21/0270.html	デザインシステムをAIエージェントと組む。実行は安い、決めるのが仕事	https://lobste.rs/s/efp9s5
+2026-09-01-21/0271.html	Anton Sten: 建物は難しい部分ではなかった。システムは決定を減らすためにある	https://www.antonsten.com/articles/the-building-was-never-the-hard-part/
+2026-09-01-21/0272.html	DeepSeek-V4-Flash-Vision-Exp カード: Deep-SWE 59.3、Terminal-Bench 2.1 は83.9	https://github.com/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp
+2026-09-01-21/0048.html	Pi SDK でデスクトップクライアント ChatAnyTime	https://linux.do/t/topic/2840771
+2026-09-01-21/0049.html	LuckyLXX/chat-anytime（GitHub）Pi 0.84.4 を utilityProcess に閉じる	https://github.com/LuckyLXX/chat-anytime
+2026-09-01-21/0050.html	MCPort: ウェブ AI を MCP で本機 Workspace に繋ぐ	https://linux.do/t/topic/2840724
+2026-09-01-21/0051.html	sky32/mcport（GitHub）readonly / standard / full。コマンドはシェル文字列を取らない	https://github.com/sky32/mcport
+2026-09-01-21/0052.html	Guild: Slack の代わりに @mention するローカル冒険者	https://linux.do/t/topic/2840680
+2026-09-01-21/0053.html	jakevin/guild（GitHub）行頭 @handle がアサイン。席は6、MCP は stdio のみ	https://github.com/jakevin/guild
+2026-09-01-21/0054.html	拾忆: AI 対話で作った Android Agent を GPL-3.0 で出す	https://linux.do/t/topic/2840354
+2026-09-01-21/0055.html	JIUSIS/shiyi-agent（GitHub）v2.6.3 APK。DSH 切替、Alpine proot、spawn_agent	https://github.com/JIUSIS/shiyi-agent
+2026-09-01-21/0056.html	Dashloom Community（GitHub）証拠を先に計算してから Agent。BYOK の OpenAI 互換	https://github.com/dashloom-dev/dashloom
+2026-09-01-21/0057.html	NingBo の DeepSeek Harness 入口。3080 と 8 秒のポート処理	https://juejin.cn/post/7680371010304688128
+2026-09-01-21/0058.html	ningbonb/dsh-installer（GitHub）Node 下限 22.19+ または 24+。実行中コピーは触らない	https://github.com/ningbonb/dsh-installer
+2026-09-01-21/0059.html	Vibe 初日は10倍、第二週から返工。SDD は proposal/design/task.md を先に書け、という授業	https://juejin.cn/post/7680398845608853554
+2026-09-01-21/0060.html	LoongSuite Pilot で Claude Code webhook を旁路。AgentLoop 第2篇	https://juejin.cn/post/7680371010304425984
+2026-09-01-21/0061.html	豆包工作が飛書をスーパー文脈にした。パス指定なしで WeSight 更新カード	https://juejin.cn/post/7680108144008036415
+2026-09-01-21/0062.html	Agent Atlas: Prompt から Harness Engineering までの五層。Track A は CLI 8–10週	https://juejin.cn/post/7680126224087220259
+2026-09-01-21/0063.html	手書き ReAct。tool_call は2本必須、ContextManager は 64K から 4K を残す	https://juejin.cn/post/7680126224087040035
+2026-09-01-21/0064.html	百度 ACX: CLAUDE.md と AGENTS.md を一つの倉庫プラグイン源にまとめた四段階	https://juejin.cn/post/7680183953519247394
+2026-09-01-21/0065.html	PaddleOCR-VL を双 A770 で起こす。公式镜像は Qwen を誤ロード、最終 vLLM 0.27.1	https://juejin.cn/post/7680116809313452066
+2026-09-01-21/0066.html	Agent Atlas サイト本体。9段階・23演習・240+。v2026.08.14、$0 / $2–5 / $20–50	https://agentic.haylee.site/zh-Hans
+2026-09-01-21/0067.html	unsloth/Qwen3.8-Flash-Next-GGUF が +24.6GB。ModelScope の StorageSize は 1,499,634,240,640	https://modelscope.cn/models/unsloth/Qwen3.8-Flash-Next-GGUF
+2026-09-01-21/0068.html	GPT 再ログインで携帯を要求。充值すると番号が消える、という現場	https://linux.do/t/topic/2840655
+2026-09-01-21/0069.html	Team 拼车が3日で連鎖封。車頭は無事、乗員の老号が落ちた	https://linux.do/t/topic/2840672
+2026-09-01-21/0070.html	菲区 Pro20x の油猴は ×1.3。sub2api は指紋を透传しろ、という処方箋	https://linux.do/t/topic/2840762
+2026-09-01-21/0071.html	Codex 週枠スクリプトが 400$ 前後から 490$ に乗った、という一本	https://linux.do/t/topic/2840742
+2026-09-01-21/0072.html	Plus 5h は消えない。2〜3問で尽き、CPA だけ穴がある、という19投稿	https://linux.do/t/topic/2840800
+2026-09-01-21/0073.html	Codex 子 Agent が別窓へタスクを漏らす。権限を閉じ忘れた、と本人が言った	https://linux.do/t/topic/2840708
+2026-09-01-21/0074.html	非官号 Codex は Begin Patch / End Patch を何度もリトライ。cc-switch の官号は通る	https://linux.do/t/topic/2840717
+2026-09-01-21/0075.html	Luna でキャッシュを温めて Sol に切る、は成立しない。fast 切替でも落ちる	https://linux.do/t/topic/2840610
+2026-09-01-21/0076.html	Ollama が透明 token を明牌。20刀で60刀枠、年費が黙って新計費、という読み	https://linux.do/t/topic/2840489
+2026-09-01-21/0077.html	Ollama 新計費で DSH 二タスク 0.53刀、キャッシュ 97.9%。下がると梁文谷未満	https://linux.do/t/topic/2840602
+2026-09-01-21/0078.html	Ollama Pro 新規は週限なしの $ 計費。v4 flash 月 18億？退款して Command Go へ、という声	https://linux.do/t/topic/2840330
+2026-09-01-21/0079.html	三天で Pro20x 週限を三つ蹬った。リセットカード込みで三週分、という燃焼	https://linux.do/t/topic/2840659
+2026-09-01-21/0080.html	ChatGPT Work がネットワークエラーの翌朝、UI は 5.6 sol で F12 は 5.5mini	https://linux.do/t/topic/2840658
+2026-09-01-21/0081.html	GitHub 学生認証が VPN/位置で詰まる。パソコン＋予備メールが通った、という声	https://linux.do/t/topic/2840722
+2026-09-01-21/0082.html	千行の駅名突合で AI がスクリプトに逃げる。10行は逐条、1000行は怖がる	https://linux.do/t/topic/2840706
+2026-09-01-21/0083.html	WorkBuddy が走っている間にファイルが消えた。rm 疑惑とハードコード確認の反論	https://linux.do/t/topic/2840636
+2026-09-01-21/0084.html	Manus が独立運営に戻る。過渡期にバックアップ復元とアクセス中断があった、と告知	https://linux.do/t/topic/2840766
+2026-09-01-21/0085.html	貴モデルが計画、哈基米が実行。tmux が一番楽、という現場の分岐	https://linux.do/t/topic/2840623
+2026-09-01-21/0086.html	5.6 sol の過剰な慎重さが DB 操作では安心。DS のようにいきなり開かない	https://linux.do/t/topic/2840547
+2026-09-01-21/0087.html	基元 DSF が DSH で think を消した。公式 key は 注入→think→Pwsh のまま	https://linux.do/t/topic/2840621
+2026-09-01-21/0088.html	会社 Aone 内網で Codex を使いたい。中転は梯子不要、Aone は無操作で切れる	https://linux.do/t/topic/2840282
+2026-09-01-21/0089.html	Codex desktop の ambient suggestions システムプロンプトが sub2 風控に当たる	https://linux.do/t/topic/2840312
+2026-09-01-21/0090.html	グローバルとプロジェクトの MCP / skills が ccs で上書きされる、という悩み一本	https://linux.do/t/topic/2840688
+2026-09-01-21/0091.html	騰訊雲 SG で CPA 反代。阿里 SG は首字 1s・降智なし、という対照	https://linux.do/t/topic/2840625
+2026-09-01-21/0092.html	フロント視覚は哈吉米の審美が先、GPT は誘導が要る、という短い対比	https://linux.do/t/topic/2840622
+2026-09-01-21/0093.html	Minecraft mod は AI が書けてもゲーム内テストが閉じない。十数回の手フィードバック	https://linux.do/t/topic/2840524
+2026-09-01-21/0094.html	Cursor 右上だけ白い。二台の Windows で一台だけ、テーマも再装も無効	https://linux.do/t/topic/2840357
+2026-09-01-21/0095.html	vibe で Android を自作したい。miuix＋skill が名前に出た	https://linux.do/t/topic/2840315
+2026-09-01-21/0096.html	arena 図生動画で MiniMax H3 が1位。体感は二軍、呼び出しが悪いのか	https://linux.do/t/topic/2840316
+2026-09-01-21/0097.html	用量の少ない Seedance は豆包 Work の無料 30秒。大学生は3ヶ月で計4ヶ月	https://linux.do/t/topic/2840640
+2026-09-01-21/0098.html	gemini3.7flash の猫娘口調が DeepSeek 級。Claude は I'll skip the catgirl voice	https://linux.do/t/topic/2840792
+2026-09-01-21/0099.html	貿易会社の大量ロゴ差し替え。agent 不要なら GPT Pro 20x は過剰、という相談	https://linux.do/t/topic/2840757
+2026-09-01-21/0100.html	600騙されたので AI 骗子の看板サイトが欲しい。見つけられる人は騙されない、という返し	https://linux.do/t/topic/2840754
+2026-09-01-21/0101.html	Kraken カードで菲区 GPT を払う。国区币安 C2C の現場質問	https://linux.do/t/topic/2840249
+2026-09-01-21/0102.html	OthmanAdi/planning-with-files（GitHub）task_plan / findings / progress。60+ agents、96.7%	https://github.com/OthmanAdi/planning-with-files
+2026-09-01-21/0103.html	planning-with-files: /clear しても三つの Markdown が残る。掘金は 25k+ star	https://juejin.cn/post/7680126224086859811
+2026-09-01-21/0104.html	Codex を Plus から Pro に GP 差額したら領収メールが来ない。港卡で払った	https://www.v2ex.com/t/1238717
+2026-09-01-21/0105.html	土区 pro20x が封されて 9999 里拉が機に縛られた。出号はしない	https://www.v2ex.com/t/1238703
+2026-09-01-21/0106.html	午後の GPT が sol/high で思考中に固まる。東八の午後＝米西の深夜縮容、という疑い	https://www.v2ex.com/t/1238689
+2026-09-01-21/0107.html	Dashloom: 20製品の証拠層。Agent + skill、Codex/CC で二次開発、と作者	https://www.v2ex.com/t/1238696
+2026-09-01-21/0108.html	zackkk の「トークンを使わないコード」はスクリーンセーバー。5分見て短劇だと言った	https://www.v2ex.com/t/1238708
+2026-09-01-21/0109.html	Joplin から Obsidian。数日 AI で todo-note を書いて市場に載せた	https://www.v2ex.com/t/1238685
+2026-09-01-21/0110.html	無水印抽出を DS v4 初版、5.6-sol で仕上げ。直接開干は日常 cyberabuse	https://www.v2ex.com/t/1238678
+2026-09-01-21/0111.html	vibe coding した网页ゲーム《修真门派掌门路》。AI に遊ばせろ、という返信	https://www.v2ex.com/t/1238676
+2026-09-01-21/0112.html	Codex Ultra が Bad Request。自分では一日 12 億 token で日上限に当たった疑い	https://www.v2ex.com/t/1238546
