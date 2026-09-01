@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TinyFrontier/codex-ponytail-txcheck — /ponytail Full vs Ultra のA/B · レーダー 2026-09-02 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>TinyFrontier/codex-ponytail-txcheck — /ponytail Full vs Ultra のA/B</h1>
+<p class="primary"><a href="https://github.com/TinyFrontier/codex-ponytail-txcheck" target="_blank" rel="noopener">https://github.com/TinyFrontier/codex-ponytail-txcheck</a></p>
+<div class="thread">
+<p>リポジトリ https://github.com/TinyFrontier/codex-ponytail-txcheck 。@tiny_frontier のツイートから導入。</p>
+<p>README冒頭（抜粋）:
+# Ponytail TxCheck experiment
+
+An A/B case study comparing the same coding agent building the same application with and
+without Ponytail.
+
+All three implementations are complete.
+
+## Question
+
+Do <code>/ponytail full</code> or <code>/ponytail ultra</code> reduce the amount of production source code while
+preserving the required behavior and quality of a small full-stack application?
+
+This is a case study, not a general benchmark. Any public write-up should report the result
+even if Ponytail has no measurable benefit or produces a worse implementation.
+
+## Structure
+
+- <code>PROMPT.md</code> — the exact application prompt used in all runs.
+- <code>without_ponytail/</code> — output of the control run.
+- <code>with_ponytail/</code> — output of the Ponytail Full run.
+- <code>with_ponytail_ultra/</code> — output of the Ponytail Ultra run.
+
+## Fixed protocol
+
+1. Start each run from its empty output directory in a fresh agent session.
+2. Use the same model, reasoning effort, tool access, network policy, and time limit.
+3. For the control run, leave Ponytail disabled and send the contents of <code>PROMPT.md</code> unchanged.
+4. For each treatment, activate its assigned <code>/ponytail</code> intensity, then send the same
+   <code>PROMPT.md</code> unchanged.
+5. Do not reuse context, code, review feedback, or errors from one run in the other.
+6. Allow each agent to inspect documentation and install dependencies under the same policy.
+7. Stop each run when the agent declares the applic</p>
+<p>プロトコルは同一 PROMPT.md、同一モデル。計測は非空白本番ソース文字。README の表: Without 14,994 / Full 16,847 / Ultra 11,634。パイロットは gpt-5.6-luna medium の builder → 独立 QA → orchestrator。Ultra は標準ライブラリ HTTP に落として小さくした、と明記。</p>
+<h2>所感</h2>
+<p>ケーススタディ1本。Full が逆効果、Ultra が勝つ、を再現可能な形で置いているのが良い。</p>
+<h2>体験</h2>
+<p>README を curl で取得。3ディレクトリの再実行は未実施。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
