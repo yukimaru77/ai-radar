@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vLLM-Omni: FastH3をcomplete-MP4が再生より速い本番サーブに載せる · レーダー 2026-09-01 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-01 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag x">X</span></div>
+<h1>vLLM-Omni: FastH3をcomplete-MP4が再生より速い本番サーブに載せる</h1>
+<p class="primary"><a href="https://vllm.ai/blog/2026-09-01-minimax-h3-production-serving" target="_blank" rel="noopener">https://vllm.ai/blog/2026-09-01-minimax-h3-production-serving</a></p>
+<div class="thread">
+<p>vLLM Blog、September 1, 2026、22 min read、vLLM-Omni Team。題: MiniMax H3 on vLLM-Omni: From System-Wide Optimization to Real-Time Serving with FastVideo&#x27;s FastH3。</p>
+<p>二段: まず MiniMax H3 サーブ全体のオーバーヘッドを削り、次に FastVideo の 4-step FastH3 で 49 DiT forwards を 4 に替える。測定 8xB300 プロファイルで FastH3 が complete 10.125-second MP4 を 8.678-8.710 seconds で出した、と本文。real-time は complete response が再生時間より速いこと。streaming でも first frame でもない。</p>
+<p>Base H3 レーン（Diffusers vs vLLM-Omni、50-point dense BF16）と FastH3 duration sweep は別 evidence lane。同じ SHA / prompt / seed / artifact ではないので base-to-FastH3 speedup は出さない、と明記。</p>
+<p>Base レーンの Client E2E: Diffusers 82.239 s、vLLM-Omni 56.917 s。complete-response latency 30.8%、1.445x。Peak HBM/rank: 151.699 vs 128.232 GiB。解像度表記 1344x768 / 24 FPS。FastH3 レーンは Dense/Data-Free T2VA only。</p>
+<p>告知ツイは別ページ。ローカル Comfy の 4060 Ti 数字とも別世界。</p>
+<h2>所感</h2>
+<p>サーブ側の real-time 定義が厳しい（complete MP4）。ローカル 4-step 話と混ぜない。</p>
+<h2>体験</h2>
+<p>箱でブログ HTML を取得（HTTP 200）し、script/style を除いて本文を読んだ。vLLM-Omni のサーブは立てていない。B300 も無い。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
