@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>关于真随机数的问题，除了用 抛硬币， 还有其他好办法吗？ · レーダー 2026-09-02 06:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 06:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>关于真随机数的问题，除了用 抛硬币， 还有其他好办法吗？</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2842490" target="_blank" rel="noopener">https://linux.do/t/topic/2842490</a></p>
+<div class="thread">
+<p>LINUX DO。created=2026-09-01T20:16:27.349Z posts=9 category=gossip</p>
+<p>@sdfasffsdf234「我大概知道的是这样的，用硬币投出 正面和反面 ，即0和1 ， 用 二进制来造随机数 ，任何数字都可以得出。 具体其实也不知道怎么弄。 除了这个，还有其他好办法吗？现成的工具？」</p>
+<p>@mintaqrua「一般基于现实/硬件的随机数生成都被视为真随机。比如一些早期的方案会让用户乱甩鼠标」</p>
+<p>@Swiftlance「random.org - 这里用大气环境白噪声获取随机数 https://qrng.anu.edu.au - 这里由实验室通过测量真空的量子涨落实时生成 佬友可以试试。第一个比较方便好用，有手机app。」</p>
+<p>@sdfasffsdf234「问题来了 ，gpt 和codex 曾经帮我设计一个 随机数生成的计划，就是用 硬币或者骰子 投100次，这样熵是 100或者2的100次方，这个具体多少暂且不表。主要用最后用来生成 硬件钱包的助记词。 但是这个垃圾说，只要有一次投的不是那么随机，比如你扔的时候，没有很公平的扔，（举例：比如a面朝下，并没有足够的扔的高度，这么b面朝上的概率就变大了）， 造成最终随机数的熵就变小了，如果要求熵是100 ，那么这次必须重来。我感觉属于胡说八道。 （最终我的要求是这个随机数不被人撞库，或者因为熵太小被人算出来） 大家怎么看，这个gpt 和codex 的看法呢？ 弄得我烦死了，一次都不能弄错，稍微马虎都不行。 我直接强制中间给10个 a面，根本不扔，就有被人算出来的可能性了？ 或者我强制其中50次，根本没扔，我是随便乱说的，难道熵就便成了50 ，会很容易被超级计算机给算出来这个随机数？ 当时我是10个骰子 1次投的（投10次就有10*10=100个数字），他说一次10个骰子里面只要有一个你投的不够充分随机，必须全部重新投。不然熵不足。 （最近爆出来的coldcard硬件钱包 熵不足，用的是某个伪」</p>
+<p>@purr「如果只是你自己 其实可以考虑一件事 攻击者真的能够知道你的熵来源么 感觉比起抛硬币 这个用来生成 “硬件钱包的助记词” 的软件出问题的概率更大? 比如前面说的甩鼠标 结果软件bug 坐标会自动取整至个位数 甩再久也没用(」</p>
+<p>@sdfasffsdf234「有道理 ，我用了两个不同来源的离线软件测试，都生成了同一套助记词。看来佬是懂硬件钱包助记词生成的！」</p>
+<p>@paring「现代设备中芯片基本都有 TRNG 模块，都是基于物理熵源的，为啥不直接用，反而要自己设计啊。 严格来讲真随机的熵源要基于量子效应设计的，这些经典体系的宏观确定性混沌系统也只能拿来辅助，不能作为真随机的，抛硬币就在这个范畴内」</p>
+<p>@IssunmiHaichi「对于“上帝都不知道的随机是真随机”，那么物理理论上也不可能做到，但是要是不想让别人知道 即便是伪随机也够用了」</p>
+<h2>所感</h2>
+<p>中国圏の一次声。枠・モデル・ハーネスの数字と条件を残す。</p>
+<h2>体験</h2>
+<p>linux.do トピックJSONを取得して本文を読んだ。ログイン操作は未実施。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
