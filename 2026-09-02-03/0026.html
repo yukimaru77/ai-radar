@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZCode公式が夜中に飛書へ来て履歴ロードを調査 — 智譜に転粉 · レーダー 2026-09-02 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>ZCode公式が夜中に飛書へ来て履歴ロードを調査 — 智譜に転粉</h1>
+<p class="primary"><a href="https://linux.do/t/2842267" target="_blank" rel="noopener">https://linux.do/t/2842267</a></p>
+<div class="thread">
+<p>LINUX DO develop。@Llliao。posts 32 / likes 19 / views 773。冷起動で履歴セッション読み込みに1-2分かかる、と ZCode 飛書のユーザフィードバック群に書いたら、公式がすぐ来て一緒に切り分けた、という一人称。22:41 でも人がいる。</p>
+<p>症状の切り分け：起動画面は速い。履歴を1件クリックするたびに20-30秒。セッションは10個だけ。比較対象として Hermes は1000超セッションでもデスクトップ起動10秒未満。55666 は「起動3分は Codex の得意技」と返す。</p>
+<p>製品面の声。cybm は中国ユーザ向け・他社 key の設定が明確・SSH リモートが楽、と勧めてきた。wo_wo はカスタムモデルを名前手打ちなのが不満。yaho は他モデルで思考強度が触れない。Llliao は反代した ZCode では調整でき、カスタムなら設定ファイルのモデル欄に思考強度パラメータを足せる、と返した。</p>
+<p>枠。Rosalia_Lang1 は週次リセット2回と 5h リセット2回を最近受けた。Pro 転か ZCode 導入かが不明。Notch は「zcode很好 就是coding plan不当人」。Llliao はこれまで WorkBuddy 反代と HUB の GLM で、今回は公式の返信速度だけで Coding Plan を買う、モデルと価格は後回し、と書いた。</p>
+<p>スレは OpenViking に飛ぶ。Llliao は Hermes の可視化と公式群で開発者に聞ける体験を満点とし、全 Agent を OpenViking に載せる予定。ithou は API が落ちると Codex/Claude まで死ぬので Hermes だけ。Llliao の実装：OpenViking は既存 Agent 記憶への重ね（置換ではない）、失敗は静默、だからウォッチドッグと定期チェック。権限は検査のみ、改変は爆発しやすい。ドキュメントにない不具合はログを OpenViking 公式へ。</p>
+<p>472965913「难怪半夜送1亿，原来自己员工也在加班啊。」blaumeer は Coding Plan Max を年初から持っていたが公式群の存在を知らなかった。Llliao は ZCode 公式サイトにある、とだけ（リンクは貼らない）。</p>
+<p><strong>Llliao</strong>「起因是我发现我的ZCode每次冷启动加载历史会话都要等一两分钟然后跑去ZCode飞书用户反馈群反馈 然后官方的马上来人加我帮我排查，对智谱路转粉了」</p>
+<p><strong>Llliao</strong>「它是启动界面快 但是点击历史会话一个就要加载二三十秒 我总共就十个会话 给我整懵了 我的Hermes一千多个会话桌面版启动也就不到十秒」</p>
+<p><strong>wayned</strong>「时间瞩目，22:41，这也太卷了吧」</p>
+<p><strong>cybm</strong>「我一直给人安利zcode的，非常适合中国宝宝，配置其他家key也清晰，而且关键这个ssh远程用的非常顺手」</p>
+<p><strong>Rosalia_Lang1</strong>「这波我也要站智谱了，我最近收到两次周重置和两次5h重置，还挺大方的，不知道是我转 pro 套餐的原因还是装了 zcode 的原因。」</p>
+<p><strong>Notch</strong>「zcode很好 就是coding plan不当人」</p>
+<p><strong>Llliao</strong>「这把打算性情一把买个Coding Plan 体验了 就冲ZCode的官方这回馈速度 模型怎么样价格怎么样不管了 就冲产品 性情一把」</p>
+<p><strong>Llliao</strong>「做这个定时任务检查前把Hermes官方关于内置记忆提供商文档和OpenViking官方文档喂给Hermes……并且明确不给执行权限只有检查权限，不然Hermes排查出问题可能自己上手改，改坏了容易爆炸」</p>
+<h2>所感</h2>
+<p>製品の速さより「夜中に開発が飛書へ来る」一次声。履歴ロード20-30秒対 Hermes 10秒、思考強度は設定ファイル、Coding Plan の枠体感が同じスレに載る。</p>
+<h2>体験</h2>
+<p>スレ JSON（32 posts）を読んだ。ZCode 飛書群への参加、履歴ロード再現、OpenViking ウォッチドッグは未実施。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
