@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ashuai/dsh-s2s — DeepSeek Harness session-to-session · レーダー 2026-09-02 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>ashuai/dsh-s2s — DeepSeek Harness session-to-session</h1>
+<p class="primary"><a href="https://github.com/ashuai/dsh-s2s" target="_blank" rel="noopener">https://github.com/ashuai/dsh-s2s</a></p>
+<div class="thread">
+<p>リポジトリ https://github.com/ashuai/dsh-s2s。この窓のソースから導入されたため単独ページ化。</p>
+<p>README冒頭（抜粋）:
+# dsh-s2s — DeepSeek Harness 的 Session-to-Session 同宿主会话互联
+
+&gt; 一个 cordis 插件,让**同一台宿主上的多个 DSH session 互相对话**——按**会话名(标题)**点名即可,并支持**拉起已结束(静止)的 session**。
+
+**实现思路受 a2a 启发,但并非其 fork**:a2a 是跨主机 mesh(hub + WebSocket + presence);而 s2s 是**同宿主单进程**路径,因此**不继承其 hub/网络层**,只借鉴了它的**注入习语**(空闲→<code>followup</code>、忙碌→<code>inject</code>)。s2s 用一个**进程内 broker** 直接投递,**零 TCP 端口、零 WS、零重连**。原 a2a 版实现归档在本仓库历史与 <code>legacy-a2a</code> 分支,作参照。(跨进程/跨机 mesh 请直接用 a2a;非 DSH 标准 A2A agent 需网关类插件。)
+
+&gt; 使用手册见 [docs/USAGE.md](docs/USAGE.md);场景与最佳实践见 [docs/BEST_PRACTICES.md](docs/BEST_PRACTICES.md);设计证据稿见 [docs/SOLUTION.md](docs/SOLUTION.md)(v0.2 历史基线)。
+
+---
+
+## 它是什么 / 不是什么
+
+| | s2s(本项目) | a2a |
+|---|---|---|
+| 拓扑 | **同宿主/单进程** | 跨进程/跨机(可信局域网) |
+| 传输 | **进程内 broker 直投,零端口** | hub server + WebSocket |
+| 寻址 | **name(标题)主寻址,现读不缓存** | roster / presence |
+| 静止会话 | ✅ 按名**拉起**(<code>AgentRegistry.resume</code>)(a2a 没有) | ❌ 仅在线接收方 |
+| 防回环 | ✅ 发送侧 hop/限速 | ❌ |
+| 浏览器 UI / 命令面 | ❌ 无(精简) | ✅ |
+
+## 功能一览
+
+- **进程内投递**:<code>S2sBroker.deliver(sessionId, {from,text})</code> → <code>ctx.agents.get(...)</code> → <code>agent.followup</code>(空闲)/<code>inject</code>(忙碌)。零网络、零序列化。
+- **name 主寻址**:<code>s2s_resume(name: &quot;开发&quot;, ...)</code> / <code>s2s_message(name: &quot;产品&quot;, ...)</code>;每次解析**现读会话最新标题**(日志 <code>session/title</code> 事件),改名即刻生效;同名→<code>ambiguous</code>(用 `ses</p>
+<h2>所感</h2>
+<p>製品/ツールはREADMEを見た範囲で判断。クローンやCLIは未実施の場合が多い。</p>
+<h2>体験</h2>
+<p>README/トップまで触った／クローンやCLIは未実施</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

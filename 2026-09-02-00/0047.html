@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laihiujin/Prism — 開源マトリクス配信 · レーダー 2026-09-02 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>Laihiujin/Prism — 開源マトリクス配信</h1>
+<p class="primary"><a href="https://github.com/Laihiujin/Prism" target="_blank" rel="noopener">https://github.com/Laihiujin/Prism</a></p>
+<div class="thread">
+<p>リポジトリ https://github.com/Laihiujin/Prism。この窓のソースから導入されたため単独ページ化。</p>
+<p>README冒頭（抜粋）:
+# Prism 棱镜/映射
+&gt; 创作一次，映射全平台。
+
+Prism一个 AI 驱动的多平台内容编排与自动化发布系统；
+面向多账号、多素材、多平台的内容分发场景，提供从计划生成、任务调度到执行监控与数据回收的全链路能力；
+
+---
+
+## 目录
+- [项目定位](#项目定位)
+- [核心能力（矩阵投放闭环）](#核心能力矩阵投放闭环)
+- [新功能集成](#新功能集成)
+- [功能截图](#功能截图)
+- [支持平台](#支持平台)
+- [架构概览](#架构概览)
+- [部署开始](#部署开始)
+  - [Windows 本地部署](#windows-本地部署)
+  - [macOS（PM2）部署](#macospm2部署)
+- [命令行](#命令行)
+- [矩阵投放流程（SOP）](#矩阵投放流程sop)
+- [API 示例](#api-示例)
+- [目录结构](#目录结构)
+- [合规提示](#合规提示)
+- [项目支持与采用](#项目支持与采用)
+- [许可](#许可)
+
+---
+
+## 项目定位
+
+Prism 是一个“矩阵投放 / 分发中台”，把「账号、素材、计划、排期、执行、监控、回收」统一到可编排的任务系统中：
+- 适合多平台、多账号的规模化分发与运营底座；
+- 不强行覆盖剪辑/混剪/内容工厂，可作为外部生产链路的对接层；
+- 设计参考行业常见“编-投-管-回”闭环，但项目更聚焦于“投 + 管 + 回”；
+
+---
+
+## 核心能力（矩阵投放闭环）
+
+### 投：矩阵发布与调度
+- 多平台、多账号、多素材组合发布；
+- 批量生成任务、统一入队、并发调度；
+- 定时发布、结果回传、失败重试；
+
+### 管：账号与任务运营
+- 账号绑定、状态监控、异常提醒；
+- 任务队列看板、执行日志可视化；
+- 每账号固定身份绑定（账号 → 浏览器身份 → 固定代理 → 浏览器执行）；
+
+### 回：数据回收（复盘输入）
+- 当前支持：抖音、B 站；
+- 预留可扩展：快手、小红书、视频号等（按平台适配器扩展）；
+
+### 编：AI 编排加速（投前准备）
+- 内置 HermesAgent AI 助手；
+- 自然语言生成/润色标题、标签、话题等投放配置；
+- 支持“一句话投放”（示例见下）；
+
+### 可扩展 / 可自托管
+- FastAPI + Next.js + Celery/Redis + Patchright + Persona Studio；
+- 平台适配器模块化扩展；
+- Web 控制台 + Electron 桌面端，可本地或私有化部署；
+- 浏览器身份层、代理层均可在「直连 / 内置后台 / 自托管」间按需开关；
+
+---
+
+## 新功能集成
+
+&gt; 最近一轮优化的核心是把“账号的**固定身份环境**”落成可编排、可切换、可一键维护的组件：
+&gt; **账号 </p>
+<h2>所感</h2>
+<p>製品/ツールはREADMEを見た範囲で判断。クローンやCLIは未実施の場合が多い。</p>
+<h2>体験</h2>
+<p>README/トップまで触った／クローンやCLIは未実施</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

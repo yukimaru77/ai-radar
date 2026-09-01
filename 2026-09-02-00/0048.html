@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>noaul/nono — 自ホスト個人ナビ/デジタル作業台 · レーダー 2026-09-02 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>noaul/nono — 自ホスト個人ナビ/デジタル作業台</h1>
+<p class="primary"><a href="https://github.com/noaul/nono" target="_blank" rel="noopener">https://github.com/noaul/nono</a></p>
+<div class="thread">
+<p>リポジトリ https://github.com/noaul/nono。この窓のソースから導入されたため単独ページ化。</p>
+<p>README冒頭（抜粋）:
+# Nono
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;strong&gt;简体中文&lt;/strong&gt; | &lt;a href=&quot;README_EN.md&quot;&gt;English&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;design/icons/nono-duo-512.png&quot; width=&quot;96&quot; height=&quot;96&quot; alt=&quot;Nono 图标&quot;&gt;
+&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  一个可自托管的个人数字工作台：统一管理网址导航、内容发布、个人资产、基础设施和 GitHub Stars。
+&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;a href=&quot;https://github.com/noaul/nono&quot;&gt;GitHub&lt;/a&gt; ·
+  &lt;a href=&quot;https://github.com/noaul/nono/issues&quot;&gt;问题反馈&lt;/a&gt; ·
+  &lt;a href=&quot;https://noaul.com/privacy&quot;&gt;隐私政策&lt;/a&gt;
+&lt;/p&gt;
+
+Nono 不是单一页面应用，而是一套放在同一仓库、同一域名和同一部署链路中的个人服务集合。核心 Nono 提供公开导航、管理后台、认证和公共 API；NoDesk、NoMoney、Yumi、NoStar、Clipper 与 Chrome 扩展分别承担内容、资产、基础设施、GitHub 收藏、网页剪藏和浏览器采集工作。
+
+&gt; 本项目面向个人或小规模可信用户的自托管场景。默认生产形态是一个业务容器加一个 PostgreSQL 容器，不是多节点高可用架构。
+
+## 目录
+
+- [项目组成](#项目组成)
+- [功能概览](#功能概览)
+- [系统架构](#系统架构)
+- [技术栈](#技术栈)
+- [仓库结构](#仓库结构)
+- [快速开始](#快速开始)
+- [首次初始化](#首次初始化)
+- [本地开发](#本地开发)
+- [环境变量](#环境变量)
+- [数据与存储](#数据与存储)
+- [认证与权限](#认证与权限)
+- [AI 集成](#ai-集成)
+- [测试与质量门禁](#测试与质量门禁)
+- [生产部署](#生产部署)
+- [备份与恢复](#备份与恢复)
+- [数据迁移](#数据迁移)
+- [Chrome 扩展](#chrome-扩展)
+- [第三方依赖](#第三方依赖)
+- [安全与隐私](#安全与隐私)
+- [常见问题](#常见问题)
+- [维护约定](#维护约定)
+- [文档索引](#文档索引)
+- [项目链接与许可](#项目链接与许可)
+- [社区](#社区)
+
+## 项目组成
+
+| 产品 | 默认路径 | 主要用途 | 认证 | 主要存储 |
+| --- | --- | --- | --- | --- |
+| **Non</p>
+<h2>所感</h2>
+<p>製品/ツールはREADMEを見た範囲で判断。クローンやCLIは未実施の場合が多い。</p>
+<h2>体験</h2>
+<p>README/トップまで触った／クローンやCLIは未実施</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
