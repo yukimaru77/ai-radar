@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Fable 5.1 / Mythos 5.1 — cache読み $0.25/M、典型~25%安・高エージェント最大~45% · レーダー 2026-09-02 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>Claude Fable 5.1 / Mythos 5.1 — cache読み $0.25/M、典型~25%安・高エージェント最大~45%</h1>
+<p class="primary"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1" target="_blank" rel="noopener">https://www.anthropic.com/claude-fable-and-mythos-5-1</a></p>
+<div class="thread">
+<p>Anthropic公式（2026-09-01発表、箱で 2026-09-02 03:15 JST に開いた）。同じ重み、セーフガードが違う。Fable 5.1 は一般公開。Mythos 5.1 は trusted access（cyber + life sciences）。API id は <code>claude-fable-5-1</code>。AWS / GCP / Azure / Claude API。</p>
+<p>価格: input $10 / M、output $50 / M（Fable 5 と同じ）。cache read は 75% 安くなって $0.25 / M。トークン課金の典型ワークロードは Fable 5 比 ~25% 安、高度にエージェントな仕事は最大 ~45%。公式ページに週次クォータのリセットは書いていない。</p>
+<p>デフォルト effort: Claude Code は High、Cowork と Claude.ai は Medium。EFS（Enterprise Frontier Safeguards）は顧客管理のクラウドストレージ、プライバシーは ZDR 相当、秋に段階投入。それまでは対象顧客が ZDR 付きで Fable 5.1 を使える。</p>
+<p>サイバー: Fable 5 比で介入がセッションあたり ~60% 減。脆弱性の識別はできるが exploit 開発はしない。pentest / exploit / binary vuln scan は Opus へリダイレクト。生物学: 初等・医療の誤発火は Fable 5 ローンチ比 85% 減。研究・開発は Mythos LSVP 以外 Opus へ。</p>
+<p>Anti-distillation: 新規 API アカウントは thinking transcript を保ったまま過去コンテキストを手編集できない。既存アカウントは現時点では対象外。EU watermark は 2026-08-02 以降の出力。検出 API は private preview。</p>
+<p>ベンチ（production safeguards 付き Fable 5.1）: Terminal-Bench-Science 0.1 は 52.6%（Fable 5 24.7 / Opus 5 29.0 / GPT-5.6 Sol 22.4）。Terminal-Bench 4.0 は Fable 5.1 55.8% / Mythos 5.1 60.9%（Fable 5 42.0 / Opus 5 52.3 / Sol 37.3）。GDPval-AA v2 1853（1723 / 1824 / 1711）。OSWorld 2.0 partial 77.9% / strict 41.7%。HLE no tools 60.9%、with tools 65.0%。AutomationBench 31.4%。CursorBench 3.2.0 73.4%。</p>
+<p>公式逸話（独立検証はしていない）: Millennium は長年エンジニアと他モデルが見逃した rare crash。Jane Street は Fable 5 / Opus 5 より多くのコーディング問題を解く。Mythos の protein binder は 3 ターゲットで Adaptyv Bio 最良の 10x affinity、12 ターゲットで ~50% hit（典型 10–15%）。GPU kernel は OSS 生物学モデル 7 本で最大 2.5x、GPU コスト 30–60% 減。</p>
+<p>HN では 52 点前後で上がった（id 49525496）。コメント本体は what&#x27;s-new スレ（49525378）へ移動。</p>
+<h2>所感</h2>
+<p>キャッシュ単価を 1/4 にしたのが本体。週次枠のリセットは公式文面に無い。CN の「A社が週次を戻した」は現場一次として別ページ。数字は公式ページからそのまま。</p>
+<h2>体験</h2>
+<p>公式ページ https://www.anthropic.com/claude-fable-and-mythos-5-1 を開いて数字を転記。/news/claude-fable-and-mythos-5-1 は 404。API 実コール・課金反映は未実施。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fable 5.1 docs overview — 1M ctx / 128K out、cache read $0.25、5m write $12.50、1h write $20 · レーダー 2026-09-02 03:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 03:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag en">英語圏</span></div>
+<h1>Fable 5.1 docs overview — 1M ctx / 128K out、cache read $0.25、5m write $12.50、1h write $20</h1>
+<p class="primary"><a href="https://platform.claude.com/docs/en/models/fable-5-1/overview" target="_blank" rel="noopener">https://platform.claude.com/docs/en/models/fable-5-1/overview</a></p>
+<div class="thread">
+<p>platform.claude.com docs（Latest, released September 1, 2026）。Model ID <code>claude-fable-5-1</code>。Context 1M tokens、Max output 128K。Input $10 / MTok、Output $50 / MTok。</p>
+<p>Pricing 表: 5m cache write $12.50 / MTok、1h cache write $20 / MTok、Cache read $0.25 / MTok。Batch API は input/output 50% off。Fable 5 の cache read は $1、Fable 5.1 は 0.025x（他モデルは 0.1x）。</p>
+<p>比較: Opus 5 は $5/$25、Sonnet 5 は $2/$10、Haiku 4.5 は $1/$5。Fable 5.1 の thinking は Adaptive (always on)、default effort <code>high</code>、knowledge cutoff Jun 2026。Latency は lineup 中 Slower。</p>
+<p>プラットフォーム: Claude API <code>claude-fable-5-1</code>、Bedrock <code>anthropic.claude-fable-5-1</code>、GCP / Microsoft Foundry / Claude Platform on AWS も同 ID。Retirement は not sooner than September 1, 2027。</p>
+<p>破壊的変更 3: forced tool use は error、以前のモデルは thinking block を読めない、過去ターン編集は thinking を無効化。追加 5: per-message effort (beta)、turn-scoped system messages (beta)、display updates (beta)、cache read 値下げ、content provenance。</p>
+<p>Mythos 5.1 は同じ仕様・価格、Project Glasswing 招待のみ。アカウントチームへ。</p>
+<h2>所感</h2>
+<p>公式ブログの $0.25 と docs が一致。週次リセットは docs にも無い。Claude Code の default High はここでも確認できる。</p>
+<h2>体験</h2>
+<p>docs overview を WebFetch。Pricing 表と model ID をページから転記。API 実コールは未実施。</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
