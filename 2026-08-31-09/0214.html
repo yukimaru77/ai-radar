@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>掘金: GitNexus 4.6万星。構造計算をクエリ時からインデックス時へ。Codex が構造盲 · レーダー 2026-08-31 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>掘金: GitNexus 4.6万星。構造計算をクエリ時からインデックス時へ。Codex が構造盲</h1>
+<p class="primary"><a href="https://juejin.cn/post/7679618338583740426" target="_blank" rel="noopener">https://juejin.cn/post/7679618338583740426</a></p>
+<div class="thread">
+<p>掘金 7679618338583740426。作者 <strong>苏灿烤鱼</strong>。公開 2026-08-30 23:02:34Z / <strong>2026-08-31 08:02 JST</strong>。RSS description（末尾切れ）。リポは <a href="https://github.com/abhigyanpatwari/GitNexus" target="_blank" rel="noopener">abhigyanpatwari/GitNexus</a>。</p>
+<p>苏灿烤鱼: 「不是又一个RAG套壳。它把整个代码库编译成一张可查询的知识图谱，连小模型都能拥有架构师视角。」</p>
+<p>苏灿烤鱼: 「你让AI助手改一个UserService.validate()方法，它改得很流畅，注释也补得漂亮。三天后，线上炸了：有47个函数依赖这个方法的返回类型，AI一个都不知道。这不是你用的模型不够聪明。这是所有AI编程工具的结构性缺陷：它们能看到代码的"字"，却看不到代码的"骨架"。」</p>
+<p>苏灿烤鱼: 「这个项目2025年8月才创建，一年时间拿下超过4.6万星…最新版本v1.6.10在2026年8月底刚刚发布。它的定位说得很直白："The nervous system for agent context"」</p>
+<p>苏灿烤鱼: 「README里还有一句更狠的对比："像DeepWiki，但更深。DeepWiki帮你理解代码，GitNexus让你分析代码。"」</p>
+<p>Cursor / Claude Code / Codex の関数探しは grep と embedding。「这些关系藏在AST里…grep和向量检索对它们天然失明。」核心は「把结构计算从查询时挪到索引时」。利益の三層: 可靠性、token效率、模型平权。</p>
+<p>CLI: <code>npx gitnexus analyze</code> で索引、<code>npx gitnexus setup</code> が Claude Code / Cursor / Codex / Antigravity を自動検出。索引はローカル <code>.gitnexus/</code>、全程無網絡。MCP 17 ツール（impact / trace / detect_changes / Cypher）。ライセンス PolyForm Noncommercial。</p>
+<h2>所感</h2>
+<p>ハーネス側の「構造盲」診断。モデルを責めるな、インデックス時にグラフを作れ、という現場向けの切り方。</p>
+<h2>体験</h2>
+<p>記事は RSS 抜粋まで（末尾切れ）。製品は 0215。CLI の実実行は 0215 に書いた。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

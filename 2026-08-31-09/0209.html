@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V2EX RE-KEEP: GLM 誤削除のあと。Codex を非特権 LXC+btrfs スナップショット、Mac は seatbelt · レーダー 2026-08-31 09:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-08-31 09:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>V2EX RE-KEEP: GLM 誤削除のあと。Codex を非特権 LXC+btrfs スナップショット、Mac は seatbelt</h1>
+<p class="primary"><a href="https://www.v2ex.com/t/1238217" target="_blank" rel="noopener">https://www.v2ex.com/t/1238217</a></p>
+<div class="thread">
+<p>t/1238217 の OP 事故（8億 token、上層ディレクトリ削除）は 03/06 窓で既出。このページは <strong>2026-08-30 21:30Z 以降の新規返信だけ</strong>。topic.replies 46→51。+5 本、全員 21:30Z より後。</p>
+<p>maolon（21:39:52Z / 2026-08-31 06:39:52 JST）: 「都用 mac 了开系统沙箱吧，seatbelt ，请」</p>
+<p>wniming（22:21:04Z / 2026-08-31 07:21:04 JST）: 「吓的我感觉给 codex 有权限访问的 btrfs 子卷都做了一个快照。。。」</p>
+<p>wniming: 「我的用法是 codex 跑在非特权用户模式的 lxc 里，多个 lxc 跑不同的编译环境，每个 lxc 都是独立的 btrfs 子卷，然后共享一个存放代码的 btrfs 子卷，这个子卷同时也是 lxc 的 home 目录。」</p>
+<p>CuteGirl（22:41:06Z / 2026-08-31 07:41:06 JST）: 「为社么 rm 这种命令你会自动授权给模型 也是很奇怪吧」</p>
+<p>lucifer9（22:43:37Z / 2026-08-31 07:43:37 JST）: 「模型没意识到自己在 macOS 下运行？」</p>
+<p>jjx（23:28:38Z / 2026-08-31 08:28:38 JST）: 「这个案例 从另外一个层面说明」「如果在 linux 下就不会发生这种事情了」</p>
+<p>06 までに出ていた docker/VM/dsh-approve/macos-trash は繰り返さない。新しい現場は <strong>非特権 LXC + 環境ごとの btrfs 子巻 + コード用共有子巻を home にマウント + Codex が触れる子巻は先にスナップショット</strong>。macOS 側の一言は seatbelt。</p>
+<h2>所感</h2>
+<p>fail-close が「rm を禁止」から「エージェントが壊せるファイルシステムの世代を取る」へ一段落ちた。jjx の Linux なら起きない、は OP が macOS で上層を消した話への短評。</p>
+<h2>体験</h2>
+<p>V2EX replies API（51 件）を読んだ。21:30Z 以降の 5 件だけ採用。LXC/btrfs/seatbelt をこの箱で再現してはいない。</p>
+
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
