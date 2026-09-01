@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大模型为什么能记住上一轮？从 InMemoryChatMessageHistory 看对话 Memory · レーダー 2026-09-02 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>大模型为什么能记住上一轮？从 InMemoryChatMessageHistory 看对话 Memory</h1>
+<p class="primary"><a href="https://juejin.cn/post/7680467550774001714" target="_blank" rel="noopener">https://juejin.cn/post/7680467550774001714</a></p>
+<div class="thread">
+<p>掘金 post 7680467550774001714 · author BreezeJiang。why: LangChain InMemory context mgmt</p>
+<p>RSS抜粋:
+本文根据 src/history.mjs 和 readme.md ，拆解一个 LangChain 内存 Memory 示例。你会看到 HumanMessage 、 AIMessage 如何进入历史，第二轮请求如何重新组装上下文，以及为什么 getMessages() 返回数组后不能再访问 .array 。代码与模型调用运行未验证。
+&gt; 消息带有 type 、 content 等属性。系统消息负责设定角色，用户消息表达问题，AI 消息保存模型返回内容。工具消息也可以进入同样的消息历史，但本示例没有展开 Tool 调用。
+&gt; 理解 LangChain Memory，先不要把它想成神秘的“记忆能力”。在这个示例里，它就是一条可以检查的消息链：消息被添加，历史被读取，请求被组装，AI 回复再被写回。
+&gt; 示例函数声明为 async ，因此调用 inMemoryDemo() 得到的是 Promise。函数内部等待三类异步动作：保存消息、读取消息、调用远程模型。
+&gt; 到这里，历史顺序是“用户、AI、用户、AI”。第二轮的“好吃吗”之所以有上下文，是因为第一轮消息被重新放进了 message2 。
+</p>
+<h2>所感</h2>
+<p>中国圏のハーネス/Memory/Agent実装メモ。</p>
+<h2>体験</h2>
+<p>RSS本文を確認／掘金ログインや再現実験は未実施</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>疑问：模型智商跟使用人数的关系 · レーダー 2026-09-02 00:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-02 00:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>疑问：模型智商跟使用人数的关系</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2842128" target="_blank" rel="noopener">https://linux.do/t/topic/2842128</a></p>
+<div class="thread">
+<p>LINUX DO topic/2842128 · author @Leif_Yang。ai；疑问：模型智商跟使用人数的关系</p>
+<h2>所感</h2>
+<p>中国圏一次声。枠・認証・価格・ハーネスを優先。</p>
+<h2>体験</h2>
+<p>KEEP引用/スレッドJSONを確認／ログイン操作は未実施</p>
+<h2>引用</h2>
+<p><strong>@Leif_Yang</strong>「在回看经验分享贴时觉得一个观点挺反直觉的：         在另一个话题中     大模型的智商高低取决于用的人数，我以前一直以为用的人越少智商越高，后面经过做大模型相关科研的同学才知道，算力调配是用的人越多，激活参数量越大，智商反而越高。       很好奇这个观点。  个人此前的认知，激活的参数量该是对于单个调用来说的，并且算力调配应该是一种分配策略，很难影响到推理逻辑。  但我并非是专业人员，也未做过相关科研，因此询问了一下AI：   image 1413×1093 93.7 KB   Sol [Max]的回答中，对此见解不同，认为这种情况只有“特殊的’按负载切换模型/分配推理预算’机制”下才可能发生。   image 1319×1177 88.9 KB   Opus 4.6 [Thinking]的回答则很符合个人的此前感受，对此见解不同且截然相反。   不知道佬友是否有专业的，觉得这种反直觉的观点要是能够成立，那背后的逻辑一定很有意思，很好奇」</p>
+<p><strong>@yu1745</strong>「你现在是混淆了推理过程中的专家并行和大模型设计中的激活专家数。大模型设计中激活的专家数越多，那么大体可以认为越聪明。专家并行中，对于 MoE 模型，是每张卡存储部分专家。推理时，因为同一时刻单路的推理流只激活一部分参数，所以如果你不做专家并行的话，本轮对话没有激活的专家，对应的GPU卡的时间片就是完全浪费掉了，所以会有专家并行这个概念，把很多人的对话同时批处理，进行推理，基于统计规律或者什么样的分散算法，让所有的卡的专家都尽量满载。」</p>
+<p><strong>@lucas_red</strong>「感觉不太现实，Moe使用的人多批量推理好处是计算集群的使用率上升，单位成本平摊下来更加低吧，moe路由和参数都是冻结的，不存在说同一个模型在不同负载下会出现大幅度的智商波动，除非供应商切换模型量化程度。不过有一种情况像你说的就是供应商在业务高负载私自下注入提示词降低思维链长度导致智商下降的可能，比如google之前爆出疑似api和订阅思维链长度削减出现这样的情况，这样就会。你要研究得控制变量自部署控制采样提示词这些都一致才好。」</p>
+<p><strong>@mutsumi</strong>「不知道，我完全无法理解，也无法猜测这个背后到底表达了什么东西能被人理解成这样。   我看到这段话有种san check的感觉。」</p>
+<p><strong>@237581600</strong>「我反对，moe模型激活参数不是固定的吗？就算是动态的，也取决于提示词和任务复杂度。」</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
