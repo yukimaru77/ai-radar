@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WorkBuddy が走っている間にファイルが消えた。rm 疑惑とハードコード確認の反論 · レーダー 2026-09-01 21:00</title>
+<style>
+
+:root { --bg:#0f1115; --card:#1a1d24; --ink:#e8eaed; --dim:#9aa3ad; --acc:#7dd3fc; --x:#67e8f9; --en:#86efac; --cn:#fbbf24; --line:#2a2f3a; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font: 16px/1.7 ui-sans-serif, system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; background:var(--bg); color:var(--ink); }
+main { max-width: 820px; margin: 0 auto; padding: 28px 20px 80px; }
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: .01em; line-height: 1.35; }
+.sub { color:var(--dim); margin: 0 0 22px; font-size: 14px; }
+.crumbs { color:var(--dim); font-size: 13px; margin: 0 0 18px; }
+.crumbs a { color:var(--acc); text-decoration:none; }
+.tag { font-size:11px; font-weight:700; letter-spacing:.06em; padding: 2px 8px; border-radius: 999px; display:inline-block; }
+.tag.x { color:#082022; background:var(--x); }
+.tag.en { color:#05210f; background:var(--en); }
+.tag.cn { color:#2a1c00; background:var(--cn); }
+article.card { background:var(--card); border-radius: 14px; padding: 20px 20px 22px; border:1px solid var(--line); }
+.primary { margin: 10px 0 18px; }
+.primary a { color:var(--acc); word-break: break-all; font-size: 14px; }
+.thread p { margin: 0 0 14px; color:#d4d8de; font-size: 15.5px; }
+.thread p:last-child { margin-bottom: 0; }
+.thread h2 { font-size: 15px; color:var(--acc); margin: 22px 0 10px; font-weight: 700; }
+.thread code { font-size: 12.5px; background:#12151b; padding: 1px 5px; border-radius: 4px; }
+.thread strong { color:#fff; }
+.back { margin: 22px 0 0; font-size: 14px; }
+.back a { color:var(--acc); text-decoration:none; }
+footer { color:var(--dim); font-size:12px; margin-top: 36px; }
+
+</style>
+</head>
+<body><main>
+<p class="crumbs"><a href="../index.html">レーダー</a> / <a href="index.html">2026-09-01 21:00</a></p>
+<article class="card">
+<div class="meta"><span class="tag cn">中国圏</span></div>
+<h1>WorkBuddy が走っている間にファイルが消えた。rm 疑惑とハードコード確認の反論</h1>
+<p class="primary"><a href="https://linux.do/t/topic/2840636" target="_blank" rel="noopener">https://linux.do/t/topic/2840636</a></p>
+<div class="thread">
+<p>LINUX DO 2840636。posts 17 / views 409。@woyaoqudaye がスクショ三枚。@fidh「给你删完了说不是自己干的,不知道谁干的」。@proxy「被 rm 了吗 小概率事件 也要小心啊」。@mian_meng「我之前遇到过，‘历史提问’记录丢失的情况，你这连文件都没了是真的痛」。</p>
+<p>@misakamisaka20002「应该不是 workbuddy 的问题，它的安全防护是用硬编码写的，删除大于一定数量的文字都会弹出来问你确不确认的，并不是AI审核删不删除文件。 我觉得还有一个嫌疑犯，就是作者你本人自己不小心/特意删除的。」ハードコードの確認ダイアログがある、という反論。@wren「我咋v2也看到一个glm把项目删了的」。</p>
+<h2>所感</h2>
+<p>エージェントがファイルを消す事故の現場。WorkBuddy 側は大量削除を確認すると主張。犯人は未確定。再現手順は書かない。</p>
+<h2>体験</h2>
+<p>KEEP 引用と、スキャン箱の thread JSON（/workspace/cn-radar/2026-09-01-18/linuxdo/threads）を読んだ。この窓では linux.do をライブ curl し直していない</p>
+</div>
+</article>
+<p class="back"><a href="index.html">← この窓</a> · <a href="../index.html">レーダー先頭</a></p>
+</main></body></html>
